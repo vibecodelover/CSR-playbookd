@@ -1,0 +1,833 @@
+{
+ "updated": "2026-11-18",
+ "bench": [
+  {
+   "big": "25%",
+   "t": "Average share of employees who volunteer",
+   "s": "31% at companies under 10,000 staff vs 16% above 100,000",
+   "src": "CECP Giving in Numbers 2025",
+   "url": "https://3blmedia.com/news/giving-numberstm-2025-edition-companies-aligning-business-practices-purpose-report-25-higher",
+   "sdg": 10
+  },
+  {
+   "big": "31% vs 22%",
+   "t": "Workforce participation: India vs global",
+   "s": "Benchmark of 212 companies",
+   "src": "Goodera, 2024",
+   "url": "https://www.outlookindia.com/hub4business/the-tech-behind-purpose-abhishek-humbad-founder-ceo-of-goodera-on-transforming-corporate-volunteering-worldwide",
+   "sdg": 5
+  },
+  {
+   "big": "22% vs 93%",
+   "t": "Companies matching employee donations: India vs global",
+   "s": "Large untapped employee-giving potential",
+   "src": "Give Grants, dus spoke India Inc 2026",
+   "url": "https://businessnewsweek.in/business/give-grants-2026-report-highlights-employee-donation-matching-gap-between-indian-companies-and-global-peers/",
+   "sdg": 17
+  },
+  {
+   "big": "$36.14",
+   "t": "Value of a volunteer hour (US, 2025)",
+   "s": "US-only wage-replacement estimate; pro bono valued near $220/hour",
+   "src": "Independent Sector, Apr 2026",
+   "url": "https://independentsector.org/research/value-of-volunteer-time/",
+   "sdg": 8
+  },
+  {
+   "big": "2026",
+   "t": "UN International Volunteer Year",
+   "s": "UNGA resolution 78/127; International Volunteer Day is 5 December",
+   "src": "UN Volunteers",
+   "url": "https://www.unv.org/es/node/48333",
+   "sdg": 16
+  }
+ ],
+ "types": [
+  {
+   "n": "Community service days",
+   "cat": "Hands-on",
+   "fmt": "In-person",
+   "time": "Hours",
+   "skill": "General",
+   "d": "Team-based, half- or full-day activities with a partner NGO or school.",
+   "ex": "School painting, library set-ups, kit packing, park clean-ups",
+   "best": "Large-scale participation and team bonding",
+   "sdg": 11
+  },
+  {
+   "n": "Environment drives",
+   "cat": "Hands-on",
+   "fmt": "In-person",
+   "time": "Hours",
+   "skill": "General",
+   "d": "Tree planting, lake and beach clean-ups, seed-ball making, waste segregation.",
+   "ex": "Mangrove planting, lake restoration, e-waste collection",
+   "best": "Sites near plants and offices; World Environment Day",
+   "sdg": 13
+  },
+  {
+   "n": "Teaching & tutoring",
+   "cat": "Hands-on",
+   "fmt": "Hybrid",
+   "time": "Weeks",
+   "skill": "General",
+   "d": "Regular sessions with students — reading, maths, spoken English, digital basics.",
+   "ex": "Weekly reading circles, exam prep, STEM clubs",
+   "best": "Long-term relationships with schools",
+   "sdg": 4
+  },
+  {
+   "n": "Mentoring & career guidance",
+   "cat": "Skills-based",
+   "fmt": "Hybrid",
+   "time": "Months",
+   "skill": "Professional",
+   "d": "One-to-one or group mentoring for youth, first-generation graduates or women returning to work.",
+   "ex": "Mock interviews, CV clinics, career talks",
+   "best": "Employability programmes; graduate and women's networks",
+   "sdg": 8
+  },
+  {
+   "n": "Skills-based volunteering (projects)",
+   "cat": "Skills-based",
+   "fmt": "Hybrid",
+   "time": "Weeks",
+   "skill": "Professional",
+   "d": "Employees use job skills on a scoped NGO project with a clear deliverable.",
+   "ex": "Website rebuild, M&E dashboard, finance clean-up, HR policies",
+   "best": "Building NGO capacity; employee learning",
+   "sdg": 17
+  },
+  {
+   "n": "Pro bono consulting",
+   "cat": "Pro bono & leadership",
+   "fmt": "Hybrid",
+   "time": "Weeks",
+   "skill": "Expert",
+   "d": "Teams take on a strategic problem for an NGO or social enterprise, like a consulting engagement.",
+   "ex": "Business plan, go-to-market, legal or tax structuring",
+   "best": "Senior talent; strategic NGO partners",
+   "sdg": 17
+  },
+  {
+   "n": "Social sabbaticals & fellowships",
+   "cat": "Pro bono & leadership",
+   "fmt": "In-person",
+   "time": "Months",
+   "skill": "Expert",
+   "d": "Immersive multi-week assignments, often in another city or country.",
+   "ex": "4-week field sabbaticals, global service corps",
+   "best": "Leadership development",
+   "sdg": 17
+  },
+  {
+   "n": "NGO board service",
+   "cat": "Pro bono & leadership",
+   "fmt": "Hybrid",
+   "time": "Months",
+   "skill": "Expert",
+   "d": "Senior employees join NGO boards or advisory councils.",
+   "ex": "Board placement programmes, audit committee roles",
+   "best": "Governance strength for partners",
+   "sdg": 16
+  },
+  {
+   "n": "Hackathons & tech for good",
+   "cat": "Skills-based",
+   "fmt": "Hybrid",
+   "time": "Days",
+   "skill": "Professional",
+   "d": "Time-boxed sprints where teams build tools for NGOs or public problems.",
+   "ex": "Accessibility apps, data tools, AI pilots for NGOs",
+   "best": "Tech companies; innovation culture",
+   "sdg": 9
+  },
+  {
+   "n": "Virtual volunteering",
+   "cat": "Virtual & micro",
+   "fmt": "Virtual",
+   "time": "Hours",
+   "skill": "General",
+   "d": "Remote tasks that can be done from anywhere.",
+   "ex": "Online tutoring, translation, audiobook recording, data tagging",
+   "best": "Hybrid workforces; multi-city teams",
+   "sdg": 4
+  },
+  {
+   "n": "Micro-volunteering",
+   "cat": "Virtual & micro",
+   "fmt": "Virtual",
+   "time": "Hours",
+   "skill": "General",
+   "d": "Tasks of minutes to an hour, often on a platform.",
+   "ex": "Transcription, reviewing applications, design feedback",
+   "best": "Busy teams; first-time volunteers",
+   "sdg": 17
+  },
+  {
+   "n": "Health camps & awareness",
+   "cat": "Hands-on",
+   "fmt": "In-person",
+   "time": "Days",
+   "skill": "Professional",
+   "d": "Employees support screening camps or run awareness sessions with health partners.",
+   "ex": "Eye and dental camps, menstrual health, road safety",
+   "best": "Healthcare, pharma and insurance companies",
+   "sdg": 3
+  },
+  {
+   "n": "Blood & organ donation drives",
+   "cat": "Hands-on",
+   "fmt": "In-person",
+   "time": "Hours",
+   "skill": "General",
+   "d": "On-site drives with licensed blood banks; pledge campaigns.",
+   "ex": "Quarterly blood drives, stem-cell registry sign-ups",
+   "best": "Every workplace; Voluntary Blood Donation Day",
+   "sdg": 3
+  },
+  {
+   "n": "Disaster response & relief",
+   "cat": "Hands-on",
+   "fmt": "Hybrid",
+   "time": "Days",
+   "skill": "General",
+   "d": "Relief kits, logistics, helplines and rebuilding after floods, cyclones or heatwaves.",
+   "ex": "Kit assembly, helpline support, rebuilding schools",
+   "best": "Companies with logistics or local presence",
+   "sdg": 12
+  },
+  {
+   "n": "Financial & digital literacy",
+   "cat": "Skills-based",
+   "fmt": "In-person",
+   "time": "Weeks",
+   "skill": "Professional",
+   "d": "Employees teach money, banking, scams and digital skills.",
+   "ex": "Senior-citizen digital safety, SHG finance sessions",
+   "best": "Banks, fintech, insurance",
+   "sdg": 8
+  },
+  {
+   "n": "Inclusion & accessibility",
+   "cat": "Hands-on",
+   "fmt": "Hybrid",
+   "time": "Hours",
+   "skill": "General",
+   "d": "Activities with persons with disabilities, elderly and other excluded groups.",
+   "ex": "Sign-language workshops, scribe support, elder visits",
+   "best": "DEI goals; ERG-led programmes",
+   "sdg": 10
+  },
+  {
+   "n": "Family & retiree volunteering",
+   "cat": "Hands-on",
+   "fmt": "In-person",
+   "time": "Hours",
+   "skill": "General",
+   "d": "Opening programmes to employees' families and alumni.",
+   "ex": "Weekend drives with children, retiree mentoring",
+   "best": "Wider reach; culture building",
+   "sdg": 11
+  },
+  {
+   "n": "ERG & employee-led initiatives",
+   "cat": "Hands-on",
+   "fmt": "Hybrid",
+   "time": "Weeks",
+   "skill": "General",
+   "d": "Employee resource groups or impact councils design their own projects.",
+   "ex": "Women's network mentoring, pride-led awareness",
+   "best": "Grassroots ownership",
+   "sdg": 5
+  },
+  {
+   "n": "Payroll giving & donation matching",
+   "cat": "Giving-linked",
+   "fmt": "Virtual",
+   "time": "Hours",
+   "skill": "General",
+   "d": "Employees give through payroll; the company matches donations.",
+   "ex": "1:1 matching, festival giving campaigns",
+   "best": "Turning goodwill into steady funding",
+   "sdg": 17
+  },
+  {
+   "n": "Volunteer grants (dollars for doers)",
+   "cat": "Giving-linked",
+   "fmt": "Hybrid",
+   "time": "Hours",
+   "skill": "General",
+   "d": "The company donates to NGOs where employees volunteer a set number of hours.",
+   "ex": "Grant per 20/40 hours volunteered",
+   "best": "Rewarding long-term volunteers",
+   "sdg": 17
+  },
+  {
+   "n": "Donation & collection drives",
+   "cat": "Giving-linked",
+   "fmt": "In-person",
+   "time": "Hours",
+   "skill": "General",
+   "d": "Collection of books, clothes, food, devices or school supplies.",
+   "ex": "Joy of Giving drives, laptop refurbishment",
+   "best": "Festivals; quick wins",
+   "sdg": 1
+  },
+  {
+   "n": "Citizen science & civic action",
+   "cat": "Hands-on",
+   "fmt": "Hybrid",
+   "time": "Hours",
+   "skill": "General",
+   "d": "Data collection and civic participation for public good.",
+   "ex": "Bird counts, air-quality logging, voter awareness",
+   "best": "Environment and civic themes",
+   "sdg": 11
+  }
+ ],
+ "agencies": [
+  {
+   "n": "iVolunteer",
+   "type": "Volunteering intermediary",
+   "reg": "India",
+   "does": "Designs and runs corporate volunteering programmes — policy advice, execution and third-party certification; co-hosted the 2020 Asia Pacific Pro Bono Summit with Pyxera Global.",
+   "u": "https://ivolunteer.in/corporate-volunteering-programs"
+  },
+  {
+   "n": "ConnectFor",
+   "type": "Volunteering intermediary",
+   "reg": "India",
+   "does": "Matches volunteers with NGO needs; runs corporate group, virtual and skill-based volunteering across major metros. Free for NGOs and volunteers.",
+   "u": "https://www.connectfor.org"
+  },
+  {
+   "n": "United Way Mumbai",
+   "type": "Workplace giving & volunteering",
+   "reg": "India",
+   "does": "Custom volunteering calendars for companies plus payroll giving; 14,400+ people engaged through corporate volunteering and payroll giving in 2024-25.",
+   "u": "https://www.unitedwaymumbai.org/employee-volunteering"
+  },
+  {
+   "n": "United Way India network",
+   "type": "Workplace giving & volunteering",
+   "reg": "India",
+   "does": "Network of United Way chapters in India working with 1,000+ corporate partners on CSR, workplace giving and volunteering.",
+   "u": "https://give.do/discover/1AEA/united-way-india/"
+  },
+  {
+   "n": "Youth for Seva",
+   "type": "Volunteer-led NGO",
+   "reg": "India",
+   "does": "Runs one-time, long-term and virtual corporate volunteering (school transformation, mentoring); hosts a Corporate Volunteering Conclave; 3.29 lakh+ volunteers since 2007.",
+   "u": "https://www.youthforseva.org/Corporate-Volunteering"
+  },
+  {
+   "n": "Bhumi",
+   "type": "Volunteer-led NGO",
+   "reg": "India",
+   "does": "Large youth volunteering NGO; employee volunteering alongside school transformation and education CSR projects.",
+   "u": "https://www.bhumi.ngo/csr"
+  },
+  {
+   "n": "Goonj",
+   "type": "NGO partner",
+   "reg": "India",
+   "does": "Collection drives and material-for-work relief; a common partner for donation and disaster volunteering.",
+   "u": "https://goonj.org"
+  },
+  {
+   "n": "Give",
+   "type": "Giving platform",
+   "reg": "India",
+   "does": "Online giving platform with NGO due-diligence profiles; used for employee giving and matching campaigns.",
+   "u": "https://give.do"
+  },
+  {
+   "n": "CAF India",
+   "type": "Workplace giving & volunteering",
+   "reg": "India",
+   "does": "Charities Aid Foundation India — payroll giving, CSR advisory and employee engagement.",
+   "u": "https://www.cafindia.org"
+  },
+  {
+   "n": "Goodera",
+   "type": "Volunteering platform",
+   "reg": "Global",
+   "does": "Bengaluru-founded platform running curated in-person and virtual volunteering; 5,000+ events in India in a year; hosts Karma Summit Asia and the Karma Awards.",
+   "u": "https://www.goodera.com/volunteer-opportunities/india"
+  },
+  {
+   "n": "Benevity",
+   "type": "Volunteering platform",
+   "reg": "Global",
+   "does": "Employee giving, matching and volunteering software used by large multinationals; publishes Benevity Impact Labs data.",
+   "u": "https://benevity.com"
+  },
+  {
+   "n": "MovingWorlds",
+   "type": "Skills-based platform",
+   "reg": "Global",
+   "does": "Matches employees to skills-based projects with social enterprises; scaled SAP's skills-based volunteering from 2021.",
+   "u": "https://movingworlds.org/skills-based-volunteering-platform/sap-case-study"
+  },
+  {
+   "n": "Pyxera Global",
+   "type": "Skills-based platform",
+   "reg": "Global",
+   "does": "Designs immersive and virtual skills-based volunteering and global pro bono programmes, including the SAP Social Sabbatical.",
+   "u": "https://pyxeraglobal.org/?p=47445"
+  },
+  {
+   "n": "Taproot Foundation",
+   "type": "Skills-based platform",
+   "reg": "Global",
+   "does": "Pioneer of pro bono service; publishes pro bono valuation (about $220/hour in 2024).",
+   "u": "https://taprootfoundation.org"
+  },
+  {
+   "n": "Catchafire",
+   "type": "Skills-based platform",
+   "reg": "Global",
+   "does": "Online matching of professionals to short skills-based projects for non-profits.",
+   "u": "https://www.catchafire.org"
+  },
+  {
+   "n": "IAVE — Global Corporate Volunteer Council",
+   "type": "Network & research",
+   "reg": "Global",
+   "does": "The global network of companies running workforce volunteering; members in 70+ countries; led civil-society planning for IVY 2026.",
+   "u": "https://www.iave.org/?p=3522"
+  },
+  {
+   "n": "Points of Light",
+   "type": "Network & research",
+   "reg": "Global",
+   "does": "Global volunteering network; Corporate Service Council and The Civic 50 honours; 2.5 million volunteers engaged across 38 countries in 2025.",
+   "u": "https://www.pointsoflight.org"
+  },
+  {
+   "n": "UN Volunteers (UNV)",
+   "type": "Network & research",
+   "reg": "Global",
+   "does": "UN agency for volunteerism; coordinates the International Volunteer Year 2026 (UNGA resolution 78/127).",
+   "u": "https://www.unv.org"
+  },
+  {
+   "n": "CECP",
+   "type": "Network & research",
+   "reg": "Global",
+   "does": "Chief Executives for Corporate Purpose — Giving in Numbers benchmarks on volunteering, matching gifts and community investment.",
+   "u": "https://cecp.co"
+  },
+  {
+   "n": "Independent Sector",
+   "type": "Network & research",
+   "reg": "Global",
+   "does": "Publishes the US Value of Volunteer Time each April ($36.14/hour for 2025).",
+   "u": "https://independentsector.org/research/value-of-volunteer-time/"
+  },
+  {
+   "n": "B4SI (Business for Societal Impact)",
+   "type": "Network & research",
+   "reg": "Global",
+   "does": "Measurement framework (formerly LBG) for valuing corporate community investment, including employee time.",
+   "u": "https://b4si.net"
+  }
+ ],
+ "cases": [
+  {
+   "co": "Tata group — Tata Engage & ProEngage",
+   "reg": "India",
+   "model": "Group platform: Tata Volunteering Week, ProEngage skills projects, disaster response, company programmes",
+   "sdg": 17,
+   "stats": [
+    [
+     "1.087 cr hrs",
+     "Group volunteering hours in FY25 — up 35% on FY24 (54 companies)"
+    ],
+    [
+     "9,500+",
+     "ProEngage volunteers over 10 years, ~4.99 lakh hours for 1,222 NGOs"
+    ],
+    [
+     "4 PCVH",
+     "Per-capita volunteering-hours goal, reached a year ahead of 2025"
+    ]
+   ],
+   "why": "Clear group-wide target (per-capita hours), a mix of event and project formats, open to families and retirees, and company-level SPOC networks.",
+   "src": [
+    [
+     "Tata.com — FY25 volunteering",
+     "https://www.tata.com/newsroom/community/tata-group-volunteering-ethos-growth"
+    ],
+    [
+     "ProEngage at 10",
+     "https://www.tata.com/newsroom/community/tata-proengage-skills-as-service-10-years"
+    ]
+   ]
+  },
+  {
+   "co": "TCS — HOPE",
+   "reg": "India",
+   "model": "Company programme inside Tata Engage",
+   "sdg": 4,
+   "stats": [
+    [
+     "147K",
+     "volunteers in FY25"
+    ],
+    [
+     "8.93 M",
+     "hours in FY25 — 14.75 hours per employee"
+    ],
+    [
+     "82%",
+     "of the Tata group's volunteering hours"
+    ]
+   ],
+   "why": "Scale through a workforce-wide platform with many causes and easy sign-up.",
+   "src": [
+    [
+     "Tata.com — TCS HOPE",
+     "https://www.tata.com/newsroom/community/hope-tcs-employee-volunteering"
+    ]
+   ]
+  },
+  {
+   "co": "Mahindra Group — Esops & MySeva",
+   "reg": "India",
+   "model": "Company-led events (Esops, since 2005) plus recognition of individual service (MySeva)",
+   "sdg": 11,
+   "stats": [
+    [
+     "5.1 lakh",
+     "person-hours by 71,283 volunteers in FY25"
+    ],
+    [
+     "37,357",
+     "volunteers on Mahindra Volunteering Day, 5 Dec 2024"
+    ],
+    [
+     "53.9 lakh+",
+     "hours since 2005"
+    ]
+   ],
+   "why": "A named platform with a 20-year history, an annual day tied to International Volunteer Day, and credit for volunteering employees do on their own.",
+   "src": [
+    [
+     "M&M Annual Report FY25",
+     "https://www.mahindra.com/annual-report-FY2025/84/"
+    ],
+    [
+     "Esops turns 20",
+     "https://echo.mahindra.com/2025/july/issue-1/esops-turns-20"
+    ]
+   ]
+  },
+  {
+   "co": "Infosys — InfyCares",
+   "reg": "India",
+   "model": "Employee volunteering linked to Infosys Foundation CSR themes",
+   "sdg": 4,
+   "stats": [
+    [
+     "1.3 lakh+",
+     "hours by 34,000+ employees across 21 locations (FY25)"
+    ],
+    [
+     "2.62 lakh+",
+     "hours in FY26 — roughly double"
+    ]
+   ],
+   "why": "Volunteering is tied to the foundation's own education, health and relief programmes, with location-level impact weeks.",
+   "src": [
+    [
+     "Infosys ESG 2024-25",
+     "https://www.infosys.com/sustainability/documents/esg-2024-25/esg-highlights.pdf"
+    ],
+    [
+     "Infosys ESG 2025-26",
+     "https://www.infosys.com/about/esg/reports/2025-26/social-communities.html"
+    ]
+   ]
+  },
+  {
+   "co": "Titan Company",
+   "reg": "India",
+   "model": "Tata Engage plus company programmes with family participation",
+   "sdg": 5,
+   "stats": [
+    [
+     "38,575",
+     "hours in FY25"
+    ],
+    [
+     "4.22",
+     "hours per employee"
+    ],
+    [
+     "1,079",
+     "family members took part (11% of volunteers)"
+    ]
+   ],
+   "why": "Family participation and many small local activities (238 in a year).",
+   "src": [
+    [
+     "Tata.com — Titan",
+     "https://www.tata.com/newsroom/community/titan-employee-volunteering-footprints"
+    ]
+   ]
+  },
+  {
+   "co": "DBS — People of Purpose",
+   "reg": "Global (incl. India)",
+   "model": "Two volunteer-leave days a year; service and skills-based programmes",
+   "sdg": 8,
+   "stats": [
+    [
+     "1 M+",
+     "hours since 2014"
+    ],
+    [
+     "1.5 M",
+     "hours pledged over 10 years with a SGD 1 bn commitment"
+    ],
+    [
+     "2 days",
+     "paid volunteer leave per employee"
+    ]
+   ],
+   "why": "Volunteering is built into flagship programmes — in India, staff help deliver financial-literacy sessions with Haqdarshak.",
+   "src": [
+    [
+     "DBS People of Purpose",
+     "https://www.dbs.com/sustainability/creating-social-impact/people-of-purpose"
+    ],
+    [
+     "DBS–Haqdarshak",
+     "https://www.dbs.com/newsroom/DBS_Foundation_Collaborates_with_Haqdarshak"
+    ]
+   ]
+  },
+  {
+   "co": "Salesforce — 1-1-1 model",
+   "reg": "Global (incl. India)",
+   "model": "7 paid volunteer days (56 hours) a year, matching gifts, employee impact councils",
+   "sdg": 17,
+   "stats": [
+    [
+     "56 hrs",
+     "paid volunteer time off per employee per year"
+    ],
+    [
+     "50%",
+     "of employees volunteered in 2025"
+    ],
+    [
+     "10 M+",
+     "all-time volunteer hours (2025)"
+    ]
+   ],
+   "why": "Generous, simple policy; employee-led impact councils run local programmes; milestone-linked grants.",
+   "src": [
+    [
+     "Salesforce volunteering",
+     "https://www.salesforce.com/company/philanthropy/employee-volunteering-giving/"
+    ],
+    [
+     "Salesforce news",
+     "https://www.salesforce.com/news/?p=91579"
+    ]
+   ]
+  },
+  {
+   "co": "SAP — Social Sabbatical",
+   "reg": "Global",
+   "model": "4-week immersive pro bono assignments with social enterprises; piloted in 2012",
+   "sdg": 9,
+   "stats": [
+    [
+     "4 weeks",
+     "on-site, team-based assignments"
+    ],
+    [
+     "2012",
+     "pilot; now a long-running flagship with Pyxera Global"
+    ]
+   ],
+   "why": "Treats volunteering as leadership development — scoped business problems, cross-functional teams, strong NPS from hosts and employees.",
+   "src": [
+    [
+     "Pyxera — SAP report 2025",
+     "https://pyxeraglobal.org/wp-content/uploads/2026/05/SAP-Social-Sabbatical-2025-Annual-Report.pdf"
+    ],
+    [
+     "Reuters/BusinessLive interview",
+     "https://www.businesslive.co.za/bd/companies/2021-12-20-saps-social-sabbaticals-keep-employees-challenged-and-engaged/"
+    ]
+   ]
+  },
+  {
+   "co": "Tata AIA Life",
+   "reg": "India",
+   "model": "Joined ProEngage, Tata Volunteering Week and disaster response",
+   "sdg": 3,
+   "stats": [
+    [
+     "0.72 → 4.86",
+     "hours per employee, FY24 to FY25"
+    ]
+   ],
+   "why": "Shows how quickly participation grows once a company plugs into a ready group platform.",
+   "src": [
+    [
+     "Tata.com — Tata AIA",
+     "https://www.tata.com/newsroom/community/tata-aia-volunteering-empathy"
+    ]
+   ]
+  }
+ ],
+ "law": [
+  [
+   "Employees' time is not CSR spend",
+   "MCA has said monetising employees' pro bono services does not count towards the 2% CSR obligation.",
+   "https://taxguru.in/?p=75559",
+   "MCA General Circular 21/2014"
+  ],
+  [
+   "CSR staff salaries fall in the 5% overhead cap",
+   "Salaries of regular CSR staff and of employees who render services for CSR are administrative overheads, capped at 5% of CSR spend.",
+   "https://www.mca.gov.in/mca/html/mcav2_en/home/home/efacilitaion+center/faq+on+csr+cell-site+area/faq+on+csr+cell.html",
+   "MCA CSR FAQ"
+  ],
+  [
+   "Employee-only benefits are excluded",
+   "Activities that benefit only employees and their families are not CSR — so team meals, T-shirts or travel for volunteers can't be booked as CSR.",
+   "https://taxguru.in/?p=773122",
+   "Rule 2(1)(d), CSR Rules"
+  ],
+  [
+   "Project costs can count",
+   "Costs of the community project itself (materials, kits, NGO costs) can be CSR if the activity fits Schedule VII and runs through an eligible channel.",
+   "https://www.mca.gov.in",
+   "Schedule VII & Rule 4"
+  ],
+  [
+   "Encouraged, not mandated",
+   "MCA encourages companies to involve employees in CSR, so volunteering strengthens CSR projects without adding to the spend.",
+   "https://taxguru.in/?p=75559",
+   "MCA General Circular 21/2014"
+  ]
+ ],
+ "metrics": [
+  [
+   "Participation rate",
+   "Unique volunteers ÷ total headcount",
+   "Reach; compare with 25% global average"
+  ],
+  [
+   "Per-capita volunteering hours (PCVH)",
+   "Total hours ÷ headcount",
+   "Depth; Tata's group goal was 4"
+  ],
+  [
+   "Repeat volunteer rate",
+   "Volunteers with 2+ activities ÷ all volunteers",
+   "Habit and quality"
+  ],
+  [
+   "Skills-based share",
+   "Skills-based hours ÷ total hours",
+   "Strategic value to NGOs"
+  ],
+  [
+   "NGO satisfaction / NPS",
+   "Partner survey after each activity",
+   "Was it useful or a burden?"
+  ],
+  [
+   "Outcome per project",
+   "Deliverables and beneficiary outcomes agreed with the NGO",
+   "Real impact, not just hours"
+  ],
+  [
+   "Employee outcomes",
+   "Engagement, retention, skills gained (survey or HRIS)",
+   "Business case"
+  ],
+  [
+   "Value of time",
+   "Hours × local wage rate (or pro bono rate for experts)",
+   "Reporting — never as CSR spend in India"
+  ]
+ ],
+ "steps": [
+  [
+   "Start from community need",
+   "Ask partner NGOs what help they actually need; avoid 'volunteer tourism' that costs NGOs more than it gives."
+  ],
+  [
+   "Write a volunteering policy",
+   "Paid volunteer days, who is eligible (contract staff, families, retirees), approvals and leave tracking."
+  ],
+  [
+   "Pick partners and formats",
+   "Mix easy entry points (events, virtual) with deeper skills-based and long-term roles."
+  ],
+  [
+   "Safeguard everyone",
+   "Child-protection and POSH rules, background checks for work with children, insurance, travel and data-privacy protocols."
+  ],
+  [
+   "Build a champions network",
+   "Site or team SPOCs, ERG leads and leadership role models to drive participation."
+  ],
+  [
+   "Make it easy",
+   "One platform or calendar for sign-up, logging hours and sharing stories."
+  ],
+  [
+   "Recognise and reward",
+   "Certificates, volunteer grants, awards and leadership shout-outs."
+  ],
+  [
+   "Measure, report, improve",
+   "Track the metrics below; disclose in your sustainability report or BRSR; review partner feedback."
+  ]
+ ],
+ "calendar": [
+  [
+   "Daan Utsav (India's Festival of Giving)",
+   "2–8 October"
+  ],
+  [
+   "Mandela Day",
+   "18 July"
+  ],
+  [
+   "World Environment Day",
+   "5 June"
+  ],
+  [
+   "GivingTuesday",
+   "1 December 2026"
+  ],
+  [
+   "International Volunteer Day",
+   "5 December"
+  ],
+  [
+   "Voluntary Blood Donation Day (India)",
+   "1 October"
+  ],
+  [
+   "Tata Volunteering Week",
+   "Twice a year"
+  ],
+  [
+   "Karma Summit Asia (Goodera)",
+   "September, Bengaluru"
+  ]
+ ]
+}

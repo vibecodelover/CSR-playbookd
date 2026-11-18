@@ -275,6 +275,15 @@ dialog#ngo-dlg form{padding:22px 24px 20px}
 dialog#ngo-dlg::backdrop{background:rgba(10,16,24,.55);backdrop-filter:blur(3px)}
 .dlg-bar{height:6px;margin:-22px -24px 18px;border-radius:18px 18px 0 0;background:linear-gradient(90deg,var(--sdg3),var(--sdg15),var(--sdg6),var(--sdg14),var(--sdg16))}
 .score-card{border-top:5px solid var(--sdg3)}
+.vt .pills{display:flex;gap:5px;flex-wrap:wrap;margin:8px 0}
+.vt{border-left:5px solid var(--k)}
+.vt .pill,.vc .pill{flex:none}
+.vt .ex{font-size:.82rem;color:var(--ink-3);margin-top:6px}
+.vc{border-top:5px solid var(--k)}
+.vc .rep-stats div{border-left-color:var(--k)}
+.vf-res{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:10px}
+.vf-res .card{border-left:5px solid var(--k)}
+.vf-res .mt{font-size:.75rem;font-weight:700;color:var(--k)}
 footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);font-size:.8rem}
 .hide{display:none!important}
 .new{display:inline-block;background:var(--sdg9);color:#fff;font-size:.62rem;font-weight:700;padding:1px 6px;border-radius:5px;margin-left:6px;vertical-align:middle}
@@ -300,6 +309,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
   <a href="#compliance" data-v="compliance" style="--c:var(--sdg4)"><span class="dot"></span>Compliance Corner</a>
   <a href="#awards" data-v="awards" style="--c:#b07d12"><span class="dot"></span>Awards</a>
   <a href="#ngos" data-v="ngos" style="--c:var(--sdg3)"><span class="dot"></span>NGO Directory</a>
+  <a href="#volunteering" data-v="volunteering" style="--c:var(--sdg10)"><span class="dot"></span>Volunteering</a>
   <a href="#esg" data-v="esg" style="--c:var(--sdg13)"><span class="dot"></span>ESG Frameworks</a>
 </div></nav>
 
@@ -580,6 +590,62 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
   <p class="muted" style="margin-top:12px">Photos can't be embedded from NGO websites on this page; use the website and report links for photos and stories.</p>
 </section>
 
+<!-- ================= VOLUNTEERING ================= -->
+<section class="view" id="v-volunteering" style="--accent2:var(--sdg5)" data-accent="var(--sdg10)">
+  <div class="hero-h"><h2>Employee volunteering &amp; engagement</h2><span class="badge">India + global</span></div>
+  <p class="lede">Every way employees can give time and skills, who can help you run it, programmes that work, and how to stay CSR-compliant while measuring impact. <span class="muted" id="vol-updated"></span></p>
+  <div class="grid g4" id="vol-bench"></div>
+  <div class="subtabs" style="margin-top:18px">
+    <button data-vsub="types">Ways to volunteer</button>
+    <button data-vsub="finder">Find the right format</button>
+    <button data-vsub="agencies">Who can help</button>
+    <button data-vsub="cases">Programmes that work</button>
+    <button data-vsub="plan">Plan, comply &amp; measure</button>
+  </div>
+  <div class="subview" id="vsub-types">
+    <div class="chips" id="vt-cat"></div>
+    <div class="controls">
+      <select id="vt-fmt" aria-label="Format"><option value="">Any format</option><option>In-person</option><option>Virtual</option><option>Hybrid</option></select>
+      <select id="vt-time" aria-label="Time commitment"><option value="">Any commitment</option><option>Hours</option><option>Days</option><option>Weeks</option><option>Months</option></select>
+      <select id="vt-skill" aria-label="Skill level"><option value="">Any skill level</option><option>General</option><option>Professional</option><option>Expert</option></select>
+      <input type="search" id="vt-q" placeholder="Search formats…" style="flex:1;min-width:200px"></div>
+    <p class="muted" id="vt-count"></p>
+    <div class="grid g3" id="vt-list"></div>
+  </div>
+  <div class="subview" id="vsub-finder">
+    <div class="card"><h3>Find the right volunteering format</h3><p class="muted">Answer five quick questions — the best-matching formats update as you go.</p>
+      <div class="sim-grid" id="vf-q">
+        <label class="f">Time each person can give<select id="vf-time"><option value="Hours">A few hours</option><option value="Days">A day or two</option><option value="Weeks">A few weeks</option><option value="Months">Months, regularly</option></select></label>
+        <label class="f">Where your people are<select id="vf-loc"><option value="office">Mostly in offices or plants</option><option value="remote">Remote or spread out</option><option value="both">A mix</option></select></label>
+        <label class="f">Skills to share<select id="vf-skill"><option value="General">Goodwill and energy</option><option value="Professional">Professional skills</option><option value="Expert">Senior or expert skills</option></select></label>
+        <label class="f">Who will take part<select id="vf-group"><option value="team">Teams</option><option value="individual">Individuals</option><option value="family">Employees and families</option></select></label>
+        <label class="f">Main goal<select id="vf-goal"><option value="participation">Maximise participation</option><option value="skills">Build employee skills</option><option value="capacity">Strengthen NGO capacity</option><option value="giving">Grow giving</option></select></label>
+      </div>
+      <div id="vf-out" style="margin-top:16px"></div></div>
+  </div>
+  <div class="subview" id="vsub-agencies">
+    <div class="chips" id="va-type"></div>
+    <div class="controls"><select id="va-reg" aria-label="Region"><option value="">India + global</option><option>India</option><option>Global</option></select><input type="search" id="va-q" placeholder="Search agencies…" style="flex:1;min-width:200px"></div>
+    <div class="grid g3" id="va-list"></div>
+    <p class="muted" style="margin-top:12px">Listing is not an endorsement. Check registrations (12A/80G, CSR-1 if CSR funds flow, FCRA where relevant) and safeguarding policies before partnering.</p>
+  </div>
+  <div class="subview" id="vsub-cases">
+    <div class="chips" id="vc-reg"></div>
+    <div class="grid g2" id="vc-list"></div>
+  </div>
+  <div class="subview" id="vsub-plan">
+    <div class="sec-h" style="margin-top:0"><h3>Volunteering and India's CSR law</h3></div>
+    <div class="grid g3" id="vp-law"></div>
+    <div class="sec-h"><h3>Run a programme in 8 steps</h3></div>
+    <div class="grid g4" id="vp-steps"></div>
+    <div class="sec-h"><h3>What to measure</h3></div>
+    <div class="card"><div class="tbl" style="max-height:none"><table><thead><tr><th>Metric</th><th>How to calculate</th><th>Why it matters</th></tr></thead><tbody id="vp-metrics"></tbody></table></div>
+      <div class="src">Frameworks: <a href="https://b4si.net" target="_blank" rel="noopener">B4SI</a> for valuing employee time · <a href="https://cecp.co" target="_blank" rel="noopener">CECP Giving in Numbers</a> for benchmarks · <a href="https://independentsector.org/research/value-of-volunteer-time/" target="_blank" rel="noopener">Independent Sector</a> (US value of time).</div></div>
+    <div class="sec-h"><h3>Volunteering calendar</h3></div>
+    <div class="grid g4" id="vp-cal"></div>
+  </div>
+</section>
+
 <!-- ================= ESG ================= -->
 <section class="view" id="v-esg" style="--accent2:var(--sdg6)" data-accent="var(--sdg13)">
   <div class="hero-h"><h2>ESG frameworks, documents &amp; assurance</h2><span class="badge">India + global</span></div>
@@ -672,7 +738,7 @@ function chipGroup(el,opts,cur,cb){el.innerHTML=opts.map(o=>`<button class="chip
   el.onclick=e=>{const b=e.target.closest('.chip');if(!b)return;el.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c===b));cb(b.dataset.v);};}
 
 /* ===== routing (main + sub views) ===== */
-const views=['whats-new','statistics','compliance','awards','ngos','esg'];
+const views=['whats-new','statistics','compliance','awards','ngos','volunteering','esg'];
 const csubs=['history','howto','checklist','simulator','updates'];
 let statsDrawn=false, curSub='history';
 function route(){
@@ -1020,6 +1086,49 @@ function renderNGOs(){const so=$('#ngo-sort').value,key={score:o=>o.score??-1,ex
     <div class="linkrow">${o.L.map(l=>ext(l[0],esc(l[1])+' ↗')).join('')}</div></div></div>`;}).join('');}
 chipGroup($('#ngo-theme'),[['','All themes'],...themes.map(t=>[t,t])],'',v=>{ngoTheme=v;renderNGOs();});$('#ngo-sort').oninput=renderNGOs;renderNGOs();
 
+/* ===== VOLUNTEERING ===== */
+let VOL=null,vtCat='',vaType='',vcReg='';
+$$('#v-volunteering .subtabs button').forEach(b=>b.onclick=()=>{$$('#v-volunteering .subtabs button').forEach(x=>x.classList.toggle('on',x===b));$$('#v-volunteering .subview').forEach(d=>d.classList.toggle('on',d.id==='vsub-'+b.dataset.vsub));});
+$('#v-volunteering .subtabs button').click();
+const VCAT={'Hands-on':11,'Skills-based':9,'Pro bono & leadership':16,'Virtual & micro':14,'Giving-linked':17};
+function renderVT(){if(!VOL)return;const f=$('#vt-fmt').value,t=$('#vt-time').value,k=$('#vt-skill').value,q=$('#vt-q').value.toLowerCase();
+  const L=VOL.types.filter(x=>(!vtCat||x.cat===vtCat)&&(!f||x.fmt===f)&&(!t||x.time===t)&&(!k||x.skill===k)&&(!q||(x.n+x.d+x.ex+x.best).toLowerCase().includes(q)));
+  $('#vt-count').textContent=`${L.length} of ${VOL.types.length} formats`;
+  $('#vt-list').innerHTML=L.map(x=>`<div class="card lift vt" style="--k:var(--sdg${x.sdg})"><div style="display:flex;justify-content:space-between;gap:8px"><b>${esc(x.n)}</b><span class="pill" style="background:var(--sdg${VCAT[x.cat]||17});color:#fff;border:0">${esc(x.cat)}</span></div>
+    <div class="pills"><span class="pill">${esc(x.fmt)}</span><span class="pill">⏱ ${esc(x.time)}</span><span class="pill">${esc(x.skill)} skills</span><span class="pill">SDG ${x.sdg}</span></div>
+    <div style="font-size:.9rem">${esc(x.d)}</div><div class="ex"><b>Examples:</b> ${esc(x.ex)}</div><div class="ex"><b>Best for:</b> ${esc(x.best)}</div></div>`).join('')||'<p class="muted">No formats match.</p>';}
+function renderVF(){if(!VOL)return;const tm=['Hours','Days','Weeks','Months'];const T=$('#vf-time').value,Lc=$('#vf-loc').value,S=$('#vf-skill').value,G=$('#vf-group').value,Go=$('#vf-goal').value;
+  const res=VOL.types.map(x=>{let sc=0,why=[];const dt=Math.abs(tm.indexOf(x.time)-tm.indexOf(T));if(dt===0){sc+=3;why.push('fits your time');}else if(dt===1)sc+=1;
+    if(Lc==='remote'){sc+=x.fmt==='Virtual'?3:x.fmt==='Hybrid'?2:0;if(x.fmt!=='In-person')why.push('works remotely');}else if(Lc==='office'){sc+=x.fmt==='Virtual'?1:2;}else sc+=2;
+    const sk={General:{General:2,Professional:.5,Expert:0},Professional:{General:.5,Professional:3,Expert:1},Expert:{General:0,Professional:2,Expert:3}}[S][x.skill];sc+=sk;if(sk>=2)why.push('uses the skills you have');
+    if(G==='family'){if(/Family/.test(x.n)){sc+=3;why.push('built for families');}else if(x.cat==='Hands-on')sc+=1;}
+    if(G==='team'&&(x.cat==='Hands-on'||/Hackathon/.test(x.n)))sc+=1.5;
+    if(G==='individual'&&['Virtual & micro','Skills-based','Pro bono & leadership'].includes(x.cat))sc+=1;
+    const gm={participation:{'Hands-on':2,'Giving-linked':2,'Virtual & micro':1},skills:{'Skills-based':3,'Pro bono & leadership':3},capacity:{'Skills-based':2.5,'Pro bono & leadership':2.5},giving:{'Giving-linked':3}}[Go][x.cat]||0;sc+=gm;if(gm>=2)why.push('matches your goal');
+    return {x,sc,why};}).sort((a,b)=>b.sc-a.sc).slice(0,6);
+  const mx=res[0].sc;
+  $('#vf-out').innerHTML=`<b>Best matches</b><div class="vf-res" style="margin-top:8px">${res.map((r,i)=>`<div class="card flat lift" style="--k:var(--sdg${r.x.sdg})"><span class="mt">#${i+1} · ${Math.round(r.sc/mx*100)}% match</span><b style="display:block;margin-top:2px">${esc(r.x.n)}</b><div class="muted" style="font-size:.82rem;margin-top:4px">${esc(r.x.d)}</div><div style="font-size:.8rem;margin-top:6px">${r.why.length?'✓ '+r.why.map(esc).join(' · '):''}</div></div>`).join('')}</div>`;}
+function renderVA(){if(!VOL)return;const r=$('#va-reg').value,q=$('#va-q').value.toLowerCase();
+  const C={'Volunteering intermediary':10,'Workplace giving & volunteering':17,'Volunteer-led NGO':3,'NGO partner':1,'Giving platform':9,'Volunteering platform':14,'Skills-based platform':16,'Network & research':13};
+  $('#va-list').innerHTML=VOL.agencies.filter(a=>(!vaType||a.type===vaType)&&(!r||a.reg===r)&&(!q||(a.n+a.does+a.type).toLowerCase().includes(q))).map(a=>`<div class="card lift vt" style="--k:var(--sdg${C[a.type]||17})"><div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start"><h3 style="margin:0;font-size:1.02rem">${esc(a.n)}</h3><span class="pill">${esc(a.reg)}</span></div><div class="muted" style="margin:2px 0 6px">${esc(a.type)}</div><div style="font-size:.88rem">${esc(a.does)}</div><div class="linkrow">${ext(a.u,'Visit ↗')}</div></div>`).join('')||'<p class="muted">No agencies match.</p>';}
+function renderVC(){if(!VOL)return;
+  $('#vc-list').innerHTML=VOL.cases.filter(c=>!vcReg||(vcReg==='India'?c.reg==='India'||/India/.test(c.reg):c.reg!=='India')).map(c=>`<div class="card lift vc" style="--k:var(--sdg${c.sdg})"><div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><h3 style="margin:0">${esc(c.co)}</h3><span class="pill">${esc(c.reg)}</span></div><div class="muted" style="margin-top:4px">${esc(c.model)}</div>
+    <div class="rep-stats">${c.stats.map(s=>`<div><b>${esc(s[0])}</b><span>${esc(s[1])}</span></div>`).join('')}</div><div style="font-size:.9rem"><b>Why it works:</b> ${esc(c.why)}</div><div class="src">Sources: ${c.src.map(s=>ext(s[1],esc(s[0]))).join(' · ')}</div></div>`).join('');}
+loadJSON('data/volunteering.json').then(d=>{VOL=d;$('#vol-updated').textContent='Last updated '+dfmt(d.updated)+'.';
+  $('#vol-bench').innerHTML=d.bench.map(b=>`<div class="card kpi lift" style="--k:var(--sdg${b.sdg})"><div class="v">${esc(b.big)}</div><div class="l">${esc(b.t)}</div><div class="s">${esc(b.s)} · ${ext(b.url,esc(b.src))}</div></div>`).join('');
+  chipGroup($('#vt-cat'),[['','All formats'],...Object.keys(VCAT).map(k=>[k,k])],'',v=>{vtCat=v;renderVT();});
+  ['vt-fmt','vt-time','vt-skill','vt-q'].forEach(id=>$('#'+id).addEventListener('input',renderVT));renderVT();
+  $$('#vf-q select').forEach(x=>x.addEventListener('change',renderVF));renderVF();
+  chipGroup($('#va-type'),[['','All agencies'],...[...new Set(d.agencies.map(a=>a.type))].map(t=>[t,t])],'',v=>{vaType=v;renderVA();});
+  ['va-reg','va-q'].forEach(id=>$('#'+id).addEventListener('input',renderVA));renderVA();
+  chipGroup($('#vc-reg'),[['','All programmes'],['India','India'],['Global','Global']],'',v=>{vcReg=v;renderVC();});renderVC();
+  $('#vp-law').innerHTML=d.law.map((l,i)=>`<div class="card flat" style="border-top:4px solid var(--sdg${[4,16,1,3,17][i%5]})"><b>${esc(l[0])}</b><p style="margin:.35rem 0 0;font-size:.9rem">${esc(l[1])}</p><div class="src">${ext(l[2],esc(l[3]))}</div></div>`).join('');
+  $('#vp-steps').innerHTML=d.steps.map((s,i)=>`<div class="card flat lift" style="border-top:4px solid var(--sdg${[10,5,3,4,9,14,7,13][i]})"><b>${i+1}. ${esc(s[0])}</b><p style="margin:.3rem 0 0;font-size:.88rem">${esc(s[1])}</p></div>`).join('');
+  $('#vp-metrics').innerHTML=d.metrics.map(m=>`<tr><td><b>${esc(m[0])}</b></td><td>${esc(m[1])}</td><td>${esc(m[2])}</td></tr>`).join('');
+  $('#vp-cal').innerHTML=d.calendar.map((c,i)=>`<div class="card flat" style="border-left:5px solid var(--sdg${[1,8,13,17,10,3,16,9][i%8]})"><b>${esc(c[0])}</b><div class="muted">${esc(c[1])}</div></div>`).join('');
+  $$('#v-volunteering .sec-h h3').forEach((h,i)=>h.style.setProperty('--u',`var(--sdg${[10,5,3,14][i%4]})`));
+}).catch(()=>{$('#vt-list').innerHTML='<p class="muted">Volunteering data could not be loaded.</p>';});
+
 /* ===== ESG ===== */
 $$('#v-esg .subtabs button').forEach(b=>b.onclick=()=>{$$('#v-esg .subtabs button').forEach(x=>x.classList.toggle('on',x===b));$$('#v-esg .subview').forEach(d=>d.classList.toggle('on',d.id==='esub-'+b.dataset.esub));});
 $('#v-esg .subtabs button').click();
@@ -1130,6 +1239,11 @@ let GIDX=null;
 function buildIdx(){const I=[];const add=(t,sub,k,fn)=>I.push({t,sub,k,fn,q:(t+' '+sub).toLowerCase()});
   [['whats-new',"What's New",9],['statistics','CSR Insights',16],['compliance-history','CSR law journey (timeline)',4],['compliance-howto','How to be CSR compliant',4],['compliance-checklist','CSR audit-ready checklist',4],['compliance-simulator','CSR compliance simulator',4],['compliance-updates','Compliance tracker',4],['awards','CSR & sustainability awards',11],['ngos','NGO directory',3],['esg','ESG frameworks',13]].forEach(([h,t,k])=>add(t,'Section',k,()=>go(h)));
   SCH7.forEach(r=>add(`Schedule VII (${r[0]}) — ${r[2]}`,'Eligible CSR activity',r[1],()=>go('compliance-howto',()=>{const d=$$('#sub-howto details')[2];d.open=true;d.scrollIntoView({behavior:'smooth'});})));
+  const vgo=(sub,fn)=>go('volunteering',()=>{$(`#v-volunteering .subtabs button[data-vsub=${sub}]`).click();fn&&fn();});
+  add('Employee volunteering','Section',10,()=>go('volunteering'));
+  if(VOL){VOL.types.forEach(x=>add(x.n,'Volunteering format · '+x.cat,x.sdg,()=>vgo('types',()=>{vtCat='';$('#vt-q').value=x.n;renderVT();flash($('#vt-list .card'));})));
+    VOL.agencies.forEach(a=>add(a.n,'Volunteering partner · '+a.type,10,()=>vgo('agencies',()=>{vaType='';$('#va-q').value=a.n;renderVA();flash($('#va-list .card'));})));
+    VOL.cases.forEach(c=>add(c.co,'Volunteering programme',c.sdg,()=>vgo('cases',()=>{vcReg='';renderVC();const h=findCard('#vc-list h3',c.co);if(h){h.closest('.card').scrollIntoView({behavior:'smooth',block:'center'});flash(h.closest('.card'));}})));}
   FW.forEach(f=>add(f[0],'ESG framework · '+f[2],13,()=>go('esg',()=>{$('#v-esg .subtabs button').click();$('#fw-q').value=f[0];renderFW();$('#fw-list .fw')&&($('#fw-list .fw').classList.add('open'),flash($('#fw-list .fw')));})));
   AWARDS.forEach(a=>add(a.n,'Award · '+a.sc+' · '+a.o,11,()=>{awScope='';awFee='';$$('#aw-scope .chip,#aw-fee .chip').forEach(c=>c.classList.toggle('on',c.dataset.v===''));renderAwards();goCard('awards','#awards-list h3',a.n);}));
   NGOS.forEach(o=>add(o.n,'NGO · '+o.th,o.sdg,()=>{ngoTheme='';$$('#ngo-theme .chip').forEach(c=>c.classList.toggle('on',c.dataset.v===''));renderNGOs();goCard('ngos','#ngo-list h3',o.n);}));

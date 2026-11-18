@@ -61,8 +61,8 @@
    "fy": "FY24",
    "value": 34908.75,
    "companies": 27188,
-   "src": "PIB / MCA (Mar 2026)",
-   "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2244948"
+   "src": "MCA via India CSR (27,188 companies); PIB 25 Mar 2026",
+   "url": "https://indiacsr.in/csr-spend-jumps-from-rs-10065-cr-to-rs-34908-cr-2024/"
   },
   {
    "fy": "FY25",
@@ -463,8 +463,8 @@
   }
  ],
  "fy25Themes": {
-  "label": "Fulcrum CSR Performance Report 2026",
-  "url": "https://indiacsr.in/?p=193955",
+  "label": "Fulcrum CSR Performance Report 2026 (FY 2024-25)",
+  "url": "https://indiacsr.in/?p=194212",
   "rows": [
    [
     "Education (excl. special education)",
@@ -500,7 +500,7 @@
  },
  "topListedFY24": {
   "label": "Prime Database (NSE-listed), FY 2023-24",
-  "url": "https://www.iasgyan.in/daily-current-affairs/corporate-social-responsibility-csr-spending",
+  "url": "https://businesstoday.in/latest/economy/story/maharashtra-rajasthan-tamil-nadu-these-10-states-received-60-of-the-total-csr-spend-by-india-inc-check-details-here-473862-2025-04-28",
   "rows": [
    [
     "HDFC Bank",
@@ -555,36 +555,78 @@
   ]
  },
  "topFY25": {
-  "label": "Prime Database / Fulcrum, FY 2024-25",
+  "label": "Prime Database (NSE-listed), FY 2024-25",
   "url": "https://indiacsr.in/nse-listed-companies-csr-spending-surges-2024-25/",
   "rows": [
    [
     "Reliance Industries",
+    "Oil, gas & conglomerate",
     1309.5
    ],
    [
     "HDFC Bank",
+    "Banking & finance",
     1068.03
+   ],
+   [
+    "TCS",
+    "IT services",
+    960.0
+   ],
+   [
+    "ONGC",
+    "Oil, gas & conglomerate",
+    929.08
+   ],
+   [
+    "ICICI Bank",
+    "Banking & finance",
+    801.12
+   ],
+   [
+    "Tata Steel",
+    "Metals & mining",
+    584.61
+   ],
+   [
+    "Indian Oil",
+    "Oil, gas & conglomerate",
+    583.03
+   ],
+   [
+    "Infosys",
+    "IT services",
+    526.26
+   ],
+   [
+    "ITC",
+    "FMCG",
+    461.5
+   ],
+   [
+    "NTPC",
+    "Power & utilities",
+    362.94
    ]
   ]
  },
  "industry": [
   {
    "k": "Oil & gas, refining",
-   "t": "Led CSR among India's top 100 listed firms in FY24, with PSUs like ONGC and Indian Oil among the biggest spenders; plant-district health, education and livelihood dominate.",
-   "src": "ICRA ESG via Board Stewardship",
-   "url": "https://boardstewardship.com/csr-spending-by-indias-top-100-firms-rises-29-to-rs-12897-crore/"
+   "t": "Reliance, ONGC and Indian Oil are all in the top 10 listed spenders in both FY24 and FY25; ONGC rose from ₹635 crore to ₹929 crore.",
+   "src": "Prime Database via India CSR",
+   "url": "https://indiacsr.in/nse-listed-companies-csr-spending-surges-2024-25/"
   },
   {
    "k": "Private banks & BFSI",
-   "t": "HDFC Bank and ICICI Bank sit in the national top 10; BFSI and energy firms with rural operations are lifting allocations to aspirational districts.",
-   "src": "Sattva via IndiaSpend",
-   "url": "https://www.indiaspend.com/data-viz/dataviz-how-indias-rs-34000-crore-csr-spending-is-distributed-974210"
+   "t": "HDFC Bank was the top listed spender in FY24 (₹945 crore) and second in FY25 (₹1,068 crore); ICICI Bank rose from ₹519 crore to ₹801 crore.",
+   "src": "Prime Database",
+   "url": "https://indiacsr.in/nse-listed-companies-csr-spending-surges-2024-25/"
   },
   {
    "k": "IT services & GCCs",
-   "t": "TCS and Infosys are top-10 spenders; Global Capability Centres spent ₹3,661 crore in FY25 (≈9% of national CSR), with strong tilt to education, skilling and tech-for-good.",
-   "src": "Sattva & India Data Insights",
+   "t": "TCS and Infosys are top-10 spenders; Global Capability Centres spent ₹3,661 crore in FY25 (about 9% of national CSR), growing at a 20.4% CAGR since FY15 vs 15% for all CSR.",
+   "src": "Sattva via People Matters",
    "url": "https://www.peoplematters.in/news/business/indias-gccs-increase-csr-spending-64x-in-a-decade-report-finds-52722"
   },
   {
@@ -594,23 +636,23 @@
    "url": "https://www.sattva.co.in/wp-content/uploads/2026/04/Why-60-of-Manufacturing-CSR-Stays-Within-Plant-Districts-April-2026.pdf"
   },
   {
-   "k": "Central PSUs",
-   "t": "CPSE CSR rose 19% to ₹4,911 crore in FY24; the top 10 CPSEs made up about 57% of it. Government-owned firms direct ~11% of budgets to aspirational districts, three times private firms.",
-   "src": "Business Standard (DPE survey); Sattva",
-   "url": "https://www.business-standard.com/amp/industry/news/csr-spending-by-cpses-surge-19-to-rs-4-911-cr-reaches-4-year-high-in-fy24-124122600925_1.html"
+   "k": "Government-owned companies",
+   "t": "Government-owned companies direct 11% of their CSR budgets to aspirational districts — three times the share of private firms. CPSE CSR rose 19% to ₹4,911 crore in FY24.",
+   "src": "Sattva via Newslaundry; Business Standard",
+   "url": "https://www.newslaundry.com/2025/12/22/how-indias-rs-34000-crore-csr-spending-is-distributed"
   },
   {
    "k": "Small & mid-size companies",
-   "t": "Companies with CSR budgets under ₹1 crore are far more likely to overspend; ~22,500 unlisted firms together spend roughly half of national CSR in small, fragmented amounts.",
-   "src": "Sattva; CRISIL",
-   "url": "https://coalitiongreenwich.crisil.com/content/dam/crisilcom2-0/our-analysis/reports/corporate/2025/01/uneven-states.pdf"
+   "t": "Companies with CSR budgets under ₹1 crore are far more likely to overspend: 765 firms spent at least twice their obligation in 2021-24, and 380 firms with no obligation still spent ₹809 crore.",
+   "src": "Sattva via IndiaSpend",
+   "url": "https://www.indiaspend.com/data-viz/dataviz-how-indias-rs-34000-crore-csr-spending-is-distributed-974210"
   }
  ],
  "insights": [
   {
    "big": "₹40,794 cr",
    "t": "Record CSR spend in FY 2024-25",
-   "s": "Up 17% in a year and 15% CAGR over the decade.",
+   "s": "Up 17% in a year; about 15% a year compounded since FY15 (₹10,066 crore).",
    "src": "Sattva",
    "url": "https://www.outlookbusiness.com/spotlight/pr-wire/indias-csr-spending-reaches-rs-40794-crore-in-fy25-funding-remains-unevenly-distributed-against-need-sattva-consulting-report",
    "sdg": 17
@@ -618,9 +660,9 @@
   {
    "big": "34%",
    "t": "Education's share of FY25 CSR",
-   "s": "₹13,877 crore — still the single biggest theme; healthcare follows at 21%.",
+   "s": "₹13,877 crore, up 14% in a year — still the biggest theme; healthcare follows at 21% (₹8,531 crore).",
    "src": "Fulcrum",
-   "url": "https://indiacsr.in/?p=193955",
+   "url": "https://indiacsr.in/?p=194212",
    "sdg": 4
   },
   {
@@ -635,8 +677,8 @@
    "big": "193",
    "t": "Districts that receive three-quarters of all CSR",
    "s": "Only 3 of 54 high-poverty districts are among the top recipients.",
-   "src": "Sattva",
-   "url": "https://www.sattva.co.in/wp-content/uploads/2025/10/CSRs-Next-act.pdf",
+   "src": "Sattva via Newslaundry",
+   "url": "https://www.newslaundry.com/2025/12/22/how-indias-rs-34000-crore-csr-spending-is-distributed",
    "sdg": 10
   },
   {
@@ -650,7 +692,7 @@
   {
    "big": "₹3,661 cr",
    "t": "CSR by Global Capability Centres in FY25",
-   "s": "About 9% of national CSR, growing ~20% a year since FY15.",
+   "s": "About 9% of national CSR; GCC CSR grew at a 20.4% CAGR since FY15 vs 15% for all CSR.",
    "src": "Sattva & IDI",
    "url": "https://www.peoplematters.in/news/business/indias-gccs-increase-csr-spending-64x-in-a-decade-report-finds-52722",
    "sdg": 9

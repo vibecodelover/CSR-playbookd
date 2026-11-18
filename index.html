@@ -375,11 +375,11 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
 
   <div class="sec-h"><h3>What each industry is doing</h3></div>
   <div class="grid g2" style="align-items:start">
-    <div class="card"><h3>Top 10 listed spenders, FY 2023-24 — grouped by industry</h3><p class="muted">₹ crore; hover for companies</p><div class="chartbox"><canvas id="c-ind"></canvas></div><div class="src" id="ind-src"></div></div>
+    <div class="card"><h3>Top 10 listed spenders, FY 2024-25 — grouped by industry</h3><p class="muted">₹ crore per industry (sum of its top-10 companies); hover for the companies</p><div class="chartbox"><canvas id="c-ind"></canvas></div><div class="src" id="ind-src"></div></div>
     <div class="grid" id="industry" style="gap:10px"></div>
   </div>
 
-  <div class="sec-h"><h3>FY 2024-25 by theme</h3></div>
+  <div class="sec-h"><h3>FY 2024-25 by theme</h3><span class="muted">Top 5 themes = 75% of ₹40,794 crore</span></div>
   <div class="grid g2">
     <div class="card"><div class="chartbox sm"><canvas id="c-fy25"></canvas></div><div class="src" id="fy25-src"></div></div>
     <div class="card"><h3>Top spenders</h3><div class="tbl" id="t-top"></div></div>
@@ -838,10 +838,11 @@ function buildStatsStatic(){
   $('#sector-src').innerHTML='Source: '+ext(STATS.sectorSource.url,esc(STATS.sectorSource.label))+' · '+ext('https://www.csr.gov.in','National CSR Portal (MCA)')+'. SDG colours are our indicative mapping.';$('#state-src').innerHTML='Source: '+ext(STATS.sectorSource.url,esc(STATS.sectorSource.label))+' · '+ext('https://www.csr.gov.in','National CSR Portal (MCA)')+'.';
   $('#sec-pick').innerHTML=STATS.sectors.map((s,i)=>`<option value="${i}">${esc(s.name)}</option>`).join('');
   $('#industry').innerHTML=STATS.industry.map((x,i)=>`<div class="card flat lift" style="border-left:5px solid var(--sdg${[7,8,9,12,16,10][i%6]})"><b>${esc(x.k)}</b><p style="margin:.3rem 0;font-size:.9rem">${esc(x.t)}</p><div class="src">${ext(x.url,esc(x.src))}</div></div>`).join('');
-  $('#ind-src').innerHTML='Source: '+ext(STATS.topListedFY24.url,esc(STATS.topListedFY24.label))+'. Grouping by industry is ours.';
+  $('#ind-src').innerHTML='Source: '+ext(STATS.topFY25.url,esc(STATS.topFY25.label))+' — amounts include admin and impact-assessment costs. Grouping by industry is ours.';
   $('#fy25-src').innerHTML='Source: '+ext(STATS.fy25Themes.url,esc(STATS.fy25Themes.label));
-  const t24=STATS.topListedFY24.rows, t25=Object.fromEntries(STATS.topFY25.rows);
-  $('#t-top').innerHTML=`<table><thead><tr><th>Company</th><th>Industry</th><th class="num">FY24 ₹ cr</th><th class="num">FY25 ₹ cr</th></tr></thead><tbody>${t24.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td class="num">${fmt(r[2])}</td><td class="num">${t25[r[0]]?fmt(t25[r[0]]):'—'}</td></tr>`).join('')}</tbody></table><div class="src" style="padding:0 10px 10px">${ext(STATS.topListedFY24.url,'FY24: Prime Database')} · ${ext(STATS.topFY25.url,'FY25: Prime / Fulcrum')}</div>`;
+  const t24=Object.fromEntries(STATS.topListedFY24.rows.map(r=>[r[0],r])), t25=Object.fromEntries(STATS.topFY25.rows.map(r=>[r[0],r]));
+  const names=[...new Set([...Object.keys(t25),...Object.keys(t24)])].sort((a,b)=>((t25[b]?t25[b][2]:0)-(t25[a]?t25[a][2]:0))||((t24[b]?t24[b][2]:0)-(t24[a]?t24[a][2]:0)));
+  $('#t-top').innerHTML=`<table><thead><tr><th>Company</th><th>Industry</th><th class="num">FY24 ₹ cr</th><th class="num">FY25 ₹ cr</th></tr></thead><tbody>${names.map(n=>{const a=t24[n],b=t25[n];return `<tr><td>${esc(n)}</td><td>${esc((b||a)[1])}</td><td class="num">${a?fmt(a[2]):'not in top 10'}</td><td class="num">${b?fmt(b[2]):'not in top 10'}</td></tr>`;}).join('')}</tbody></table><div class="src" style="padding:0 10px 10px">Top 10 NSE-listed spenders each year. ${ext(STATS.topListedFY24.url,'FY24: Prime Database')} · ${ext(STATS.topFY25.url,'FY25: Prime Database')}</div>`;
   // reports & landscape
   if(STATS.reports&&STATS.reports.length){
     const L=STATS.landscape;
@@ -863,13 +864,13 @@ function baseOpts(){const ink2=css('--ink-2'),grid=css('--grid'),surf=css('--sur
 function drawStats(){
   if(!window.Chart){$$('#v-statistics .chartbox').forEach(c=>c.innerHTML='<p class="muted">Charts could not load; see tables.</p>');$('#t-trend').classList.remove('hide');return;}
   const {grid,surf,tip}=baseOpts(), s16=SDG(16), tr=STATS.trend;
-  const tipCr={...tip,callbacks:{label:c=>'₹'+fmt(c.parsed.x??c.parsed.y)+' crore'}};
+  const tipCr={...tip,callbacks:{label:c=>'₹'+fmt(c.chart.options.indexAxis==='y'?c.parsed.x:c.parsed.y)+' crore'}};
   // trend
   const mk=mode=>{CH.trend&&CH.trend.destroy();
     if(mode==='yoy'){const lab=tr.slice(1).map(r=>r.fy),val=tr.slice(1).map((r,i)=>+(((r.value/tr[i].value)-1)*100).toFixed(1));
       CH.trend=new Chart($('#c-trend'),{type:'bar',data:{labels:lab,datasets:[{data:val,backgroundColor:val.map(v=>v>=0?s16:SDG(1)),borderRadius:4,barThickness:22}]},options:{maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{...tip,callbacks:{label:c=>c.parsed.y+'% vs previous year'}}},scales:{x:{grid:{display:false}},y:{grid:{color:grid},border:{display:false},ticks:{callback:v=>v+'%'}}}}});}
     else CH.trend=new Chart($('#c-trend'),{type:'line',data:{labels:tr.map(r=>r.fy),datasets:[{data:tr.map(r=>r.value),borderColor:s16,backgroundColor:s16+'22',fill:true,borderWidth:2.5,pointRadius:tr.map(r=>r.analyst?6:4),pointStyle:tr.map(r=>r.analyst?'rectRot':'circle'),pointBorderColor:surf,pointBorderWidth:2,tension:.3}]},
-      options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{display:false},tooltip:{...tip,callbacks:{label:c=>'₹'+fmt(c.parsed.y)+' crore'+(tr[c.dataIndex].analyst?' (analyst)':''),afterLabel:c=>tr[c.dataIndex].src}}},scales:{x:{grid:{display:false}},y:{beginAtZero:true,grid:{color:grid},border:{display:false},ticks:{callback:v=>'₹'+v/1000+'k'}}}}});};
+      options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{display:false},tooltip:{...tip,callbacks:{label:c=>'₹'+fmt(c.parsed.y)+' crore'+(tr[c.dataIndex].analyst?' (analyst)':''),afterLabel:c=>tr[c.dataIndex].src}}},scales:{x:{grid:{display:false}},y:{beginAtZero:true,grid:{color:grid},border:{display:false},ticks:{callback:v=>'₹'+fmt(v,0)+' cr'}}}}});};
   mk('abs');
   $$('[data-trend]').forEach(b=>b.onclick=()=>{$$('[data-trend]').forEach(x=>x.classList.toggle('on',x===b));const m=b.dataset.trend;$('#t-trend').classList.toggle('hide',m!=='tbl');$('#trend-box').classList.toggle('hide',m==='tbl');if(m!=='tbl')mk(m);});
   // sector + state by year
@@ -886,10 +887,10 @@ function drawStats(){
   const secDraw=i=>{const s=STATS.sectors[+i],c=SDG(s.sdg),y=STATS.sectorYears;CH.se&&CH.se.destroy();
     CH.se=new Chart($('#c-sec'),{type:'line',data:{labels:y,datasets:[{data:s.v,borderColor:c,backgroundColor:c+'22',fill:true,borderWidth:2.5,pointRadius:4,pointBorderColor:surf,pointBorderWidth:2,tension:.3}]},options:{maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:tipCr},scales:{x:{grid:{display:false}},y:{beginAtZero:true,grid:{color:grid},border:{display:false},ticks:{callback:v=>'₹'+fmt(v,0)}}}}});
     const tot=STATS.sectors.reduce((a,b)=>a+b.v[4],0),g=(Math.pow(s.v[4]/s.v[0],1/4)-1)*100;
-    $('#sec-facts').innerHTML=`<b style="color:${c}">SDG ${s.sdg}</b> · FY24: <b>₹${fmt(s.v[4])} cr</b> (${fmt(s.v[4]/tot*100,1)}% of total) · 4-yr CAGR <b>${isFinite(g)?fmt(g,1)+'%':'n/a'}</b>`;};
+    $('#sec-facts').innerHTML=`<b style="color:${c}">SDG ${s.sdg}</b> · FY24: <b>₹${fmt(s.v[4])} cr</b> (${fmt(s.v[4]/tot*100,1)}% of sector-tagged CSR) · 4-yr CAGR <b>${isFinite(g)?fmt(g,1)+'%':'n/a'}</b>`;};
   $('#sec-pick').onchange=e=>secDraw(e.target.value);secDraw(0);
   // industry grouping
-  const grp={};STATS.topListedFY24.rows.forEach(r=>{(grp[r[1]]=grp[r[1]]||{v:0,c:[]}).v+=r[2];grp[r[1]].c.push(r[0]);});
+  const grp={};STATS.topFY25.rows.forEach(r=>{(grp[r[1]]=grp[r[1]]||{v:0,c:[]}).v+=r[2];grp[r[1]].c.push(r[0]+' ₹'+fmt(r[2],0));});
   const gl=Object.entries(grp).sort((a,b)=>b[1].v-a[1].v), icol=[7,8,9,12,10,16];
   new Chart($('#c-ind'),{type:'bar',data:{labels:gl.map(g=>g[0]),datasets:[{data:gl.map(g=>+g[1].v.toFixed(2)),backgroundColor:gl.map((_,i)=>SDG(icol[i%6])),borderRadius:4,borderSkipped:'start',barThickness:18}]},options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{...tip,callbacks:{label:c=>'₹'+fmt(c.parsed.x)+' crore',afterLabel:c=>gl[c.dataIndex][1].c.join(', ')}}},scales:{x:{beginAtZero:true,grid:{color:grid},border:{display:false},ticks:{maxTicksLimit:5,callback:v=>'₹'+fmt(v,0)}},y:{grid:{display:false}}}}});
   const f=STATS.fy25Themes.rows;
@@ -1219,7 +1220,7 @@ function buildSDGBar(){
 }
 function sdgTip(b){const g=+b.dataset.g,t=$('#sdgtip'),hr=$('header.top').getBoundingClientRect(),r=b.getBoundingClientRect();
   const o=SDGV&&SDGV.by[g];t.style.setProperty('--k',`var(--sdg${g})`);
-  t.innerHTML=`<b>SDG ${g} · ${esc(SDGN[g-1])}</b>${o?`₹${fmt(o.v,0)} crore CSR in ${SDGV.yr} · ${fmt(o.v/SDGV.tot*100,1)}% of total`:(SDGV?'No CSR sector maps directly to this goal':'')}<br><span class="muted">Click to explore</span>`;
+  t.innerHTML=`<b>SDG ${g} · ${esc(SDGN[g-1])}</b>${o?`₹${fmt(o.v,0)} crore CSR in ${SDGV.yr} · ${fmt(o.v/SDGV.tot*100,1)}% of sector-tagged CSR`:(SDGV?'No CSR sector maps directly to this goal':'')}<br><span class="muted">Click to explore</span>`;
   let x=r.left+r.width/2-hr.left;x=Math.max(130,Math.min(hr.width-130,x));t.style.left=x+'px';t.classList.add('on');}
 function sdgGo(g){const o=SDGV&&SDGV.by[g];
   go('statistics',()=>{if(o){$('#sec-pick').value=o.top;$('#sec-pick').dispatchEvent(new Event('change'));$('#sec-pick').closest('.card').scrollIntoView({behavior:'smooth',block:'center'});flash($('#sec-pick').closest('.card'));}else{$('#fw-q')&&0;}});}

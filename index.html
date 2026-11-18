@@ -37,8 +37,7 @@ header.top{color:var(--hdr-ink);position:relative;z-index:40;transition:color .2
 .hdr{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
 .hdr-main{flex:1 1 520px}
 .hdr-search{position:relative;flex:0 1 360px;width:100%;margin-top:6px}
-.hdr-search input{width:100%;padding:11px 14px 11px 38px;border-radius:999px;border:1px solid color-mix(in srgb,var(--hdr-ink) 18%,transparent);background:color-mix(in srgb,var(--hdr-bg) 70%,transparent);color:var(--hdr-ink);backdrop-filter:blur(6px);font-size:.9rem}
-.hdr-search::before{content:"";position:absolute;z-index:2;pointer-events:none;left:14px;top:13px;width:16px;height:16px;opacity:.55;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23808080' stroke-width='2.4' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-4-4'/%3E%3C/svg%3E") center/contain no-repeat}
+.hdr-search input{width:100%;padding:11px 16px;border-radius:999px;border:1px solid color-mix(in srgb,var(--hdr-ink) 18%,transparent);background:color-mix(in srgb,var(--hdr-bg) 70%,transparent);color:var(--hdr-ink);backdrop-filter:blur(6px);font-size:.9rem}
 .hdr-search input:focus{outline:none;border-color:var(--sdg14);box-shadow:0 0 0 4px color-mix(in srgb,var(--sdg14) 25%,transparent)}
 .gs-res{position:absolute;left:0;right:0;top:calc(100% + 6px);background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:14px;box-shadow:0 14px 40px rgba(0,0,0,.18);overflow:hidden;display:none;max-height:420px;overflow-y:auto}
 .gs-res.on{display:block}
@@ -155,20 +154,29 @@ ul.clean{margin:.3rem 0;padding-left:1.1rem} ul.clean li{margin:.28rem 0}
 @media (max-width:880px){.news-grid{grid-template-columns:1fr}}
 .pick{border-top:4px solid var(--k);display:flex;flex-direction:column;gap:6px}
 .pick .t{font-weight:700;font-size:1rem;color:var(--ink)}
-/* slides */
-.slides{position:relative;overflow:hidden;border-radius:20px;background:#101820;color:#fff;min-height:250px}
-.slide{position:absolute;inset:0;padding:30px 34px;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateX(30px);transition:all .5s ease;pointer-events:none}
+/* slides (shared carousel) */
+.slides{position:relative;overflow:hidden;border-radius:20px;color:#fff;min-height:260px;background:var(--surface-2);box-shadow:var(--shadow)}
+.slide{position:absolute;inset:0;padding:30px 34px 56px;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateX(30px);transition:opacity .55s ease,transform .55s ease;pointer-events:none;
+ background:radial-gradient(460px 280px at 95% 0%,color-mix(in srgb,var(--k2) 75%,transparent),transparent 70%),radial-gradient(360px 240px at 0% 110%,color-mix(in srgb,var(--k3) 55%,transparent),transparent 70%),linear-gradient(135deg,color-mix(in srgb,var(--k) var(--m1),#000) 0%,color-mix(in srgb,var(--k) var(--m2),#06121c) 100%)}
 .slide.on{opacity:1;transform:none;pointer-events:auto}
-.slide .big{font-family:Fraunces,serif;font-size:clamp(2.4rem,7vw,4.2rem);font-weight:700;line-height:1;color:color-mix(in srgb,var(--k) 70%,#fff)}
+.slide .big{font-family:Fraunces,serif;font-size:clamp(2.4rem,7vw,4.2rem);font-weight:700;line-height:1;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.18)}
 .slide .t{font-size:1.25rem;font-weight:600;margin-top:10px}
-.slide .s{opacity:.8;margin-top:6px;max-width:640px}
-.slide .src a{color:#cfd8e3}
-.slide::before{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:var(--k)}
+.slide .s{opacity:.92;margin-top:6px;max-width:680px}
+.slide a{color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.5)}
+.slide .src{color:rgba(255,255,255,.85)}
+.slide .src a{color:#fff}
+.slide .meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:.78rem;font-weight:600;margin-bottom:12px}
+.slide .meta span{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.28);padding:2px 10px;border-radius:999px}
+.slide .hl{font-family:Fraunces,serif;font-size:clamp(1.35rem,3.2vw,2rem);font-weight:700;line-height:1.2;max-width:820px}
+.slide .hl a{text-decoration:none}.slide .hl a:hover{text-decoration:underline}
+.slide .go{display:inline-block;margin-top:14px;font-weight:600;font-size:.85rem;background:#fff;color:#141412;padding:7px 14px;border-radius:999px;text-decoration:none!important}
 .sl-nav{position:absolute;right:16px;bottom:14px;display:flex;gap:8px;align-items:center;z-index:2}
-.sl-nav button{font:inherit;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);color:#fff;cursor:pointer}
-.sl-dots{position:absolute;left:34px;bottom:18px;display:flex;gap:6px;z-index:2}
-.sl-dots i{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.35);cursor:pointer;transition:all .2s}
+.sl-nav button{font:inherit;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.45);background:rgba(255,255,255,.14);color:#fff;cursor:pointer;backdrop-filter:blur(4px)}
+.sl-nav button:hover{background:rgba(255,255,255,.28)}
+.sl-dots{position:absolute;left:34px;bottom:20px;display:flex;gap:6px;z-index:2}
+.sl-dots i{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.45);cursor:pointer;transition:all .2s}
 .sl-dots i.on{width:24px;background:#fff}
+.sl-count{position:absolute;right:20px;top:16px;font-size:.75rem;font-weight:600;opacity:.8;z-index:2}
 /* year slider */
 .yearbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin-bottom:14px}
 .yearbar .yr{font-family:Fraunces,serif;font-size:1.6rem;font-weight:700;min-width:70px}
@@ -262,6 +270,11 @@ details.acc .body{padding:0 18px 16px}
 .theme-fab .ic2{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--surface);font-size:.8rem}
 @media (max-width:640px){.theme-fab .lbl{display:none}.theme-fab{padding:10px}}
 html{transition:background .25s}
+dialog#ngo-dlg{max-width:680px;width:calc(100% - 32px);border:0;border-radius:18px;padding:0;background:var(--surface);color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35)}
+dialog#ngo-dlg form{padding:22px 24px 20px}
+dialog#ngo-dlg::backdrop{background:rgba(10,16,24,.55);backdrop-filter:blur(3px)}
+.dlg-bar{height:6px;margin:-22px -24px 18px;border-radius:18px 18px 0 0;background:linear-gradient(90deg,var(--sdg3),var(--sdg15),var(--sdg6),var(--sdg14),var(--sdg16))}
+.score-card{border-top:5px solid var(--sdg3)}
 footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);font-size:.8rem}
 .hide{display:none!important}
 .new{display:inline-block;background:var(--sdg9);color:#fff;font-size:.62rem;font-weight:700;padding:1px 6px;border-radius:5px;margin-left:6px;vertical-align:middle}
@@ -296,8 +309,8 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
 <section class="view" id="v-whats-new" style="--accent2:var(--sdg7)" data-accent="var(--sdg9)">
   <div class="hero-h"><h2>What's New in CSR &amp; ESG</h2><span class="badge">Updated daily</span></div>
   <p class="lede">News, research, events and rule changes, curated every morning. Headlines are paraphrased — open the source for the full story. <span id="news-updated" class="muted"></span></p>
-  <div class="grid g3" id="news-picks"></div>
-  <div class="sec-h"><h3>All stories</h3></div>
+  <div class="slides news-slides" id="news-slides" tabindex="0" aria-roledescription="carousel" aria-label="Featured stories"></div>
+  <div class="sec-h"><h3>All stories</h3><span class="muted">The featured carousel shows the 8 newest stories and refreshes with every daily update</span></div>
   <div class="chips" id="news-chips"></div>
   <div class="controls"><input type="search" id="news-q" placeholder="Search headlines…" aria-label="Search news" style="flex:1;min-width:220px"></div>
   <div class="grid news-grid">
@@ -320,6 +333,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
   <div class="hero-h"><h2>CSR insights</h2><span class="badge">Data refreshed weekly</span></div>
   <p class="lede">Ten years of mandatory CSR in India — how much, where, on what, and who is spending. Official MCA data, with the latest year from analyst reports until MCA publishes it. <span class="muted" id="stats-updated"></span></p>
   <div class="grid g4" id="kpis"></div>
+  <div class="src" id="kpi-src"></div>
 
   <div class="sec-h"><h3>Key insights</h3><span class="muted">Swipe or use the arrows</span></div>
   <div class="slides" id="slides" tabindex="0" aria-roledescription="carousel"></div>
@@ -346,7 +360,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
   <div class="sec-h"><h3>Sector explorer</h3></div>
   <div class="card">
     <div class="controls"><label class="f">Pick a development sector<select id="sec-pick"></select></label><div id="sec-facts" class="muted" style="flex:1;min-width:240px"></div></div>
-    <div class="chartbox sm"><canvas id="c-sec"></canvas></div>
+    <div class="chartbox sm"><canvas id="c-sec"></canvas></div><div class="src" id="secx-src"></div>
   </div>
 
   <div class="sec-h"><h3>What each industry is doing</h3></div>
@@ -546,7 +560,13 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
 <section class="view" id="v-ngos" style="--accent2:var(--sdg15)" data-accent="var(--sdg3)">
   <div class="hero-h"><h2>NGO directory</h2><span class="badge">Ranked by theme</span></div>
   <p class="lede">Established Indian NGOs with links to their websites, annual reports, audited financials and independent profiles. Scores are a starting point for due diligence, not an endorsement.</p>
-  <div class="callout"><b>Score (0–100):</b> 50% programme-spend ratio · 25% scale (≥₹500 cr = 100, ₹100–500 cr = 85, ₹50–100 cr = 70, ₹20–50 cr = 55, &lt;₹20 cr = 40) · 25% Give accreditation (Gold 100, Silver 80, Bronze 60, none found 50). Years differ by NGO and are shown on each card.</div>
+  <div class="card score-card" style="margin-bottom:14px"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center"><h3 style="margin:0">How the score works (0–100)</h3><button class="btn sm" id="ngo-disc-open">View disclaimer</button></div>
+   <div class="tbl" style="max-height:none;margin-top:10px"><table><thead><tr><th>Parameter</th><th class="num">Weight</th><th>How it is scored</th></tr></thead><tbody>
+<tr><td><b>Programme-spend ratio</b></td><td class="num">50%</td><td>Share of total expenses spent on programmes (vs fundraising and administration), as reported publicly. Score = the ratio itself.</td></tr>
+<tr><td><b>Scale of operations</b></td><td class="num">25%</td><td>Annual expenses: ≥ ₹500 cr = 100 · ₹100–500 cr = 85 · ₹50–100 cr = 70 · ₹20–50 cr = 55 · &lt; ₹20 cr = 40</td></tr>
+<tr><td><b>Independent accreditation</b></td><td class="num">25%</td><td>Give accreditation: Gold = 100 · Silver = 80 · Bronze = 60 · none found = 50</td></tr>
+</tbody></table></div>
+   <p class="muted" style="margin:.6rem 0 0">Public data only — NGO websites, annual reports, audited financials, Give Discover and HelpYourNGO. Financial years differ by NGO and are shown on each card. NGOs that don't publish a programme-spend ratio are listed but not scored. Ranks compare NGOs within the same theme. A score is a starting point for due diligence, not an endorsement.</p></div>
   <div class="card flat" style="margin-bottom:14px"><b>Verify before you fund</b><div class="linkrow">
     <a href="https://ngodarpan.gov.in" target="_blank" rel="noopener">NGO Darpan (NITI Aayog)</a>
     <a href="https://www.mca.gov.in" target="_blank" rel="noopener">MCA portal — CSR-1 / company master data</a>
@@ -617,6 +637,24 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
 </main>
 
 <button class="theme-fab" id="theme-fab" type="button" aria-label="Switch theme"><span class="ic2" id="theme-ic">☾</span><span class="lbl" id="theme-lbl">Dark mode</span></button>
+<dialog id="ngo-dlg" aria-labelledby="ngo-dlg-h"><form method="dialog">
+  <div class="dlg-bar"></div>
+  <h3 id="ngo-dlg-h" style="font-size:1.3rem">Before you open the NGO directory</h3>
+  <ul class="clean">
+   <li><b>Public data only.</b> Everything here comes from public sources — NGO websites, annual reports, audited financial statements, Give Discover and HelpYourNGO. Nothing was verified with the NGOs.</li>
+   <li><b>Not an endorsement.</b> Listing or ranking an NGO is not a recommendation and does not replace due diligence (CSR-1, 12A/80G, FCRA, NGO Darpan, site visits).</li>
+   <li><b>Figures differ by year</b> and may be out of date; each card shows the year used.</li>
+  </ul>
+  <b>Scoring parameters</b>
+  <div class="tbl" style="max-height:none;margin:8px 0 6px"><table><thead><tr><th>Parameter</th><th class="num">Weight</th><th>How it is scored</th></tr></thead><tbody>
+<tr><td><b>Programme-spend ratio</b></td><td class="num">50%</td><td>Share of total expenses spent on programmes (vs fundraising and administration), as reported publicly. Score = the ratio itself.</td></tr>
+<tr><td><b>Scale of operations</b></td><td class="num">25%</td><td>Annual expenses: ≥ ₹500 cr = 100 · ₹100–500 cr = 85 · ₹50–100 cr = 70 · ₹20–50 cr = 55 · &lt; ₹20 cr = 40</td></tr>
+<tr><td><b>Independent accreditation</b></td><td class="num">25%</td><td>Give accreditation: Gold = 100 · Silver = 80 · Bronze = 60 · none found = 50</td></tr>
+</tbody></table></div>
+  <p class="muted" style="margin:0 0 12px">Score = 0.5 × programme ratio + 0.25 × scale score + 0.25 × accreditation score. Ranks are within each theme.</p>
+  <label style="display:flex;gap:8px;align-items:center;font-size:.85rem;margin-bottom:14px"><input type="checkbox" id="ngo-dlg-skip"> Don't show this again in this browser</label>
+  <div style="display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap"><button class="btn" value="back" id="ngo-dlg-back">Go back</button><button class="btn primary" value="ok" autofocus>I understand — open directory</button></div>
+</form></dialog>
 <footer><div class="sdgstrip" aria-hidden="true" style="height:4px;margin-top:-24px;margin-bottom:24px"><i style="background:var(--sdg1)"></i><i style="background:var(--sdg2)"></i><i style="background:var(--sdg3)"></i><i style="background:var(--sdg4)"></i><i style="background:var(--sdg5)"></i><i style="background:var(--sdg6)"></i><i style="background:var(--sdg7)"></i><i style="background:var(--sdg8)"></i><i style="background:var(--sdg9)"></i><i style="background:var(--sdg10)"></i><i style="background:var(--sdg11)"></i><i style="background:var(--sdg12)"></i><i style="background:var(--sdg13)"></i><i style="background:var(--sdg14)"></i><i style="background:var(--sdg15)"></i><i style="background:var(--sdg16)"></i><i style="background:var(--sdg17)"></i></div><div class="wrap"><p>CSR Playbook India · Base data as of 17 November 2026. What's New, the compliance tracker and penalty cases refresh daily; statistics weekly. Not legal or investment advice. NGO scores use public data (Give Discover, HelpYourNGO, NGO reports) and are not endorsements. SDG colours are used for navigation and theme coding.</p></div></footer>
 
 <script>
@@ -646,11 +684,32 @@ function route(){
   const sec=$('#v-'+v); document.documentElement.style.setProperty('--accent',sec.dataset.accent);
   if(v==='compliance') showSub(csubs.includes(sub)?sub:curSub);
   if(v==='statistics' && STATS && !statsDrawn){drawStats();statsDrawn=true;}
+  if(v==='ngos') setTimeout(()=>ngoDialog(false),60);
+  else window._lastView=h;
   window.scrollTo({top:0});
 }
 function showSub(s){curSub=s;$$('#v-compliance .subtabs button').forEach(b=>b.classList.toggle('on',b.dataset.sub===s));$$('#v-compliance .subview').forEach(d=>d.classList.toggle('on',d.id==='sub-'+s));}
 $$('#v-compliance .subtabs button').forEach(b=>b.onclick=()=>{history.replaceState(null,'','#compliance-'+b.dataset.sub);showSub(b.dataset.sub);});
 window.addEventListener('hashchange',route);
+
+/* ===== shared carousel ===== */
+const LIGHTSDG=[2,6,7,9,11,12,14,15];
+function carousel(el,items,{render,color,interval=6500}){
+  if(!items.length){el.innerHTML='<p class="muted" style="padding:20px">Nothing to show yet.</p>';return;}
+  el.innerHTML=items.map((it,i)=>{const g=color(it,i),g2=g%17+1,g3=(g+15)%17+1,lt=LIGHTSDG.includes(g);
+    return `<div class="slide${i?'':' on'}" role="group" aria-roledescription="slide" aria-label="${i+1} of ${items.length}" style="--k:var(--sdg${g});--k2:var(--sdg${g2});--k3:var(--sdg${g3});--m1:${lt?'60%':'88%'};--m2:${lt?'42%':'62%'}">${render(it,i)}</div>`;}).join('')+
+   `<div class="sl-count"></div><div class="sl-dots">${items.map((_,i)=>`<i class="${i?'':'on'}" data-i="${i}"></i>`).join('')}</div><div class="sl-nav"><button class="sl-prev" aria-label="Previous">‹</button><button class="sl-pause" aria-label="Pause">❚❚</button><button class="sl-next" aria-label="Next">›</button></div>`;
+  const S=[...el.querySelectorAll('.slide')],D=[...el.querySelectorAll('.sl-dots i')],q=c=>el.querySelector(c);let cur=0,timer=null,user=false;
+  const show=n=>{cur=(n+S.length)%S.length;S.forEach((x,i)=>x.classList.toggle('on',i===cur));D.forEach((x,i)=>x.classList.toggle('on',i===cur));q('.sl-count').textContent=`${cur+1} / ${S.length}`;};
+  const play=()=>{clearInterval(timer);if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;timer=setInterval(()=>show(cur+1),interval);q('.sl-pause').textContent='❚❚';};
+  const stop=()=>{clearInterval(timer);timer=null;q('.sl-pause').textContent='▶';};
+  q('.sl-prev').onclick=()=>{show(cur-1);if(!user)play();};q('.sl-next').onclick=()=>{show(cur+1);if(!user)play();};
+  q('.sl-pause').onclick=()=>{if(timer){user=true;stop();}else{user=false;play();}};
+  D.forEach(d=>d.onclick=()=>{show(+d.dataset.i);if(!user)play();});
+  el.onmouseenter=()=>{if(timer)clearInterval(timer);};el.onmouseleave=()=>{if(!user)play();};
+  let x0=null;el.ontouchstart=e=>{x0=e.touches[0].clientX;};el.ontouchend=e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)show(cur+(dx<0?1:-1));x0=null;};
+  el.onkeydown=e=>{if(e.key==='ArrowRight')show(cur+1);if(e.key==='ArrowLeft')show(cur-1);};
+  show(0);play();}
 
 /* ===== feeds ===== */
 let NEWS=[],COMP=[],CASES=null,STATS=null;
@@ -669,8 +728,9 @@ function renderNews(){const q=$('#news-q').value.toLowerCase();
 $('#news-q').addEventListener('input',renderNews);
 loadJSON('data/news.json').then(d=>{NEWS=d.items||[];$('#news-updated').textContent='Last updated '+dfmt(d.updated)+'.';
   chipGroup($('#news-chips'),[['','All'],['CSR','CSR'],['ESG','ESG'],['Event','Events'],['India','India'],['Global','Global']],'',v=>{newsTag=v;renderNews();});
-  const top=[...NEWS].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3), ks=[9,16,13];
-  $('#news-picks').innerHTML=top.map((i,n)=>`<div class="card lift pick" style="--k:var(--sdg${ks[n]})"><span class="muted">${dfmt(i.date)} · ${esc(i.tag)}</span><div class="t">${ext(i.url,esc(i.title))}</div><div class="muted" style="font-size:.86rem">${esc(i.summary)}</div><div class="src">${esc(i.source)}</div></div>`).join('');
+  const top=[...NEWS].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,8),TC={CSR:[9,16,10,4],ESG:[13,14,3,6],Event:[10,8,11,17]},cnt={CSR:0,ESG:0,Event:0};
+  carousel($('#news-slides'),top,{color:i=>{const a=TC[i.tag]||[17];return a[(cnt[i.tag]=(cnt[i.tag]||0)+1)%a.length];},
+    render:i=>`<div class="meta"><span>${dfmt(i.date)}</span><span>${esc(i.tag)}</span><span>${esc(i.region)}</span></div><div class="hl">${ext(i.url,esc(i.title))}</div><div class="s">${esc(i.summary)}</div><div><a class="go" href="${esc(i.url)}" target="_blank" rel="noopener">Read on ${esc(i.source)} ↗</a></div>`});
   renderNews();PULSE.news=NEWS.length?[...NEWS].sort((a,b)=>b.date.localeCompare(a.date))[0]:null;renderPulse();}).catch(()=>{$('#news-feed').innerHTML='<p class="muted">The feed could not be loaded right now.</p>';});
 let compType='';
 function renderComp(){const list=COMP.filter(i=>!compType||i.type===compType).sort((a,b)=>b.date.localeCompare(a.date));
@@ -701,20 +761,15 @@ function buildStatsStatic(){
   $('#kpis').innerHTML=k.map((x,i)=>`<div class="card kpi" style="--k:var(--sdg${x[6]})"><div class="v" id="kv${i}">0</div><div class="l">${x[4]}</div><div class="s">${x[5]}</div></div>`).join('');
   k.forEach((x,i)=>countUp($('#kv'+i),x[0],x[1],x[2],x[3]));
   // slides
-  const S=STATS.insights;
-  $('#slides').innerHTML=S.map((s,i)=>`<div class="slide${i?'':' on'}" style="--k:${SDG(s.sdg)}"><div class="big">${esc(s.big)}</div><div class="t">${esc(s.t)}</div><div class="s">${esc(s.s)}</div><div class="src">${ext(s.url,esc(s.src))} · SDG ${s.sdg}</div></div>`).join('')+
-   `<div class="sl-dots">${S.map((_,i)=>`<i class="${i?'':'on'}" data-i="${i}"></i>`).join('')}</div><div class="sl-nav"><button id="sl-prev" aria-label="Previous">‹</button><button id="sl-pause" aria-label="Pause">❚❚</button><button id="sl-next" aria-label="Next">›</button></div>`;
-  let cur=0,timer=null;const go=n=>{cur=(n+S.length)%S.length;$$('.slide').forEach((s,i)=>s.classList.toggle('on',i===cur));$$('.sl-dots i').forEach((s,i)=>s.classList.toggle('on',i===cur));};
-  const play=()=>{clearInterval(timer);timer=setInterval(()=>go(cur+1),6000);$('#sl-pause').textContent='❚❚';}, stop=()=>{clearInterval(timer);timer=null;$('#sl-pause').textContent='▶';};
-  $('#sl-prev').onclick=()=>{go(cur-1);play();};$('#sl-next').onclick=()=>{go(cur+1);play();};$('#sl-pause').onclick=()=>timer?stop():play();
-  $$('.sl-dots i').forEach(d=>d.onclick=()=>{go(+d.dataset.i);play();});
-  let x0=null;$('#slides').addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});$('#slides').addEventListener('touchend',e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(cur+(dx<0?1:-1));play();}x0=null;});
-  $('#slides').addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1);});
-  if(!matchMedia('(prefers-reduced-motion: reduce)').matches) play();
+  carousel($('#slides'),STATS.insights,{color:x=>x.sdg,render:x=>`<div class="big">${esc(x.big)}</div><div class="t">${esc(x.t)}</div><div class="s">${esc(x.s)}</div><div class="src" style="margin-top:12px">Source: ${ext(x.url,esc(x.src))} · SDG ${x.sdg}</div>`});
   // tables & static lists
   $('#t-trend').innerHTML=`<table><thead><tr><th>Year</th><th class="num">₹ crore</th><th class="num">YoY</th><th>Source</th></tr></thead><tbody>${tr.map((r,i)=>`<tr><td>${r.fy}${r.analyst?' *':''}</td><td class="num">${fmt(r.value)}</td><td class="num">${i?fmt((r.value/tr[i-1].value-1)*100,1)+'%':'—'}</td><td>${ext(r.url,esc(r.src))}</td></tr>`).join('')}</tbody></table>`;
-  $('#trend-src').innerHTML='Sources per year in the table view. * = analyst estimate from MCA filings, replaced when MCA publishes official data. Recent years rise as late filings arrive.';
-  $('#sector-src').innerHTML=$('#state-src').innerHTML='Source: '+ext(STATS.sectorSource.url,esc(STATS.sectorSource.label));
+  const uq=[];tr.forEach(r=>{const e=uq.find(u=>u.url===r.url);if(e)e.fy.push(r.fy);else uq.push({src:r.src,url:r.url,fy:[r.fy]});});
+  const srcList=uq.map(u=>`${ext(u.url,esc(u.src))} (${u.fy.length>1?u.fy[0]+'–'+u.fy[u.fy.length-1]:u.fy[0]})`).join(' · ');
+  $('#trend-src').innerHTML=`Sources: ${srcList}. FY25 is an analyst estimate from MCA filings until MCA publishes official data; recent years rise as late filings arrive. Portal: ${ext('https://www.csr.gov.in','National CSR Portal (MCA)')}.`;
+  $('#kpi-src').innerHTML=`Sources: ${ext(tr[tr.length-1].url,esc(tr[tr.length-1].src))} (FY25) · ${ext(tr[tr.length-2].url,esc(tr[tr.length-2].src))} (FY24) · CAGR and cumulative total calculated from the yearly figures in the chart below.`;
+  $('#secx-src').innerHTML='Source: '+ext(STATS.sectorSource.url,esc(STATS.sectorSource.label))+' · '+ext('https://www.csr.gov.in','National CSR Portal')+'. Sector-to-SDG matching is indicative (ours).';
+  $('#sector-src').innerHTML='Source: '+ext(STATS.sectorSource.url,esc(STATS.sectorSource.label))+' · '+ext('https://www.csr.gov.in','National CSR Portal (MCA)')+'. SDG colours are our indicative mapping.';$('#state-src').innerHTML='Source: '+ext(STATS.sectorSource.url,esc(STATS.sectorSource.label))+' · '+ext('https://www.csr.gov.in','National CSR Portal (MCA)')+'.';
   $('#sec-pick').innerHTML=STATS.sectors.map((s,i)=>`<option value="${i}">${esc(s.name)}</option>`).join('');
   $('#industry').innerHTML=STATS.industry.map((x,i)=>`<div class="card flat lift" style="border-left:5px solid var(--sdg${[7,8,9,12,16,10][i%6]})"><b>${esc(x.k)}</b><p style="margin:.3rem 0;font-size:.9rem">${esc(x.t)}</p><div class="src">${ext(x.url,esc(x.src))}</div></div>`).join('');
   $('#ind-src').innerHTML='Source: '+ext(STATS.topListedFY24.url,esc(STATS.topListedFY24.label))+'. Grouping by industry is ours.';
@@ -1034,7 +1089,6 @@ $('#esg-steps').innerHTML=STEPS.map((s,i)=>`<div class="card flat lift" style="b
 const PULSE={news:null,cas:null,stat:null};
 function nextDeadline(){const now=new Date(),y=now.getFullYear();const c=[[y,3,30,'unspent (ongoing) → Unspent CSR Account'],[y,8,30,'unspent (one-time) → Schedule VII fund'],[y+1,3,30,'unspent (ongoing) → Unspent CSR Account']].map(([yy,m,d,t])=>({dt:new Date(yy,m,d,23,59),t})).filter(x=>x.dt>now).sort((a,b)=>a.dt-b.dt)[0];return {...c,days:Math.ceil((c.dt-now)/864e5)};}
 function renderPulse(){const dl=nextDeadline(),o=[];
-  if(PULSE.news)o.push(`<a href="#whats-new" style="--k:var(--sdg9)"><span class="d"></span><span class="k">Latest</span><span class="t">${esc(PULSE.news.title)}</span></a>`);
   o.push(`<a href="#compliance-howto" style="--k:var(--sdg4)"><span class="d"></span><span class="k">${dl.days} days to</span><span class="t">${dfmt(dl.dt.toISOString().slice(0,10))}: ${esc(dl.t)}</span></a>`);
   if(PULSE.stat)o.push(`<a href="#statistics" style="--k:var(--sdg16)"><span class="d"></span><span class="k">CSR ${esc(PULSE.stat.fy)}</span><span class="t">₹${fmt(PULSE.stat.value,0)} crore${PULSE.stat.analyst?' (analyst est.)':''}</span></a>`);
   if(PULSE.cas)o.push(`<a href="#compliance-simulator" style="--k:var(--sdg10)"><span class="d"></span><span class="k">Latest penalty</span><span class="t">${esc(PULSE.cas.who)}</span></a>`);
@@ -1101,6 +1155,13 @@ document.addEventListener('keydown',e=>{if(e.key==='/'&&!/input|textarea|select/
 /* ===== colour accents on section headings ===== */
 const UC=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17].sort((a,b)=>((a*7)%17)-((b*7)%17));
 $$('.sec-h h3').forEach((h,i)=>h.style.setProperty('--u',`var(--sdg${UC[i%17]})`));
+
+/* ===== NGO disclaimer dialog ===== */
+let ngoAck=false;try{ngoAck=sessionStorage.getItem('ngo-ack')==='1'||localStorage.getItem('ngo-ack')==='1';}catch(e){}
+function ngoDialog(force){const d=$('#ngo-dlg');if(!d||(!force&&ngoAck)||d.open)return;if(d.showModal)d.showModal();}
+$('#ngo-dlg').addEventListener('close',()=>{const d=$('#ngo-dlg');if(d.returnValue==='back'){go(window._lastView||'whats-new');return;}ngoAck=true;try{sessionStorage.setItem('ngo-ack','1');if($('#ngo-dlg-skip').checked)localStorage.setItem('ngo-ack','1');}catch(e){}});
+$('#ngo-dlg').addEventListener('cancel',()=>{ngoAck=true;try{sessionStorage.setItem('ngo-ack','1');}catch(e){}});
+$('#ngo-disc-open').onclick=()=>ngoDialog(true);
 
 /* ===== theme toggle ===== */
 const mqDark=matchMedia('(prefers-color-scheme: dark)');

@@ -118,7 +118,7 @@ ul.clean{margin:.3rem 0;padding-left:1.1rem} ul.clean li{margin:.28rem 0}
 .slides{position:relative;overflow:hidden;border-radius:20px;background:#101820;color:#fff;min-height:250px}
 .slide{position:absolute;inset:0;padding:30px 34px;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateX(30px);transition:all .5s ease;pointer-events:none}
 .slide.on{opacity:1;transform:none;pointer-events:auto}
-.slide .big{font-family:Fraunces,serif;font-size:clamp(2.4rem,7vw,4.2rem);font-weight:700;line-height:1;color:var(--k)}
+.slide .big{font-family:Fraunces,serif;font-size:clamp(2.4rem,7vw,4.2rem);font-weight:700;line-height:1;color:color-mix(in srgb,var(--k) 70%,#fff)}
 .slide .t{font-size:1.25rem;font-weight:600;margin-top:10px}
 .slide .s{opacity:.8;margin-top:6px;max-width:640px}
 .slide .src a{color:#cfd8e3}
@@ -209,6 +209,13 @@ details.acc .body{padding:0 18px 16px}
 .fw .more{display:none;margin-top:8px;font-size:.88rem;color:var(--ink-2)}
 .fw.open .more{display:block}
 .fw .h{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.rep{border-top:6px solid var(--k);animation:fade .25s ease}
+.rep .rh{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start}
+.rep-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:10px;margin:14px 0}
+.rep-stats div{background:var(--surface-2);border-radius:12px;padding:12px;border-left:4px solid var(--k)}
+.rep-stats b{display:block;font-family:Fraunces,serif;font-size:1.35rem;line-height:1.15}
+.rep-stats span{font-size:.8rem;color:var(--ink-2)}
+.rep .act{background:var(--tint);border-radius:10px;padding:10px 14px;margin-top:10px;font-size:.9rem}
 footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);font-size:.8rem}
 .hide{display:none!important}
 .new{display:inline-block;background:var(--sdg9);color:#fff;font-size:.62rem;font-weight:700;padding:1px 6px;border-radius:5px;margin-left:6px;vertical-align:middle}
@@ -266,6 +273,14 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
 
   <div class="sec-h"><h3>Key insights</h3><span class="muted">Swipe or use the arrows</span></div>
   <div class="slides" id="slides" tabindex="0" aria-roledescription="carousel"></div>
+
+  <div id="reports-block">
+  <div class="sec-h"><div><h3>India's giving at a glance</h3><p class="muted" style="margin:0" id="land-note"></p></div></div>
+  <div class="grid g4" id="landscape"></div>
+  <div class="sec-h"><h3>What the big reports say</h3><span class="muted">Pick a report</span></div>
+  <div class="chips" id="rep-chips"></div>
+  <div class="card rep" id="rep"></div>
+  </div>
 
   <div class="sec-h"><h3>The decade of CSR</h3>
     <div class="chips" style="margin:0"><button class="chip on" data-trend="abs">₹ crore</button><button class="chip" data-trend="yoy">Year-on-year growth</button><button class="chip" data-trend="tbl">Table</button></div></div>
@@ -655,6 +670,19 @@ function buildStatsStatic(){
   $('#fy25-src').innerHTML='Source: '+ext(STATS.fy25Themes.url,esc(STATS.fy25Themes.label));
   const t24=STATS.topListedFY24.rows, t25=Object.fromEntries(STATS.topFY25.rows);
   $('#t-top').innerHTML=`<table><thead><tr><th>Company</th><th>Industry</th><th class="num">FY24 ₹ cr</th><th class="num">FY25 ₹ cr</th></tr></thead><tbody>${t24.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td class="num">${fmt(r[2])}</td><td class="num">${t25[r[0]]?fmt(t25[r[0]]):'—'}</td></tr>`).join('')}</tbody></table><div class="src" style="padding:0 10px 10px">${ext(STATS.topListedFY24.url,'FY24: Prime Database')} · ${ext(STATS.topFY25.url,'FY25: Prime / Fulcrum')}</div>`;
+  // reports & landscape
+  if(STATS.reports&&STATS.reports.length){
+    const L=STATS.landscape;
+    if(L){$('#land-note').textContent=L.note;$('#landscape').innerHTML=L.tiles.map(t=>`<div class="card kpi lift" style="--k:var(--sdg${t.sdg})"><div class="v">${esc(t.big)}</div><div class="l">${esc(t.t)}</div><div class="s">${esc(t.s)} · ${ext(t.url,esc(t.src))}</div></div>`).join('');}
+    const R=STATS.reports;
+    const showRep=id=>{const r=R.find(x=>x.id===id)||R[0];const k=`var(--sdg${r.sdg})`;const el=$('#rep');el.style.setProperty('--k',k);
+      el.innerHTML=`<div class="rh"><div><h3 style="margin:0;font-size:1.3rem">${esc(r.name)}</h3><div class="muted">${esc(r.sub)} · ${esc(r.org)} · ${dfmt(r.date)}</div></div><a class="btn sm" href="${esc(r.url)}" target="_blank" rel="noopener">Open report ↗</a></div>
+        <div class="rep-stats">${r.stats.map(x=>`<div><b>${esc(x[0])}</b><span>${esc(x[1])}</span></div>`).join('')}</div>
+        <b>Key takeaways</b><ul class="clean">${r.take.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>
+        <div class="act"><b>For CSR teams:</b> ${esc(r.act)}</div>
+        <div class="src">Basis: ${esc(r.sample)}<br>Sources: ${r.src.map(x=>ext(x[1],esc(x[0]))).join(' · ')}</div>`;};
+    chipGroup($('#rep-chips'),R.map(r=>[r.id,r.name]),R[0].id,showRep);showRep(R[0].id);
+  } else $('#reports-block').classList.add('hide');
   $('#global').innerHTML=STATS.global.map((g,i)=>`<div class="card kpi" style="--k:var(--sdg${[17,14,12][i]})"><div class="v">${esc(g.big)}</div><div class="l">${esc(g.t)}</div><div class="s">${esc(g.s)} · ${ext(g.url,esc(g.src))}</div></div>`).join('');
 }
 let CH={};

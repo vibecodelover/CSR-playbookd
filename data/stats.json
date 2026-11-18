@@ -1,84 +1,1007 @@
 {
-  "updated": "2026-11-17",
-  "note": "Official figures: MCA National CSR Portal / Parliament replies. Latest year marked 'analyst' is from reports built on MCA filings and is replaced when MCA publishes official numbers.",
-  "trend": [
-    {"fy":"FY15","value":10065.93,"companies":16548,"src":"MCA via India CSR","url":"https://indiacsr.in/?p=191212"},
-    {"fy":"FY16","value":14527.59,"src":"Lok Sabha Q.314","url":"https://eparlib.nic.in/bitstream/123456789/952559/1/AS314.pdf"},
-    {"fy":"FY17","value":14344.40,"src":"Rajya Sabha Q.2112 (2022)","url":"https://rsdebate.nic.in/bitstream/123456789/729700/1/PQ_256_22032022_U2112_p122_p122.pdf"},
-    {"fy":"FY18","value":17097.66,"src":"Rajya Sabha Q.2112 (2022)","url":"https://rsdebate.nic.in/bitstream/123456789/729700/1/PQ_256_22032022_U2112_p122_p122.pdf"},
-    {"fy":"FY19","value":20163.18,"src":"Rajya Sabha Q.2112 (2022)","url":"https://rsdebate.nic.in/bitstream/123456789/729700/1/PQ_256_22032022_U2112_p122_p122.pdf"},
-    {"fy":"FY20","value":24965.82,"src":"Lok Sabha Q.2501 (Aug 2025)","url":"https://taxguru.in/company-law/csr-spending-details-data-access.html"},
-    {"fy":"FY21","value":26210.95,"src":"Lok Sabha Q.2501 (Aug 2025)","url":"https://taxguru.in/company-law/csr-spending-details-data-access.html"},
-    {"fy":"FY22","value":27141.45,"src":"Lok Sabha Q.2501 (Aug 2025)","url":"https://taxguru.in/company-law/csr-spending-details-data-access.html"},
-    {"fy":"FY23","value":30932.08,"src":"Lok Sabha Q.2501 (Aug 2025)","url":"https://taxguru.in/company-law/csr-spending-details-data-access.html"},
-    {"fy":"FY24","value":34908.75,"companies":27188,"src":"PIB / MCA (Mar 2026)","url":"https://pib.gov.in/PressReleasePage.aspx?PRID=2244948"},
-    {"fy":"FY25","value":40794,"analyst":true,"src":"Sattva State of CSR 2026 (MCA filings)","url":"https://www.outlookbusiness.com/spotlight/pr-wire/indias-csr-spending-reaches-rs-40794-crore-in-fy25-funding-remains-unevenly-distributed-against-need-sattva-consulting-report"}
-  ],
-  "sectorYears": ["FY20","FY21","FY22","FY23","FY24"],
-  "sectorSource": {"label":"Lok Sabha Unstarred Q.2501 (4 Aug 2025), MCA data","url":"https://taxguru.in/company-law/csr-spending-details-data-access.html"},
-  "sectors": [
-    {"name":"Education","sdg":4,"v":[7179.51,6693.25,6719.89,10414.93,12134.57]},
-    {"name":"Health care","sdg":3,"v":[4905.72,7325.83,8049.49,7023.60,7150.81]},
-    {"name":"Environmental sustainability","sdg":13,"v":[1470.53,1030.16,2441.82,2008.04,2429.97]},
-    {"name":"Rural development","sdg":11,"v":[2301.02,1850.71,1847.07,2059.41,2408.09]},
-    {"name":"Livelihood enhancement","sdg":8,"v":[1077.72,938.91,880.50,1703.64,2360.09]},
-    {"name":"Vocational skills","sdg":8,"v":[1181.23,717.65,1053.80,1206.75,1396.55]},
-    {"name":"Poverty, hunger, malnutrition","sdg":2,"v":[1159.71,1407.58,1903.78,1282.73,1233.93]},
-    {"name":"Other central govt funds (incl. PMNRF, PM CARES)","sdg":17,"v":[1790.69,3491.30,1631.01,1145.78,1000.83]},
-    {"name":"Art and culture","sdg":11,"v":[933.57,493.13,260.39,449.21,704.04]},
-    {"name":"Training to promote sports","sdg":3,"v":[304.00,243.39,311.71,542.53,692.09]},
-    {"name":"Animal welfare","sdg":15,"v":[106.12,193.55,174.35,325.44,531.14]},
-    {"name":"Women empowerment","sdg":5,"v":[259.57,206.00,264.94,417.26,454.22]},
-    {"name":"Conservation of natural resources","sdg":15,"v":[160.60,92.00,274.90,584.65,423.47]},
-    {"name":"Special education","sdg":4,"v":[196.88,209.24,191.08,319.50,396.57]},
-    {"name":"Sanitation","sdg":6,"v":[521.72,338.97,314.53,438.81,375.23]},
-    {"name":"Safe drinking water","sdg":6,"v":[253.40,203.13,192.34,252.78,327.45]},
-    {"name":"Gender equality","sdg":5,"v":[82.93,43.83,104.97,121.15,204.17]},
-    {"name":"Socio-economic equalities","sdg":10,"v":[214.88,149.81,165.30,159.19,200.81]},
-    {"name":"Senior citizens welfare","sdg":10,"v":[52.33,56.47,80.34,153.91,159.82]},
-    {"name":"Agro forestry","sdg":15,"v":[67.38,20.90,35.52,67.28,74.47]},
-    {"name":"Armed forces veterans & dependants","sdg":16,"v":[62.06,84.05,47.65,63.63,68.04]},
-    {"name":"Women's homes & hostels","sdg":5,"v":[48.50,44.52,101.00,49.50,41.80]},
-    {"name":"Slum area development","sdg":11,"v":[42.94,88.95,58.38,94.22,38.82]},
-    {"name":"Orphanages","sdg":1,"v":[36.50,21.88,27.54,44.99,31.57]},
-    {"name":"Technology incubators","sdg":9,"v":[53.50,62.62,8.57,1.48,1.91]}
-  ],
-  "states": [
-    {"name":"Maharashtra","v":[3353.24,3464.81,5407.40,5705.54,6065.95]},
-    {"name":"Karnataka","v":[1448.16,1277.81,1849.82,2058.73,2254.88]},
-    {"name":"Gujarat","v":[984.37,1461.60,1613.18,2060.02,2707.54]},
-    {"name":"Tamil Nadu","v":[1072.26,1174.07,1441.03,1637.12,1968.76]},
-    {"name":"Delhi","v":[830.00,724.59,1198.50,1517.07,1949.95]},
-    {"name":"Uttar Pradesh","v":[577.98,907.32,1345.02,1213.12,1545.01]},
-    {"name":"Odisha","v":[717.39,578.16,752.37,994.82,1389.39]},
-    {"name":"Rajasthan","v":[734.12,670.00,713.85,1122.65,1145.67]},
-    {"name":"Andhra Pradesh","v":[710.23,719.81,663.50,986.77,1129.75]},
-    {"name":"Telangana","v":[445.80,627.71,688.58,1040.61,1054.92]}
-  ],
-  "fy25Themes": {"label":"Fulcrum CSR Performance Report 2026","url":"https://indiacsr.in/?p=193955","rows":[["Education (excl. special education)",13877,34,4],["Healthcare",8531,21,3],["Environmental sustainability",3397,8,13],["Livelihood enhancement",2548,6,8],["Rural development",2477,6,11]]},
-  "topListedFY24": {"label":"Prime Database (NSE-listed), FY 2023-24","url":"https://www.iasgyan.in/daily-current-affairs/corporate-social-responsibility-csr-spending","rows":[["HDFC Bank","Banking & finance",945.31],["Reliance Industries","Oil, gas & conglomerate",900],["TCS","IT services",827],["ONGC","Oil, gas & conglomerate",634.57],["Tata Steel","Metals & mining",580.02],["ICICI Bank","Banking & finance",518.87],["Indian Oil","Oil, gas & conglomerate",457.71],["Infosys","IT services",455.67],["ITC","FMCG",404.05],["Power Grid","Power & utilities",330.48]]},
-  "topFY25": {"label":"Prime Database / Fulcrum, FY 2024-25","url":"https://indiacsr.in/nse-listed-companies-csr-spending-surges-2024-25/","rows":[["Reliance Industries",1309.50],["HDFC Bank",1068.03]]},
-  "industry": [
-    {"k":"Oil & gas, refining","t":"Led CSR among India's top 100 listed firms in FY24, with PSUs like ONGC and Indian Oil among the biggest spenders; plant-district health, education and livelihood dominate.","src":"ICRA ESG via Board Stewardship","url":"https://boardstewardship.com/csr-spending-by-indias-top-100-firms-rises-29-to-rs-12897-crore/"},
-    {"k":"Private banks & BFSI","t":"HDFC Bank and ICICI Bank sit in the national top 10; BFSI and energy firms with rural operations are lifting allocations to aspirational districts.","src":"Sattva via IndiaSpend","url":"https://www.indiaspend.com/data-viz/dataviz-how-indias-rs-34000-crore-csr-spending-is-distributed-974210"},
-    {"k":"IT services & GCCs","t":"TCS and Infosys are top-10 spenders; Global Capability Centres spent ₹3,661 crore in FY25 (≈9% of national CSR), with strong tilt to education, skilling and tech-for-good.","src":"Sattva & India Data Insights","url":"https://www.peoplematters.in/news/business/indias-gccs-increase-csr-spending-64x-in-a-decade-report-finds-52722"},
-    {"k":"Manufacturing (steel, cement, auto)","t":"About 60% of manufacturing CSR stays within the districts where plants operate — place-based, community-licence-driven giving.","src":"Sattva (Apr 2026)","url":"https://www.sattva.co.in/wp-content/uploads/2026/04/Why-60-of-Manufacturing-CSR-Stays-Within-Plant-Districts-April-2026.pdf"},
-    {"k":"Central PSUs","t":"CPSE CSR rose 19% to ₹4,911 crore in FY24; the top 10 CPSEs made up about 57% of it. Government-owned firms direct ~11% of budgets to aspirational districts, three times private firms.","src":"Business Standard (DPE survey); Sattva","url":"https://www.business-standard.com/amp/industry/news/csr-spending-by-cpses-surge-19-to-rs-4-911-cr-reaches-4-year-high-in-fy24-124122600925_1.html"},
-    {"k":"Small & mid-size companies","t":"Companies with CSR budgets under ₹1 crore are far more likely to overspend; ~22,500 unlisted firms together spend roughly half of national CSR in small, fragmented amounts.","src":"Sattva; CRISIL","url":"https://coalitiongreenwich.crisil.com/content/dam/crisilcom2-0/our-analysis/reports/corporate/2025/01/uneven-states.pdf"}
-  ],
-  "insights": [
-    {"big":"₹40,794 cr","t":"Record CSR spend in FY 2024-25","s":"Up 17% in a year and 15% CAGR over the decade.","src":"Sattva","url":"https://www.outlookbusiness.com/spotlight/pr-wire/indias-csr-spending-reaches-rs-40794-crore-in-fy25-funding-remains-unevenly-distributed-against-need-sattva-consulting-report","sdg":17},
-    {"big":"34%","t":"Education's share of FY25 CSR","s":"₹13,877 crore — still the single biggest theme; healthcare follows at 21%.","src":"Fulcrum","url":"https://indiacsr.in/?p=193955","sdg":4},
-    {"big":"37%","t":"Companies under-spending in FY24, down from 66% in FY20","s":"The 2021 penalty regime is working: 63% now spend more than prescribed.","src":"CareEdge via Business Today","url":"https://www.businesstoday.in/amp/latest/corporate/story/hdfc-reliance-industries-top-csr-contributors-in-india-careedge-514961-2026-02-06","sdg":16},
-    {"big":"193","t":"Districts that receive three-quarters of all CSR","s":"Only 3 of 54 high-poverty districts are among the top recipients.","src":"Sattva","url":"https://www.sattva.co.in/wp-content/uploads/2025/10/CSRs-Next-act.pdf","sdg":10},
-    {"big":"3×","t":"What a 5% shift would do for high-need districts","s":"Redirecting 5% of FY25 CSR would triple what they receive today.","src":"Sattva","url":"https://theprint.in/ani-press-releases/indias-csr-spending-reaches-rs-40794-crore-in-fy25-funding-remains-unevenly-distributed-against-need-sattva-consulting-report/3081507/","sdg":1},
-    {"big":"₹3,661 cr","t":"CSR by Global Capability Centres in FY25","s":"About 9% of national CSR, growing ~20% a year since FY15.","src":"Sattva & IDI","url":"https://www.peoplematters.in/news/business/indias-gccs-increase-csr-spending-64x-in-a-decade-report-finds-52722","sdg":9},
-    {"big":"120%","t":"Growth of CSR to industrial districts (3 yrs to FY24)","s":"Tier-2 cities grew 55% — CSR is following plants, not metros.","src":"Sattva via Newslaundry","url":"https://www.newslaundry.com/2025/12/22/how-indias-rs-34000-crore-csr-spending-is-distributed","sdg":11},
-    {"big":"10%","t":"New cap for CSR via Social Stock Exchange ZCZP","s":"From 27 May 2026 — a new route to fund listed non-profits.","src":"Corporatelaws.in","url":"https://corporatelaws.in/2026/07/companies-csr-policy-amendment-rules-2026.html","sdg":17}
-  ],
-  "global": [
-    {"big":"$43.7 bn","t":"US corporate giving, 2025","s":"7% of $617.2 bn total US giving; flat after inflation.","url":"https://givingusa.org/giving-usa-charitable-giving-rose-to-617-20-billion-in-2025-surpassing-the-600-billion-mark-for-the-first-time/","src":"Giving USA 2026"},
-    {"big":"$23.5 M","t":"Median community investment per large company, 2025","s":"52% of companies cut giving; 42% expect 2026 budgets to fall.","url":"https://www.3blmedia.com/news/cecps-giving-numbersr-2026-edition-finds-corporate-giving-holding-steady-despite-most","src":"CECP Giving in Numbers 2026"},
-    {"big":"~1%","t":"US corporate giving as share of pre-tax profit","s":"India mandates 2% of average net profit for qualifying companies.","url":"https://foundationsource.com/?p=5799","src":"Foundation Source"}
+ "updated": "2026-11-18",
+ "note": "Official figures: MCA National CSR Portal / Parliament replies. Latest year marked 'analyst' is from reports built on MCA filings and is replaced when MCA publishes official numbers.",
+ "trend": [
+  {
+   "fy": "FY15",
+   "value": 10065.93,
+   "companies": 16548,
+   "src": "MCA via India CSR",
+   "url": "https://indiacsr.in/?p=191212"
+  },
+  {
+   "fy": "FY16",
+   "value": 14527.59,
+   "src": "Lok Sabha Q.314",
+   "url": "https://eparlib.nic.in/bitstream/123456789/952559/1/AS314.pdf"
+  },
+  {
+   "fy": "FY17",
+   "value": 14344.4,
+   "src": "Rajya Sabha Q.2112 (2022)",
+   "url": "https://rsdebate.nic.in/bitstream/123456789/729700/1/PQ_256_22032022_U2112_p122_p122.pdf"
+  },
+  {
+   "fy": "FY18",
+   "value": 17097.66,
+   "src": "Rajya Sabha Q.2112 (2022)",
+   "url": "https://rsdebate.nic.in/bitstream/123456789/729700/1/PQ_256_22032022_U2112_p122_p122.pdf"
+  },
+  {
+   "fy": "FY19",
+   "value": 20163.18,
+   "src": "Rajya Sabha Q.2112 (2022)",
+   "url": "https://rsdebate.nic.in/bitstream/123456789/729700/1/PQ_256_22032022_U2112_p122_p122.pdf"
+  },
+  {
+   "fy": "FY20",
+   "value": 24965.82,
+   "src": "Lok Sabha Q.2501 (Aug 2025)",
+   "url": "https://taxguru.in/company-law/csr-spending-details-data-access.html"
+  },
+  {
+   "fy": "FY21",
+   "value": 26210.95,
+   "src": "Lok Sabha Q.2501 (Aug 2025)",
+   "url": "https://taxguru.in/company-law/csr-spending-details-data-access.html"
+  },
+  {
+   "fy": "FY22",
+   "value": 27141.45,
+   "src": "Lok Sabha Q.2501 (Aug 2025)",
+   "url": "https://taxguru.in/company-law/csr-spending-details-data-access.html"
+  },
+  {
+   "fy": "FY23",
+   "value": 30932.08,
+   "src": "Lok Sabha Q.2501 (Aug 2025)",
+   "url": "https://taxguru.in/company-law/csr-spending-details-data-access.html"
+  },
+  {
+   "fy": "FY24",
+   "value": 34908.75,
+   "companies": 27188,
+   "src": "PIB / MCA (Mar 2026)",
+   "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=2244948"
+  },
+  {
+   "fy": "FY25",
+   "value": 40794,
+   "analyst": true,
+   "src": "Sattva State of CSR 2026 (MCA filings)",
+   "url": "https://www.outlookbusiness.com/spotlight/pr-wire/indias-csr-spending-reaches-rs-40794-crore-in-fy25-funding-remains-unevenly-distributed-against-need-sattva-consulting-report"
+  }
+ ],
+ "sectorYears": [
+  "FY20",
+  "FY21",
+  "FY22",
+  "FY23",
+  "FY24"
+ ],
+ "sectorSource": {
+  "label": "Lok Sabha Unstarred Q.2501 (4 Aug 2025), MCA data",
+  "url": "https://taxguru.in/company-law/csr-spending-details-data-access.html"
+ },
+ "sectors": [
+  {
+   "name": "Education",
+   "sdg": 4,
+   "v": [
+    7179.51,
+    6693.25,
+    6719.89,
+    10414.93,
+    12134.57
+   ]
+  },
+  {
+   "name": "Health care",
+   "sdg": 3,
+   "v": [
+    4905.72,
+    7325.83,
+    8049.49,
+    7023.6,
+    7150.81
+   ]
+  },
+  {
+   "name": "Environmental sustainability",
+   "sdg": 13,
+   "v": [
+    1470.53,
+    1030.16,
+    2441.82,
+    2008.04,
+    2429.97
+   ]
+  },
+  {
+   "name": "Rural development",
+   "sdg": 11,
+   "v": [
+    2301.02,
+    1850.71,
+    1847.07,
+    2059.41,
+    2408.09
+   ]
+  },
+  {
+   "name": "Livelihood enhancement",
+   "sdg": 8,
+   "v": [
+    1077.72,
+    938.91,
+    880.5,
+    1703.64,
+    2360.09
+   ]
+  },
+  {
+   "name": "Vocational skills",
+   "sdg": 8,
+   "v": [
+    1181.23,
+    717.65,
+    1053.8,
+    1206.75,
+    1396.55
+   ]
+  },
+  {
+   "name": "Poverty, hunger, malnutrition",
+   "sdg": 2,
+   "v": [
+    1159.71,
+    1407.58,
+    1903.78,
+    1282.73,
+    1233.93
+   ]
+  },
+  {
+   "name": "Other central govt funds (incl. PMNRF, PM CARES)",
+   "sdg": 17,
+   "v": [
+    1790.69,
+    3491.3,
+    1631.01,
+    1145.78,
+    1000.83
+   ]
+  },
+  {
+   "name": "Art and culture",
+   "sdg": 11,
+   "v": [
+    933.57,
+    493.13,
+    260.39,
+    449.21,
+    704.04
+   ]
+  },
+  {
+   "name": "Training to promote sports",
+   "sdg": 3,
+   "v": [
+    304.0,
+    243.39,
+    311.71,
+    542.53,
+    692.09
+   ]
+  },
+  {
+   "name": "Animal welfare",
+   "sdg": 15,
+   "v": [
+    106.12,
+    193.55,
+    174.35,
+    325.44,
+    531.14
+   ]
+  },
+  {
+   "name": "Women empowerment",
+   "sdg": 5,
+   "v": [
+    259.57,
+    206.0,
+    264.94,
+    417.26,
+    454.22
+   ]
+  },
+  {
+   "name": "Conservation of natural resources",
+   "sdg": 15,
+   "v": [
+    160.6,
+    92.0,
+    274.9,
+    584.65,
+    423.47
+   ]
+  },
+  {
+   "name": "Special education",
+   "sdg": 4,
+   "v": [
+    196.88,
+    209.24,
+    191.08,
+    319.5,
+    396.57
+   ]
+  },
+  {
+   "name": "Sanitation",
+   "sdg": 6,
+   "v": [
+    521.72,
+    338.97,
+    314.53,
+    438.81,
+    375.23
+   ]
+  },
+  {
+   "name": "Safe drinking water",
+   "sdg": 6,
+   "v": [
+    253.4,
+    203.13,
+    192.34,
+    252.78,
+    327.45
+   ]
+  },
+  {
+   "name": "Gender equality",
+   "sdg": 5,
+   "v": [
+    82.93,
+    43.83,
+    104.97,
+    121.15,
+    204.17
+   ]
+  },
+  {
+   "name": "Socio-economic equalities",
+   "sdg": 10,
+   "v": [
+    214.88,
+    149.81,
+    165.3,
+    159.19,
+    200.81
+   ]
+  },
+  {
+   "name": "Senior citizens welfare",
+   "sdg": 10,
+   "v": [
+    52.33,
+    56.47,
+    80.34,
+    153.91,
+    159.82
+   ]
+  },
+  {
+   "name": "Agro forestry",
+   "sdg": 15,
+   "v": [
+    67.38,
+    20.9,
+    35.52,
+    67.28,
+    74.47
+   ]
+  },
+  {
+   "name": "Armed forces veterans & dependants",
+   "sdg": 16,
+   "v": [
+    62.06,
+    84.05,
+    47.65,
+    63.63,
+    68.04
+   ]
+  },
+  {
+   "name": "Women's homes & hostels",
+   "sdg": 5,
+   "v": [
+    48.5,
+    44.52,
+    101.0,
+    49.5,
+    41.8
+   ]
+  },
+  {
+   "name": "Slum area development",
+   "sdg": 11,
+   "v": [
+    42.94,
+    88.95,
+    58.38,
+    94.22,
+    38.82
+   ]
+  },
+  {
+   "name": "Orphanages",
+   "sdg": 1,
+   "v": [
+    36.5,
+    21.88,
+    27.54,
+    44.99,
+    31.57
+   ]
+  },
+  {
+   "name": "Technology incubators",
+   "sdg": 9,
+   "v": [
+    53.5,
+    62.62,
+    8.57,
+    1.48,
+    1.91
+   ]
+  }
+ ],
+ "states": [
+  {
+   "name": "Maharashtra",
+   "v": [
+    3353.24,
+    3464.81,
+    5407.4,
+    5705.54,
+    6065.95
+   ]
+  },
+  {
+   "name": "Karnataka",
+   "v": [
+    1448.16,
+    1277.81,
+    1849.82,
+    2058.73,
+    2254.88
+   ]
+  },
+  {
+   "name": "Gujarat",
+   "v": [
+    984.37,
+    1461.6,
+    1613.18,
+    2060.02,
+    2707.54
+   ]
+  },
+  {
+   "name": "Tamil Nadu",
+   "v": [
+    1072.26,
+    1174.07,
+    1441.03,
+    1637.12,
+    1968.76
+   ]
+  },
+  {
+   "name": "Delhi",
+   "v": [
+    830.0,
+    724.59,
+    1198.5,
+    1517.07,
+    1949.95
+   ]
+  },
+  {
+   "name": "Uttar Pradesh",
+   "v": [
+    577.98,
+    907.32,
+    1345.02,
+    1213.12,
+    1545.01
+   ]
+  },
+  {
+   "name": "Odisha",
+   "v": [
+    717.39,
+    578.16,
+    752.37,
+    994.82,
+    1389.39
+   ]
+  },
+  {
+   "name": "Rajasthan",
+   "v": [
+    734.12,
+    670.0,
+    713.85,
+    1122.65,
+    1145.67
+   ]
+  },
+  {
+   "name": "Andhra Pradesh",
+   "v": [
+    710.23,
+    719.81,
+    663.5,
+    986.77,
+    1129.75
+   ]
+  },
+  {
+   "name": "Telangana",
+   "v": [
+    445.8,
+    627.71,
+    688.58,
+    1040.61,
+    1054.92
+   ]
+  }
+ ],
+ "fy25Themes": {
+  "label": "Fulcrum CSR Performance Report 2026",
+  "url": "https://indiacsr.in/?p=193955",
+  "rows": [
+   [
+    "Education (excl. special education)",
+    13877,
+    34,
+    4
+   ],
+   [
+    "Healthcare",
+    8531,
+    21,
+    3
+   ],
+   [
+    "Environmental sustainability",
+    3397,
+    8,
+    13
+   ],
+   [
+    "Livelihood enhancement",
+    2548,
+    6,
+    8
+   ],
+   [
+    "Rural development",
+    2477,
+    6,
+    11
+   ]
   ]
+ },
+ "topListedFY24": {
+  "label": "Prime Database (NSE-listed), FY 2023-24",
+  "url": "https://www.iasgyan.in/daily-current-affairs/corporate-social-responsibility-csr-spending",
+  "rows": [
+   [
+    "HDFC Bank",
+    "Banking & finance",
+    945.31
+   ],
+   [
+    "Reliance Industries",
+    "Oil, gas & conglomerate",
+    900
+   ],
+   [
+    "TCS",
+    "IT services",
+    827
+   ],
+   [
+    "ONGC",
+    "Oil, gas & conglomerate",
+    634.57
+   ],
+   [
+    "Tata Steel",
+    "Metals & mining",
+    580.02
+   ],
+   [
+    "ICICI Bank",
+    "Banking & finance",
+    518.87
+   ],
+   [
+    "Indian Oil",
+    "Oil, gas & conglomerate",
+    457.71
+   ],
+   [
+    "Infosys",
+    "IT services",
+    455.67
+   ],
+   [
+    "ITC",
+    "FMCG",
+    404.05
+   ],
+   [
+    "Power Grid",
+    "Power & utilities",
+    330.48
+   ]
+  ]
+ },
+ "topFY25": {
+  "label": "Prime Database / Fulcrum, FY 2024-25",
+  "url": "https://indiacsr.in/nse-listed-companies-csr-spending-surges-2024-25/",
+  "rows": [
+   [
+    "Reliance Industries",
+    1309.5
+   ],
+   [
+    "HDFC Bank",
+    1068.03
+   ]
+  ]
+ },
+ "industry": [
+  {
+   "k": "Oil & gas, refining",
+   "t": "Led CSR among India's top 100 listed firms in FY24, with PSUs like ONGC and Indian Oil among the biggest spenders; plant-district health, education and livelihood dominate.",
+   "src": "ICRA ESG via Board Stewardship",
+   "url": "https://boardstewardship.com/csr-spending-by-indias-top-100-firms-rises-29-to-rs-12897-crore/"
+  },
+  {
+   "k": "Private banks & BFSI",
+   "t": "HDFC Bank and ICICI Bank sit in the national top 10; BFSI and energy firms with rural operations are lifting allocations to aspirational districts.",
+   "src": "Sattva via IndiaSpend",
+   "url": "https://www.indiaspend.com/data-viz/dataviz-how-indias-rs-34000-crore-csr-spending-is-distributed-974210"
+  },
+  {
+   "k": "IT services & GCCs",
+   "t": "TCS and Infosys are top-10 spenders; Global Capability Centres spent ₹3,661 crore in FY25 (≈9% of national CSR), with strong tilt to education, skilling and tech-for-good.",
+   "src": "Sattva & India Data Insights",
+   "url": "https://www.peoplematters.in/news/business/indias-gccs-increase-csr-spending-64x-in-a-decade-report-finds-52722"
+  },
+  {
+   "k": "Manufacturing (steel, cement, auto)",
+   "t": "About 60% of manufacturing CSR stays within the districts where plants operate — place-based, community-licence-driven giving.",
+   "src": "Sattva (Apr 2026)",
+   "url": "https://www.sattva.co.in/wp-content/uploads/2026/04/Why-60-of-Manufacturing-CSR-Stays-Within-Plant-Districts-April-2026.pdf"
+  },
+  {
+   "k": "Central PSUs",
+   "t": "CPSE CSR rose 19% to ₹4,911 crore in FY24; the top 10 CPSEs made up about 57% of it. Government-owned firms direct ~11% of budgets to aspirational districts, three times private firms.",
+   "src": "Business Standard (DPE survey); Sattva",
+   "url": "https://www.business-standard.com/amp/industry/news/csr-spending-by-cpses-surge-19-to-rs-4-911-cr-reaches-4-year-high-in-fy24-124122600925_1.html"
+  },
+  {
+   "k": "Small & mid-size companies",
+   "t": "Companies with CSR budgets under ₹1 crore are far more likely to overspend; ~22,500 unlisted firms together spend roughly half of national CSR in small, fragmented amounts.",
+   "src": "Sattva; CRISIL",
+   "url": "https://coalitiongreenwich.crisil.com/content/dam/crisilcom2-0/our-analysis/reports/corporate/2025/01/uneven-states.pdf"
+  }
+ ],
+ "insights": [
+  {
+   "big": "₹40,794 cr",
+   "t": "Record CSR spend in FY 2024-25",
+   "s": "Up 17% in a year and 15% CAGR over the decade.",
+   "src": "Sattva",
+   "url": "https://www.outlookbusiness.com/spotlight/pr-wire/indias-csr-spending-reaches-rs-40794-crore-in-fy25-funding-remains-unevenly-distributed-against-need-sattva-consulting-report",
+   "sdg": 17
+  },
+  {
+   "big": "34%",
+   "t": "Education's share of FY25 CSR",
+   "s": "₹13,877 crore — still the single biggest theme; healthcare follows at 21%.",
+   "src": "Fulcrum",
+   "url": "https://indiacsr.in/?p=193955",
+   "sdg": 4
+  },
+  {
+   "big": "37%",
+   "t": "Companies under-spending in FY24, down from 66% in FY20",
+   "s": "The 2021 penalty regime is working: 63% now spend more than prescribed.",
+   "src": "CareEdge via Business Today",
+   "url": "https://www.businesstoday.in/amp/latest/corporate/story/hdfc-reliance-industries-top-csr-contributors-in-india-careedge-514961-2026-02-06",
+   "sdg": 16
+  },
+  {
+   "big": "193",
+   "t": "Districts that receive three-quarters of all CSR",
+   "s": "Only 3 of 54 high-poverty districts are among the top recipients.",
+   "src": "Sattva",
+   "url": "https://www.sattva.co.in/wp-content/uploads/2025/10/CSRs-Next-act.pdf",
+   "sdg": 10
+  },
+  {
+   "big": "3×",
+   "t": "What a 5% shift would do for high-need districts",
+   "s": "Redirecting 5% of FY25 CSR would triple what they receive today.",
+   "src": "Sattva",
+   "url": "https://theprint.in/ani-press-releases/indias-csr-spending-reaches-rs-40794-crore-in-fy25-funding-remains-unevenly-distributed-against-need-sattva-consulting-report/3081507/",
+   "sdg": 1
+  },
+  {
+   "big": "₹3,661 cr",
+   "t": "CSR by Global Capability Centres in FY25",
+   "s": "About 9% of national CSR, growing ~20% a year since FY15.",
+   "src": "Sattva & IDI",
+   "url": "https://www.peoplematters.in/news/business/indias-gccs-increase-csr-spending-64x-in-a-decade-report-finds-52722",
+   "sdg": 9
+  },
+  {
+   "big": "120%",
+   "t": "Growth of CSR to industrial districts (3 yrs to FY24)",
+   "s": "Tier-2 cities grew 55% — CSR is following plants, not metros.",
+   "src": "Sattva via Newslaundry",
+   "url": "https://www.newslaundry.com/2025/12/22/how-indias-rs-34000-crore-csr-spending-is-distributed",
+   "sdg": 11
+  },
+  {
+   "big": "49%",
+   "t": "Share of CSR from just 200 companies",
+   "s": "The other 29,046 companies run small projects averaging ₹18 lakh.",
+   "src": "Give Grants, dus spoke India Inc 2026",
+   "url": "https://lapaasvoice.com/indias-top-200-companies-account-for-49-of-total-csr-spending-give-grants-study-finds",
+   "sdg": 10
+  },
+  {
+   "big": "₹16 lakh cr",
+   "t": "India's social-sector funding gap, FY25",
+   "s": "Private philanthropy must grow above 25% a year to stop it widening.",
+   "src": "Bain & Dasra, India Philanthropy Report 2026",
+   "url": "https://www.bain.com/insights/india-philanthropy-report-2026/",
+   "sdg": 17
+  },
+  {
+   "big": "₹54,000 cr",
+   "t": "What Indian households give every year",
+   "s": "More than all mandatory CSR — but mostly informal.",
+   "src": "CSIP Ashoka, How India Gives 2025–26",
+   "url": "https://thecsruniverse.com/articles/ashoka-university-s-how-india-gives-2025-26-finds-68-indians-contribute-540-billion-annually",
+   "sdg": 1
+  }
+ ],
+ "global": [
+  {
+   "big": "$43.7 bn",
+   "t": "US corporate giving, 2025",
+   "s": "7% of $617.2 bn total US giving; flat after inflation.",
+   "url": "https://givingusa.org/giving-usa-charitable-giving-rose-to-617-20-billion-in-2025-surpassing-the-600-billion-mark-for-the-first-time/",
+   "src": "Giving USA 2026"
+  },
+  {
+   "big": "$23.5 M",
+   "t": "Median community investment per large company, 2025",
+   "s": "52% of companies cut giving; 42% expect 2026 budgets to fall.",
+   "url": "https://www.3blmedia.com/news/cecps-giving-numbersr-2026-edition-finds-corporate-giving-holding-steady-despite-most",
+   "src": "CECP Giving in Numbers 2026"
+  },
+  {
+   "big": "~1%",
+   "t": "US corporate giving as share of pre-tax profit",
+   "s": "India mandates 2% of average net profit for qualifying companies.",
+   "url": "https://foundationsource.com/?p=5799",
+   "src": "Foundation Source"
+  }
+ ],
+ "landscape": {
+  "note": "FY 2024-25 estimates from different studies. They overlap (private philanthropy includes CSR and family giving) and use different methods, so they should not be added up.",
+  "tiles": [
+   {
+    "big": "₹1.43 lakh cr",
+    "t": "Private philanthropy (CSR + family + retail)",
+    "s": "Growing 9–11% a year; needs >25% to stop the gap widening",
+    "src": "Bain & Dasra, India Philanthropy Report 2026",
+    "url": "https://www.bain.com/insights/india-philanthropy-report-2026/",
+    "sdg": 17
+   },
+   {
+    "big": "₹54,000 cr",
+    "t": "Everyday household giving",
+    "s": "Cash, in-kind and volunteering; 68% of Indians give",
+    "src": "CSIP Ashoka, How India Gives 2025–26",
+    "url": "https://thecsruniverse.com/articles/ashoka-university-s-how-india-gives-2025-26-finds-68-indians-contribute-540-billion-annually",
+    "sdg": 1
+   },
+   {
+    "big": "₹40,794 cr",
+    "t": "Mandatory CSR spend",
+    "s": "Record year; up 17% on FY24",
+    "src": "Sattva, State of CSR 2026",
+    "url": "https://www.outlookbusiness.com/spotlight/pr-wire/indias-csr-spending-reaches-rs-40794-crore-in-fy25-funding-remains-unevenly-distributed-against-need-sattva-consulting-report",
+    "sdg": 16
+   },
+   {
+    "big": "₹10,380 cr",
+    "t": "Personal giving by India's top 191 donors",
+    "s": "Up 85% in three years",
+    "src": "EdelGive Hurun India Philanthropy List 2025",
+    "url": "https://www.outlookmoney.com/amp/story/ampstories/web-stories/indias-top-10-philanthropists-2025-shiv-nadar-tops-the-list",
+    "sdg": 10
+   }
+  ]
+ },
+ "reports": [
+  {
+   "id": "dus",
+   "name": "dus spoke India Inc 2026",
+   "sub": "Trends, Insights & Voices — 3rd edition",
+   "org": "Give Grants",
+   "date": "2026-10-22",
+   "sdg": 17,
+   "url": "https://give.do/givegrants/dusspokeindiainc",
+   "sample": "MCA filings of 29,500+ companies; surveys of 67 CSR leaders and 200 non-profit leaders; interviews with CSR leaders from 31 organisations",
+   "stats": [
+    [
+     "49%",
+     "of all CSR spend comes from the top 200 companies"
+    ],
+    [
+     "₹1.6 cr vs ₹18 lakh",
+     "Average project size: top 200 vs the other 29,046 companies"
+    ],
+    [
+     "91%",
+     "of non-profits rank longer grants among their top three asks"
+    ],
+    [
+     "17%",
+     "of non-profits get more than 10% overhead support; 10% get none"
+    ],
+    [
+     "22% vs 93%",
+     "Companies matching employee donations: India vs global"
+    ],
+    [
+     "₹1,850 cr",
+     "Untapped yearly employee giving and volunteering opportunity"
+    ]
+   ],
+   "take": [
+    "Place-based giving is concentrated: Tata Steel alone accounts for 41% of Jharkhand's CSR, and five mining and metals firms for 53% of Odisha's.",
+    "Accountability is seen differently: 82% of CSR teams say projects share accountability, but only 40% of non-profits agree.",
+    "Only 44% of the top 100 CSR spenders have a dedicated CSR head.",
+    "Social Stock Exchange interest is early: 67% of CSR teams open to it would route residual CSR funds through it.",
+    "India's corporate giving is 0.9% of corporate profits, within the 0.6–1.4% seen in the US, France and China; CSR is projected to cross ₹1.1 lakh crore by FY35."
+   ],
+   "act": "Fund multi-year, cover real overheads, and use employee giving to extend the CSR budget.",
+   "src": [
+    [
+     "India CSR (12 Nov 2026)",
+     "https://indiacsr.in/non-profits-seek-longer-csr-grants/"
+    ],
+    [
+     "Lapaas Voice",
+     "https://lapaasvoice.com/indias-top-200-companies-account-for-49-of-total-csr-spending-give-grants-study-finds"
+    ],
+    [
+     "Business News Week (22 Oct 2026)",
+     "https://businessnewsweek.in/business/give-grants-2026-report-highlights-employee-donation-matching-gap-between-indian-companies-and-global-peers/"
+    ],
+    [
+     "2024 first edition (PDF)",
+     "https://give.do/givegrants/wp-content/uploads/2024/04/dus-spoke-India-Inc_Report.pdf"
+    ]
+   ]
+  },
+  {
+   "id": "ipr",
+   "name": "India Philanthropy Report 2026",
+   "sub": "The step change India needs",
+   "org": "Bain & Company and Dasra",
+   "date": "2026-02-25",
+   "sdg": 10,
+   "url": "https://www.bain.com/insights/india-philanthropy-report-2026/",
+   "sample": "Sizing of public, CSR, family, retail and foreign funding for India's social sector, FY20–FY30",
+   "stats": [
+    [
+     "₹27 lakh cr",
+     "Total social-sector funding in FY25 (13% CAGR since FY20)"
+    ],
+    [
+     "95%",
+     "of that funding is public spending"
+    ],
+    [
+     "₹16 lakh cr",
+     "Funding gap in FY25 vs NITI Aayog norms; ₹18 lakh cr by FY30"
+    ],
+    [
+     "₹1.43 lakh cr",
+     "Private philanthropy in FY25, growing 9–11% a year"
+    ],
+    [
+     "42%",
+     "of private giving comes from families (personal + family-business CSR)"
+    ],
+    [
+     "65–75%",
+     "of private-sector CSR comes from family-owned or family-run businesses"
+    ]
+   ],
+   "take": [
+    "Private giving would have to grow above 25% a year just to stop the gap from widening.",
+    "Family giving is broadening beyond legacy causes to gender and inclusion, climate, livelihoods, arts and heritage, and animal welfare.",
+    "Women lead philanthropy in over 60% of giving families, and younger generations increasingly decide.",
+    "Investing in philanthropy infrastructure could unlock ₹1.25–1.35 lakh crore by FY30; institutions beyond the metros are the gap."
+   ],
+   "act": "Position CSR as catalytic capital: co-fund with families and government, and build NGO and intermediary capacity.",
+   "src": [
+    [
+     "Bain & Company",
+     "https://www.bain.com/insights/india-philanthropy-report-2026/"
+    ],
+    [
+     "Dasra",
+     "https://dasra.org/individual-resources/176"
+    ],
+    [
+     "YourStory",
+     "https://yourstory.com/socialstory/2026/02/private-sector-giving-india-development-growth"
+    ]
+   ]
+  },
+  {
+   "id": "hig",
+   "name": "How India Gives 2025–26",
+   "sub": "Household giving — 3rd edition",
+   "org": "Centre for Social Impact & Philanthropy, Ashoka University",
+   "date": "2026-02-20",
+   "sdg": 1,
+   "url": "https://thecsruniverse.com/articles/ashoka-university-s-how-india-gives-2025-26-finds-68-indians-contribute-540-billion-annually",
+   "sample": "7,225 surveys and 20 qualitative interviews across 20 states in 11 languages",
+   "stats": [
+    [
+     "₹54,000 cr",
+     "Everyday household giving per year"
+    ],
+    [
+     "68%",
+     "of Indians give in some form — cash, in-kind or time"
+    ],
+    [
+     "45.9%",
+     "of individual donations go to religious organisations"
+    ],
+    [
+     "41.8%",
+     "go directly to people begging"
+    ]
+   ],
+   "take": [
+    "Households give more each year than all mandatory CSR, but mostly informally and outside organised non-profits.",
+    "Giving cuts across income levels, and participation rises as incomes grow.",
+    "In-kind giving leads, followed by cash."
+   ],
+   "act": "A large, untapped retail base: payroll giving and matching can channel everyday generosity to credible NGOs.",
+   "src": [
+    [
+     "TheCSRUniverse",
+     "https://thecsruniverse.com/articles/ashoka-university-s-how-india-gives-2025-26-finds-68-indians-contribute-540-billion-annually"
+    ],
+    [
+     "Free Press Journal",
+     "https://www.freepressjournal.in/business/459-individual-donations-go-to-religious-bodies-418-given-directly-to-beggars-how-india-gives-report"
+    ],
+    [
+     "CSIP research",
+     "https://csip.ashoka.edu.in/?p=1236"
+    ]
+   ]
+  },
+  {
+   "id": "sattva",
+   "name": "State of CSR 2026",
+   "sub": "India CSR report on FY25 filings",
+   "org": "Sattva Consulting",
+   "date": "2026-04",
+   "sdg": 16,
+   "url": "https://www.outlookbusiness.com/spotlight/pr-wire/indias-csr-spending-reaches-rs-40794-crore-in-fy25-funding-remains-unevenly-distributed-against-need-sattva-consulting-report",
+   "sample": "MCA CSR filings, FY15–FY25",
+   "stats": [
+    [
+     "₹40,794 cr",
+     "CSR spend in FY25, a record"
+    ],
+    [
+     "193",
+     "districts receive three-quarters of all CSR"
+    ],
+    [
+     "3 of 54",
+     "high-poverty districts are among the top recipients"
+    ],
+    [
+     "₹3,661 cr",
+     "CSR from Global Capability Centres in FY25"
+    ]
+   ],
+   "take": [
+    "CSR follows plants and offices: about 60% of manufacturing CSR stays in plant districts.",
+    "Shifting just 5% of CSR could triple funding to high-need districts."
+   ],
+   "act": "Add a need lens to geography — aspirational and high-poverty districts are underfunded.",
+   "src": [
+    [
+     "Outlook Business",
+     "https://www.outlookbusiness.com/spotlight/pr-wire/indias-csr-spending-reaches-rs-40794-crore-in-fy25-funding-remains-unevenly-distributed-against-need-sattva-consulting-report"
+    ]
+   ]
+  },
+  {
+   "id": "hurun",
+   "name": "EdelGive Hurun India Philanthropy List 2025",
+   "sub": "12th edition — personal giving, FY25",
+   "org": "EdelGive Foundation and Hurun India",
+   "date": "2025-11-06",
+   "sdg": 8,
+   "url": "https://yourstory.com/socialstory/2025/11/shiv-nadar-family-retains-top-spot-in-edelgive-hurun-list",
+   "sample": "Cash or cash-equivalent donations, 1 Apr 2024 – 31 Mar 2025",
+   "stats": [
+    [
+     "₹10,380 cr",
+     "given by 191 philanthropists, up 85% in three years"
+    ],
+    [
+     "₹2,708 cr",
+     "Shiv Nadar & family — most generous for the 4th time in 5 years"
+    ],
+    [
+     "101",
+     "self-made philanthropists on the list"
+    ],
+    [
+     "28%",
+     "of the total came from 57 Mumbai-based donors"
+    ]
+   ],
+   "take": [
+    "Top five: Shiv Nadar & family, Mukesh Ambani & family, the Bajaj family, Kumar Mangalam Birla & family, Gautam Adani & family.",
+    "Rohini Nilekani (₹204 cr) is the most generous woman on the list.",
+    "More new-age wealth gives through personal foundations, outside CSR."
+   ],
+   "act": "Family foundations are natural co-funders for CSR programmes; the 2026 list usually lands in early November.",
+   "src": [
+    [
+     "YourStory",
+     "https://yourstory.com/socialstory/2025/11/shiv-nadar-family-retains-top-spot-in-edelgive-hurun-list"
+    ],
+    [
+     "Business Today",
+     "https://www.businesstoday.in/india/story/hurun-india-philanthropy-list-2025-shiv-nadar-tops-list-with-rs2708-cr-donation-check-full-list-501042-2025-11-06"
+    ],
+    [
+     "Free Press Journal",
+     "https://www.freepressjournal.in/mumbai/mumbai-stands-out-as-indias-philanthropy-capital-for-2025-as-57-individuals-donate-more-than-2600-crores-to-various-social-causes"
+    ]
+   ]
+  }
+ ]
 }

@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>try{var t=localStorage.getItem('csr-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <style>
 :root{
   --bg:#f5f4ef; --surface:#fdfdfb; --surface-2:#f0eee7; --line:#e3e0d6;
@@ -16,19 +17,21 @@
   --sdg1:#E5243B;--sdg2:#DDA63A;--sdg3:#4C9F38;--sdg4:#C5192D;--sdg5:#FF3A21;--sdg6:#26BDE2;--sdg7:#FCC30B;--sdg8:#A21942;--sdg9:#FD6925;--sdg10:#DD1367;--sdg11:#FD9D24;--sdg12:#BF8B2E;--sdg13:#3F7E44;--sdg14:#0A97D9;--sdg15:#56C02B;--sdg16:#00689D;--sdg17:#19486A;
   --r:16px; --shadow:0 1px 2px rgba(0,0,0,.04),0 6px 20px rgba(0,0,0,.05);
 }
+:root{--hdr-bg:#ffffff;--hdr-ink:#141412;--link:#19486A;color-scheme:light}
 @media (prefers-color-scheme: dark){
-  :root{--bg:#111110;--surface:#1a1a18;--surface-2:#24241f;--line:#34332e;--ink:#f1f0eb;--ink-2:#c6c4bb;--ink-3:#8f8d85;--grid:#2c2b27;--tint:#1f2a31;
-  --ok:#5fd07e;--okbg:#16301e;--warn:#f2c47a;--warnbg:#3a2a10;--bad:#ff8a80;--badbg:#3a1616;}
+  :root:not([data-theme=light]){--bg:#111110;--surface:#1a1a18;--surface-2:#24241f;--line:#34332e;--ink:#f1f0eb;--ink-2:#c6c4bb;--ink-3:#8f8d85;--grid:#2c2b27;--tint:#1f2a31;
+  --ok:#5fd07e;--okbg:#16301e;--warn:#f2c47a;--warnbg:#3a2a10;--bad:#ff8a80;--badbg:#3a1616;--hdr-bg:#101820;--hdr-ink:#fff;--link:#8cc7ff;color-scheme:dark}
 }
+:root[data-theme=dark]{--bg:#111110;--surface:#1a1a18;--surface-2:#24241f;--line:#34332e;--ink:#f1f0eb;--ink-2:#c6c4bb;--ink-3:#8f8d85;--grid:#2c2b27;--tint:#1f2a31;
+  --ok:#5fd07e;--okbg:#16301e;--warn:#f2c47a;--warnbg:#3a2a10;--bad:#ff8a80;--badbg:#3a1616;--hdr-bg:#101820;--hdr-ink:#fff;--link:#8cc7ff;color-scheme:dark}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
-a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-@media (prefers-color-scheme: dark){a{color:#8cc7ff}}
+a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
 h1,h2,h3,h4{font-family:Fraunces,Georgia,serif;letter-spacing:-.01em;line-height:1.2;margin:0}
 h2{font-size:1.6rem} h3{font-size:1.12rem;margin-bottom:.35rem} h4{font-size:1rem}
 .wrap{max-width:1200px;margin:0 auto;padding:0 18px}
 /* header */
-header.top{background:#101820;color:#fff;position:relative;overflow:hidden}
+header.top{background:var(--hdr-bg);color:var(--hdr-ink);position:relative;overflow:hidden;transition:background .25s,color .25s}
 header.top .wrap{padding:26px 18px 22px;position:relative;z-index:1}
 header.top h1{font-size:2rem}
 header.top p{margin:.35rem 0 0;opacity:.85;max-width:780px}
@@ -216,6 +219,11 @@ details.acc .body{padding:0 18px 16px}
 .rep-stats b{display:block;font-family:Fraunces,serif;font-size:1.35rem;line-height:1.15}
 .rep-stats span{font-size:.8rem;color:var(--ink-2)}
 .rep .act{background:var(--tint);border-radius:10px;padding:10px 14px;margin-top:10px;font-size:.9rem}
+.theme-fab{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;align-items:center;gap:8px;font:inherit;font-size:.85rem;font-weight:600;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,.18);transition:transform .15s,background .25s,color .25s}
+.theme-fab:hover{transform:translateY(-2px)}
+.theme-fab .ic2{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--surface);font-size:.8rem}
+@media (max-width:640px){.theme-fab .lbl{display:none}.theme-fab{padding:10px}}
+html{transition:background .25s}
 footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);font-size:.8rem}
 .hide{display:none!important}
 .new{display:inline-block;background:var(--sdg9);color:#fff;font-size:.62rem;font-weight:700;padding:1px 6px;border-radius:5px;margin-left:6px;vertical-align:middle}
@@ -566,6 +574,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
 </section>
 </main>
 
+<button class="theme-fab" id="theme-fab" type="button" aria-label="Switch theme"><span class="ic2" id="theme-ic">☾</span><span class="lbl" id="theme-lbl">Dark mode</span></button>
 <footer><div class="wrap"><p>CSR Playbook India · Base data as of 17 November 2026. What's New, the compliance tracker and penalty cases refresh daily; statistics weekly. Not legal or investment advice. NGO scores use public data (Give Discover, HelpYourNGO, NGO reports) and are not endorsements. SDG colours are used for navigation and theme coding.</p></div></footer>
 
 <script>
@@ -978,6 +987,15 @@ const CORE=[['GHG footprint','Scope 1 & 2; intensity per ₹ turnover (PPP-adjus
 $('#core-rows').innerHTML=CORE.map((r,i)=>`<tr><td>${i+1}</td><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join('');
 const STEPS=[['1. Materiality','Double-materiality check with investors, customers, employees and communities.'],['2. KPI dictionary','Define each KPI once — formula, unit, boundary, owner, frequency — mapped to BRSR, GRI and ISSB.'],['3. Owners & cadence','Site-level owners; monthly for energy, water, waste, safety; quarterly for HR and suppliers.'],['4. System of record','One ESG data system with audit trail and attached evidence.'],['5. Controls','Maker-checker review and year-on-year variance checks.'],['6. Dry-run assurance','Pre-assurance review two quarters before year end.'],['7. Board oversight','Quarterly dashboard to the ESG/Risk committee.'],['8. Publish & improve','File BRSR, publish report and assurance statement, log findings.']];
 $('#esg-steps').innerHTML=STEPS.map((s,i)=>`<div class="card flat lift" style="border-top:4px solid var(--sdg${[13,7,6,9,16,12,17,3][i]})"><b>${s[0]}</b><p style="margin:.3rem 0 0;font-size:.9rem">${s[1]}</p></div>`).join('');
+
+/* ===== theme toggle ===== */
+const mqDark=matchMedia('(prefers-color-scheme: dark)');
+const curTheme=()=>document.documentElement.getAttribute('data-theme')||(mqDark.matches?'dark':'light');
+function paintFab(){const d=curTheme()==='dark';$('#theme-ic').textContent=d?'☀':'☾';$('#theme-lbl').textContent=d?'Light mode':'Dark mode';$('#theme-fab').setAttribute('aria-label',d?'Switch to light theme':'Switch to dark theme');}
+function redrawCharts(){if(!statsDrawn||!window.Chart)return;Object.values(Chart.instances||{}).forEach(c=>c.destroy());CH={};drawStats();}
+$('#theme-fab').onclick=()=>{const t=curTheme()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('csr-theme',t)}catch(e){}paintFab();redrawCharts();};
+mqDark.addEventListener('change',()=>{paintFab();if(!document.documentElement.getAttribute('data-theme'))redrawCharts();});
+paintFab();
 
 route();
 </script>

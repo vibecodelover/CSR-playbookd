@@ -31,13 +31,48 @@ h1,h2,h3,h4{font-family:Fraunces,Georgia,serif;letter-spacing:-.01em;line-height
 h2{font-size:1.6rem} h3{font-size:1.12rem;margin-bottom:.35rem} h4{font-size:1rem}
 .wrap{max-width:1200px;margin:0 auto;padding:0 18px}
 /* header */
-header.top{background:var(--hdr-bg);color:var(--hdr-ink);position:relative;overflow:hidden;transition:background .25s,color .25s}
+header.top{color:var(--hdr-ink);position:relative;z-index:40;transition:color .25s;
+ background:radial-gradient(520px 220px at 88% -10%,color-mix(in srgb,var(--sdg14) 26%,transparent),transparent 70%),radial-gradient(460px 200px at 62% 130%,color-mix(in srgb,var(--sdg7) 24%,transparent),transparent 70%),radial-gradient(420px 220px at -5% -20%,color-mix(in srgb,var(--sdg10) 18%,transparent),transparent 70%),radial-gradient(380px 180px at 35% -40%,color-mix(in srgb,var(--sdg3) 16%,transparent),transparent 70%),var(--hdr-bg)}
+.hdr-clip{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.hdr{display:flex;gap:18px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+.hdr-main{flex:1 1 520px}
+.hdr-search{position:relative;flex:0 1 360px;width:100%;margin-top:6px}
+.hdr-search input{width:100%;padding:11px 14px 11px 38px;border-radius:999px;border:1px solid color-mix(in srgb,var(--hdr-ink) 18%,transparent);background:color-mix(in srgb,var(--hdr-bg) 70%,transparent);color:var(--hdr-ink);backdrop-filter:blur(6px);font-size:.9rem}
+.hdr-search::before{content:"";position:absolute;z-index:2;pointer-events:none;left:14px;top:13px;width:16px;height:16px;opacity:.55;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23808080' stroke-width='2.4' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-4-4'/%3E%3C/svg%3E") center/contain no-repeat}
+.hdr-search input:focus{outline:none;border-color:var(--sdg14);box-shadow:0 0 0 4px color-mix(in srgb,var(--sdg14) 25%,transparent)}
+.gs-res{position:absolute;left:0;right:0;top:calc(100% + 6px);background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:14px;box-shadow:0 14px 40px rgba(0,0,0,.18);overflow:hidden;display:none;max-height:420px;overflow-y:auto}
+.gs-res.on{display:block}
+.gs-res button{all:unset;box-sizing:border-box;display:grid;grid-template-columns:10px 1fr;gap:10px;width:100%;padding:10px 14px;cursor:pointer;border-bottom:1px solid var(--line)}
+.gs-res button:last-child{border-bottom:0}
+.gs-res button i{width:10px;height:10px;border-radius:3px;margin-top:6px;background:var(--k)}
+.gs-res button.sel,.gs-res button:hover{background:var(--surface-2)}
+.gs-res b{display:block;font-size:.9rem}
+.gs-res small{color:var(--ink-3);font-size:.75rem}
+.pulse{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0 16px;-webkit-mask-image:linear-gradient(90deg,#000 92%,transparent);mask-image:linear-gradient(90deg,#000 92%,transparent)}
+.pulse a{display:inline-flex;gap:8px;align-items:center;padding:7px 13px;border-radius:999px;background:color-mix(in srgb,var(--k) 12%,transparent);border:1px solid color-mix(in srgb,var(--k) 35%,transparent);color:var(--hdr-ink);font-size:.8rem;font-weight:600;white-space:nowrap;max-width:440px;transition:all .15s}
+.pulse a:hover{text-decoration:none;background:color-mix(in srgb,var(--k) 24%,transparent);transform:translateY(-1px)}
+.pulse a .d{width:8px;height:8px;border-radius:50%;background:var(--k);flex:none;box-shadow:0 0 0 0 var(--k);animation:ping 2.4s infinite}
+.pulse a .t{overflow:hidden;text-overflow:ellipsis}
+.pulse a .k{opacity:.65;font-weight:500}
+@keyframes ping{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--k) 60%,transparent)}70%{box-shadow:0 0 0 7px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.sdgbar{display:grid;grid-template-columns:repeat(17,1fr);height:34px;align-items:end;filter:saturate(1.18) brightness(1.1);cursor:pointer}
+.sdgbar button{border:0;padding:0;margin:0;height:12px;background:var(--k);cursor:pointer;transition:height .35s cubic-bezier(.2,.8,.2,1),filter .15s;position:relative}
+.sdgbar button:hover,.sdgbar button:focus-visible{filter:brightness(1.15);outline:none}
+.sdgbar.show button{height:var(--h,12px)}
+.sdgbar button span{position:absolute;left:0;right:0;top:-15px;font-size:.62rem;font-weight:700;text-align:center;color:var(--hdr-ink);opacity:0;transition:opacity .2s}
+.sdgbar.show button span{opacity:.75}
+.sdgtip{position:absolute;bottom:42px;transform:translateX(-50%);background:var(--surface);color:var(--ink);border:1px solid var(--line);border-left:5px solid var(--k);border-radius:10px;padding:8px 12px;font-size:.8rem;box-shadow:0 10px 30px rgba(0,0,0,.18);pointer-events:none;opacity:0;transition:opacity .15s;white-space:nowrap;z-index:5}
+.sdgtip.on{opacity:1}
+.sdgtip b{display:block;font-size:.85rem}
+.sdg-hint{position:absolute;right:18px;bottom:40px;font-size:.7rem;opacity:.6}
+.flash{animation:flash 1.8s ease}
+@keyframes flash{0%,40%{box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 55%,transparent)}100%{box-shadow:var(--shadow)}}
 header.top .wrap{padding:26px 18px 22px;position:relative;z-index:1}
 header.top h1{font-size:2rem}
 header.top p{margin:.35rem 0 0;opacity:.85;max-width:780px}
-.sdgstrip{display:grid;grid-template-columns:repeat(17,1fr);height:6px}
+.sdgstrip{display:grid;grid-template-columns:repeat(17,1fr);height:6px;filter:saturate(1.18) brightness(1.1)}
 .sdgstrip i{display:block}
-.wheel{position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;opacity:.35;
+.wheel{position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;opacity:.55;filter:saturate(1.2) brightness(1.1);
  background:conic-gradient(var(--sdg1) 0 21.2deg,var(--sdg2) 0 42.4deg,var(--sdg3) 0 63.5deg,var(--sdg4) 0 84.7deg,var(--sdg5) 0 105.9deg,var(--sdg6) 0 127deg,var(--sdg7) 0 148.2deg,var(--sdg8) 0 169.4deg,var(--sdg9) 0 190.6deg,var(--sdg10) 0 211.8deg,var(--sdg11) 0 232.9deg,var(--sdg12) 0 254.1deg,var(--sdg13) 0 275.3deg,var(--sdg14) 0 296.5deg,var(--sdg15) 0 317.6deg,var(--sdg16) 0 338.8deg,var(--sdg17) 0 360deg);
  -webkit-mask:radial-gradient(circle,transparent 52%,#000 53%);mask:radial-gradient(circle,transparent 52%,#000 53%);animation:spin 60s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
@@ -51,7 +86,10 @@ nav.tabs a:hover{text-decoration:none;background:var(--surface-2);color:var(--in
 nav.tabs a.on{background:var(--c);color:#fff;box-shadow:0 4px 14px color-mix(in srgb,var(--c) 35%,transparent)}
 nav.tabs a.on .dot{background:#fff}
 main{padding:26px 0 70px}
-section.view{display:none;animation:fade .3s ease}
+section.view{display:none;animation:fade .3s ease;position:relative;isolation:isolate}
+section.view::before{content:"";position:absolute;z-index:-1;left:-60px;right:-60px;top:-30px;height:340px;pointer-events:none;background:radial-gradient(520px 220px at 0% 0%,color-mix(in srgb,var(--accent) 15%,transparent),transparent 72%),radial-gradient(420px 200px at 100% 10%,color-mix(in srgb,var(--accent2,var(--accent)) 12%,transparent),transparent 72%)}
+.sec-h h3::after{content:"";display:block;width:34px;height:4px;border-radius:4px;margin-top:6px;background:var(--u,var(--accent))}
+::selection{background:color-mix(in srgb,var(--accent) 30%,transparent)}
 section.view.on{display:block}
 @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .lede{color:var(--ink-2);max-width:840px;margin:.35rem 0 1.1rem}
@@ -69,7 +107,7 @@ section.view.on{display:block}
 .g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
 .g4{grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr))}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--shadow);transition:transform .15s,box-shadow .15s}
-.card.lift:hover{transform:translateY(-2px);box-shadow:0 2px 4px rgba(0,0,0,.05),0 12px 28px rgba(0,0,0,.08)}
+.card.lift:hover{transform:translateY(-2px);box-shadow:0 2px 4px rgba(0,0,0,.05),0 12px 28px color-mix(in srgb,var(--accent) 14%,rgba(0,0,0,.08));border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
 .card.flat{box-shadow:none}
 .sec-h{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:30px 0 12px}
 .kpi .v{font-family:Fraunces,serif;font-size:2rem;font-weight:700;line-height:1.05}
@@ -86,7 +124,7 @@ section.view.on{display:block}
 .chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
 .chip{font:inherit;font-size:.8rem;font-weight:600;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);cursor:pointer;transition:all .15s}
 .chip:hover{border-color:var(--ink-3)}
-.chip.on{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.chip.on{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 3px 10px color-mix(in srgb,var(--accent) 30%,transparent)}
 .controls{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;margin-bottom:14px}
 select,input[type=number],input[type=search],input[type=text]{font:inherit;font-size:.9rem;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
 input[type=number]{width:130px}
@@ -227,17 +265,21 @@ html{transition:background .25s}
 footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);font-size:.8rem}
 .hide{display:none!important}
 .new{display:inline-block;background:var(--sdg9);color:#fff;font-size:.62rem;font-weight:700;padding:1px 6px;border-radius:5px;margin-left:6px;vertical-align:middle}
-@media (max-width:640px){header.top h1{font-size:1.5rem}.feed .item{grid-template-columns:1fr;gap:3px}.chartbox{height:260px}.subtabs{position:static;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.subtabs button{white-space:nowrap}.slide{padding:24px 22px 50px}}
+@media (max-width:640px){.sdg-hint{display:none}.sdgbar{height:14px}.sdgbar.show{height:34px}.wheel{width:180px;height:180px;right:-70px;top:-70px;opacity:.35}.hdr-search{flex-basis:100%}header.top h1{font-size:1.5rem}.feed .item{grid-template-columns:1fr;gap:3px}.chartbox{height:260px}.subtabs{position:static;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.subtabs button{white-space:nowrap}.slide{padding:24px 22px 50px}}
 </style>
 </head>
 <body>
 <header class="top">
-  <div class="wheel" aria-hidden="true"></div>
-  <div class="wrap">
-    <h1>CSR Playbook India</h1>
-    <p>Spend trends, the law and its history, audit readiness, awards, credible NGOs and global ESG frameworks — India first, with global context. Every figure links to its public source.</p>
+  <div class="hdr-clip" aria-hidden="true"><div class="wheel"></div></div>
+  <div class="wrap hdr" style="padding-top:26px;padding-bottom:14px;position:relative;z-index:3">
+    <div class="hdr-main"><h1>CSR Playbook India</h1>
+    <p>Spend trends, the law and its history, audit readiness, awards, credible NGOs and global ESG frameworks — India first, with global context. Every figure links to its public source.</p></div>
+    <div class="hdr-search"><input type="search" id="gs" placeholder="Search laws, awards, NGOs, frameworks, news…" aria-label="Search the playbook" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="gs-res"><div class="gs-res" id="gs-res" role="listbox"></div></div>
   </div>
-  <div class="sdgstrip" aria-hidden="true"><i style="background:var(--sdg1)"></i><i style="background:var(--sdg2)"></i><i style="background:var(--sdg3)"></i><i style="background:var(--sdg4)"></i><i style="background:var(--sdg5)"></i><i style="background:var(--sdg6)"></i><i style="background:var(--sdg7)"></i><i style="background:var(--sdg8)"></i><i style="background:var(--sdg9)"></i><i style="background:var(--sdg10)"></i><i style="background:var(--sdg11)"></i><i style="background:var(--sdg12)"></i><i style="background:var(--sdg13)"></i><i style="background:var(--sdg14)"></i><i style="background:var(--sdg15)"></i><i style="background:var(--sdg16)"></i><i style="background:var(--sdg17)"></i></div>
+  <div class="wrap" style="position:relative;z-index:1"><div class="pulse" id="pulse" aria-label="Live highlights"></div></div>
+  <span class="sdg-hint" aria-hidden="true">Hover the SDG bar to see CSR by goal ↓</span>
+  <div class="sdgbar" id="sdgbar" role="list" aria-label="The 17 Sustainable Development Goals — select one to explore CSR on that goal"></div>
+  <div class="sdgtip" id="sdgtip" role="tooltip"></div>
 </header>
 <nav class="tabs" aria-label="Sections"><div class="wrap">
   <a href="#whats-new" data-v="whats-new" style="--c:var(--sdg9)"><span class="dot"></span>What's New</a>
@@ -251,7 +293,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
 <main class="wrap">
 
 <!-- ================= WHAT'S NEW ================= -->
-<section class="view" id="v-whats-new" data-accent="var(--sdg9)">
+<section class="view" id="v-whats-new" style="--accent2:var(--sdg7)" data-accent="var(--sdg9)">
   <div class="hero-h"><h2>What's New in CSR &amp; ESG</h2><span class="badge">Updated daily</span></div>
   <p class="lede">News, research, events and rule changes, curated every morning. Headlines are paraphrased — open the source for the full story. <span id="news-updated" class="muted"></span></p>
   <div class="grid g3" id="news-picks"></div>
@@ -274,7 +316,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
 </section>
 
 <!-- ================= STATISTICS ================= -->
-<section class="view" id="v-statistics" data-accent="var(--sdg16)">
+<section class="view" id="v-statistics" style="--accent2:var(--sdg14)" data-accent="var(--sdg16)">
   <div class="hero-h"><h2>CSR insights</h2><span class="badge">Data refreshed weekly</span></div>
   <p class="lede">Ten years of mandatory CSR in India — how much, where, on what, and who is spending. Official MCA data, with the latest year from analyst reports until MCA publishes it. <span class="muted" id="stats-updated"></span></p>
   <div class="grid g4" id="kpis"></div>
@@ -324,7 +366,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
 </section>
 
 <!-- ================= COMPLIANCE ================= -->
-<section class="view" id="v-compliance" data-accent="var(--sdg4)">
+<section class="view" id="v-compliance" style="--accent2:var(--sdg8)" data-accent="var(--sdg4)">
   <div class="hero-h"><h2>Compliance Corner</h2><span class="badge">Not legal advice</span></div>
   <p class="lede">Section 135 of the Companies Act, 2013, the CSR Policy Rules, 2014 and Schedule VII — the journey, the rules, the checklist, a compliance simulator and real penalty cases. Confirm against notified text on <a href="https://www.mca.gov.in" target="_blank" rel="noopener">mca.gov.in</a>.</p>
   <div class="subtabs" role="tablist">
@@ -492,7 +534,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
 </section>
 
 <!-- ================= AWARDS ================= -->
-<section class="view" id="v-awards" data-accent="#b07d12">
+<section class="view" id="v-awards" style="--accent2:var(--sdg11)" data-accent="#b07d12">
   <div class="hero-h"><h2>CSR &amp; sustainability awards</h2><span class="badge">Global · National · State</span></div>
   <p class="lede">Organiser, eligibility, categories, fees, prizes and typical calendar. The month strip shows the usual <b style="color:var(--sdg9)">deadline</b> and <b style="color:var(--sdg17)">ceremony</b>. Cycles shift every year — always confirm on the organiser's site. "Fee: check" means the organiser does not publish it openly.</p>
   <div class="chips" id="aw-scope"></div>
@@ -501,7 +543,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
 </section>
 
 <!-- ================= NGOs ================= -->
-<section class="view" id="v-ngos" data-accent="var(--sdg3)">
+<section class="view" id="v-ngos" style="--accent2:var(--sdg15)" data-accent="var(--sdg3)">
   <div class="hero-h"><h2>NGO directory</h2><span class="badge">Ranked by theme</span></div>
   <p class="lede">Established Indian NGOs with links to their websites, annual reports, audited financials and independent profiles. Scores are a starting point for due diligence, not an endorsement.</p>
   <div class="callout"><b>Score (0–100):</b> 50% programme-spend ratio · 25% scale (≥₹500 cr = 100, ₹100–500 cr = 85, ₹50–100 cr = 70, ₹20–50 cr = 55, &lt;₹20 cr = 40) · 25% Give accreditation (Gold 100, Silver 80, Bronze 60, none found 50). Years differ by NGO and are shown on each card.</div>
@@ -519,7 +561,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
 </section>
 
 <!-- ================= ESG ================= -->
-<section class="view" id="v-esg" data-accent="var(--sdg13)">
+<section class="view" id="v-esg" style="--accent2:var(--sdg6)" data-accent="var(--sdg13)">
   <div class="hero-h"><h2>ESG frameworks, documents &amp; assurance</h2><span class="badge">India + global</span></div>
   <p class="lede">Every major framework in one explorer — mandatory regulations, reporting standards, climate and nature, ratings, principles, management systems and assurance — plus a quick "what applies to us" check.</p>
   <div class="subtabs">
@@ -575,7 +617,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
 </main>
 
 <button class="theme-fab" id="theme-fab" type="button" aria-label="Switch theme"><span class="ic2" id="theme-ic">☾</span><span class="lbl" id="theme-lbl">Dark mode</span></button>
-<footer><div class="wrap"><p>CSR Playbook India · Base data as of 17 November 2026. What's New, the compliance tracker and penalty cases refresh daily; statistics weekly. Not legal or investment advice. NGO scores use public data (Give Discover, HelpYourNGO, NGO reports) and are not endorsements. SDG colours are used for navigation and theme coding.</p></div></footer>
+<footer><div class="sdgstrip" aria-hidden="true" style="height:4px;margin-top:-24px;margin-bottom:24px"><i style="background:var(--sdg1)"></i><i style="background:var(--sdg2)"></i><i style="background:var(--sdg3)"></i><i style="background:var(--sdg4)"></i><i style="background:var(--sdg5)"></i><i style="background:var(--sdg6)"></i><i style="background:var(--sdg7)"></i><i style="background:var(--sdg8)"></i><i style="background:var(--sdg9)"></i><i style="background:var(--sdg10)"></i><i style="background:var(--sdg11)"></i><i style="background:var(--sdg12)"></i><i style="background:var(--sdg13)"></i><i style="background:var(--sdg14)"></i><i style="background:var(--sdg15)"></i><i style="background:var(--sdg16)"></i><i style="background:var(--sdg17)"></i></div><div class="wrap"><p>CSR Playbook India · Base data as of 17 November 2026. What's New, the compliance tracker and penalty cases refresh daily; statistics weekly. Not legal or investment advice. NGO scores use public data (Give Discover, HelpYourNGO, NGO reports) and are not endorsements. SDG colours are used for navigation and theme coding.</p></div></footer>
 
 <script>
 /* ===== helpers ===== */
@@ -629,7 +671,7 @@ loadJSON('data/news.json').then(d=>{NEWS=d.items||[];$('#news-updated').textCont
   chipGroup($('#news-chips'),[['','All'],['CSR','CSR'],['ESG','ESG'],['Event','Events'],['India','India'],['Global','Global']],'',v=>{newsTag=v;renderNews();});
   const top=[...NEWS].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3), ks=[9,16,13];
   $('#news-picks').innerHTML=top.map((i,n)=>`<div class="card lift pick" style="--k:var(--sdg${ks[n]})"><span class="muted">${dfmt(i.date)} · ${esc(i.tag)}</span><div class="t">${ext(i.url,esc(i.title))}</div><div class="muted" style="font-size:.86rem">${esc(i.summary)}</div><div class="src">${esc(i.source)}</div></div>`).join('');
-  renderNews();}).catch(()=>{$('#news-feed').innerHTML='<p class="muted">The feed could not be loaded right now.</p>';});
+  renderNews();PULSE.news=NEWS.length?[...NEWS].sort((a,b)=>b.date.localeCompare(a.date))[0]:null;renderPulse();}).catch(()=>{$('#news-feed').innerHTML='<p class="muted">The feed could not be loaded right now.</p>';});
 let compType='';
 function renderComp(){const list=COMP.filter(i=>!compType||i.type===compType).sort((a,b)=>b.date.localeCompare(a.date));
   $('#comp-feed').innerHTML=list.length?list.map(i=>feedItem(i,'comp')).join(''):'<p class="muted">No items match.</p>';}
@@ -644,10 +686,10 @@ function renderCases(){if(!CASES)return;const list=CASES.items.filter(i=>!caseTy
 loadJSON('data/cases.json').then(d=>{CASES=d;$('#cases-updated').textContent='Last updated '+dfmt(d.updated)+'.';
   $('#case-stats').innerHTML=d.stats.map((s,i)=>`<div class="card kpi" style="--k:var(--sdg${[4,1,16,10][i%4]})"><div class="v">${esc(s.big)}</div><div class="l">${esc(s.t)}</div><div class="s">${ext(s.url,esc(s.src))}</div></div>`).join('');
   const types=[...new Set(d.items.map(i=>i.type))];chipGroup($('#case-chips'),[['','All cases'],...types.map(t=>[t,t])],'',v=>{caseType=v;renderCases();});renderCases();
-  $('#news-case-mini').innerHTML=[...d.items].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3).map(i=>feedItem(i,'case')).join('');}).catch(()=>{$('#cases').innerHTML='<p class="muted">Could not load cases.</p>';});
+  PULSE.cas=[...d.items].sort((a,b)=>b.date.localeCompare(a.date))[0];renderPulse();$('#news-case-mini').innerHTML=[...d.items].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3).map(i=>feedItem(i,'case')).join('');}).catch(()=>{$('#cases').innerHTML='<p class="muted">Could not load cases.</p>';});
 
 /* ===== statistics ===== */
-loadJSON('data/stats.json').then(d=>{STATS=d;$('#stats-updated').textContent='Data as of '+dfmt(d.updated)+'.';buildStatsStatic();if(location.hash.startsWith('#statistics')&&!statsDrawn){drawStats();statsDrawn=true;}}).catch(()=>{$('#kpis').innerHTML='<p class="muted">Statistics could not be loaded.</p>';});
+loadJSON('data/stats.json').then(d=>{STATS=d;$('#stats-updated').textContent='Data as of '+dfmt(d.updated)+'.';buildStatsStatic();PULSE.stat=STATS.trend[STATS.trend.length-1];renderPulse();buildSDGBar();if(location.hash.startsWith('#statistics')&&!statsDrawn){drawStats();statsDrawn=true;}}).catch(()=>{$('#kpis').innerHTML='<p class="muted">Statistics could not be loaded.</p>';});
 function countUp(el,to,pre,suf,dec){const t0=performance.now(),dur=900;const step=t=>{const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=pre+fmt(to*e,dec)+suf;if(p<1)requestAnimationFrame(step);};requestAnimationFrame(step);}
 function buildStatsStatic(){
   const tr=STATS.trend,last=tr[tr.length-1],prev=tr[tr.length-2],first=tr[0];
@@ -690,7 +732,7 @@ function buildStatsStatic(){
         <b>Key takeaways</b><ul class="clean">${r.take.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>
         <div class="act"><b>For CSR teams:</b> ${esc(r.act)}</div>
         <div class="src">Basis: ${esc(r.sample)}<br>Sources: ${r.src.map(x=>ext(x[1],esc(x[0]))).join(' · ')}</div>`;};
-    chipGroup($('#rep-chips'),R.map(r=>[r.id,r.name]),R[0].id,showRep);showRep(R[0].id);
+    chipGroup($('#rep-chips'),R.map(r=>[r.id,r.name]),R[0].id,showRep);showRep(R[0].id);window._showRep=id=>{$$('#rep-chips .chip').forEach(c=>c.classList.toggle('on',c.dataset.v===id));showRep(id);};
   } else $('#reports-block').classList.add('hide');
   $('#global').innerHTML=STATS.global.map((g,i)=>`<div class="card kpi" style="--k:var(--sdg${[17,14,12][i]})"><div class="v">${esc(g.big)}</div><div class="l">${esc(g.t)}</div><div class="s">${esc(g.s)} · ${ext(g.url,esc(g.src))}</div></div>`).join('');
 }
@@ -987,6 +1029,78 @@ const CORE=[['GHG footprint','Scope 1 & 2; intensity per ₹ turnover (PPP-adjus
 $('#core-rows').innerHTML=CORE.map((r,i)=>`<tr><td>${i+1}</td><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join('');
 const STEPS=[['1. Materiality','Double-materiality check with investors, customers, employees and communities.'],['2. KPI dictionary','Define each KPI once — formula, unit, boundary, owner, frequency — mapped to BRSR, GRI and ISSB.'],['3. Owners & cadence','Site-level owners; monthly for energy, water, waste, safety; quarterly for HR and suppliers.'],['4. System of record','One ESG data system with audit trail and attached evidence.'],['5. Controls','Maker-checker review and year-on-year variance checks.'],['6. Dry-run assurance','Pre-assurance review two quarters before year end.'],['7. Board oversight','Quarterly dashboard to the ESG/Risk committee.'],['8. Publish & improve','File BRSR, publish report and assurance statement, log findings.']];
 $('#esg-steps').innerHTML=STEPS.map((s,i)=>`<div class="card flat lift" style="border-top:4px solid var(--sdg${[13,7,6,9,16,12,17,3][i]})"><b>${s[0]}</b><p style="margin:.3rem 0 0;font-size:.9rem">${s[1]}</p></div>`).join('');
+
+/* ===== header: pulse chips ===== */
+const PULSE={news:null,cas:null,stat:null};
+function nextDeadline(){const now=new Date(),y=now.getFullYear();const c=[[y,3,30,'unspent (ongoing) → Unspent CSR Account'],[y,8,30,'unspent (one-time) → Schedule VII fund'],[y+1,3,30,'unspent (ongoing) → Unspent CSR Account']].map(([yy,m,d,t])=>({dt:new Date(yy,m,d,23,59),t})).filter(x=>x.dt>now).sort((a,b)=>a.dt-b.dt)[0];return {...c,days:Math.ceil((c.dt-now)/864e5)};}
+function renderPulse(){const dl=nextDeadline(),o=[];
+  if(PULSE.news)o.push(`<a href="#whats-new" style="--k:var(--sdg9)"><span class="d"></span><span class="k">Latest</span><span class="t">${esc(PULSE.news.title)}</span></a>`);
+  o.push(`<a href="#compliance-howto" style="--k:var(--sdg4)"><span class="d"></span><span class="k">${dl.days} days to</span><span class="t">${dfmt(dl.dt.toISOString().slice(0,10))}: ${esc(dl.t)}</span></a>`);
+  if(PULSE.stat)o.push(`<a href="#statistics" style="--k:var(--sdg16)"><span class="d"></span><span class="k">CSR ${esc(PULSE.stat.fy)}</span><span class="t">₹${fmt(PULSE.stat.value,0)} crore${PULSE.stat.analyst?' (analyst est.)':''}</span></a>`);
+  if(PULSE.cas)o.push(`<a href="#compliance-simulator" style="--k:var(--sdg10)"><span class="d"></span><span class="k">Latest penalty</span><span class="t">${esc(PULSE.cas.who)}</span></a>`);
+  o.push(`<a href="#compliance-simulator" style="--k:var(--sdg3)"><span class="d"></span><span class="t">Check your CSR compliance →</span></a>`);
+  $('#pulse').innerHTML=o.join('');}
+renderPulse();
+
+/* ===== header: interactive SDG bar ===== */
+const SDGN=['No Poverty','Zero Hunger','Good Health and Well-being','Quality Education','Gender Equality','Clean Water and Sanitation','Affordable and Clean Energy','Decent Work and Economic Growth','Industry, Innovation and Infrastructure','Reduced Inequalities','Sustainable Cities and Communities','Responsible Consumption and Production','Climate Action','Life Below Water','Life on Land','Peace, Justice and Strong Institutions','Partnerships for the Goals'];
+let SDGV=null;
+function buildSDGBar(){
+  if(STATS){const yi=STATS.sectorYears.length-1,tot=STATS.sectors.reduce((a,b)=>a+b.v[yi],0);SDGV={yr:STATS.sectorYears[yi],tot,by:{}};
+    STATS.sectors.forEach((x,i)=>{const o=SDGV.by[x.sdg]=SDGV.by[x.sdg]||{v:0,top:null,ti:-1};o.v+=x.v[yi];if(o.top==null||x.v[yi]>STATS.sectors[o.top].v[yi])o.top=i;});}
+  const mx=SDGV?Math.max(...Object.values(SDGV.by).map(o=>o.v)):1;
+  $('#sdgbar').innerHTML=SDGN.map((n,i)=>{const g=i+1,v=SDGV&&SDGV.by[g]?SDGV.by[g].v:0,h=6+Math.round(28*Math.sqrt(v/mx));
+    return `<button role="listitem" style="--k:var(--sdg${g});--h:${h}px" data-g="${g}" aria-label="SDG ${g}: ${esc(n)}"><span>${g}</span></button>`;}).join('');
+  $$('#sdgbar button').forEach(b=>{b.onmouseenter=b.onfocus=()=>sdgTip(b);b.onmouseleave=b.onblur=()=>$('#sdgtip').classList.remove('on');b.onclick=()=>sdgGo(+b.dataset.g);});
+}
+function sdgTip(b){const g=+b.dataset.g,t=$('#sdgtip'),hr=$('header.top').getBoundingClientRect(),r=b.getBoundingClientRect();
+  const o=SDGV&&SDGV.by[g];t.style.setProperty('--k',`var(--sdg${g})`);
+  t.innerHTML=`<b>SDG ${g} · ${esc(SDGN[g-1])}</b>${o?`₹${fmt(o.v,0)} crore CSR in ${SDGV.yr} · ${fmt(o.v/SDGV.tot*100,1)}% of total`:(SDGV?'No CSR sector maps directly to this goal':'')}<br><span class="muted">Click to explore</span>`;
+  let x=r.left+r.width/2-hr.left;x=Math.max(130,Math.min(hr.width-130,x));t.style.left=x+'px';t.classList.add('on');}
+function sdgGo(g){const o=SDGV&&SDGV.by[g];
+  go('statistics',()=>{if(o){$('#sec-pick').value=o.top;$('#sec-pick').dispatchEvent(new Event('change'));$('#sec-pick').closest('.card').scrollIntoView({behavior:'smooth',block:'center'});flash($('#sec-pick').closest('.card'));}else{$('#fw-q')&&0;}});}
+$('#sdgbar').addEventListener('mouseenter',()=>$('#sdgbar').classList.add('show'));
+$('#sdgbar').addEventListener('mouseleave',()=>$('#sdgbar').classList.remove('show'));
+$('#sdgbar').addEventListener('focusin',()=>$('#sdgbar').classList.add('show'));
+$('#sdgbar').addEventListener('focusout',()=>$('#sdgbar').classList.remove('show'));
+buildSDGBar();
+
+/* ===== navigation helpers ===== */
+function go(hash,after){if(location.hash!=='#'+hash)location.hash=hash;else route();if(after)setTimeout(after,380);}
+function flash(el){if(!el)return;el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');}
+function findCard(sel,name){return $$(sel).find(h=>h.textContent.trim()===name);}
+function goCard(hash,sel,name){go(hash,()=>{const h=findCard(sel,name);if(h){const c=h.closest('.card');c.scrollIntoView({behavior:'smooth',block:'center'});flash(c);}});}
+
+/* ===== header: global search ===== */
+let GIDX=null;
+function buildIdx(){const I=[];const add=(t,sub,k,fn)=>I.push({t,sub,k,fn,q:(t+' '+sub).toLowerCase()});
+  [['whats-new',"What's New",9],['statistics','CSR Insights',16],['compliance-history','CSR law journey (timeline)',4],['compliance-howto','How to be CSR compliant',4],['compliance-checklist','CSR audit-ready checklist',4],['compliance-simulator','CSR compliance simulator',4],['compliance-updates','Compliance tracker',4],['awards','CSR & sustainability awards',11],['ngos','NGO directory',3],['esg','ESG frameworks',13]].forEach(([h,t,k])=>add(t,'Section',k,()=>go(h)));
+  SCH7.forEach(r=>add(`Schedule VII (${r[0]}) — ${r[2]}`,'Eligible CSR activity',r[1],()=>go('compliance-howto',()=>{const d=$$('#sub-howto details')[2];d.open=true;d.scrollIntoView({behavior:'smooth'});})));
+  FW.forEach(f=>add(f[0],'ESG framework · '+f[2],13,()=>go('esg',()=>{$('#v-esg .subtabs button').click();$('#fw-q').value=f[0];renderFW();$('#fw-list .fw')&&($('#fw-list .fw').classList.add('open'),flash($('#fw-list .fw')));})));
+  AWARDS.forEach(a=>add(a.n,'Award · '+a.sc+' · '+a.o,11,()=>{awScope='';awFee='';$$('#aw-scope .chip,#aw-fee .chip').forEach(c=>c.classList.toggle('on',c.dataset.v===''));renderAwards();goCard('awards','#awards-list h3',a.n);}));
+  NGOS.forEach(o=>add(o.n,'NGO · '+o.th,o.sdg,()=>{ngoTheme='';$$('#ngo-theme .chip').forEach(c=>c.classList.toggle('on',c.dataset.v===''));renderNGOs();goCard('ngos','#ngo-list h3',o.n);}));
+  TL.forEach((e,i)=>add(e.title,'Law timeline · '+dfmt(e.date),4,()=>go('compliance-history',()=>{tlKind='';renderTL();showTL(i);$('#tl-detail').scrollIntoView({behavior:'smooth',block:'center'});})));
+  if(CASES)CASES.items.forEach(c=>add(c.who,'Penalty case · '+c.type,10,()=>{caseType='';renderCases();goCard('compliance-simulator','#cases h3',c.who);}));
+  if(STATS&&STATS.reports)STATS.reports.forEach(r=>add(r.name,'Report · '+r.org,r.sdg,()=>go('statistics',()=>{window._showRep&&window._showRep(r.id);$('#rep').scrollIntoView({behavior:'smooth',block:'center'});flash($('#rep'));})));
+  NEWS.forEach(n=>add(n.title,'News · '+n.source+' · '+dfmt(n.date),9,()=>window.open(n.url,'_blank','noopener')));
+  COMP.forEach(n=>add(n.title,'Compliance update · '+dfmt(n.date),4,()=>go('compliance-updates')));
+  return I;}
+let gsSel=0,gsList=[];
+function gsRender(){const q=$('#gs').value.trim().toLowerCase(),box=$('#gs-res');
+  if(!q){box.classList.remove('on');$('#gs').setAttribute('aria-expanded','false');return;}
+  GIDX=buildIdx();const w=q.split(/\s+/);gsList=GIDX.filter(x=>w.every(t=>x.q.includes(t))).sort((a,b)=>(b.t.toLowerCase().startsWith(q))-(a.t.toLowerCase().startsWith(q))).slice(0,9);gsSel=0;
+  box.innerHTML=gsList.length?gsList.map((x,i)=>`<button role="option" data-i="${i}" class="${i?'':'sel'}" style="--k:var(--sdg${x.k})"><i></i><span><b>${esc(x.t)}</b><small>${esc(x.sub)}</small></span></button>`).join(''):'<div style="padding:12px 14px" class="muted">No matches — try "unspent", "BRSR", "education" or an NGO name.</div>';
+  box.classList.add('on');$('#gs').setAttribute('aria-expanded','true');
+  $$('#gs-res button').forEach(b=>b.onmousedown=e=>{e.preventDefault();gsPick(+b.dataset.i);});}
+function gsPick(i){const x=gsList[i];if(!x)return;$('#gs-res').classList.remove('on');$('#gs').value='';$('#gs').blur();x.fn();}
+$('#gs').addEventListener('input',gsRender);
+$('#gs').addEventListener('keydown',e=>{const n=gsList.length;if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();if(!n)return;gsSel=(gsSel+(e.key==='ArrowDown'?1:-1)+n)%n;$$('#gs-res button').forEach((b,i)=>b.classList.toggle('sel',i===gsSel));}else if(e.key==='Enter'){e.preventDefault();gsPick(gsSel);}else if(e.key==='Escape'){$('#gs-res').classList.remove('on');}});
+$('#gs').addEventListener('blur',()=>setTimeout(()=>$('#gs-res').classList.remove('on'),120));
+document.addEventListener('keydown',e=>{if(e.key==='/'&&!/input|textarea|select/i.test(document.activeElement.tagName)){e.preventDefault();$('#gs').focus();}});
+
+/* ===== colour accents on section headings ===== */
+const UC=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17].sort((a,b)=>((a*7)%17)-((b*7)%17));
+$$('.sec-h h3').forEach((h,i)=>h.style.setProperty('--u',`var(--sdg${UC[i%17]})`));
 
 /* ===== theme toggle ===== */
 const mqDark=matchMedia('(prefers-color-scheme: dark)');

@@ -12,25 +12,25 @@
   {
    "fy": "FY16",
    "value": 14527.59,
-   "src": "Lok Sabha Q.314",
+   "src": "Lok Sabha Starred Q.314 (15 Jul 2019)",
    "url": "https://eparlib.nic.in/bitstream/123456789/952559/1/AS314.pdf"
   },
   {
    "fy": "FY17",
    "value": 14344.4,
-   "src": "Rajya Sabha Q.2112 (2022)",
+   "src": "Rajya Sabha Unstarred Q.2112 (22 Mar 2022)",
    "url": "https://rsdebate.nic.in/bitstream/123456789/729700/1/PQ_256_22032022_U2112_p122_p122.pdf"
   },
   {
    "fy": "FY18",
    "value": 17097.66,
-   "src": "Rajya Sabha Q.2112 (2022)",
+   "src": "Rajya Sabha Unstarred Q.2112 (22 Mar 2022)",
    "url": "https://rsdebate.nic.in/bitstream/123456789/729700/1/PQ_256_22032022_U2112_p122_p122.pdf"
   },
   {
    "fy": "FY19",
    "value": 20163.18,
-   "src": "Rajya Sabha Q.2112 (2022)",
+   "src": "Rajya Sabha Unstarred Q.2112 (22 Mar 2022)",
    "url": "https://rsdebate.nic.in/bitstream/123456789/729700/1/PQ_256_22032022_U2112_p122_p122.pdf"
   },
   {
@@ -637,8 +637,8 @@
   },
   {
    "k": "Government-owned companies",
-   "t": "Government-owned companies direct 11% of their CSR budgets to aspirational districts — three times the share of private firms. CPSE CSR rose 19% to ₹4,911 crore in FY24.",
-   "src": "Sattva via Newslaundry; Business Standard",
+   "t": "Government-owned companies direct 11% of their CSR budgets to aspirational districts — three times the share of private firms. CPSE CSR rose 19% to ₹4,911 crore in FY24; the top 10 CPSEs gave about 57% of it.",
+   "src": "Sattva via Newslaundry; Public Enterprises Survey via Business Standard",
    "url": "https://www.newslaundry.com/2025/12/22/how-indias-rs-34000-crore-csr-spending-is-distributed"
   },
   {
@@ -734,21 +734,21 @@
   {
    "big": "$43.7 bn",
    "t": "US corporate giving, 2025",
-   "s": "7% of $617.2 bn total US giving; flat after inflation.",
+   "s": "About 7% of $617.2 bn total US giving; up 3.1%, flat after inflation.",
    "url": "https://givingusa.org/giving-usa-charitable-giving-rose-to-617-20-billion-in-2025-surpassing-the-600-billion-mark-for-the-first-time/",
    "src": "Giving USA 2026"
   },
   {
    "big": "$23.5 M",
-   "t": "Median community investment per large company, 2025",
-   "s": "52% of companies cut giving; 42% expect 2026 budgets to fall.",
+   "t": "Median community investment per company, 2025 (CECP sample)",
+   "s": "Up 7.5% for matched companies, yet 52% cut giving and 42% expect 2026 budgets to fall.",
    "url": "https://www.3blmedia.com/news/cecps-giving-numbersr-2026-edition-finds-corporate-giving-holding-steady-despite-most",
    "src": "CECP Giving in Numbers 2026"
   },
   {
    "big": "~1%",
    "t": "US corporate giving as share of pre-tax profit",
-   "s": "India mandates 2% of average net profit for qualifying companies.",
+   "s": "Estimated for 2025, below the long-run 1.1% average; India mandates 2% of average net profit for qualifying companies.",
    "url": "https://foundationsource.com/?p=5799",
    "src": "Foundation Source"
   }

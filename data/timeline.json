@@ -1,32 +1,324 @@
 {
-  "updated": "2026-11-17",
-  "events": [
-    {"date":"2009-12","era":"Voluntary era","title":"CSR Voluntary Guidelines","kind":"Guideline","changes":["MCA issues India's first formal CSR guidelines — voluntary, under the old Companies Act, 1956, which had no CSR provision","Signals CSR as part of corporate governance"],"src":"slm.mba","url":"https://slm.mba/?p=6205"},
-    {"date":"2010-04","era":"Voluntary era","title":"DPE CSR guidelines for central PSUs","kind":"Guideline","changes":["Department of Public Enterprises issues CSR guidelines for central public sector enterprises","First structured CSR budgets for PSUs"],"src":"FICCI","url":"https://ficci.in/api/service_details/66"},
-    {"date":"2011-07","era":"Voluntary era","title":"National Voluntary Guidelines (NVGs)","kind":"Guideline","changes":["Nine principles on social, environmental and economic responsibilities of business","Replaces the 2009 guidelines; later evolves into the NGRBC (2019)"],"src":"Wikipedia (NVGs)","url":"https://wikipedia.com/wiki/National_Voluntary_Guidelines_on_Social,_Environmental_and_Economic_Responsibilities_of_Business"},
-    {"date":"2012","era":"Voluntary era","title":"SEBI Business Responsibility Reports","kind":"Disclosure","changes":["Top 100 listed companies must file Business Responsibility Reports aligned to the NVGs","First mandatory responsibility disclosure"],"src":"TheCSRUniverse","url":"https://thecsruniverse.com/articles/csr-in-india-key-milestones"},
-    {"date":"2013-08","era":"The 2013 Act","title":"Companies Act, 2013 enacted with Section 135","kind":"Law","changes":["Mandates CSR committee, policy and 2% spend for companies above thresholds","'Comply or explain' model — unspent amounts only had to be explained"],"src":"FICCI","url":"https://ficci.in/api/service_details/66"},
-    {"date":"2014-02","era":"The 2013 Act","title":"CSR Policy Rules and Schedule VII notified","kind":"Rule","changes":["Companies (CSR Policy) Rules, 2014 notified (G.S.R. 130(E))","Defines eligible activities, implementing agencies, reporting format"],"src":"ICAI (GSR 525E note)","url":"https://csr.icai.org/wp-content/uploads/2020/09/GSR-525E-Amendment-in-Schedule-VII.pdf"},
-    {"date":"2014-04","era":"The 2013 Act","title":"Mandatory CSR comes into force","kind":"Law","changes":["Section 135 effective from 1 April 2014","India becomes the first country to legally mandate CSR spending"],"src":"slm.mba","url":"https://slm.mba/?p=1206"},
-    {"date":"2014-08","era":"The 2013 Act","title":"Tax: CSR is not a business expense","kind":"Related law","changes":["Finance (No. 2) Act, 2014 inserts Explanation 2 to Section 37(1) of the Income-tax Act","CSR spend cannot be deducted as business expenditure (80G claims remain litigated)"],"src":"TaxTMI","url":"https://www.taxmanagementindia.com/visitor/Detail_Case_Laws.asp?ID=769570"},
-    {"date":"2014-10","era":"The 2013 Act","title":"Early Schedule VII amendments","kind":"Schedule VII","changes":["Amendments of 6 Aug and 24 Oct 2014 add and clarify items — including slum area development (item xi)"],"src":"ICAI Navi Mumbai","url":"https://navimumbai.icai.org/detail/17923.aspx"},
-    {"date":"2019-05","era":"Tightening","title":"Disaster management added — item (xii)","kind":"Schedule VII","changes":["Relief, rehabilitation and reconstruction become eligible CSR (G.S.R. 390(E), 30 May 2019)"],"src":"TaxTMI","url":"https://www.taxmanagementindia.com/visitor/detail_notification.asp?ID=129893"},
-    {"date":"2019-07","era":"Tightening","title":"Companies (Amendment) Act, 2019","kind":"Law","changes":["Introduces the Unspent CSR Account and transfer timelines","Proposed imprisonment for non-compliance (later replaced before it came into force)"],"src":"Fox Mandal","url":"https://foxmandal.in/?p=23615"},
-    {"date":"2019-10","era":"Tightening","title":"R&D and incubators widened — item (ix)","kind":"Schedule VII","changes":["Contributions to government-funded incubators and to public research bodies (ICAR, ICMR, CSIR etc.) for SDG-linked research made eligible"],"src":"ca2013.com","url":"https://ca2013.com/wp-content/uploads/2019/10/Schedule-VII.pdf"},
-    {"date":"2020-05","era":"Tightening","title":"PM CARES Fund added to item (viii)","kind":"Schedule VII","changes":["Notified 26 May 2020, deemed effective 28 March 2020 — COVID-era contributions count as CSR"],"src":"abcaus","url":"https://abcaus.in/companies-act/contribution-pm-cares-fund-included-schedule-vii-companies-act-2013.html"},
-    {"date":"2020-06","era":"Tightening","title":"CAPF & CPMF veterans added to item (vi)","kind":"Schedule VII","changes":["Central Armed Police Forces and Central Para Military Forces veterans and dependants, including widows, become eligible beneficiaries"],"src":"TaxGuru","url":"https://taxguru.in/?p=727897"},
-    {"date":"2020-08","era":"Tightening","title":"Item (ix) substituted again","kind":"Schedule VII","changes":["G.S.R. 525(E) widens the list of research institutions and incubators eligible for CSR contributions"],"src":"TaxGuru","url":"https://taxguru.in/?p=736655"},
-    {"date":"2020-09","era":"Tightening","title":"Companies (Amendment) Act, 2020 — decriminalisation","kind":"Law","changes":["Replaces imprisonment with monetary penalty (Section 135(7))","Allows set-off of excess spend","No CSR Committee needed if obligation ≤ ₹50 lakh"],"src":"PSA Legal","url":"https://www.psalegal.com/?p=10666"},
-    {"date":"2021-01","era":"The penalty regime","title":"New CSR regime in force (22 Jan 2021)","kind":"Rule","changes":["2019 and 2020 amendments to Section 135 commence","CSR Amendment Rules 2021: CSR-1 registration, ongoing projects, Unspent CSR Account, impact assessment, 5% overhead cap, capital-asset rules","Non-compliance becomes a civil wrong with penalties"],"src":"Taxscan","url":"https://www.taxscan.in/?p=97062"},
-    {"date":"2021-05","era":"The penalty regime","title":"SEBI BRSR replaces BRR","kind":"Disclosure","changes":["Quantitative ESG disclosure for listed companies; mandatory for the top 1,000 from FY 2022-23"],"src":"GreenSutra","url":"https://greensutra.in/news/brsr-all-you-need-to-know/"},
-    {"date":"2022-09","era":"The penalty regime","title":"CSR Amendment Rules 2022","kind":"Rule","changes":["Companies with money in the Unspent CSR Account must have a CSR Committee","Revised annual report format and other clarifications"],"src":"KPMG","url":"https://assets.kpmg.com/content/dam/kpmg/in/pdf/2022/10/first-notes-mca-amends-certain-rules-relating-to-corporate-social-responsibility.pdf"},
-    {"date":"2023-07","era":"The penalty regime","title":"SEBI BRSR Core","kind":"Disclosure","changes":["Nine ESG attributes requiring independent assurance, phased from top 150 to top 1,000"],"src":"TaxGuru","url":"https://taxguru.in/?p=875991"},
-    {"date":"2023-10","era":"The penalty regime","title":"GST: input credit blocked on CSR","kind":"Related law","changes":["Section 17(5)(fa) of the CGST Act blocks ITC on goods and services used for CSR, from 1 Oct 2023"],"src":"TaxGuru","url":"https://taxguru.in/goods-and-service-tax/prospective-amendment-itc-csr-expenditure-gst.html"},
-    {"date":"2025-03","era":"Recent","title":"SEBI eases BRSR Core","kind":"Disclosure","changes":["'Assessment or assurance' allowed; value-chain disclosure deferred and made voluntary; green credits indicator added"],"src":"TaxGuru","url":"https://taxguru.in/?p=955846"},
-    {"date":"2025-07","era":"Recent","title":"Revised e-Form CSR-1","kind":"Rule","changes":["Tighter documentation and professional certification for implementing-agency registration (from 14 July 2025)"],"src":"TaxGuru","url":"https://taxguru.in/company-law/companies-csr-policy-amendment-rules-2025.html"},
-    {"date":"2025-12","era":"Recent","title":"Companies (Amendment) Bill, 2025 introduced","kind":"Pending bill","pending":true,"changes":["Proposes lower thresholds: net worth ₹100 crore, turnover ₹500 crore, net profit ₹3 crore","Proposes a CSR-experienced director on the committee"],"src":"CAP India","url":"https://capindia.in/more-companies-likely-to-come-under-the-mandatory-csr-net/"},
-    {"date":"2026-03","era":"Recent","title":"Corporate Laws (Amendment) Bill, 2026 introduced","kind":"Pending bill","pending":true,"changes":["Net-profit trigger ₹5 crore → ₹10 crore","Unspent CSR Account transfer 30 → 90 days","Committee exemption ₹50 lakh → ₹1 crore"],"src":"AZB & Partners","url":"https://www.azbpartners.com/bank/corporate-laws-amendment-bill-2026-introduced/"},
-    {"date":"2026-05","era":"Recent","title":"Social Stock Exchange route — Rule 4A & item (xiii)","kind":"Rule","changes":["Up to 10% of annual CSR via ZCZP instruments on the Social Stock Exchange","No impact assessment needed for those projects; NPO must finish in 3 years"],"src":"Corporatelaws.in","url":"https://corporatelaws.in/2026/07/companies-csr-policy-amendment-rules-2026.html"},
-    {"date":"2026-08","era":"Recent","title":"JPC report on the 2026 Bill","kind":"Pending bill","pending":true,"changes":["Backs the ₹10 crore trigger but recommends removing the government's power to revise it","Bill not yet passed"],"src":"PRS","url":"https://prsindia.org/billtrack/prs-products/prs-jpc-report-summary"}
-  ]
+ "updated": "2026-11-18",
+ "events": [
+  {
+   "date": "2009-12",
+   "era": "Voluntary era",
+   "title": "CSR Voluntary Guidelines",
+   "kind": "Guideline",
+   "changes": [
+    "MCA issues India's first formal CSR guidelines — voluntary, under the old Companies Act, 1956, which had no CSR provision",
+    "Signals CSR as part of corporate governance"
+   ],
+   "src": "slm.mba",
+   "url": "https://slm.mba/?p=6205"
+  },
+  {
+   "date": "2010-04",
+   "era": "Voluntary era",
+   "title": "DPE CSR guidelines for central PSUs",
+   "kind": "Guideline",
+   "changes": [
+    "Department of Public Enterprises issues CSR guidelines for central public sector enterprises",
+    "First structured CSR budgets for PSUs"
+   ],
+   "src": "FICCI",
+   "url": "https://ficci.in/api/service_details/66"
+  },
+  {
+   "date": "2011-07",
+   "era": "Voluntary era",
+   "title": "National Voluntary Guidelines (NVGs)",
+   "kind": "Guideline",
+   "changes": [
+    "Nine principles on social, environmental and economic responsibilities of business",
+    "Replaces the 2009 guidelines; later evolves into the NGRBC (2019)"
+   ],
+   "src": "Wikipedia (NVGs)",
+   "url": "https://wikipedia.com/wiki/National_Voluntary_Guidelines_on_Social,_Environmental_and_Economic_Responsibilities_of_Business"
+  },
+  {
+   "date": "2012",
+   "era": "Voluntary era",
+   "title": "SEBI Business Responsibility Reports",
+   "kind": "Disclosure",
+   "changes": [
+    "Top 100 listed companies must file Business Responsibility Reports aligned to the NVGs",
+    "First mandatory responsibility disclosure"
+   ],
+   "src": "TheCSRUniverse",
+   "url": "https://thecsruniverse.com/articles/csr-in-india-key-milestones"
+  },
+  {
+   "date": "2013-08",
+   "era": "The 2013 Act",
+   "title": "Companies Act, 2013 enacted with Section 135",
+   "kind": "Law",
+   "changes": [
+    "Mandates CSR committee, policy and 2% spend for companies above thresholds",
+    "'Comply or explain' model — unspent amounts only had to be explained"
+   ],
+   "src": "FICCI",
+   "url": "https://ficci.in/api/service_details/66"
+  },
+  {
+   "date": "2014-02",
+   "era": "The 2013 Act",
+   "title": "CSR Policy Rules and Schedule VII notified",
+   "kind": "Rule",
+   "changes": [
+    "Companies (CSR Policy) Rules, 2014 notified (G.S.R. 130(E))",
+    "Defines eligible activities, implementing agencies, reporting format"
+   ],
+   "src": "ICAI (GSR 525E note)",
+   "url": "https://csr.icai.org/wp-content/uploads/2020/09/GSR-525E-Amendment-in-Schedule-VII.pdf"
+  },
+  {
+   "date": "2014-04",
+   "era": "The 2013 Act",
+   "title": "Mandatory CSR comes into force",
+   "kind": "Law",
+   "changes": [
+    "Section 135 effective from 1 April 2014",
+    "India becomes the first country to legally mandate CSR spending"
+   ],
+   "src": "slm.mba",
+   "url": "https://slm.mba/?p=1206"
+  },
+  {
+   "date": "2014-08",
+   "era": "The 2013 Act",
+   "title": "Tax: CSR is not a business expense",
+   "kind": "Related law",
+   "changes": [
+    "Finance (No. 2) Act, 2014 inserts Explanation 2 to Section 37(1) of the Income-tax Act",
+    "CSR spend cannot be deducted as business expenditure (80G claims remain litigated)"
+   ],
+   "src": "TaxTMI",
+   "url": "https://www.taxmanagementindia.com/visitor/Detail_Case_Laws.asp?ID=769570"
+  },
+  {
+   "date": "2014-10",
+   "era": "The 2013 Act",
+   "title": "Early Schedule VII amendments",
+   "kind": "Schedule VII",
+   "changes": [
+    "Amendments of 6 Aug and 24 Oct 2014 add and clarify items — including slum area development (item xi)"
+   ],
+   "src": "ICAI Navi Mumbai",
+   "url": "https://navimumbai.icai.org/detail/17923.aspx"
+  },
+  {
+   "date": "2019-05",
+   "era": "Tightening",
+   "title": "Disaster management added — item (xii)",
+   "kind": "Schedule VII",
+   "changes": [
+    "Relief, rehabilitation and reconstruction become eligible CSR (G.S.R. 390(E), 30 May 2019)"
+   ],
+   "src": "TaxTMI",
+   "url": "https://www.taxmanagementindia.com/visitor/detail_notification.asp?ID=129893"
+  },
+  {
+   "date": "2019-07",
+   "era": "Tightening",
+   "title": "Companies (Amendment) Act, 2019",
+   "kind": "Law",
+   "changes": [
+    "Introduces the Unspent CSR Account and transfer timelines",
+    "Proposed imprisonment for non-compliance (later replaced before it came into force)"
+   ],
+   "src": "Fox Mandal",
+   "url": "https://foxmandal.in/?p=23615"
+  },
+  {
+   "date": "2019-10",
+   "era": "Tightening",
+   "title": "R&D and incubators widened — item (ix)",
+   "kind": "Schedule VII",
+   "changes": [
+    "Contributions to government-funded incubators and to public research bodies (ICAR, ICMR, CSIR etc.) for SDG-linked research made eligible"
+   ],
+   "src": "ca2013.com",
+   "url": "https://ca2013.com/wp-content/uploads/2019/10/Schedule-VII.pdf"
+  },
+  {
+   "date": "2020-05",
+   "era": "Tightening",
+   "title": "PM CARES Fund added to item (viii)",
+   "kind": "Schedule VII",
+   "changes": [
+    "Notified 26 May 2020, deemed effective 28 March 2020 — COVID-era contributions count as CSR"
+   ],
+   "src": "abcaus",
+   "url": "https://abcaus.in/companies-act/contribution-pm-cares-fund-included-schedule-vii-companies-act-2013.html"
+  },
+  {
+   "date": "2020-06",
+   "era": "Tightening",
+   "title": "CAPF & CPMF veterans added to item (vi)",
+   "kind": "Schedule VII",
+   "changes": [
+    "Central Armed Police Forces and Central Para Military Forces veterans and dependants, including widows, become eligible beneficiaries"
+   ],
+   "src": "TaxGuru",
+   "url": "https://taxguru.in/?p=727897"
+  },
+  {
+   "date": "2020-08",
+   "era": "Tightening",
+   "title": "Item (ix) substituted again",
+   "kind": "Schedule VII",
+   "changes": [
+    "G.S.R. 525(E) widens the list of research institutions and incubators eligible for CSR contributions"
+   ],
+   "src": "TaxGuru",
+   "url": "https://taxguru.in/?p=736655"
+  },
+  {
+   "date": "2020-09",
+   "era": "Tightening",
+   "title": "Companies (Amendment) Act, 2020 — decriminalisation",
+   "kind": "Law",
+   "changes": [
+    "Replaces imprisonment with monetary penalty (Section 135(7))",
+    "Allows set-off of excess spend",
+    "No CSR Committee needed if obligation ≤ ₹50 lakh"
+   ],
+   "src": "PSA Legal",
+   "url": "https://www.psalegal.com/?p=10666"
+  },
+  {
+   "date": "2021-01",
+   "era": "The penalty regime",
+   "title": "New CSR regime in force (22 Jan 2021)",
+   "kind": "Rule",
+   "changes": [
+    "2019 and 2020 amendments to Section 135 commence",
+    "CSR Amendment Rules 2021: CSR-1 registration, ongoing projects, Unspent CSR Account, impact assessment, 5% overhead cap, capital-asset rules",
+    "Non-compliance becomes a civil wrong with penalties"
+   ],
+   "src": "Taxscan",
+   "url": "https://www.taxscan.in/?p=97062"
+  },
+  {
+   "date": "2021-05",
+   "era": "The penalty regime",
+   "title": "SEBI BRSR replaces BRR",
+   "kind": "Disclosure",
+   "changes": [
+    "Quantitative ESG disclosure for listed companies; mandatory for the top 1,000 from FY 2022-23"
+   ],
+   "src": "GreenSutra",
+   "url": "https://greensutra.in/news/brsr-all-you-need-to-know/"
+  },
+  {
+   "date": "2022-09",
+   "era": "The penalty regime",
+   "title": "CSR Amendment Rules 2022",
+   "kind": "Rule",
+   "changes": [
+    "Companies with money in the Unspent CSR Account must have a CSR Committee",
+    "Revised annual report format and other clarifications"
+   ],
+   "src": "KPMG",
+   "url": "https://assets.kpmg.com/content/dam/kpmg/in/pdf/2022/10/first-notes-mca-amends-certain-rules-relating-to-corporate-social-responsibility.pdf"
+  },
+  {
+   "date": "2023-07",
+   "era": "The penalty regime",
+   "title": "SEBI BRSR Core",
+   "kind": "Disclosure",
+   "changes": [
+    "Nine ESG attributes requiring independent assurance, phased from top 150 to top 1,000"
+   ],
+   "src": "TaxGuru",
+   "url": "https://taxguru.in/?p=875991"
+  },
+  {
+   "date": "2023-10",
+   "era": "The penalty regime",
+   "title": "GST: input credit blocked on CSR",
+   "kind": "Related law",
+   "changes": [
+    "Section 17(5)(fa) of the CGST Act blocks ITC on goods and services used for CSR, from 1 Oct 2023"
+   ],
+   "src": "TaxGuru",
+   "url": "https://taxguru.in/goods-and-service-tax/prospective-amendment-itc-csr-expenditure-gst.html"
+  },
+  {
+   "date": "2025-03",
+   "era": "Recent",
+   "title": "SEBI eases BRSR Core",
+   "kind": "Disclosure",
+   "changes": [
+    "'Assessment or assurance' allowed; value-chain disclosure deferred and made voluntary; green credits indicator added"
+   ],
+   "src": "TaxGuru",
+   "url": "https://taxguru.in/?p=955846"
+  },
+  {
+   "date": "2025-07",
+   "era": "Recent",
+   "title": "Revised e-Form CSR-1",
+   "kind": "Rule",
+   "changes": [
+    "Tighter documentation and professional certification for implementing-agency registration (from 14 July 2025)"
+   ],
+   "src": "TaxGuru",
+   "url": "https://taxguru.in/company-law/companies-csr-policy-amendment-rules-2025.html"
+  },
+  {
+   "date": "2025-12",
+   "era": "Recent",
+   "title": "Companies (Amendment) Bill, 2025 introduced",
+   "kind": "Pending bill",
+   "pending": true,
+   "changes": [
+    "Proposes lower thresholds: net worth ₹100 crore, turnover ₹500 crore, net profit ₹3 crore",
+    "Proposes a CSR-experienced director on the committee"
+   ],
+   "src": "CAP India",
+   "url": "https://capindia.in/more-companies-likely-to-come-under-the-mandatory-csr-net/"
+  },
+  {
+   "date": "2026-03",
+   "era": "Recent",
+   "title": "Corporate Laws (Amendment) Bill, 2026 introduced",
+   "kind": "Pending bill",
+   "pending": true,
+   "changes": [
+    "Net-profit trigger ₹5 crore → ₹10 crore",
+    "Unspent CSR Account transfer 30 → 90 days",
+    "Committee exemption ₹50 lakh → ₹1 crore"
+   ],
+   "src": "AZB & Partners",
+   "url": "https://www.azbpartners.com/bank/corporate-laws-amendment-bill-2026-introduced/"
+  },
+  {
+   "date": "2026-05",
+   "era": "Recent",
+   "title": "Social Stock Exchange route — Rule 4A & item (xiii)",
+   "kind": "Rule",
+   "changes": [
+    "Up to 10% of annual CSR via ZCZP instruments on the Social Stock Exchange",
+    "No impact assessment needed for those projects; NPO must finish in 3 years"
+   ],
+   "src": "Corporatelaws.in",
+   "url": "https://corporatelaws.in/2026/07/companies-csr-policy-amendment-rules-2026.html"
+  },
+  {
+   "date": "2026-08",
+   "era": "Recent",
+   "title": "JPC report on the 2026 Bill",
+   "kind": "Pending bill",
+   "pending": true,
+   "changes": [
+    "Backs the ₹10 crore trigger but recommends removing the government's power to revise it",
+    "Bill not yet passed"
+   ],
+   "src": "PRS",
+   "url": "https://prsindia.org/billtrack/prs-products/prs-jpc-report-summary"
+  }
+ ]
 }

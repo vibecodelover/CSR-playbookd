@@ -1,7 +1,34 @@
 {
- "updated": "2026-11-17",
+ "updated": "2026-11-18",
  "note": "Regulatory changes, enforcement orders and pending bills. Pending bills are NOT law until passed and notified.",
  "items": [
+  {
+   "date": "2026-11-03",
+   "type": "Global",
+   "status": "Final",
+   "title": "UK FCA finalises rules bringing ESG rating providers under regulation (PS26/22)",
+   "summary": "Authorisation gateway opens June 2027; regime in force from 29 June 2028.",
+   "source": "Freshfields",
+   "url": "https://www.freshfields.com/en/our-thinking/blogs/sustainability/esg-insights-november-2026-102o8nh"
+  },
+  {
+   "date": "2026-10-24",
+   "type": "Rule",
+   "status": "In force",
+   "title": "MCA General Circular 05/2026 extends FY 2025-26 annual filings without extra fees",
+   "summary": "AOC-4 to 31 Dec 2026; MGT-7/7A to 31 Jan 2027. AGM dates not extended. CSR-2 is not mentioned in summaries, so check before relying on it.",
+   "source": "CorpLawUpdates",
+   "url": "https://www.corplawupdates.in/updates/mca-extends-annual-filing-deadlines-fy-2025-26"
+  },
+  {
+   "date": "2026-10-05",
+   "type": "Enforcement",
+   "status": "Drive",
+   "title": "ED searches 8 locations in ₹200 crore CSR donation laundering case",
+   "summary": "PMLA case: trusts allegedly took CSR from ~40 PSUs and banks and recycled funds via shell entities.",
+   "source": "Enforcement Directorate",
+   "url": "https://www.enforcementdirectorate.gov.in/media/press-release-documents/63cd2884-4d87-4619-b05a-cd1f3183ad08_PR_CSR%20case_3.pdf"
+  },
   {
    "date": "2026-08-03",
    "type": "Bill",
@@ -19,6 +46,15 @@
    "summary": "Suo-motu application; ₹34.08 lakh FY 2023-24 obligation not met; ₹14.16 lakh penalty on the company plus officers under Section 135(7).",
    "source": "TaxGuru",
    "url": "https://taxguru.in/?p=1065542"
+  },
+  {
+   "date": "2026-08-03",
+   "type": "Enforcement",
+   "status": "Order",
+   "title": "ROC Mumbai II also penalises Royal Foodstuffs for FY 2020-21 unspent CSR",
+   "summary": "₹5.51 lakh not transferred by Sep 2021; ₹11.02 lakh on the company and ₹55,092 on each of two directors.",
+   "source": "TaxGuru",
+   "url": "https://taxguru.in/company-law/roc-imposes-rs-12-12-lakh-penalty-failure-transfer-unspent-csr-amount.html"
   },
   {
    "date": "2026-07-24",

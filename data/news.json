@@ -1,19 +1,222 @@
 {
-  "updated": "2026-11-17",
-  "note": "Curated daily. Headlines are paraphrased; open the source for the full story.",
-  "items": [
-    {"date": "2026-11-17", "tag": "ESG", "region": "Global", "title": "ISSB meets in Frankfurt on 18–19 November; agenda papers published", "summary": "The International Sustainability Standards Board has released the agenda and supporting papers for its November board meeting.", "source": "BDO IFRS News", "url": "https://www.bdo.global/en-gb/news/ifrs-news/issb-publishes-agenda-and-papers-for-november-meeting"},
-    {"date": "2026-11-15", "tag": "Event", "region": "India", "title": "16th India CSR Summit & Awards set for New Delhi on 21 November", "summary": "The summit's theme is future-ready CSR; useful for networking and award benchmarking.", "source": "India CSR", "url": "https://indiacsr.in/"},
-    {"date": "2026-11-15", "tag": "ESG", "region": "India", "title": "K Raheja Corp earns a 4-star GRESB rating for 2026", "summary": "Real-estate developer's benchmark result, reported alongside other Indian corporate sustainability updates.", "source": "India CSR", "url": "https://indiacsr.in/"},
-    {"date": "2026-11-15", "tag": "ESG", "region": "India", "title": "SAMHI Hotels publishes its first sustainability report", "summary": "A first-time reporter in hospitality — a sign that ESG reporting is spreading beyond the BRSR-mandated top 1,000.", "source": "India CSR", "url": "https://indiacsr.in/"},
-    {"date": "2026-11-13", "tag": "CSR", "region": "India", "title": "National CSR Conclave on skills, education and the future workforce — Mumbai, 24 November", "summary": "The programme will cover new CSR regulations and Social Stock Exchange (ZCZP) instruments.", "source": "India CSR", "url": "https://indiacsr.in/national-csr-conclave-skills-education-future-workforce/"},
-    {"date": "2026-11-09", "tag": "ESG", "region": "Global", "title": "COP31 runs 9–20 November in Antalya, Türkiye", "summary": "Climate negotiations under the Turkish presidency, with Australia leading negotiations.", "source": "Uniqus — Sustainability & Climate Pulse", "url": "https://uniqus.com/sustainability-climate-pulse-november-2026/"},
-    {"date": "2026-11-03", "tag": "CSR", "region": "India", "title": "Joyalukkas Group founder announces ₹100 crore for housing, healthcare and education", "summary": "Large philanthropic allocation targeting vulnerable communities, women, students and patients.", "source": "India CSR", "url": "https://indiacsr.in/csr/"},
-    {"date": "2026-11-03", "tag": "CSR", "region": "India", "title": "CBRE partners Samarthanam and CABI to strengthen blind cricket", "summary": "Disability-inclusion CSR through sport, with a Give-Gold-certified implementing partner.", "source": "India CSR", "url": "https://indiacsr.in/csr/"},
-    {"date": "2026-11-02", "tag": "ESG", "region": "Global", "title": "California SB 253: first-year Scope 1 and 2 reports were due 10 November", "summary": "Relevant for Indian groups with large US operations or US-parented subsidiaries.", "source": "Uniqus", "url": "https://uniqus.com/?p=58629"},
-    {"date": "2026-11-01", "tag": "ESG", "region": "Global", "title": "ISSB: nearly 50 jurisdictions now on the path to its standards", "summary": "IFRS Foundation update notes the first wave of reports prepared under ISSB standards.", "source": "IFRS Foundation (SCC paper, Nov 2026)", "url": "https://www.ifrs.org/content/dam/ifrs/meetings/2026/november/scc/ap1-issb-updates.pdf"},
-    {"date": "2026-10-15", "tag": "CSR", "region": "Global", "title": "CECP Giving in Numbers 2026: giving steady overall, but most companies pulled back", "summary": "Median community investment rose, driven by top givers; 42% of companies expect 2026 budgets to fall.", "source": "CECP via 3BL", "url": "https://www.3blmedia.com/news/cecps-giving-numbersr-2026-edition-finds-corporate-giving-holding-steady-despite-most"},
-    {"date": "2026-08-20", "tag": "CSR", "region": "Global", "title": "Corporate foundations are managing more money without more staff (CECP)", "summary": "Median transfer from a company to its foundation reached $10 million in 2025.", "source": "CECP via 3BL", "url": "https://www.3blmedia.com/news/new-cecp-research-corporate-foundations-are-managing-more-money-without-more-staff"},
-    {"date": "2026-07-18", "tag": "CSR", "region": "India", "title": "India's CSR spend hits a record ₹40,794 crore in FY 2024-25", "summary": "Up 17% year on year; education took the largest share and Maharashtra the largest state allocation.", "source": "India CSR", "url": "https://indiacsr.in/?p=193955"}
-  ]
+ "updated": "2026-11-18",
+ "note": "Curated daily. Headlines are paraphrased; open the source for the full story.",
+ "items": [
+  {
+   "date": "2026-11-17",
+   "tag": "ESG",
+   "region": "Global",
+   "title": "ISSB meets in Frankfurt on 18–19 November; agenda papers published",
+   "summary": "The International Sustainability Standards Board has released the agenda and supporting papers for its November board meeting.",
+   "source": "BDO IFRS News",
+   "url": "https://www.bdo.global/en-gb/news/ifrs-news/issb-publishes-agenda-and-papers-for-november-meeting"
+  },
+  {
+   "date": "2026-11-17",
+   "tag": "ESG",
+   "region": "India",
+   "title": "Amazon to invest US$7 billion more in Indian renewables by 2030",
+   "summary": "Adds four wind and solar projects (934 MW) in Karnataka, MP and Rajasthan; India contracted capacity will pass 2 GW.",
+   "source": "TheCSRUniverse",
+   "url": "https://thecsruniverse.com/articles/amazon-plans-us-7-billion-renewable-energy-investment-in-india-by-2030"
+  },
+  {
+   "date": "2026-11-16",
+   "tag": "ESG",
+   "region": "Global",
+   "title": "ECB to run 'deep dives' on how banks manage climate and nature risks",
+   "summary": "Supervisory scrutiny of climate and nature risk at euro-area banks is stepping up.",
+   "source": "ESG Today",
+   "url": "https://www.esgtoday.com/ecb-to-launch-deep-dives-into-banks-management-of-climate-and-nature-risks/"
+  },
+  {
+   "date": "2026-11-16",
+   "tag": "ESG",
+   "region": "Global",
+   "title": "BII, Norfund and FinDev Canada team up to mobilise $10 billion of climate finance for emerging markets",
+   "summary": "Development finance institutions pool efforts on climate capital for emerging economies, a group that includes India.",
+   "source": "ESG Today",
+   "url": "https://www.esgtoday.com/bii-norfund-findev-canada-partner-to-mobilize-10-billion-in-climate-finance-to-emerging-markets/"
+  },
+  {
+   "date": "2026-11-15",
+   "tag": "Event",
+   "region": "India",
+   "title": "16th India CSR Summit & Awards set for New Delhi on 21 November",
+   "summary": "The summit's theme is future-ready CSR; useful for networking and award benchmarking.",
+   "source": "India CSR",
+   "url": "https://indiacsr.in/"
+  },
+  {
+   "date": "2026-11-15",
+   "tag": "ESG",
+   "region": "India",
+   "title": "K Raheja Corp earns a 4-star GRESB rating for 2026",
+   "summary": "Real-estate developer's benchmark result, reported alongside other Indian corporate sustainability updates.",
+   "source": "India CSR",
+   "url": "https://indiacsr.in/"
+  },
+  {
+   "date": "2026-11-15",
+   "tag": "ESG",
+   "region": "India",
+   "title": "SAMHI Hotels publishes its first sustainability report",
+   "summary": "A first-time reporter in hospitality — a sign that ESG reporting is spreading beyond the BRSR-mandated top 1,000.",
+   "source": "India CSR",
+   "url": "https://indiacsr.in/"
+  },
+  {
+   "date": "2026-11-14",
+   "tag": "CSR",
+   "region": "India",
+   "title": "Feeding India's 'Unboxing Joy' drive reaches 1.1 lakh children",
+   "summary": "The campaign delivered play and learning gift boxes to children across the country.",
+   "source": "India CSR",
+   "url": "https://indiacsr.in/feeding-india-unboxing-joy-children-gifts-play-learning/"
+  },
+  {
+   "date": "2026-11-13",
+   "tag": "CSR",
+   "region": "India",
+   "title": "National CSR Conclave on skills, education and the future workforce — Mumbai, 24 November",
+   "summary": "The programme will cover new CSR regulations and Social Stock Exchange (ZCZP) instruments.",
+   "source": "India CSR",
+   "url": "https://indiacsr.in/national-csr-conclave-skills-education-future-workforce/"
+  },
+  {
+   "date": "2026-11-13",
+   "tag": "Event",
+   "region": "India",
+   "title": "48th Jamnalal Bajaj Awards to honour Gandhian social workers",
+   "summary": "Annual awards recognise selfless service and social impact.",
+   "source": "India CSR",
+   "url": "https://indiacsr.in/48th-jamnalal-bajaj-awards-gandhian-warriors/"
+  },
+  {
+   "date": "2026-11-09",
+   "tag": "ESG",
+   "region": "Global",
+   "title": "COP31 runs 9–20 November in Antalya, Türkiye",
+   "summary": "Climate negotiations under the Turkish presidency, with Australia leading negotiations.",
+   "source": "Uniqus — Sustainability & Climate Pulse",
+   "url": "https://uniqus.com/sustainability-climate-pulse-november-2026/"
+  },
+  {
+   "date": "2026-11-09",
+   "tag": "CSR",
+   "region": "India",
+   "title": "Muthoot Finance commits ₹1 crore to school sanitation, plus 11 community projects",
+   "summary": "Toilet units for government schools with a focus on girls' menstrual hygiene; launched for the late M. G. George Muthoot's birth anniversary.",
+   "source": "India CSR",
+   "url": "https://indiacsr.in/muthoot-finance-school-sanitation-initiative/"
+  },
+  {
+   "date": "2026-11-04",
+   "tag": "ESG",
+   "region": "India",
+   "title": "India's carbon market (CCTS) faces delays: only ~295 of ~750 plants have FY26 targets",
+   "summary": "A September amendment dropped refineries and textiles for FY26, and steel targets are still pending.",
+   "source": "Business Standard",
+   "url": "https://www.business-standard.com/economy/news/the-hazy-road-to-antalya-india-s-carbon-trading-scheme-faces-delays-126110402129_1.html"
+  },
+  {
+   "date": "2026-11-04",
+   "tag": "ESG",
+   "region": "Global",
+   "title": "UK finalises ESG-ratings regulation and plans mandatory human rights due diligence",
+   "summary": "FCA rules (PS26/22) take effect June 2028; the government will bring a due-diligence duty for large businesses.",
+   "source": "Freshfields — ESG Insights, Nov 2026",
+   "url": "https://www.freshfields.com/en/our-thinking/blogs/sustainability/esg-insights-november-2026-102o8nh"
+  },
+  {
+   "date": "2026-11-03",
+   "tag": "CSR",
+   "region": "India",
+   "title": "Joyalukkas Group founder announces ₹100 crore for housing, healthcare and education",
+   "summary": "Large philanthropic allocation targeting vulnerable communities, women, students and patients.",
+   "source": "India CSR",
+   "url": "https://indiacsr.in/csr/"
+  },
+  {
+   "date": "2026-11-03",
+   "tag": "CSR",
+   "region": "India",
+   "title": "CBRE partners Samarthanam and CABI to strengthen blind cricket",
+   "summary": "Disability-inclusion CSR through sport, with a Give-Gold-certified implementing partner.",
+   "source": "India CSR",
+   "url": "https://indiacsr.in/csr/"
+  },
+  {
+   "date": "2026-11-02",
+   "tag": "ESG",
+   "region": "Global",
+   "title": "California SB 253: first-year Scope 1 and 2 reports were due 10 November",
+   "summary": "Relevant for Indian groups with large US operations or US-parented subsidiaries.",
+   "source": "Uniqus",
+   "url": "https://uniqus.com/?p=58629"
+  },
+  {
+   "date": "2026-11-01",
+   "tag": "ESG",
+   "region": "Global",
+   "title": "ISSB: nearly 50 jurisdictions now on the path to its standards",
+   "summary": "IFRS Foundation update notes the first wave of reports prepared under ISSB standards.",
+   "source": "IFRS Foundation (SCC paper, Nov 2026)",
+   "url": "https://www.ifrs.org/content/dam/ifrs/meetings/2026/november/scc/ap1-issb-updates.pdf"
+  },
+  {
+   "date": "2026-10-24",
+   "tag": "CSR",
+   "region": "India",
+   "title": "CSRBOX projects cumulative CSR of ₹5.5 lakh crore by 2030",
+   "summary": "Annual CSR is estimated to pass ₹77,000 crore by 2030; the India CSR & ESG Summit is renamed One Purpos India Forum (press release).",
+   "source": "The Tribune (CSRBOX release)",
+   "url": "https://www.tribuneindia.com/news/advertorial-disclaimer/indias-csr-expenditure-projected-to-reach-%E2%82%B95-50-lakh-crore-by-2030-csrbox-evolves-its-12-year-legacy-into-one-purpos-india-forum"
+  },
+  {
+   "date": "2026-10-22",
+   "tag": "ESG",
+   "region": "Global",
+   "title": "ISSB proposes a Practice Statement on nature-related disclosures",
+   "summary": "Exposure draft builds on TNFD; comments are open until 19 February 2027.",
+   "source": "EY",
+   "url": "https://www.ey.com/en_gl/technical/ifrs-technical-resources/issb-issues-ed-ifrs-practice-statement-on-nature-related-disclosures"
+  },
+  {
+   "date": "2026-10-15",
+   "tag": "CSR",
+   "region": "Global",
+   "title": "CECP Giving in Numbers 2026: giving steady overall, but most companies pulled back",
+   "summary": "Median community investment rose, driven by top givers; 42% of companies expect 2026 budgets to fall.",
+   "source": "CECP via 3BL",
+   "url": "https://www.3blmedia.com/news/cecps-giving-numbersr-2026-edition-finds-corporate-giving-holding-steady-despite-most"
+  },
+  {
+   "date": "2026-10-07",
+   "tag": "CSR",
+   "region": "India",
+   "title": "ED uncovers ₹200 crore CSR racket routed through healthcare trusts",
+   "summary": "About 40 PSUs and public sector banks donated to trusts allegedly used to turn CSR money into cash.",
+   "source": "Business Today",
+   "url": "https://www.businesstoday.in/india/story/rs-200-crore-40-psus-ed-uncovers-csr-racket-funds-routed-through-trusts-promoted-by-class-xii-dropout-560077-2026-10-07"
+  },
+  {
+   "date": "2026-08-20",
+   "tag": "CSR",
+   "region": "Global",
+   "title": "Corporate foundations are managing more money without more staff (CECP)",
+   "summary": "Median transfer from a company to its foundation reached $10 million in 2025.",
+   "source": "CECP via 3BL",
+   "url": "https://www.3blmedia.com/news/new-cecp-research-corporate-foundations-are-managing-more-money-without-more-staff"
+  },
+  {
+   "date": "2026-07-18",
+   "tag": "CSR",
+   "region": "India",
+   "title": "India's CSR spend hits a record ₹40,794 crore in FY 2024-25",
+   "summary": "Up 17% year on year; education took the largest share and Maharashtra the largest state allocation.",
+   "source": "India CSR",
+   "url": "https://indiacsr.in/?p=193955"
+  }
+ ]
 }

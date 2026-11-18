@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17",
+ "updated": "2026-11-18",
  "note": "ROC adjudication orders, parliamentary data and news on CSR non-compliance. Updated daily.",
  "stats": [
   {
@@ -29,6 +29,15 @@
  ],
  "items": [
   {
+   "date": "2026-10-05",
+   "who": "Healthcare trusts linked to Dharmendra Kumar Chandradev Singh — ED Mumbai",
+   "type": "Misuse of funds",
+   "what": "Trusts allegedly drew CSR from ~40 PSUs/banks and private firms; projects incomplete, bills inflated, money routed via shells and returned as cash for a commission (~₹200 crore).",
+   "result": "PMLA searches at 8 locations; cash, documents and devices seized; probe ongoing. Lesson: politically recommended partners still need due diligence.",
+   "url": "https://www.enforcementdirectorate.gov.in/media/press-release-documents/63cd2884-4d87-4619-b05a-cd1f3183ad08_PR_CSR%20case_3.pdf",
+   "src": "Enforcement Directorate"
+  },
+  {
    "date": "2026-08-11",
    "who": "Company (CSR-2 non-filing) — ROC Kolkata I",
    "type": "CSR-2 not filed",
@@ -44,6 +53,15 @@
    "what": "FY 2023-24 obligation of ₹34.08 lakh not met; suo-motu application filed.",
    "result": "₹14.16 lakh on the company plus penalties on officers; Section 446B relief denied.",
    "url": "https://taxguru.in/?p=1065542",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2026-08-03",
+   "who": "Royal Foodstuffs Ltd — ROC Mumbai II (FY 2020-21)",
+   "type": "Not transferred",
+   "what": "Spent ₹6.73 lakh of a ₹12.24 lakh obligation; ₹5.51 lakh moved to PM CARES only in June 2026.",
+   "result": "₹11.02 lakh on the company and ₹55,092 on each of two directors; Section 446B relief denied (not a small company).",
+   "url": "https://taxguru.in/company-law/roc-imposes-rs-12-12-lakh-penalty-failure-transfer-unspent-csr-amount.html",
    "src": "TaxGuru"
   },
   {
@@ -101,8 +119,26 @@
    "src": "TaxGuru"
   },
   {
+   "date": "2026-03-17",
+   "who": "NGO worker in Raigarh (Chhattisgarh) — cyber gang posing as CSR funders",
+   "type": "Fraud invoking CSR",
+   "what": "Gang promised CSR funding, had the NGO open a corporate bank account, then took control of it; ₹2.17 crore of fraud money passed through.",
+   "result": "Five arrested; account linked to 44 cyber-fraud complaints. Lesson: no genuine CSR funder needs control of an NGO's bank account.",
+   "url": "https://indiacsr.in/csr-funding-scam-raigarh-ngo-worker-duped-rs-2-17-crore-cyber-fraud/",
+   "src": "India CSR"
+  },
+  {
+   "date": "2026-02-05",
+   "who": "Jupiter International Ltd — ROC Kolkata",
+   "type": "Board report disclosure",
+   "what": "Board's Reports for FY 2017-18 and 2018-19 did not give reasons for not spending the CSR amount.",
+   "result": "₹3 lakh on the company and ₹50,000 on each of two directors under Section 134(8).",
+   "url": "https://taxguru.in/company-law/roc-kolkata-imposed-penalty-csr-disclosure-failure-boards-report.html",
+   "src": "TaxGuru"
+  },
+  {
    "date": "2026-01-20",
-   "who": "Company — ROC Chennai",
+   "who": "Airfloa Rail Technology Ltd — ROC Chennai",
    "type": "Shortfall",
    "what": "FY 2019-20 obligation of ₹17.27 lakh neither spent nor transferred on time; later rectified.",
    "result": "Penalised — post-facto payment is not a defence.",
@@ -119,6 +155,24 @@
    "src": "TaxGuru"
   },
   {
+   "date": "2026-01-07",
+   "who": "Airfloa Rail Technology Ltd — ROC Chennai (FY 2020-21)",
+   "type": "Shortfall",
+   "what": "₹25.99 lakh obligation neither spent nor transferred; paid to PMNRF in Dec 2024 before proceedings; no one appeared, so decided ex parte.",
+   "result": "₹25.99 lakh on the company and ₹2 lakh on each of two directors (₹29.99 lakh total).",
+   "url": "https://studycafe.in/roc-slaps-rs-29-99-lakh-penalty-on-company-and-its-directors-for-not-spending-mandatory-csr-amount-405515.html",
+   "src": "StudyCafe"
+  },
+  {
+   "date": "2025-12-12",
+   "who": "Falcon Marine Exports Ltd — ROC Cuttack",
+   "type": "Board report disclosure",
+   "what": "FY 2014-15 Board's Report left out the CSR policy, committee composition and reasons for not spending 2%.",
+   "result": "₹3 lakh on the company and ₹50,000 on each of three officers; suo-motu application.",
+   "url": "https://taxguru.in/company-law/roc-cuttack-imposes-penalty-failing-disclose-csr-policy.html",
+   "src": "TaxGuru"
+  },
+  {
    "date": "2025-11-22",
    "who": "Company — ROC Bangalore",
    "type": "Misuse of Unspent Account",
@@ -128,13 +182,31 @@
    "src": "TaxGuru"
   },
   {
+   "date": "2025-11",
+   "who": "Unnamed company — ROC Delhi",
+   "type": "Late transfer",
+   "what": "FY 2022-23 unspent ₹10.24 lakh not moved to a Schedule VII fund by 30 Sep 2023.",
+   "result": "₹20.48 lakh on the company (2×) and ₹1.02 lakh on each director (1/10).",
+   "url": "https://www.taxscan.in/top-stories/delay-in-transferring-1024-lakh-unspent-csr-funds-mca-imposes-penalty-of-2048-lakh-on-company-and-102-lakh-on-each-director-1441712",
+   "src": "Taxscan"
+  },
+  {
    "date": "2025-10-17",
    "who": "Pace Digitek Ltd — ROC Bangalore",
    "type": "Multi-year shortfall",
    "what": "CSR not spent for FY 2020-21, 2021-22 and 2023-24; disclosed suo motu before its IPO; later moved ₹26.63 lakh to PMNRF.",
-   "result": "Penalties reported at ₹55.92 lakh in total across years.",
-   "url": "https://indiacsr.in/?p=176615",
-   "src": "India CSR"
+   "result": "Adjudication order: ₹14.79 lakh on the company and ₹73,970 on the MD (FY 2022-23 spared due to excess spend). Some reports cite higher totals.",
+   "url": "https://taxguru.in/company-law/penalty-imposed-non-spending-csr-funds-companies-act-2013.html",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2025-08",
+   "who": "NGOs, trusts and shell firms across six states — Income Tax Dept",
+   "type": "Misuse of funds",
+   "what": "Searches found CSR donations routed to paper NGOs and withdrawn as cash or layered through shells over about three years.",
+   "result": "About ₹800 crore flagged (preliminary); action against donor companies and recipients under consideration.",
+   "url": "https://thecsrjournal.in/it-department-busts-800-crore-csr-fund-diversion-scheme-after-raids-in-six-states",
+   "src": "The CSR Journal"
   },
   {
    "date": "2025-03-26",
@@ -164,12 +236,21 @@
    "src": "TaxGuru"
   },
   {
-   "date": "2025-11",
-   "who": "Unnamed company — ROC Delhi",
+   "date": "2023-05-17",
+   "who": "Comviva Technologies Ltd — ROC Delhi & Haryana",
    "type": "Late transfer",
-   "what": "FY 2022-23 unspent ₹10.24 lakh not moved to a Schedule VII fund by 30 Sep 2023.",
-   "result": "₹20.48 lakh on the company (2×) and ₹1.02 lakh on each director (1/10).",
-   "url": "https://www.taxscan.in/top-stories/delay-in-transferring-1024-lakh-unspent-csr-funds-mca-imposes-penalty-of-2048-lakh-on-company-and-102-lakh-on-each-director-1441712",
+   "what": "₹5.50 lakh FY 2020-21 unspent transfer to PMNRF bounced and went unnoticed; deposited only in March 2022.",
+   "result": "₹11.00 lakh on the company and ₹55,012 on each of five directors (incl. independent directors).",
+   "url": "https://taxguru.in/company-law/roc-imposes-penalty-company-failure-meet-csr-obligations.html",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2023-05",
+   "who": "RHI Magnesita India Ltd — ROC Mumbai",
+   "type": "Late transfer",
+   "what": "₹1.03 crore unspent CSR not moved to a Schedule VII fund within six months; later paid to PM CARES.",
+   "result": "₹1 crore on the company and ₹2 lakh each on the MD, a director, the CS and the CFO.",
+   "url": "https://www.taxscan.in/non-utilization-of-csr-funds-roc-slams-rhi-magnesita-india-ltd-with-rs-1-crore-fine/277092",
    "src": "Taxscan"
   }
  ]

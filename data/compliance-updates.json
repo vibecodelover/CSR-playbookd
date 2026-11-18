@@ -1,0 +1,105 @@
+{
+ "updated": "2026-11-17",
+ "note": "Regulatory changes, enforcement orders and pending bills. Pending bills are NOT law until passed and notified.",
+ "items": [
+  {
+   "date": "2026-08-03",
+   "type": "Bill",
+   "status": "Pending",
+   "title": "JPC report on the Corporate Laws (Amendment) Bill, 2026 tabled",
+   "summary": "Backs raising the CSR net-profit trigger from ₹5 crore to ₹10 crore, and recommends removing the government's power to revise that threshold.",
+   "source": "PRS Legislative Research",
+   "url": "https://prsindia.org/billtrack/prs-products/prs-jpc-report-summary"
+  },
+  {
+   "date": "2026-08-03",
+   "type": "Enforcement",
+   "status": "Order",
+   "title": "ROC Mumbai II penalises Royal Foodstuffs for FY 2023-24 CSR shortfall",
+   "summary": "Suo-motu application; ₹34.08 lakh FY 2023-24 obligation not met; ₹14.16 lakh penalty on the company plus officers under Section 135(7).",
+   "source": "TaxGuru",
+   "url": "https://taxguru.in/?p=1065542"
+  },
+  {
+   "date": "2026-07-24",
+   "type": "Enforcement",
+   "status": "Drive",
+   "title": "ROCs issue show-cause notices to companies that never filed Form CSR-2 for FY 2021-22",
+   "summary": "Orders cite a Ministry instruction on CSR non-compliance — a signal that CSR-2 non-filers are being flagged systematically.",
+   "source": "TaxGuru",
+   "url": "https://taxguru.in/?p=1063565"
+  },
+  {
+   "date": "2026-07-17",
+   "type": "Enforcement",
+   "status": "Order",
+   "title": "ROC Delhi II penalises Varindera Constructions for late transfer of unspent CSR (FY 2020-21)",
+   "summary": "₹5.20 lakh unspent was moved to a Schedule VII fund years late; company and five officers penalised.",
+   "source": "TaxGuru",
+   "url": "https://taxguru.in/?p=1060066"
+  },
+  {
+   "date": "2026-06-25",
+   "type": "Enforcement",
+   "status": "Order",
+   "title": "ROC Bilaspur penalises late CSR-2 filing even after the company filed before the notice",
+   "summary": "Filing late (before the SCN) did not avoid a penalty under Section 450.",
+   "source": "TaxGuru",
+   "url": "https://taxguru.in/?p=1058083"
+  },
+  {
+   "date": "2026-05-27",
+   "type": "Rule",
+   "status": "In force",
+   "title": "CSR Amendment Rules 2026: new Rule 4A and Schedule VII item (xiii) for Social Stock Exchange ZCZP instruments",
+   "summary": "Up to 10% of a year's CSR spend may go into ZCZP instruments; no impact assessment needed for those projects.",
+   "source": "Taxmann",
+   "url": "https://www.taxmann.com/post/blog/mca-enables-csr-spending-through-zczp-instruments-on-sse/"
+  },
+  {
+   "date": "2026-03-23",
+   "type": "Bill",
+   "status": "Pending",
+   "title": "Corporate Laws (Amendment) Bill, 2026 introduced in Lok Sabha and sent to a JPC",
+   "summary": "CSR proposals: ₹10 crore profit trigger, 90 days (from 30) to fund the Unspent CSR Account, committee exemption raised to ₹1 crore.",
+   "source": "AZB & Partners",
+   "url": "https://www.azbpartners.com/bank/corporate-laws-amendment-bill-2026-introduced/"
+  },
+  {
+   "date": "2026-02-24",
+   "type": "Global",
+   "status": "Final",
+   "title": "EU Council gives final approval to Omnibus I (CSRD/CSDDD simplification)",
+   "summary": "CSRD scope narrows to >1,000 employees and >€450m turnover; wave 2 pushed back two years.",
+   "source": "Greenstep",
+   "url": "https://greenstep.com/articles/csrd-and-omnibus-what-changes-2026/"
+  },
+  {
+   "date": "2025-12-05",
+   "type": "Bill",
+   "status": "Pending",
+   "title": "A Companies (Amendment) Bill, 2025 introduced in Rajya Sabha proposes LOWER CSR thresholds",
+   "summary": "Proposes net worth ₹100 crore, turnover ₹500 crore, net profit ₹3 crore — the opposite direction to the 2026 Bill. Watch both.",
+   "source": "Centre for Advancement of Philanthropy",
+   "url": "https://capindia.in/more-companies-likely-to-come-under-the-mandatory-csr-net/"
+  },
+  {
+   "date": "2025-07-14",
+   "type": "Rule",
+   "status": "In force",
+   "title": "Revised e-Form CSR-1 for registering implementing agencies takes effect",
+   "summary": "More detailed documentation and professional certification for CSR-1 registration.",
+   "source": "TaxGuru",
+   "url": "https://taxguru.in/company-law/companies-csr-policy-amendment-rules-2025.html"
+  },
+  {
+   "date": "2025-03-28",
+   "type": "SEBI",
+   "status": "In force",
+   "title": "SEBI eases BRSR Core: 'assessment or assurance', value-chain disclosure deferred, green credits added",
+   "summary": "Listed entities may pick third-party assessment instead of assurance; value-chain ESG disclosure deferred.",
+   "source": "TaxGuru",
+   "url": "https://taxguru.in/?p=955846"
+  }
+ ]
+}

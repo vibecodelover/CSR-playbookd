@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSR Playbook India</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{
+  --bg:#f5f4ef; --surface:#fdfdfb; --surface-2:#f0eee7; --line:#e3e0d6;
+  --ink:#141412; --ink-2:#4f4e4a; --ink-3:#86847c; --grid:#e7e4db;
+  --accent:#19486A; --accent-ink:#fff; --tint:#e8eef3;
+  --ok:#1a7f37; --okbg:#e6f4ea; --warn:#8a5a00; --warnbg:#fff4e0; --bad:#b42318; --badbg:#fdecec;
+  --sdg1:#E5243B;--sdg2:#DDA63A;--sdg3:#4C9F38;--sdg4:#C5192D;--sdg5:#FF3A21;--sdg6:#26BDE2;--sdg7:#FCC30B;--sdg8:#A21942;--sdg9:#FD6925;--sdg10:#DD1367;--sdg11:#FD9D24;--sdg12:#BF8B2E;--sdg13:#3F7E44;--sdg14:#0A97D9;--sdg15:#56C02B;--sdg16:#00689D;--sdg17:#19486A;
+  --r:16px; --shadow:0 1px 2px rgba(0,0,0,.04),0 6px 20px rgba(0,0,0,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#111110;--surface:#1a1a18;--surface-2:#24241f;--line:#34332e;--ink:#f1f0eb;--ink-2:#c6c4bb;--ink-3:#8f8d85;--grid:#2c2b27;--tint:#1f2a31;
+  --ok:#5fd07e;--okbg:#16301e;--warn:#f2c47a;--warnbg:#3a2a10;--bad:#ff8a80;--badbg:#3a1616;}
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+@media (prefers-color-scheme: dark){a{color:#8cc7ff}}
+h1,h2,h3,h4{font-family:Fraunces,Georgia,serif;letter-spacing:-.01em;line-height:1.2;margin:0}
+h2{font-size:1.6rem} h3{font-size:1.12rem;margin-bottom:.35rem} h4{font-size:1rem}
+.wrap{max-width:1200px;margin:0 auto;padding:0 18px}
+/* header */
+header.top{background:#101820;color:#fff;position:relative;overflow:hidden}
+header.top .wrap{padding:26px 18px 22px;position:relative;z-index:1}
+header.top h1{font-size:2rem}
+header.top p{margin:.35rem 0 0;opacity:.85;max-width:780px}
+.sdgstrip{display:grid;grid-template-columns:repeat(17,1fr);height:6px}
+.sdgstrip i{display:block}
+.wheel{position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;opacity:.35;
+ background:conic-gradient(var(--sdg1) 0 21.2deg,var(--sdg2) 0 42.4deg,var(--sdg3) 0 63.5deg,var(--sdg4) 0 84.7deg,var(--sdg5) 0 105.9deg,var(--sdg6) 0 127deg,var(--sdg7) 0 148.2deg,var(--sdg8) 0 169.4deg,var(--sdg9) 0 190.6deg,var(--sdg10) 0 211.8deg,var(--sdg11) 0 232.9deg,var(--sdg12) 0 254.1deg,var(--sdg13) 0 275.3deg,var(--sdg14) 0 296.5deg,var(--sdg15) 0 317.6deg,var(--sdg16) 0 338.8deg,var(--sdg17) 0 360deg);
+ -webkit-mask:radial-gradient(circle,transparent 52%,#000 53%);mask:radial-gradient(circle,transparent 52%,#000 53%);animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){.wheel{animation:none}}
+/* main tabs */
+nav.tabs{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.tabs .wrap{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-top:8px;padding-bottom:8px}
+nav.tabs a{display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:12px;white-space:nowrap;color:var(--ink-2);font-weight:600;font-size:.9rem;border:1px solid transparent;transition:all .18s}
+nav.tabs a .dot{width:10px;height:10px;border-radius:3px;background:var(--c)}
+nav.tabs a:hover{text-decoration:none;background:var(--surface-2);color:var(--ink)}
+nav.tabs a.on{background:var(--c);color:#fff;box-shadow:0 4px 14px color-mix(in srgb,var(--c) 35%,transparent)}
+nav.tabs a.on .dot{background:#fff}
+main{padding:26px 0 70px}
+section.view{display:none;animation:fade .3s ease}
+section.view.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.lede{color:var(--ink-2);max-width:840px;margin:.35rem 0 1.1rem}
+.hero-h{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.hero-h .badge{background:var(--accent);color:#fff;font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:999px;letter-spacing:.03em;text-transform:uppercase}
+/* sub tabs */
+.subtabs{display:flex;gap:6px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);padding:6px;border-radius:14px;margin:6px 0 18px;position:sticky;top:62px;z-index:20}
+.subtabs button{font:inherit;font-size:.86rem;font-weight:600;border:0;background:transparent;color:var(--ink-2);padding:8px 13px;border-radius:10px;cursor:pointer;transition:all .15s}
+.subtabs button:hover{background:var(--surface-2);color:var(--ink)}
+.subtabs button.on{background:var(--accent);color:#fff}
+.subview{display:none;animation:fade .25s ease} .subview.on{display:block}
+/* layout */
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--shadow);transition:transform .15s,box-shadow .15s}
+.card.lift:hover{transform:translateY(-2px);box-shadow:0 2px 4px rgba(0,0,0,.05),0 12px 28px rgba(0,0,0,.08)}
+.card.flat{box-shadow:none}
+.sec-h{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:30px 0 12px}
+.kpi .v{font-family:Fraunces,serif;font-size:2rem;font-weight:700;line-height:1.05}
+.kpi .l{color:var(--ink-2);font-size:.88rem;margin-top:5px}
+.kpi .s{color:var(--ink-3);font-size:.76rem;margin-top:8px}
+.kpi{border-top:4px solid var(--k,var(--accent))}
+.muted{color:var(--ink-3);font-size:.82rem}
+.src{color:var(--ink-3);font-size:.77rem;margin-top:10px}
+.src a{color:var(--ink-2);text-decoration:underline}
+.pill{display:inline-flex;align-items:center;gap:4px;font-size:.72rem;font-weight:600;padding:2px 9px;border-radius:999px;background:var(--surface-2);color:var(--ink-2);border:1px solid var(--line);white-space:nowrap}
+.pill.ok{background:var(--okbg);color:var(--ok);border-color:transparent}
+.pill.warn{background:var(--warnbg);color:var(--warn);border-color:transparent}
+.pill.bad{background:var(--badbg);color:var(--bad);border-color:transparent}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.chip{font:inherit;font-size:.8rem;font-weight:600;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);cursor:pointer;transition:all .15s}
+.chip:hover{border-color:var(--ink-3)}
+.chip.on{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;margin-bottom:14px}
+select,input[type=number],input[type=search],input[type=text]{font:inherit;font-size:.9rem;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+input[type=number]{width:130px}
+input[type=range]{accent-color:var(--accent);width:100%}
+label.f{display:flex;flex-direction:column;gap:4px;font-size:.78rem;color:var(--ink-2);font-weight:600}
+.btn{font:inherit;font-size:.86rem;font-weight:600;padding:9px 15px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;transition:all .15s}
+.btn:hover{border-color:var(--ink-3)}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn.sm{padding:5px 10px;font-size:.78rem}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;color:var(--ink-2);background:var(--surface-2);position:sticky;top:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.tbl{overflow:auto;max-height:480px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.chartbox{position:relative;height:300px} .chartbox.tall{height:400px} .chartbox.sm{height:220px}
+ul.clean{margin:.3rem 0;padding-left:1.1rem} ul.clean li{margin:.28rem 0}
+.callout{border-left:4px solid var(--accent);background:var(--surface);padding:12px 16px;border-radius:0 12px 12px 0;margin:12px 0;color:var(--ink-2)}
+.callout b{color:var(--ink)}
+/* feed */
+.feed .item{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.feed .item:last-child{border-bottom:0}
+.feed .d{font-size:.78rem;color:var(--ink-3);font-weight:600;padding-top:2px}
+.feed .t{font-weight:600} .feed .t a{color:var(--ink)}
+.feed .sm{color:var(--ink-2);font-size:.88rem;margin:3px 0 6px}
+.feed .meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:.76rem;color:var(--ink-3)}
+.news-grid{grid-template-columns:2fr 1fr}
+@media (max-width:880px){.news-grid{grid-template-columns:1fr}}
+.pick{border-top:4px solid var(--k);display:flex;flex-direction:column;gap:6px}
+.pick .t{font-weight:700;font-size:1rem;color:var(--ink)}
+/* slides */
+.slides{position:relative;overflow:hidden;border-radius:20px;background:#101820;color:#fff;min-height:250px}
+.slide{position:absolute;inset:0;padding:30px 34px;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateX(30px);transition:all .5s ease;pointer-events:none}
+.slide.on{opacity:1;transform:none;pointer-events:auto}
+.slide .big{font-family:Fraunces,serif;font-size:clamp(2.4rem,7vw,4.2rem);font-weight:700;line-height:1;color:var(--k)}
+.slide .t{font-size:1.25rem;font-weight:600;margin-top:10px}
+.slide .s{opacity:.8;margin-top:6px;max-width:640px}
+.slide .src a{color:#cfd8e3}
+.slide::before{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:var(--k)}
+.sl-nav{position:absolute;right:16px;bottom:14px;display:flex;gap:8px;align-items:center;z-index:2}
+.sl-nav button{font:inherit;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);color:#fff;cursor:pointer}
+.sl-dots{position:absolute;left:34px;bottom:18px;display:flex;gap:6px;z-index:2}
+.sl-dots i{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.35);cursor:pointer;transition:all .2s}
+.sl-dots i.on{width:24px;background:#fff}
+/* year slider */
+.yearbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin-bottom:14px}
+.yearbar .yr{font-family:Fraunces,serif;font-size:1.6rem;font-weight:700;min-width:70px}
+.yearbar input{flex:1;min-width:180px}
+/* timeline */
+.tl-wrap{overflow-x:auto;padding:10px 4px 18px;scrollbar-width:thin}
+.tl{display:flex;align-items:center;gap:0;min-width:max-content;position:relative;padding:40px 10px 30px}
+.tl::before{content:"";position:absolute;left:0;right:0;top:50%;height:3px;background:linear-gradient(90deg,var(--sdg17),var(--sdg16),var(--sdg13),var(--sdg4),var(--sdg9));border-radius:3px}
+.tl .era{position:absolute;top:0;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-3)}
+.bub{position:relative;z-index:1;margin:0 9px;width:46px;height:46px;border-radius:50%;border:3px solid var(--surface);background:var(--k);color:#fff;font-size:.66rem;font-weight:700;display:grid;place-items:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.18);transition:transform .15s}
+.bub:hover,.bub:focus{transform:scale(1.18);outline:none}
+.bub.on{transform:scale(1.28);box-shadow:0 0 0 4px color-mix(in srgb,var(--k) 35%,transparent)}
+.bub.pend{background:repeating-linear-gradient(45deg,var(--k),var(--k) 5px,color-mix(in srgb,var(--k) 70%,#fff) 5px,color-mix(in srgb,var(--k) 70%,#fff) 10px)}
+.bub .yl{position:absolute;top:52px;font-size:.7rem;color:var(--ink-2);white-space:nowrap}
+.tl-detail{border-left:6px solid var(--k);animation:fade .25s ease}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:.78rem;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.legend i{width:11px;height:11px;border-radius:50%;display:inline-block}
+/* accordion */
+details.acc{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin:10px 0;overflow:hidden}
+details.acc summary{cursor:pointer;font-weight:600;padding:14px 18px;list-style:none;display:flex;align-items:center;gap:10px}
+details.acc summary::-webkit-details-marker{display:none}
+details.acc summary .n{width:26px;height:26px;border-radius:8px;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:.8rem}
+details.acc summary::after{content:"+";margin-left:auto;font-size:1.2rem;color:var(--ink-3)}
+details.acc[open] summary::after{content:"–"}
+details.acc .body{padding:0 18px 16px}
+.s7{border-radius:12px;padding:12px 14px;border:1px solid var(--line);background:var(--surface);border-left:6px solid var(--k)}
+.s7 b{display:block;margin-bottom:3px}
+.s7 .ex{font-size:.8rem;color:var(--ink-3);margin-top:4px}
+.incl li::marker{color:var(--ok)} .excl li::marker{color:var(--bad)}
+/* checklist */
+.ckl{list-style:none;padding:0;margin:0}
+.ckl li{display:flex;gap:10px;align-items:flex-start;padding:8px 6px;border-radius:8px;cursor:pointer}
+.ckl li:hover{background:var(--surface-2)}
+.ckl input{margin-top:3px;width:17px;height:17px;accent-color:var(--accent);flex:none}
+.ckl li.done span{color:var(--ink-3);text-decoration:line-through}
+.prog{height:10px;background:var(--surface-2);border-radius:99px;overflow:hidden}
+.prog span{display:block;height:100%;background:var(--accent);transition:width .3s}
+/* simulator */
+.steps{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.steps button{font:inherit;font-size:.8rem;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:99px;padding:6px 12px;cursor:pointer}
+.steps button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.sim-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.verdict{border-radius:16px;padding:18px;margin-top:16px;border:1px solid var(--line)}
+.verdict.ok{background:var(--okbg)} .verdict.bad{background:var(--badbg)} .verdict.mid{background:var(--warnbg)}
+.verdict h3{font-size:1.3rem}
+.reasons{list-style:none;padding:0;margin:10px 0 0}
+.reasons li{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:7px 0;border-bottom:1px dashed var(--line)}
+.reasons li:last-child{border-bottom:0}
+.ic{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:.72rem;font-weight:800;color:#fff}
+.ic.ok{background:var(--ok)} .ic.warn{background:#c98500} .ic.bad{background:var(--bad)}
+.meter{display:flex;align-items:center;gap:12px;margin-top:8px}
+.meter .prog{flex:1}
+.actchk{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:6px}
+.actchk label{display:flex;gap:8px;align-items:flex-start;font-size:.84rem;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--surface);cursor:pointer}
+.actchk label.no{border-style:dashed}
+/* awards / ngo */
+.aw .top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.aw dl{display:grid;grid-template-columns:92px 1fr;gap:4px 10px;margin:10px 0 0;font-size:.86rem}
+.aw dt{color:var(--ink-3);font-weight:600} .aw dd{margin:0}
+.cal{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;margin-top:6px}
+.cal div{font-size:.66rem;text-align:center;padding:3px 0;border-radius:5px;background:var(--surface-2);color:var(--ink-3)}
+.cal div.dl{background:var(--sdg9);color:#fff;font-weight:700}
+.cal div.ce{background:var(--sdg17);color:#fff;font-weight:700}
+.ngo{display:grid;grid-template-columns:auto 1fr;gap:14px}
+.mono{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;font-family:Fraunces,serif;font-weight:700;font-size:1.2rem;color:#fff}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}
+.stat-row div{background:var(--surface-2);border-radius:10px;padding:8px}
+.stat-row b{display:block;font-size:1rem}
+.stat-row span{font-size:.72rem;color:var(--ink-3)}
+.linkrow{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.linkrow a{font-size:.76rem;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);color:var(--ink-2)}
+.linkrow a:hover{text-decoration:none;border-color:var(--ink-3)}
+.rank{font-family:Fraunces,serif;font-weight:700;color:var(--accent);font-size:1.1rem}
+.bar{height:8px;background:var(--surface-2);border-radius:99px;overflow:hidden;margin-top:4px}
+.bar span{display:block;height:100%;border-radius:99px}
+/* frameworks */
+.fw{border-left:5px solid var(--k);cursor:pointer}
+.fw .more{display:none;margin-top:8px;font-size:.88rem;color:var(--ink-2)}
+.fw.open .more{display:block}
+.fw .h{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);font-size:.8rem}
+.hide{display:none!important}
+.new{display:inline-block;background:var(--sdg9);color:#fff;font-size:.62rem;font-weight:700;padding:1px 6px;border-radius:5px;margin-left:6px;vertical-align:middle}
+@media (max-width:640px){header.top h1{font-size:1.5rem}.feed .item{grid-template-columns:1fr;gap:3px}.chartbox{height:260px}.subtabs{position:static;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.subtabs button{white-space:nowrap}.slide{padding:24px 22px 50px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wheel" aria-hidden="true"></div>
+  <div class="wrap">
+    <h1>CSR Playbook India</h1>
+    <p>Spend trends, the law and its history, audit readiness, awards, credible NGOs and global ESG frameworks — India first, with global context. Every figure links to its public source.</p>
+  </div>
+  <div class="sdgstrip" aria-hidden="true"><i style="background:var(--sdg1)"></i><i style="background:var(--sdg2)"></i><i style="background:var(--sdg3)"></i><i style="background:var(--sdg4)"></i><i style="background:var(--sdg5)"></i><i style="background:var(--sdg6)"></i><i style="background:var(--sdg7)"></i><i style="background:var(--sdg8)"></i><i style="background:var(--sdg9)"></i><i style="background:var(--sdg10)"></i><i style="background:var(--sdg11)"></i><i style="background:var(--sdg12)"></i><i style="background:var(--sdg13)"></i><i style="background:var(--sdg14)"></i><i style="background:var(--sdg15)"></i><i style="background:var(--sdg16)"></i><i style="background:var(--sdg17)"></i></div>
+</header>
+<nav class="tabs" aria-label="Sections"><div class="wrap">
+  <a href="#whats-new" data-v="whats-new" style="--c:var(--sdg9)"><span class="dot"></span>What's New</a>
+  <a href="#statistics" data-v="statistics" style="--c:var(--sdg16)"><span class="dot"></span>CSR Insights</a>
+  <a href="#compliance" data-v="compliance" style="--c:var(--sdg4)"><span class="dot"></span>Compliance Corner</a>
+  <a href="#awards" data-v="awards" style="--c:#b07d12"><span class="dot"></span>Awards</a>
+  <a href="#ngos" data-v="ngos" style="--c:var(--sdg3)"><span class="dot"></span>NGO Directory</a>
+  <a href="#esg" data-v="esg" style="--c:var(--sdg13)"><span class="dot"></span>ESG Frameworks</a>
+</div></nav>
+
+<main class="wrap">
+
+<!-- ================= WHAT'S NEW ================= -->
+<section class="view" id="v-whats-new" data-accent="var(--sdg9)">
+  <div class="hero-h"><h2>What's New in CSR &amp; ESG</h2><span class="badge">Updated daily</span></div>
+  <p class="lede">News, research, events and rule changes, curated every morning. Headlines are paraphrased — open the source for the full story. <span id="news-updated" class="muted"></span></p>
+  <div class="grid g3" id="news-picks"></div>
+  <div class="sec-h"><h3>All stories</h3></div>
+  <div class="chips" id="news-chips"></div>
+  <div class="controls"><input type="search" id="news-q" placeholder="Search headlines…" aria-label="Search news" style="flex:1;min-width:220px"></div>
+  <div class="grid news-grid">
+    <div class="card"><div class="feed" id="news-feed"><p class="muted">Loading feed…</p></div></div>
+    <div>
+      <div class="card"><h3>Latest compliance changes</h3><div class="feed" id="news-comp-mini"></div><a href="#compliance-updates">Open the compliance tracker →</a></div>
+      <div class="card" style="margin-top:14px"><h3>Latest penalty cases</h3><div class="feed" id="news-case-mini"></div><a href="#compliance-simulator">See all cases →</a></div>
+      <div class="card" style="margin-top:14px"><h3>Primary sources</h3><ul class="clean">
+        <li><a href="https://www.csr.gov.in" target="_blank" rel="noopener">National CSR Portal (MCA)</a></li>
+        <li><a href="https://www.mca.gov.in" target="_blank" rel="noopener">MCA notifications</a> · <a href="https://www.sebi.gov.in" target="_blank" rel="noopener">SEBI circulars</a></li>
+        <li><a href="https://prsindia.org/billtrack" target="_blank" rel="noopener">PRS Bill Track</a> · <a href="https://pib.gov.in" target="_blank" rel="noopener">PIB</a></li>
+        <li><a href="https://indiacsr.in" target="_blank" rel="noopener">India CSR</a> · <a href="https://thecsrjournal.in" target="_blank" rel="noopener">The CSR Journal</a> · <a href="https://thecsruniverse.com" target="_blank" rel="noopener">TheCSRUniverse</a></li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATISTICS ================= -->
+<section class="view" id="v-statistics" data-accent="var(--sdg16)">
+  <div class="hero-h"><h2>CSR insights</h2><span class="badge">Data refreshed weekly</span></div>
+  <p class="lede">Ten years of mandatory CSR in India — how much, where, on what, and who is spending. Official MCA data, with the latest year from analyst reports until MCA publishes it. <span class="muted" id="stats-updated"></span></p>
+  <div class="grid g4" id="kpis"></div>
+
+  <div class="sec-h"><h3>Key insights</h3><span class="muted">Swipe or use the arrows</span></div>
+  <div class="slides" id="slides" tabindex="0" aria-roledescription="carousel"></div>
+
+  <div class="sec-h"><h3>The decade of CSR</h3>
+    <div class="chips" style="margin:0"><button class="chip on" data-trend="abs">₹ crore</button><button class="chip" data-trend="yoy">Year-on-year growth</button><button class="chip" data-trend="tbl">Table</button></div></div>
+  <div class="card"><div class="chartbox" id="trend-box"><canvas id="c-trend"></canvas></div><div class="tbl hide" id="t-trend"></div><div class="src" id="trend-src"></div></div>
+
+  <div class="sec-h"><h3>Where the money goes — by year</h3><span class="muted">Drag the slider or press play</span></div>
+  <div class="yearbar"><span class="yr" id="yr-label">FY24</span><input type="range" id="yr" min="0" max="4" step="1" value="4" aria-label="Financial year"><button class="btn sm" id="yr-play">▶ Play</button></div>
+  <div class="grid g2">
+    <div class="card"><h3>Development sectors</h3><p class="muted">Top 12 sectors, ₹ crore · bars coloured by the matching SDG</p><div class="chartbox tall"><canvas id="c-sector"></canvas></div><div class="src" id="sector-src"></div></div>
+    <div class="card"><h3>Top 10 recipient states</h3><p class="muted">₹ crore · excludes PAN-India and central funds</p><div class="chartbox tall"><canvas id="c-state"></canvas></div><div class="src" id="state-src"></div></div>
+  </div>
+
+  <div class="sec-h"><h3>Sector explorer</h3></div>
+  <div class="card">
+    <div class="controls"><label class="f">Pick a development sector<select id="sec-pick"></select></label><div id="sec-facts" class="muted" style="flex:1;min-width:240px"></div></div>
+    <div class="chartbox sm"><canvas id="c-sec"></canvas></div>
+  </div>
+
+  <div class="sec-h"><h3>What each industry is doing</h3></div>
+  <div class="grid g2" style="align-items:start">
+    <div class="card"><h3>Top 10 listed spenders, FY 2023-24 — grouped by industry</h3><p class="muted">₹ crore; hover for companies</p><div class="chartbox"><canvas id="c-ind"></canvas></div><div class="src" id="ind-src"></div></div>
+    <div class="grid" id="industry" style="gap:10px"></div>
+  </div>
+
+  <div class="sec-h"><h3>FY 2024-25 by theme</h3></div>
+  <div class="grid g2">
+    <div class="card"><div class="chartbox sm"><canvas id="c-fy25"></canvas></div><div class="src" id="fy25-src"></div></div>
+    <div class="card"><h3>Top spenders</h3><div class="tbl" id="t-top"></div></div>
+  </div>
+
+  <div class="sec-h"><h3>Global context</h3></div>
+  <div class="grid g3" id="global"></div>
+</section>
+
+<!-- ================= COMPLIANCE ================= -->
+<section class="view" id="v-compliance" data-accent="var(--sdg4)">
+  <div class="hero-h"><h2>Compliance Corner</h2><span class="badge">Not legal advice</span></div>
+  <p class="lede">Section 135 of the Companies Act, 2013, the CSR Policy Rules, 2014 and Schedule VII — the journey, the rules, the checklist, a compliance simulator and real penalty cases. Confirm against notified text on <a href="https://www.mca.gov.in" target="_blank" rel="noopener">mca.gov.in</a>.</p>
+  <div class="subtabs" role="tablist">
+    <button data-sub="history">① CSR law journey</button>
+    <button data-sub="howto">② How to be compliant</button>
+    <button data-sub="checklist">③ Audit-ready checklist</button>
+    <button data-sub="simulator">④ Compliance simulator &amp; cases</button>
+    <button data-sub="updates">Latest updates</button>
+  </div>
+
+  <!-- history -->
+  <div class="subview" id="sub-history">
+    <div class="sec-h" style="margin-top:0"><div><h3>From voluntary guidelines to penalties — tap a bubble</h3><p class="muted" style="margin:0">Dashed bubbles are pending bills. Scroll sideways on mobile. <span id="tl-updated"></span></p></div>
+      <div class="legend" id="tl-legend"></div></div>
+    <div class="chips" id="tl-chips"></div>
+    <div class="card" style="padding:6px 10px"><div class="tl-wrap"><div class="tl" id="tl"></div></div></div>
+    <div class="card tl-detail" id="tl-detail" style="margin-top:14px"></div>
+    <div class="grid g3" style="margin-top:14px">
+      <div class="card flat"><b>2009–2013 · Voluntary era</b><p class="muted">Guidelines and disclosure only. CSR was encouraged, not required.</p></div>
+      <div class="card flat"><b>2014–2020 · Comply or explain</b><p class="muted">Spending mandated, but unspent money only had to be explained in the Board's report.</p></div>
+      <div class="card flat"><b>2021 onward · Comply or pay</b><p class="muted">Unspent amounts must be transferred; monetary penalties on the company and officers.</p></div>
+    </div>
+  </div>
+
+  <!-- how to -->
+  <div class="subview" id="sub-howto">
+    <details class="acc" open><summary><span class="n">1</span>Does CSR apply, and how much?</summary><div class="body">
+      <div class="grid g3">
+        <div class="card flat"><b>Thresholds — any one, in the preceding FY</b><ul class="clean"><li>Net worth ≥ ₹500 crore</li><li>Turnover ≥ ₹1,000 crore</li><li>Net profit ≥ ₹5 crore</li></ul><p class="muted">Pending: ₹10 crore profit trigger (2026 Bill) — not yet law.</p></div>
+        <div class="card flat"><b>Obligation</b><p>At least <b>2%</b> of average net profit (computed under Section 198) of the three immediately preceding financial years. New companies use the years available.</p></div>
+        <div class="card flat"><b>Quick calculator</b><div class="controls" style="margin:6px 0 0"><label class="f">Avg net profit (₹ cr)<input type="number" id="q-np" value="250"></label></div><div id="q-out" style="font-weight:600"></div></div>
+      </div></div></details>
+
+    <details class="acc"><summary><span class="n">2</span>Governance: committee, policy, action plan</summary><div class="body"><ul class="clean">
+      <li><b>CSR Committee</b> of the Board: at least 3 directors with at least one independent director (where the company must have one); a private company may have 2 directors. If the obligation is ≤ ₹50 lakh, the Board can perform the committee's role (Section 135(9)).</li>
+      <li>A company with money in its <b>Unspent CSR Account</b> must have a committee (2022 rules).</li>
+      <li><b>CSR Policy</b> approved by the Board and disclosed on the website, with committee composition and approved projects.</li>
+      <li><b>Annual Action Plan</b>: projects, ongoing vs one-time, modalities of fund use, implementation schedule, monitoring and impact-assessment plan.</li>
+      <li><b>CFO certificate</b> each year that funds were used for approved purposes.</li></ul></div></details>
+
+    <details class="acc"><summary><span class="n">3</span>Schedule VII — eligible activities, with programme ideas</summary><div class="body"><div class="grid g3" id="sch7"></div>
+      <div class="src">Paraphrased from Schedule VII as amended; item (xiii) per <a href="https://taxguru.in/?p=1047100" target="_blank" rel="noopener">G.S.R. 416(E), 27 May 2026</a>. Programme ideas are illustrative — Schedule VII items should be read liberally but your project must clearly fit one.</div></div></details>
+
+    <details class="acc"><summary><span class="n">4</span>What to include — and what to exclude</summary><div class="body"><div class="grid g2">
+      <div class="card flat"><b style="color:var(--ok)">Include</b><ul class="clean incl">
+        <li>Projects under any Schedule VII item, delivered in India</li>
+        <li>Delivery directly, via your own Section 8 foundation, or via a CSR-1-registered agency</li>
+        <li>Admin overheads up to 5% of the year's CSR spend (staff, monitoring, capacity building of own staff)</li>
+        <li>Impact assessment cost: up to 5% of spend or ₹50 lakh, whichever is less (where IA is mandatory)</li>
+        <li>Capital assets held by an eligible entity (Section 8 company, registered trust/society, public authority) or beneficiaries/SHGs</li>
+        <li>Up to 10% via Social Stock Exchange ZCZP instruments (from May 2026)</li>
+        <li>Collaborations with other companies, if each reports separately</li>
+      </ul></div>
+      <div class="card flat"><b style="color:var(--bad)">Exclude</b><ul class="clean excl">
+        <li>Activities in the normal course of business</li>
+        <li>Programmes benefiting only employees and their families</li>
+        <li>Contributions to political parties (directly or indirectly)</li>
+        <li>Sponsorships and events primarily for marketing or brand visibility</li>
+        <li>Activities outside India (except training of Indian sports personnel representing India)</li>
+        <li>Activities required by another law (e.g. environmental clearance conditions, labour-law obligations)</li>
+        <li>Funds routed through an implementing agency without CSR-1 registration</li>
+        <li>Surplus from CSR projects added back to business profit</li>
+      </ul></div></div></div></details>
+
+    <details class="acc"><summary><span class="n">5</span>Unspent money, ongoing projects and set-off</summary><div class="body"><div class="grid g3">
+      <div class="card flat"><span class="pill">Ongoing project</span><p>A multi-year project (up to 3 years excluding the start year) approved as ongoing by the Board. Unspent → <b>Unspent CSR Account within 30 days</b> of year end; spend within the next 3 years; leftover → Schedule VII fund within 30 days after the 3rd year.</p></div>
+      <div class="card flat"><span class="pill">One-time</span><p>Unspent → a <b>Schedule VII fund within 6 months</b> of year end (e.g. PM National Relief Fund, PM CARES, Swachh Bharat Kosh, Clean Ganga Fund).</p></div>
+      <div class="card flat"><span class="pill bad">Penalty — Sec 135(7)</span><p><b>Company:</b> lower of 2× the amount due or ₹1 crore. <b>Each officer in default:</b> lower of 1/10 or ₹2 lakh — paid personally.</p><p class="muted">Excess spend can be set off over the next 3 years, with a Board resolution.</p></div>
+    </div></div></details>
+
+    <details class="acc"><summary><span class="n">6</span>Implementing agencies, impact assessment, capital assets</summary><div class="body"><ul class="clean">
+      <li><b>CSR-1:</b> agencies (Section 8 companies, registered trusts and societies with 12A/80G, or government-established entities) must be registered with MCA; non-company-promoted agencies need a 3-year track record. The form was revised from 14 July 2025.</li>
+      <li><b>Impact assessment:</b> if the average CSR obligation of the 3 preceding years is ≥ ₹10 crore, independent impact assessment is required for projects of ≥ ₹1 crore completed at least a year earlier; attach to the annual report.</li>
+      <li><b>Capital assets:</b> must be held by an eligible entity or beneficiaries, not the company.</li>
+      <li><b>Utilisation:</b> money disbursed to an agency counts, but the Board must satisfy itself it was used as approved — collect utilisation certificates and field evidence.</li></ul></div></details>
+
+    <details class="acc"><summary><span class="n">7</span>Related laws you must read alongside Section 135</summary><div class="body"><div class="tbl" style="max-height:none"><table><thead><tr><th>Law / rule</th><th>What it means for CSR</th></tr></thead><tbody>
+      <tr><td>Companies Act s.135 &amp; Schedule VII</td><td>Applicability, committee, policy, 2% obligation, unspent transfer, penalty, eligible activities</td></tr>
+      <tr><td>Companies (CSR Policy) Rules, 2014</td><td>Definitions, implementing agencies (CSR-1), overheads, impact assessment, capital assets, ZCZP (Rule 4A)</td></tr>
+      <tr><td>Companies Act s.134(3)(o) &amp; s.198</td><td>CSR disclosure in Board's report; how "net profit" is computed</td></tr>
+      <tr><td>Companies (Accounts) Rules — Rule 12(1B)</td><td>Form CSR-2 filing; ROCs penalise non-filing under s.450 (<a href="https://taxguru.in/?p=1068950" target="_blank" rel="noopener">example</a>)</td></tr>
+      <tr><td>Companies Act s.454 &amp; s.446B</td><td>Adjudication of penalties; reduced penalties for small companies/start-ups in some cases</td></tr>
+      <tr><td>CARO 2020, clause 3(xx)</td><td>Statutory auditor reports on transfer of unspent CSR amounts</td></tr>
+      <tr><td>Income-tax — Explanation 2 to s.37(1)</td><td>CSR is not a deductible business expense (since 2014); several tribunals still allow s.80G on eligible donations (<a href="https://www.taxtmi.com/caselaws?id=459305" target="_blank" rel="noopener">example</a>). The Income-tax Bill/Act 2025 carries the exclusion forward (<a href="https://www.taxtmi.com/tmi_notes?id=1488" target="_blank" rel="noopener">clause 34</a>).</td></tr>
+      <tr><td>CGST Act s.17(5)(fa)</td><td>No input tax credit on goods/services used for CSR from 1 Oct 2023 — budget GST as cost (<a href="https://taxguru.in/goods-and-service-tax/prospective-amendment-itc-csr-expenditure-gst.html" target="_blank" rel="noopener">source</a>)</td></tr>
+      <tr><td>FCRA, 2010</td><td>If the donor company is a "foreign source", the NGO needs FCRA registration to receive the money</td></tr>
+      <tr><td>Income-tax s.12AB / 80G</td><td>Registration of NGOs — a precondition for CSR-1</td></tr>
+      <tr><td>SEBI LODR Reg 34(2)(f) — BRSR</td><td>Listed companies report CSR under Principle 8 (inclusive growth)</td></tr>
+      <tr><td>SEBI Social Stock Exchange framework</td><td>Governs ZCZP instruments now eligible as CSR</td></tr>
+    </tbody></table></div></div></details>
+
+    <details class="acc"><summary><span class="n">8</span>Reporting calendar</summary><div class="body"><div class="tbl" style="max-height:none"><table><thead><tr><th>What</th><th>When</th><th>Tip</th></tr></thead><tbody>
+      <tr><td>Annual Action Plan</td><td>Start of year</td><td>Tag projects ongoing vs one-time at approval</td></tr>
+      <tr><td>Ongoing unspent → Unspent CSR Account</td><td>By 30 April</td><td>Board resolution + dated bank proof</td></tr>
+      <tr><td>One-time unspent → Schedule VII fund</td><td>By 30 September</td><td>Keep fund receipts</td></tr>
+      <tr><td>Annexure II in Board's report</td><td>With annual accounts</td><td>Must reconcile with CSR-2 and books</td></tr>
+      <tr><td>Form CSR-2</td><td>Addendum to AOC-4</td><td>Check every year since FY 2020-21 — ROCs are back-checking</td></tr>
+      <tr><td>Impact assessment</td><td>Annual report year after project ends</td><td>Independent assessor</td></tr>
+    </tbody></table></div></div></details>
+  </div>
+
+  <!-- checklist -->
+  <div class="subview" id="sub-checklist">
+    <div class="card" style="margin-bottom:14px"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><div><h3 style="margin:0">Your audit readiness</h3><p class="muted" style="margin:2px 0 0">Tick what you have in place. Progress is saved in this browser only.</p></div><div style="display:flex;gap:8px"><button class="btn sm" id="ck-copy">Copy as text</button><button class="btn sm" id="ck-reset">Reset</button></div></div>
+      <div class="meter"><div class="prog"><span id="ck-bar" style="width:0"></span></div><b id="ck-pct">0%</b></div></div>
+    <div class="grid g2" id="ck"></div>
+  </div>
+
+  <!-- simulator -->
+  <div class="subview" id="sub-simulator">
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center"><div><h3 style="margin:0">Are you CSR compliant? — the simulator</h3><p class="muted" style="margin:2px 0 0">Enter your numbers, or load a scenario. Indicative only; ROCs decide on facts.</p></div>
+        <div class="chips" style="margin:0"><button class="chip" data-preset="good">Model company</button><button class="chip" data-preset="late">Late transfer</button><button class="chip" data-preset="ngo">Unregistered NGO</button><button class="chip" data-preset="inel">Ineligible spend</button></div></div>
+      <div class="steps" id="sim-steps" style="margin-top:12px"><button data-st="1" class="on">1 · Company</button><button data-st="2">2 · Committee</button><button data-st="3">3 · Money</button><button data-st="4">4 · Activities</button><button data-st="5">5 · Filings</button></div>
+      <div class="sim-st" data-st="1"><div class="sim-grid">
+        <label class="f">Company type<select id="s-type"><option value="listed">Listed public</option><option value="public">Unlisted public</option><option value="private">Private</option></select></label>
+        <label class="f">Net worth, preceding FY (₹ cr)<input type="number" id="s-nw" value="420"></label>
+        <label class="f">Turnover, preceding FY (₹ cr)<input type="number" id="s-to" value="1800"></label>
+        <label class="f">Net profit (s.198) — FY-3 (₹ cr)<input type="number" id="s-p3" value="90"></label>
+        <label class="f">Net profit — FY-2 (₹ cr)<input type="number" id="s-p2" value="110"></label>
+        <label class="f">Net profit — FY-1 (₹ cr)<input type="number" id="s-p1" value="130"></label>
+      </div></div>
+      <div class="sim-st hide" data-st="2"><div class="sim-grid">
+        <label class="f">Directors on CSR Committee<input type="number" id="s-dir" value="3" min="0"></label>
+        <label class="f">Independent director on committee?<select id="s-id"><option value="yes">Yes</option><option value="no">No</option></select></label>
+        <label class="f">Board-approved CSR policy?<select id="s-pol"><option value="yes">Yes</option><option value="no">No</option></select></label>
+        <label class="f">Annual action plan budget (₹ cr)<input type="number" id="s-bud" value="2.2" step="0.1"></label>
+      </div></div>
+      <div class="sim-st hide" data-st="3"><div class="sim-grid">
+        <label class="f">Spent directly (₹ cr)<input type="number" id="s-dirsp" value="0.6" step="0.01"></label>
+        <label class="f">Disbursed to agencies (₹ cr)<input type="number" id="s-disb" value="1.6" step="0.01"></label>
+        <label class="f">…of which agencies have utilised (₹ cr)<input type="number" id="s-util" value="1.3" step="0.01"></label>
+        <label class="f">Admin overheads within spend (₹ cr)<input type="number" id="s-oh" value="0.08" step="0.01"></label>
+        <label class="f">Set-off available from past excess (₹ cr)<input type="number" id="s-so" value="0" step="0.01"></label>
+        <label class="f">Unspent amount handled how?<select id="s-how"><option value="ongoing">Ongoing → Unspent CSR Account ≤30 days</option><option value="fund">One-time → Schedule VII fund ≤6 months</option><option value="late">Transferred after the deadline</option><option value="none">Not transferred</option></select></label>
+        <label class="f">Implementing agencies CSR-1 registered?<select id="s-csr1"><option value="yes">Yes, all</option><option value="no">No / some not</option></select></label>
+        <label class="f">Officers in default (if any)<input type="number" id="s-of" value="3" min="0"></label>
+      </div></div>
+      <div class="sim-st hide" data-st="4"><p class="muted" style="margin-top:0">Tick every activity your spend went into. Dashed boxes are <b>not</b> eligible.</p><div class="actchk" id="s-acts"></div>
+        <label class="f" style="margin-top:10px;max-width:280px">Amount spent on ineligible activities (₹ cr)<input type="number" id="s-inel" value="0" step="0.01"></label></div>
+      <div class="sim-st hide" data-st="5"><div class="sim-grid">
+        <label class="f">Form CSR-2 filed on time?<select id="s-csr2"><option value="yes">Yes</option><option value="no">No / late</option></select></label>
+        <label class="f">Annexure II in Board's report?<select id="s-ann"><option value="yes">Yes</option><option value="no">No</option></select></label>
+        <label class="f">Website disclosure done?<select id="s-web"><option value="yes">Yes</option><option value="no">No</option></select></label>
+        <label class="f">Impact assessment (if required)<select id="s-ia"><option value="na">Not applicable</option><option value="yes">Done</option><option value="no">Required but not done</option></select></label>
+        <label class="f">CFO utilisation certificate?<select id="s-cfo"><option value="yes">Yes</option><option value="no">No</option></select></label>
+      </div></div>
+      <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap"><button class="btn" id="sim-prev">← Back</button><button class="btn" id="sim-next">Next →</button><button class="btn primary" id="sim-run">Check my compliance</button></div>
+      <div id="sim-out"></div>
+    </div>
+
+    <div class="sec-h"><div><h3>How CSR failures played out <span class="new">updated daily</span></h3><p class="muted" style="margin:0">ROC adjudication orders, parliamentary data and news. <span id="cases-updated"></span></p></div></div>
+    <div class="grid g4" id="case-stats"></div>
+    <div class="chips" id="case-chips" style="margin-top:14px"></div>
+    <div class="grid g2" id="cases"></div>
+    <div class="callout"><b>Pattern across orders:</b> paying later does not cancel the default; officers pay personally; even calculation errors and late CSR-2 filings attract penalties. Classify projects correctly at the start of the year and diarise 30 April and 30 September.</div>
+  </div>
+
+  <!-- updates -->
+  <div class="subview" id="sub-updates">
+    <div class="sec-h" style="margin-top:0"><h3>Compliance tracker <span class="new">updated daily</span></h3><span class="muted" id="comp-updated"></span></div>
+    <div class="chips" id="comp-chips"></div>
+    <div class="card"><div class="feed" id="comp-feed"><p class="muted">Loading…</p></div></div>
+  </div>
+</section>
+
+<!-- ================= AWARDS ================= -->
+<section class="view" id="v-awards" data-accent="#b07d12">
+  <div class="hero-h"><h2>CSR &amp; sustainability awards</h2><span class="badge">Global · National · State</span></div>
+  <p class="lede">Organiser, eligibility, categories, fees, prizes and typical calendar. The month strip shows the usual <b style="color:var(--sdg9)">deadline</b> and <b style="color:var(--sdg17)">ceremony</b>. Cycles shift every year — always confirm on the organiser's site. "Fee: check" means the organiser does not publish it openly.</p>
+  <div class="chips" id="aw-scope"></div>
+  <div class="chips" id="aw-fee"></div>
+  <div class="grid g2" id="awards-list"></div>
+</section>
+
+<!-- ================= NGOs ================= -->
+<section class="view" id="v-ngos" data-accent="var(--sdg3)">
+  <div class="hero-h"><h2>NGO directory</h2><span class="badge">Ranked by theme</span></div>
+  <p class="lede">Established Indian NGOs with links to their websites, annual reports, audited financials and independent profiles. Scores are a starting point for due diligence, not an endorsement.</p>
+  <div class="callout"><b>Score (0–100):</b> 50% programme-spend ratio · 25% scale (≥₹500 cr = 100, ₹100–500 cr = 85, ₹50–100 cr = 70, ₹20–50 cr = 55, &lt;₹20 cr = 40) · 25% Give accreditation (Gold 100, Silver 80, Bronze 60, none found 50). Years differ by NGO and are shown on each card.</div>
+  <div class="card flat" style="margin-bottom:14px"><b>Verify before you fund</b><div class="linkrow">
+    <a href="https://ngodarpan.gov.in" target="_blank" rel="noopener">NGO Darpan (NITI Aayog)</a>
+    <a href="https://www.mca.gov.in" target="_blank" rel="noopener">MCA portal — CSR-1 / company master data</a>
+    <a href="https://fcraonline.nic.in" target="_blank" rel="noopener">FCRA status</a>
+    <a href="https://www.incometax.gov.in" target="_blank" rel="noopener">Income-tax e-filing (12A/80G)</a>
+    <a href="https://give.do/discover" target="_blank" rel="noopener">Give Discover</a>
+    <a href="https://www.helpyourngo.com" target="_blank" rel="noopener">HelpYourNGO</a></div></div>
+  <div class="chips" id="ngo-theme"></div>
+  <div class="controls"><select id="ngo-sort"><option value="score">Sort: score</option><option value="exp">Sort: annual expenses</option><option value="ratio">Sort: programme ratio</option></select></div>
+  <div class="grid g2" id="ngo-list"></div>
+  <p class="muted" style="margin-top:12px">Photos can't be embedded from NGO websites on this page; use the website and report links for photos and stories.</p>
+</section>
+
+<!-- ================= ESG ================= -->
+<section class="view" id="v-esg" data-accent="var(--sdg13)">
+  <div class="hero-h"><h2>ESG frameworks, documents &amp; assurance</h2><span class="badge">India + global</span></div>
+  <p class="lede">Every major framework in one explorer — mandatory regulations, reporting standards, climate and nature, ratings, principles, management systems and assurance — plus a quick "what applies to us" check.</p>
+  <div class="subtabs">
+    <button data-esub="explorer">Framework explorer</button>
+    <button data-esub="applies">What applies to us?</button>
+    <button data-esub="india">India: BRSR &amp; BRSR Core</button>
+    <button data-esub="track">Documents &amp; metric tracking</button>
+  </div>
+
+  <div class="subview" id="esub-explorer">
+    <div class="chips" id="fw-cat"></div>
+    <div class="controls"><select id="fw-reg"><option value="">All regions</option><option>India</option><option>Global</option><option>EU</option><option>UK</option><option>US</option><option>Asia-Pacific</option></select>
+      <select id="fw-man"><option value="">Mandatory + voluntary</option><option value="Mandatory">Mandatory</option><option value="Voluntary">Voluntary</option></select>
+      <input type="search" id="fw-q" placeholder="Search frameworks…" style="flex:1;min-width:200px"></div>
+    <p class="muted" id="fw-count"></p>
+    <div class="grid g3" id="fw-list"></div>
+  </div>
+
+  <div class="subview" id="esub-applies">
+    <div class="card"><h3>Quick applicability check</h3><p class="muted">Tick what describes your company. Indicative; confirm thresholds with counsel.</p>
+      <div class="actchk" id="ap-q"></div>
+      <div id="ap-out" style="margin-top:14px"></div></div>
+  </div>
+
+  <div class="subview" id="esub-india">
+    <div class="grid g2">
+      <div class="card"><b>BRSR</b><p>Mandatory for the <b>top 1,000 listed companies</b> by market capitalisation; nine NGRBC principles in three sections. Over 1,230 entities filed for FY 2023-24.</p><div class="src"><a href="https://www.sebi.gov.in/sebi_data/attachdocs/jul-2025/1752724472552.pdf" target="_blank" rel="noopener">SEBI (Jul 2025)</a></div></div>
+      <div class="card"><b>BRSR Core — assessment or assurance glide path</b>
+        <div class="tbl" style="max-height:none;margin-top:6px"><table><thead><tr><th>FY</th><th>Applies to</th></tr></thead><tbody><tr><td>2023-24</td><td>Top 150</td></tr><tr><td>2024-25</td><td>Top 250</td></tr><tr><td>2025-26</td><td>Top 500</td></tr><tr><td>2026-27</td><td><b>Top 1,000 (current year)</b></td></tr></tbody></table></div>
+        <p class="muted">Since 28 March 2025: assurance <i>or</i> third-party assessment under Industry Standards Forum standards; value-chain disclosure deferred and made voluntary; green-credits indicator added.</p>
+        <div class="src"><a href="https://taxguru.in/?p=955846" target="_blank" rel="noopener">SEBI circular summary</a> · <a href="https://greensutra.in/news/brsr-all-you-need-to-know/" target="_blank" rel="noopener">BRSR 2026 guide</a></div></div>
+    </div>
+    <div class="sec-h"><h3>The nine BRSR Core attributes and the evidence to keep</h3></div>
+    <div class="card"><div class="tbl" style="max-height:none"><table><thead><tr><th>#</th><th>Attribute</th><th>Typical KPIs</th><th>Evidence an assessor will ask for</th></tr></thead><tbody id="core-rows"></tbody></table></div></div>
+    <div class="sec-h"><h3>Assurance standards</h3></div>
+    <div class="card"><ul class="clean">
+      <li><b>ICAI SSAE 3000 / 3410</b> — Indian standards for sustainability and GHG assurance, used for BRSR Core.</li>
+      <li><b>ISSA 5000</b> — IAASB's overarching sustainability assurance standard; <b>ISAE 3000 / 3410</b> remain in use.</li>
+      <li><b>AA1000AS</b> — stakeholder-focused assurance standard.</li>
+      <li><b>Limited vs reasonable</b> — limited gives negative assurance ("nothing came to our attention"); reasonable gives a positive opinion and needs stronger controls.</li></ul></div>
+  </div>
+
+  <div class="subview" id="esub-track">
+    <div class="grid g3">
+      <div class="card flat"><b>Policies</b><ul class="clean"><li>Environment, energy, water, waste</li><li>Human rights, POSH, health &amp; safety</li><li>Anti-bribery, whistle-blower, code of conduct</li><li>Supplier code, data privacy</li><li>CSR policy (Principle 8)</li></ul></div>
+      <div class="card flat"><b>Records</b><ul class="clean"><li>GHG inventory &amp; emission-factor log</li><li>Energy, water, waste meter data and invoices</li><li>EHS incident and LTIFR registers</li><li>HR data: headcount, gender, wages, training</li><li>Grievance and complaints logs</li></ul></div>
+      <div class="card flat"><b>Reports &amp; sign-offs</b><ul class="clean"><li>Materiality assessment</li><li>BRSR / sustainability report</li><li>Assurance or assessment statement</li><li>Value-chain partner assessments</li><li>Board ESG/risk committee minutes</li></ul></div>
+    </div>
+    <div class="sec-h"><h3>How to track ESG metrics — 8 steps</h3></div>
+    <div class="grid g4" id="esg-steps"></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><p>CSR Playbook India · Base data as of 17 November 2026. What's New, the compliance tracker and penalty cases refresh daily; statistics weekly. Not legal or investment advice. NGO scores use public data (Give Discover, HelpYourNGO, NGO reports) and are not endorsements. SDG colours are used for navigation and theme coding.</p></div></footer>
+
+<script>
+/* ===== helpers ===== */
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const fmt=(n,d=2)=>Number(n).toLocaleString('en-IN',{maximumFractionDigits:d});
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ext=(u,t)=>`<a href="${esc(u)}" target="_blank" rel="noopener">${t}</a>`;
+const dfmt=d=>{if(!d)return'';const p=String(d).split('-');const m=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];return p.length===3?`${+p[2]} ${m[p[1]-1]} ${p[0]}`:p.length===2?`${m[p[1]-1]} ${p[0]}`:p[0]};
+const SDG=n=>css('--sdg'+n);
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+async function loadJSON(p){const r=await fetch(p,{cache:'no-store'});if(!r.ok)throw new Error(r.status);return r.json();}
+function chipGroup(el,opts,cur,cb){el.innerHTML=opts.map(o=>`<button class="chip${o[0]===cur?' on':''}" data-v="${esc(o[0])}">${esc(o[1])}</button>`).join('');
+  el.onclick=e=>{const b=e.target.closest('.chip');if(!b)return;el.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c===b));cb(b.dataset.v);};}
+
+/* ===== routing (main + sub views) ===== */
+const views=['whats-new','statistics','compliance','awards','ngos','esg'];
+const csubs=['history','howto','checklist','simulator','updates'];
+let statsDrawn=false, curSub='history';
+function route(){
+  let h=(location.hash||'#whats-new').slice(1), v=h, sub=null;
+  if(h.startsWith('compliance-')){v='compliance';sub=h.slice(11);}
+  if(!views.includes(v)) v='whats-new';
+  $$('section.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+v));
+  $$('nav.tabs a').forEach(a=>a.classList.toggle('on',a.dataset.v===v));
+  const sec=$('#v-'+v); document.documentElement.style.setProperty('--accent',sec.dataset.accent);
+  if(v==='compliance') showSub(csubs.includes(sub)?sub:curSub);
+  if(v==='statistics' && STATS && !statsDrawn){drawStats();statsDrawn=true;}
+  window.scrollTo({top:0});
+}
+function showSub(s){curSub=s;$$('#v-compliance .subtabs button').forEach(b=>b.classList.toggle('on',b.dataset.sub===s));$$('#v-compliance .subview').forEach(d=>d.classList.toggle('on',d.id==='sub-'+s));}
+$$('#v-compliance .subtabs button').forEach(b=>b.onclick=()=>{history.replaceState(null,'','#compliance-'+b.dataset.sub);showSub(b.dataset.sub);});
+window.addEventListener('hashchange',route);
+
+/* ===== feeds ===== */
+let NEWS=[],COMP=[],CASES=null,STATS=null;
+function feedItem(i,kind){
+  let meta='';
+  if(kind==='comp'){const cls=i.type==='Enforcement'?'bad':i.status==='Pending'?'warn':(i.status==='In force'||i.status==='Final')?'ok':'';meta=`<span class="pill ${cls}">${esc(i.type)}${i.status?' · '+esc(i.status):''}</span>`;}
+  else if(kind==='case'){meta=`<span class="pill bad">${esc(i.type)}</span>`;}
+  else meta=`<span class="pill">${esc(i.tag)}</span><span class="pill">${esc(i.region)}</span>`;
+  const title=kind==='case'?i.who:i.title, sum=kind==='case'?i.result:i.summary;
+  return `<div class="item"><div class="d">${dfmt(i.date)}</div><div><div class="t">${ext(i.url,esc(title))}</div><div class="sm">${esc(sum)}</div><div class="meta">${meta}<span>${esc(i.source||i.src||'')}</span></div></div></div>`;
+}
+let newsTag='';
+function renderNews(){const q=$('#news-q').value.toLowerCase();
+  const list=NEWS.filter(i=>(!newsTag||i.tag===newsTag||i.region===newsTag)&&(!q||(i.title+' '+i.summary).toLowerCase().includes(q))).sort((a,b)=>b.date.localeCompare(a.date));
+  $('#news-feed').innerHTML=list.length?list.map(i=>feedItem(i,'news')).join(''):'<p class="muted">No items match.</p>';}
+$('#news-q').addEventListener('input',renderNews);
+loadJSON('data/news.json').then(d=>{NEWS=d.items||[];$('#news-updated').textContent='Last updated '+dfmt(d.updated)+'.';
+  chipGroup($('#news-chips'),[['','All'],['CSR','CSR'],['ESG','ESG'],['Event','Events'],['India','India'],['Global','Global']],'',v=>{newsTag=v;renderNews();});
+  const top=[...NEWS].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3), ks=[9,16,13];
+  $('#news-picks').innerHTML=top.map((i,n)=>`<div class="card lift pick" style="--k:var(--sdg${ks[n]})"><span class="muted">${dfmt(i.date)} · ${esc(i.tag)}</span><div class="t">${ext(i.url,esc(i.title))}</div><div class="muted" style="font-size:.86rem">${esc(i.summary)}</div><div class="src">${esc(i.source)}</div></div>`).join('');
+  renderNews();}).catch(()=>{$('#news-feed').innerHTML='<p class="muted">The feed could not be loaded right now.</p>';});
+let compType='';
+function renderComp(){const list=COMP.filter(i=>!compType||i.type===compType).sort((a,b)=>b.date.localeCompare(a.date));
+  $('#comp-feed').innerHTML=list.length?list.map(i=>feedItem(i,'comp')).join(''):'<p class="muted">No items match.</p>';}
+loadJSON('data/compliance-updates.json').then(d=>{COMP=d.items||[];$('#comp-updated').textContent='Last updated '+dfmt(d.updated);
+  chipGroup($('#comp-chips'),[['','All'],['Rule','Rules'],['Bill','Bills'],['Enforcement','Enforcement'],['SEBI','SEBI'],['Global','Global']],'',v=>{compType=v;renderComp();});renderComp();
+  $('#news-comp-mini').innerHTML=[...COMP].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3).map(i=>feedItem(i,'comp')).join('');}).catch(()=>{$('#comp-feed').innerHTML='<p class="muted">Could not load.</p>';});
+
+/* ===== cases ===== */
+let caseType='';
+function renderCases(){if(!CASES)return;const list=CASES.items.filter(i=>!caseType||i.type===caseType).sort((a,b)=>b.date.localeCompare(a.date));
+  $('#cases').innerHTML=list.map(c=>`<div class="card lift"><div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><span class="pill bad">${esc(c.type)}</span><span class="muted">${dfmt(c.date)}</span></div><h3 style="margin-top:8px">${esc(c.who)}</h3><p style="margin:.3rem 0"><b>What happened:</b> ${esc(c.what)}</p><p style="margin:.3rem 0"><b>Result:</b> ${esc(c.result)}</p><div class="src">${ext(c.url,esc(c.src)+' ↗')}</div></div>`).join('');}
+loadJSON('data/cases.json').then(d=>{CASES=d;$('#cases-updated').textContent='Last updated '+dfmt(d.updated)+'.';
+  $('#case-stats').innerHTML=d.stats.map((s,i)=>`<div class="card kpi" style="--k:var(--sdg${[4,1,16,10][i%4]})"><div class="v">${esc(s.big)}</div><div class="l">${esc(s.t)}</div><div class="s">${ext(s.url,esc(s.src))}</div></div>`).join('');
+  const types=[...new Set(d.items.map(i=>i.type))];chipGroup($('#case-chips'),[['','All cases'],...types.map(t=>[t,t])],'',v=>{caseType=v;renderCases();});renderCases();
+  $('#news-case-mini').innerHTML=[...d.items].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,3).map(i=>feedItem(i,'case')).join('');}).catch(()=>{$('#cases').innerHTML='<p class="muted">Could not load cases.</p>';});
+
+/* ===== statistics ===== */
+loadJSON('data/stats.json').then(d=>{STATS=d;$('#stats-updated').textContent='Data as of '+dfmt(d.updated)+'.';buildStatsStatic();if(location.hash.startsWith('#statistics')&&!statsDrawn){drawStats();statsDrawn=true;}}).catch(()=>{$('#kpis').innerHTML='<p class="muted">Statistics could not be loaded.</p>';});
+function countUp(el,to,pre,suf,dec){const t0=performance.now(),dur=900;const step=t=>{const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=pre+fmt(to*e,dec)+suf;if(p<1)requestAnimationFrame(step);};requestAnimationFrame(step);}
+function buildStatsStatic(){
+  const tr=STATS.trend,last=tr[tr.length-1],prev=tr[tr.length-2],first=tr[0];
+  const cagr=(Math.pow(last.value/first.value,1/(tr.length-1))-1)*100, cum=tr.reduce((a,b)=>a+b.value,0);
+  const k=[[last.value,'₹',' cr',0,`CSR spend, ${last.fy}${last.analyst?' (analyst)':''}`,`+${fmt((last.value/prev.value-1)*100,1)}% YoY`,17],
+    [prev.value,'₹',' cr',0,`CSR spend, ${prev.fy} (official)`,prev.companies?fmt(prev.companies,0)+' companies':'',16],
+    [cagr,'','%',1,`CAGR, ${first.fy}–${last.fy}`,`${first.fy} ₹${fmt(first.value,0)} cr → ${last.fy} ₹${fmt(last.value,0)} cr`,4],
+    [cum/100000,'₹',' lakh cr',2,'Cumulative CSR since FY 2014-15','Sum of annual figures above',13]];
+  $('#kpis').innerHTML=k.map((x,i)=>`<div class="card kpi" style="--k:var(--sdg${x[6]})"><div class="v" id="kv${i}">0</div><div class="l">${x[4]}</div><div class="s">${x[5]}</div></div>`).join('');
+  k.forEach((x,i)=>countUp($('#kv'+i),x[0],x[1],x[2],x[3]));
+  // slides
+  const S=STATS.insights;
+  $('#slides').innerHTML=S.map((s,i)=>`<div class="slide${i?'':' on'}" style="--k:${SDG(s.sdg)}"><div class="big">${esc(s.big)}</div><div class="t">${esc(s.t)}</div><div class="s">${esc(s.s)}</div><div class="src">${ext(s.url,esc(s.src))} · SDG ${s.sdg}</div></div>`).join('')+
+   `<div class="sl-dots">${S.map((_,i)=>`<i class="${i?'':'on'}" data-i="${i}"></i>`).join('')}</div><div class="sl-nav"><button id="sl-prev" aria-label="Previous">‹</button><button id="sl-pause" aria-label="Pause">❚❚</button><button id="sl-next" aria-label="Next">›</button></div>`;
+  let cur=0,timer=null;const go=n=>{cur=(n+S.length)%S.length;$$('.slide').forEach((s,i)=>s.classList.toggle('on',i===cur));$$('.sl-dots i').forEach((s,i)=>s.classList.toggle('on',i===cur));};
+  const play=()=>{clearInterval(timer);timer=setInterval(()=>go(cur+1),6000);$('#sl-pause').textContent='❚❚';}, stop=()=>{clearInterval(timer);timer=null;$('#sl-pause').textContent='▶';};
+  $('#sl-prev').onclick=()=>{go(cur-1);play();};$('#sl-next').onclick=()=>{go(cur+1);play();};$('#sl-pause').onclick=()=>timer?stop():play();
+  $$('.sl-dots i').forEach(d=>d.onclick=()=>{go(+d.dataset.i);play();});
+  let x0=null;$('#slides').addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});$('#slides').addEventListener('touchend',e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(cur+(dx<0?1:-1));play();}x0=null;});
+  $('#slides').addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1);});
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches) play();
+  // tables & static lists
+  $('#t-trend').innerHTML=`<table><thead><tr><th>Year</th><th class="num">₹ crore</th><th class="num">YoY</th><th>Source</th></tr></thead><tbody>${tr.map((r,i)=>`<tr><td>${r.fy}${r.analyst?' *':''}</td><td class="num">${fmt(r.value)}</td><td class="num">${i?fmt((r.value/tr[i-1].value-1)*100,1)+'%':'—'}</td><td>${ext(r.url,esc(r.src))}</td></tr>`).join('')}</tbody></table>`;
+  $('#trend-src').innerHTML='Sources per year in the table view. * = analyst estimate from MCA filings, replaced when MCA publishes official data. Recent years rise as late filings arrive.';
+  $('#sector-src').innerHTML=$('#state-src').innerHTML='Source: '+ext(STATS.sectorSource.url,esc(STATS.sectorSource.label));
+  $('#sec-pick').innerHTML=STATS.sectors.map((s,i)=>`<option value="${i}">${esc(s.name)}</option>`).join('');
+  $('#industry').innerHTML=STATS.industry.map((x,i)=>`<div class="card flat lift" style="border-left:5px solid var(--sdg${[7,8,9,12,16,10][i%6]})"><b>${esc(x.k)}</b><p style="margin:.3rem 0;font-size:.9rem">${esc(x.t)}</p><div class="src">${ext(x.url,esc(x.src))}</div></div>`).join('');
+  $('#ind-src').innerHTML='Source: '+ext(STATS.topListedFY24.url,esc(STATS.topListedFY24.label))+'. Grouping by industry is ours.';
+  $('#fy25-src').innerHTML='Source: '+ext(STATS.fy25Themes.url,esc(STATS.fy25Themes.label));
+  const t24=STATS.topListedFY24.rows, t25=Object.fromEntries(STATS.topFY25.rows);
+  $('#t-top').innerHTML=`<table><thead><tr><th>Company</th><th>Industry</th><th class="num">FY24 ₹ cr</th><th class="num">FY25 ₹ cr</th></tr></thead><tbody>${t24.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td class="num">${fmt(r[2])}</td><td class="num">${t25[r[0]]?fmt(t25[r[0]]):'—'}</td></tr>`).join('')}</tbody></table><div class="src" style="padding:0 10px 10px">${ext(STATS.topListedFY24.url,'FY24: Prime Database')} · ${ext(STATS.topFY25.url,'FY25: Prime / Fulcrum')}</div>`;
+  $('#global').innerHTML=STATS.global.map((g,i)=>`<div class="card kpi" style="--k:var(--sdg${[17,14,12][i]})"><div class="v">${esc(g.big)}</div><div class="l">${esc(g.t)}</div><div class="s">${esc(g.s)} · ${ext(g.url,esc(g.src))}</div></div>`).join('');
+}
+let CH={};
+function baseOpts(){const ink2=css('--ink-2'),grid=css('--grid'),surf=css('--surface');Chart.defaults.font.family='Inter, system-ui, sans-serif';Chart.defaults.color=ink2;
+  return {grid,surf,tip:{backgroundColor:css('--ink'),titleColor:surf,bodyColor:surf,padding:10,displayColors:false}};}
+function drawStats(){
+  if(!window.Chart){$$('#v-statistics .chartbox').forEach(c=>c.innerHTML='<p class="muted">Charts could not load; see tables.</p>');$('#t-trend').classList.remove('hide');return;}
+  const {grid,surf,tip}=baseOpts(), s16=SDG(16), tr=STATS.trend;
+  const tipCr={...tip,callbacks:{label:c=>'₹'+fmt(c.parsed.x??c.parsed.y)+' crore'}};
+  // trend
+  const mk=mode=>{CH.trend&&CH.trend.destroy();
+    if(mode==='yoy'){const lab=tr.slice(1).map(r=>r.fy),val=tr.slice(1).map((r,i)=>+(((r.value/tr[i].value)-1)*100).toFixed(1));
+      CH.trend=new Chart($('#c-trend'),{type:'bar',data:{labels:lab,datasets:[{data:val,backgroundColor:val.map(v=>v>=0?s16:SDG(1)),borderRadius:4,barThickness:22}]},options:{maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{...tip,callbacks:{label:c=>c.parsed.y+'% vs previous year'}}},scales:{x:{grid:{display:false}},y:{grid:{color:grid},border:{display:false},ticks:{callback:v=>v+'%'}}}}});}
+    else CH.trend=new Chart($('#c-trend'),{type:'line',data:{labels:tr.map(r=>r.fy),datasets:[{data:tr.map(r=>r.value),borderColor:s16,backgroundColor:s16+'22',fill:true,borderWidth:2.5,pointRadius:tr.map(r=>r.analyst?6:4),pointStyle:tr.map(r=>r.analyst?'rectRot':'circle'),pointBorderColor:surf,pointBorderWidth:2,tension:.3}]},
+      options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{display:false},tooltip:{...tip,callbacks:{label:c=>'₹'+fmt(c.parsed.y)+' crore'+(tr[c.dataIndex].analyst?' (analyst)':''),afterLabel:c=>tr[c.dataIndex].src}}},scales:{x:{grid:{display:false}},y:{beginAtZero:true,grid:{color:grid},border:{display:false},ticks:{callback:v=>'₹'+v/1000+'k'}}}}});};
+  mk('abs');
+  $$('[data-trend]').forEach(b=>b.onclick=()=>{$$('[data-trend]').forEach(x=>x.classList.toggle('on',x===b));const m=b.dataset.trend;$('#t-trend').classList.toggle('hide',m!=='tbl');$('#trend-box').classList.toggle('hide',m==='tbl');if(m!=='tbl')mk(m);});
+  // sector + state by year
+  const hb=(el,lab,val,cols)=>new Chart(el,{type:'bar',data:{labels:lab,datasets:[{data:val,backgroundColor:cols,borderRadius:4,borderSkipped:'start',barThickness:14}]},options:{indexAxis:'y',maintainAspectRatio:false,animation:{duration:500},plugins:{legend:{display:false},tooltip:tipCr},scales:{x:{beginAtZero:true,grid:{color:grid},border:{display:false},ticks:{maxTicksLimit:5,callback:v=>'₹'+fmt(v,0)}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:11}}}}}});
+  const setYear=i=>{$('#yr-label').textContent=STATS.sectorYears[i];
+    const sec=STATS.sectors.map(s=>({n:s.name,v:s.v[i],c:SDG(s.sdg)})).sort((a,b)=>b.v-a.v).slice(0,12);
+    const st=STATS.states.map(s=>({n:s.name,v:s.v[i]})).sort((a,b)=>b.v-a.v);
+    if(!CH.sec){CH.sec=hb($('#c-sector'),sec.map(x=>x.n),sec.map(x=>x.v),sec.map(x=>x.c));CH.st=hb($('#c-state'),st.map(x=>x.n),st.map(x=>x.v),s16);}
+    else{CH.sec.data.labels=sec.map(x=>x.n);CH.sec.data.datasets[0].data=sec.map(x=>x.v);CH.sec.data.datasets[0].backgroundColor=sec.map(x=>x.c);CH.sec.update();CH.st.data.labels=st.map(x=>x.n);CH.st.data.datasets[0].data=st.map(x=>x.v);CH.st.update();}};
+  $('#yr').max=STATS.sectorYears.length-1;$('#yr').value=STATS.sectorYears.length-1;setYear(+$('#yr').value);
+  $('#yr').oninput=e=>setYear(+e.target.value);
+  let pt=null;$('#yr-play').onclick=()=>{if(pt){clearInterval(pt);pt=null;$('#yr-play').textContent='▶ Play';return;}let i=0;$('#yr').value=0;setYear(0);$('#yr-play').textContent='❚❚ Pause';pt=setInterval(()=>{i++;if(i>=STATS.sectorYears.length){clearInterval(pt);pt=null;$('#yr-play').textContent='▶ Play';return;}$('#yr').value=i;setYear(i);},1400);};
+  // sector explorer
+  const secDraw=i=>{const s=STATS.sectors[+i],c=SDG(s.sdg),y=STATS.sectorYears;CH.se&&CH.se.destroy();
+    CH.se=new Chart($('#c-sec'),{type:'line',data:{labels:y,datasets:[{data:s.v,borderColor:c,backgroundColor:c+'22',fill:true,borderWidth:2.5,pointRadius:4,pointBorderColor:surf,pointBorderWidth:2,tension:.3}]},options:{maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:tipCr},scales:{x:{grid:{display:false}},y:{beginAtZero:true,grid:{color:grid},border:{display:false},ticks:{callback:v=>'₹'+fmt(v,0)}}}}});
+    const tot=STATS.sectors.reduce((a,b)=>a+b.v[4],0),g=(Math.pow(s.v[4]/s.v[0],1/4)-1)*100;
+    $('#sec-facts').innerHTML=`<b style="color:${c}">SDG ${s.sdg}</b> · FY24: <b>₹${fmt(s.v[4])} cr</b> (${fmt(s.v[4]/tot*100,1)}% of total) · 4-yr CAGR <b>${isFinite(g)?fmt(g,1)+'%':'n/a'}</b>`;};
+  $('#sec-pick').onchange=e=>secDraw(e.target.value);secDraw(0);
+  // industry grouping
+  const grp={};STATS.topListedFY24.rows.forEach(r=>{(grp[r[1]]=grp[r[1]]||{v:0,c:[]}).v+=r[2];grp[r[1]].c.push(r[0]);});
+  const gl=Object.entries(grp).sort((a,b)=>b[1].v-a[1].v), icol=[7,8,9,12,10,16];
+  new Chart($('#c-ind'),{type:'bar',data:{labels:gl.map(g=>g[0]),datasets:[{data:gl.map(g=>+g[1].v.toFixed(2)),backgroundColor:gl.map((_,i)=>SDG(icol[i%6])),borderRadius:4,borderSkipped:'start',barThickness:18}]},options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{...tip,callbacks:{label:c=>'₹'+fmt(c.parsed.x)+' crore',afterLabel:c=>gl[c.dataIndex][1].c.join(', ')}}},scales:{x:{beginAtZero:true,grid:{color:grid},border:{display:false},ticks:{maxTicksLimit:5,callback:v=>'₹'+fmt(v,0)}},y:{grid:{display:false}}}}});
+  const f=STATS.fy25Themes.rows;
+  new Chart($('#c-fy25'),{type:'bar',data:{labels:f.map(r=>r[0]),datasets:[{data:f.map(r=>r[1]),backgroundColor:f.map(r=>SDG(r[3])),borderRadius:4,borderSkipped:'start',barThickness:18}]},options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{...tip,callbacks:{label:c=>'₹'+fmt(c.parsed.x,0)+' crore · '+f[c.dataIndex][2]+'%'}}},scales:{x:{beginAtZero:true,grid:{color:grid},border:{display:false},ticks:{maxTicksLimit:5,callback:v=>'₹'+fmt(v,0)}},y:{grid:{display:false},ticks:{font:{size:11}}}}}});
+}
+
+/* ===== timeline ===== */
+const KIND={Guideline:17,Disclosure:16,Law:4,Rule:1,'Schedule VII':3,'Related law':10,'Pending bill':9};
+let TL=[],tlKind='';
+function renderTL(){const ev=TL.filter(e=>!tlKind||e.kind===tlKind);
+  $('#tl').innerHTML=ev.map(e=>`<button class="bub${e.pending?' pend':''}" style="--k:var(--sdg${KIND[e.kind]||17})" data-i="${TL.indexOf(e)}" aria-label="${esc(dfmt(e.date)+': '+e.title)}" title="${esc(e.title)}">'${esc(e.date.slice(2,4))}<span class="yl">${dfmt(e.date)}</span></button>`).join('');
+  $$('#tl .bub').forEach(b=>{b.onclick=()=>showTL(+b.dataset.i);b.onkeydown=k=>{if(k.key==='ArrowRight'&&b.nextElementSibling)b.nextElementSibling.focus();if(k.key==='ArrowLeft'&&b.previousElementSibling)b.previousElementSibling.focus();};});
+  if(ev.length)showTL(TL.indexOf(ev[ev.length-1]),true);}
+function showTL(i,quiet){const e=TL[i];$$('#tl .bub').forEach(b=>b.classList.toggle('on',+b.dataset.i===i));const k=`var(--sdg${KIND[e.kind]||17})`;
+  const b=$(`#tl .bub[data-i="${i}"]`);if(b){const w=b.closest('.tl-wrap');w.scrollTo({left:b.offsetLeft-w.clientWidth/2,behavior:quiet?'auto':'smooth'});}
+  $('#tl-detail').style.setProperty('--k',k);
+  $('#tl-detail').innerHTML=`<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><span class="pill" style="background:${k};color:#fff;border:0">${esc(e.kind)}</span><span class="pill">${esc(e.era)}</span>${e.pending?'<span class="pill warn">Not yet law</span>':''}<span class="muted">${dfmt(e.date)}</span></div><h3 style="margin-top:10px;font-size:1.3rem">${esc(e.title)}</h3><b>What changed</b><ul class="clean">${e.changes.map(c=>`<li>${esc(c)}</li>`).join('')}</ul><div class="src">Source: ${ext(e.url,esc(e.src))}</div><div style="display:flex;gap:8px;margin-top:10px"><button class="btn sm" id="tl-p">← Earlier</button><button class="btn sm" id="tl-n">Later →</button></div>`;
+  $('#tl-p').onclick=()=>{if(i>0)showTL(i-1)};$('#tl-n').onclick=()=>{if(i<TL.length-1)showTL(i+1)};}
+loadJSON('data/timeline.json').then(d=>{TL=d.events;$('#tl-updated').textContent='Last updated '+dfmt(d.updated)+'.';
+  $('#tl-legend').innerHTML=Object.entries(KIND).map(([k,v])=>`<span><i style="background:var(--sdg${v})"></i>${k}</span>`).join('');
+  chipGroup($('#tl-chips'),[['','All milestones'],...Object.keys(KIND).map(k=>[k,k])],'',v=>{tlKind=v;renderTL();});renderTL();}).catch(()=>{$('#tl-detail').innerHTML='<p class="muted">Timeline could not be loaded.</p>';});
+
+/* ===== Schedule VII ===== */
+const SCH7=[
+ ['i',2,'Hunger, poverty, health, sanitation, water','Nutrition, preventive healthcare, sanitation (incl. Swachh Bharat Kosh), safe drinking water','Mobile health units, anaemia programmes, RO plants, WASH in schools'],
+ ['ii',4,'Education, skills, livelihoods','Education incl. special education; employment-enhancing vocational skills; livelihood projects','Foundational learning, AI/digital skilling, ITIs, FPOs'],
+ ['iii',5,'Gender equality & reducing inequalities','Women\'s empowerment, homes and hostels for women and orphans, old-age homes, day care, support for backward groups','Women-led enterprises, creches, elder care'],
+ ['iv',13,'Environment & animal welfare','Ecological balance, flora and fauna, animal welfare, agroforestry, natural resources, soil/air/water quality, Clean Ganga Fund','Watershed, afforestation, waste, renewable energy access'],
+ ['v',11,'Heritage, art & culture','National heritage, restoration, public libraries, traditional arts and handicrafts','Craft clusters, heritage restoration'],
+ ['vi',16,'Armed forces & police veterans','Veterans, war widows, CAPF/CPMF veterans and dependants','Re-skilling veterans, widow support'],
+ ['vii',3,'Sports','Training for rural, nationally recognised, Paralympic and Olympic sports','Grassroots academies, para-athlete support'],
+ ['viii',17,'PM\'s funds & central funds','PM National Relief Fund, PM CARES and central funds for SC/ST/OBC, minorities, women','Direct fund contributions'],
+ ['ix',9,'Research & incubators','Government-funded incubators and R&D in science, technology, engineering, medicine; public universities, IITs, national labs','Research chairs, incubator grants'],
+ ['x',11,'Rural development','Rural development projects','Village infrastructure, model villages'],
+ ['xi',11,'Slum area development','Slum area development','Urban basic services in notified slums'],
+ ['xii',13,'Disaster management','Relief, rehabilitation and reconstruction','Flood relief, resilient housing'],
+ ['xiii',17,'Social Stock Exchange (ZCZP)','Subscription to zero coupon zero principal instruments — added 27 May 2026, capped at 10% of annual spend','Funding listed non-profits via SSE']];
+$('#sch7').innerHTML=SCH7.map(r=>`<div class="s7" style="--k:var(--sdg${r[1]})"><span class="pill">(${r[0]}) · SDG ${r[1]}</span><b style="margin-top:6px">${esc(r[2])}</b><div style="font-size:.85rem">${esc(r[3])}</div><div class="ex">Programme ideas: ${esc(r[4])}</div></div>`).join('');
+const qcalc=()=>{const np=+$('#q-np').value||0,ob=Math.max(0,np*0.02);$('#q-out').innerHTML=`Obligation ≈ ₹${fmt(ob)} crore (₹${fmt(ob*100)} lakh)<br><span class="muted">${ob<=0.5?'≤ ₹50 lakh: Board can act as CSR Committee':'> ₹50 lakh: CSR Committee required'}${ob>=10?' · ≥ ₹10 cr: impact assessment applies':''}</span>`;};
+$('#q-np').oninput=qcalc;qcalc();
+
+/* ===== checklist ===== */
+const CK=[
+ ['Governance & planning',['Applicability working: s.198 net profit for 3 years and 2% computation','Set-off ledger for excess spend, with Board resolution','Board-approved CSR Policy on the website','Annual Action Plan with ongoing / one-time tagging','CSR Committee constituted (or Board, if ≤ ₹50 lakh) with minutes','Overhead calculation showing ≤ 5%']],
+ ['Partners & money trail',['Partner due-diligence file: CSR-1, 12A/80G, 3-year track record, FCRA if relevant','MoU with milestones, tranche-linked releases and reporting','Project-wise ledger; utilisation certificates from partners','CFO certificate on utilisation','Unspent CSR Account statements with dated transfer proof (30-day / 6-month tests)','Capital asset register showing eligible ownership']],
+ ['Evidence of impact',['Logframe with outcome indicators, baseline and endline','Monitoring reports, field-visit notes, beneficiary lists, geotagged photos','Independent impact assessment where required','Grievance and safeguarding log for programmes']],
+ ['Filings & audit',['Annexure II in Board\'s report reconciles with books and CSR-2','Form CSR-2 filed for every applicable year since FY 2020-21','CARO 2020 clause 3(xx) reviewed with statutory auditor','BRSR Principle 8 disclosures align with CSR data (listed cos.)','Plan for suo-motu adjudication if a deadline was missed']]];
+let ckState=store.get('ckv2',{});
+function renderCK(){$('#ck').innerHTML=CK.map((s,si)=>{const done=s[1].filter((_,i)=>ckState[si+'-'+i]).length;
+  return `<div class="card"><div style="display:flex;justify-content:space-between;align-items:center"><h3 style="margin:0">${s[0]}</h3><span class="pill${done===s[1].length?' ok':''}">${done}/${s[1].length}</span></div><div class="bar" style="margin:8px 0"><span style="width:${done/s[1].length*100}%;background:var(--accent)"></span></div><ul class="ckl">${s[1].map((t,i)=>`<li class="${ckState[si+'-'+i]?'done':''}"><input type="checkbox" data-k="${si}-${i}" ${ckState[si+'-'+i]?'checked':''} id="ck${si}${i}"><span>${esc(t)}</span></li>`).join('')}</ul></div>`;}).join('');
+  const all=CK.reduce((a,s)=>a+s[1].length,0),d=Object.values(ckState).filter(Boolean).length,p=Math.round(d/all*100);$('#ck-bar').style.width=p+'%';$('#ck-pct').textContent=p+'%';
+  $$('#ck li').forEach(li=>li.onclick=e=>{const cb=li.querySelector('input');if(e.target!==cb)cb.checked=!cb.checked;ckState[cb.dataset.k]=cb.checked;store.set('ckv2',ckState);renderCK();});}
+renderCK();
+$('#ck-reset').onclick=()=>{ckState={};store.set('ckv2',ckState);renderCK();};
+$('#ck-copy').onclick=async e=>{const t='CSR audit-readiness checklist\n'+CK.map((s,si)=>s[0]+'\n'+s[1].map((x,i)=>(ckState[si+'-'+i]?'☑ ':'☐ ')+x).join('\n')).join('\n\n');try{await navigator.clipboard.writeText(t);e.target.textContent='Copied ✓';}catch(_){e.target.textContent='Copy blocked';}};
+
+/* ===== simulator ===== */
+const ACTS=[['i','Hunger, health, sanitation, water',1],['ii','Education, skills, livelihoods',1],['iii','Gender & inequality',1],['iv','Environment & animal welfare',1],['v','Heritage, art & culture',1],['vi','Veterans',1],['vii','Sports training',1],['viii','PM\'s / central funds',1],['ix','Research & incubators',1],['x','Rural development',1],['xi','Slum development',1],['xii','Disaster management',1],['xiii','Social Stock Exchange ZCZP',1],
+ ['x1','Employee-only welfare',0],['x2','Marketing sponsorship / brand event',0],['x3','Political contribution',0],['x4','Activity outside India',0],['x5','Normal course of business',0],['x6','Obligation under another law',0]];
+$('#s-acts').innerHTML=ACTS.map(a=>`<label class="${a[2]?'':'no'}"><input type="checkbox" value="${a[0]}" ${['i','ii'].includes(a[0])?'checked':''}><span>${a[2]?'('+a[0]+') ':'✕ '}${esc(a[1])}</span></label>`).join('');
+let st=1;const showSt=n=>{st=Math.min(5,Math.max(1,n));$$('.sim-st').forEach(d=>d.classList.toggle('hide',+d.dataset.st!==st));$$('#sim-steps button').forEach(b=>b.classList.toggle('on',+b.dataset.st===st));};
+$$('#sim-steps button').forEach(b=>b.onclick=()=>showSt(+b.dataset.st));$('#sim-prev').onclick=()=>showSt(st-1);$('#sim-next').onclick=()=>showSt(st+1);
+const V=id=>$('#'+id).value, N=id=>+$('#'+id).value||0;
+const PRESETS={
+ good:{'s-type':'listed','s-nw':420,'s-to':1800,'s-p3':90,'s-p2':110,'s-p1':130,'s-dir':3,'s-id':'yes','s-pol':'yes','s-bud':2.2,'s-dirsp':0.6,'s-disb':1.6,'s-util':1.5,'s-oh':0.08,'s-so':0,'s-how':'ongoing','s-csr1':'yes','s-of':3,'s-inel':0,'s-csr2':'yes','s-ann':'yes','s-web':'yes','s-ia':'na','s-cfo':'yes',acts:['i','ii','iv']},
+ late:{'s-type':'public','s-nw':300,'s-to':1200,'s-p3':60,'s-p2':70,'s-p1':80,'s-dir':3,'s-id':'yes','s-pol':'yes','s-bud':1.4,'s-dirsp':0.3,'s-disb':0.8,'s-util':0.8,'s-oh':0.05,'s-so':0,'s-how':'late','s-csr1':'yes','s-of':4,'s-inel':0,'s-csr2':'no','s-ann':'yes','s-web':'yes','s-ia':'na','s-cfo':'yes',acts:['ii','x']},
+ ngo:{'s-type':'private','s-nw':150,'s-to':1500,'s-p3':40,'s-p2':45,'s-p1':50,'s-dir':2,'s-id':'no','s-pol':'yes','s-bud':0.9,'s-dirsp':0,'s-disb':0.95,'s-util':0.6,'s-oh':0.03,'s-so':0,'s-how':'none','s-csr1':'no','s-of':2,'s-inel':0,'s-csr2':'yes','s-ann':'yes','s-web':'no','s-ia':'na','s-cfo':'no',acts:['i','iii']},
+ inel:{'s-type':'listed','s-nw':2500,'s-to':9000,'s-p3':600,'s-p2':650,'s-p1':700,'s-dir':4,'s-id':'yes','s-pol':'yes','s-bud':13,'s-dirsp':4,'s-disb':9,'s-util':8,'s-oh':0.9,'s-so':0,'s-how':'fund','s-csr1':'yes','s-of':5,'s-inel':1.5,'s-csr2':'yes','s-ann':'yes','s-web':'yes','s-ia':'no','s-cfo':'yes',acts:['ii','iv','x2','x1']}};
+$$('[data-preset]').forEach(b=>b.onclick=()=>{const p=PRESETS[b.dataset.preset];Object.entries(p).forEach(([k,v])=>{if(k!=='acts')$('#'+k).value=v;});$$('#s-acts input').forEach(i=>i.checked=p.acts.includes(i.value));$$('[data-preset]').forEach(x=>x.classList.toggle('on',x===b));runSim();});
+function runSim(){
+  const R=[];const add=(s,t)=>R.push([s,t]);const L=x=>'₹'+fmt(x*100)+' lakh', C=x=>'₹'+fmt(x)+' cr';
+  const np=[N('s-p3'),N('s-p2'),N('s-p1')], avg=(np[0]+np[1]+np[2])/3, nw=N('s-nw'), to=N('s-to');
+  const app=nw>=500||to>=1000||np[2]>=5;
+  if(!app){add('ok',`Section 135 does not apply: net worth ${C(nw)}, turnover ${C(to)}, net profit ${C(np[2])} are all below thresholds.`);return show(R,'ok','Not covered by Section 135',0,0);}
+  const why=[nw>=500?'net worth ≥ ₹500 cr':'',to>=1000?'turnover ≥ ₹1,000 cr':'',np[2]>=5?'net profit ≥ ₹5 cr':''].filter(Boolean).join(', ');
+  add('ok',`Section 135 applies (${why}).`);
+  const ob=Math.max(0,avg*0.02);add('ok',`Obligation: 2% × average net profit ${C(avg)} = <b>${C(ob)}</b> (${L(ob)}).`);
+  // committee
+  const type=V('s-type'),dir=N('s-dir'),id=V('s-id');
+  if(ob<=0.5) add('ok','Obligation ≤ ₹50 lakh — the Board may perform the CSR Committee\'s functions.');
+  else{const need=type==='private'?2:3;if(dir<need)add('bad',`CSR Committee has ${dir} director(s); at least ${need} needed for a ${type} company.`);else add('ok',`CSR Committee of ${dir} directors meets the minimum.`);
+    if(type!=='private'&&id==='no')add('warn','No independent director on the committee — required where the company must have independent directors (listed and many public companies).');}
+  if(V('s-pol')==='no')add('bad','No Board-approved CSR Policy — Section 135(3)-(4) requires one, disclosed on the website.');
+  const bud=N('s-bud');if(bud<ob)add('warn',`Action-plan budget ${C(bud)} is below the obligation ${C(ob)} — plan for the full 2%.`);else add('ok','Action-plan budget covers the obligation.');
+  // activities
+  const acts=$$('#s-acts input:checked').map(i=>i.value),badActs=acts.filter(a=>a.startsWith('x'));let inel=N('s-inel');
+  if(badActs.length){const names=ACTS.filter(a=>badActs.includes(a[0])).map(a=>a[1]).join(', ');add('bad',`Ineligible activities ticked (${names}) — ${inel>0?L(inel)+' will not count as CSR':'enter the amount; it will not count as CSR'}.`);} else if(inel>0)add('warn',`${L(inel)} marked ineligible will be excluded.`);
+  if(!acts.some(a=>!a.startsWith('x')))add('bad','No Schedule VII activity selected — spend must fall under Schedule VII.');
+  // money
+  let direct=N('s-dirsp'),disb=N('s-disb'),util=N('s-util'),oh=N('s-oh'),so=N('s-so');const gross=direct+disb;
+  if(V('s-csr1')==='no'&&disb>0){add('bad',`Implementing agencies lack CSR-1 registration — ${L(disb)} routed through them does not count.`);disb=0;}
+  if(disb>0&&util<disb)add('warn',`Agencies have utilised ${L(util)} of ${L(disb)} disbursed — the Board must satisfy itself of utilisation; collect utilisation certificates.`);
+  const total=direct+disb, cap=0.05*gross, ohx=Math.max(0,oh-cap);
+  if(ohx>0)add('bad',`Admin overheads ${L(oh)} exceed the 5% cap (${L(cap)}); ${L(ohx)} does not count.`);else if(gross>0)add('ok',`Overheads ${L(oh)} within the 5% cap.`);
+  const elig=Math.max(0,total-ohx-inel), un=Math.max(0,ob-elig-so), ex=Math.max(0,elig+so-ob);
+  add('ok',`Eligible CSR spend counted: <b>${L(elig)}</b>${so?` + set-off ${L(so)}`:''}.`);
+  let pen=0,pc=0,po=0,of=Math.max(0,Math.round(N('s-of')));
+  if(un<0.0001){add('ok','Full obligation met.');if(ex>0)add('ok',`Excess ${L(ex)} can be set off over the next 3 years (Board resolution needed).`);}
+  else{const how=V('s-how');
+    if(how==='ongoing')add('warn',`Unspent ${L(un)} parked in the Unspent CSR Account within 30 days — compliant, but must be spent within 3 years, and the committee must stay in place.`);
+    else if(how==='fund')add('ok',`Unspent ${L(un)} transferred to a Schedule VII fund within 6 months — compliant.`);
+    else{pc=Math.min(2*un,1);po=Math.min(0.1*un,0.02);pen=pc+po*of;add('bad',`Unspent ${L(un)} ${how==='late'?'transferred late':'not transferred'} — Section 135(7) penalty: company ${L(pc)} (lower of 2× or ₹1 cr) + ${L(po)} per officer × ${of} = <b>${L(pen)}</b>, and the amount must still be transferred.`);}}
+  // filings
+  if(V('s-csr2')==='no')add('bad','Form CSR-2 not filed on time — ROCs are penalising this under Section 450 even when filed late.');
+  if(V('s-ann')==='no')add('bad','No annual report on CSR (Annexure II) in the Board\'s report — breach of Section 134(3)(o).');
+  if(V('s-web')==='no')add('warn','Website disclosure missing (committee, policy, projects).');
+  if(V('s-cfo')==='no')add('warn','No CFO certificate on utilisation of funds.');
+  const avgOb=ob;if(avgOb>=10&&V('s-ia')==='na')add('warn','Average obligation ≥ ₹10 crore — impact assessment applies to projects ≥ ₹1 crore completed a year earlier.');
+  if(V('s-ia')==='no')add('bad','Impact assessment required but not done.');
+  const bad=R.filter(r=>r[0]==='bad').length,warn=R.filter(r=>r[0]==='warn').length;
+  const cls=bad?'bad':warn?'mid':'ok', h=bad?`❌ Non-compliant — ${bad} breach${bad>1?'es':''}`:warn?`⚠️ Compliant, with ${warn} risk${warn>1?'s':''} to fix`:'✅ Compliant';
+  show(R,cls,h,pen,Math.max(0,100-bad*18-warn*6));
+}
+function show(R,cls,h,pen,score){
+  $('#sim-out').innerHTML=`<div class="verdict ${cls}"><h3>${h}</h3><div class="meter"><span class="muted">Compliance health</span><div class="prog"><span style="width:${score}%;background:${score>80?'var(--ok)':score>50?'#c98500':'var(--bad)'}"></span></div><b>${score}/100</b></div>${pen?`<p style="margin:.6rem 0 0"><b>Estimated penalty exposure: ₹${fmt(pen*100)} lakh</b></p>`:''}<ul class="reasons">${R.map(r=>`<li><span class="ic ${r[0]}">${r[0]==='ok'?'✓':r[0]==='warn'?'!':'✕'}</span><span>${r[1]}</span></li>`).join('')}</ul><p class="muted" style="margin-bottom:0">See matching real cases below. Indicative only — not legal advice.</p></div>`;
+  if(window._simScroll)$('#sim-out').scrollIntoView({behavior:'smooth',block:'nearest'});window._simScroll=true;}
+$('#sim-run').onclick=runSim;window._simScroll=false;runSim();
+
+/* ===== awards ===== */
+const MON=['J','F','M','A','M','J','J','A','S','O','N','D'];
+const AWARDS=[
+ {n:'National CSR Awards',o:'Ministry of Corporate Affairs (with IICA)',sc:'India – national',fee:'Free',f:'No fee; nominations routed through ministries, state governments and professional bodies',prize:'Apex government recognition; presented by the President in 2019',cat:'Excellence in CSR (by spend), aspirational districts / difficult terrains, national priority areas; MSME slots',who:'Companies under Section 135',when:'Irregular: 1st edition Oct 2019; 2020 winners announced Aug 2022; NCSRA 2022 cycle announced. No newer cycle found.',dl:null,ce:null,u:'https://iepf.gov.in/content/csr/global/master/home/national-csr-awards.html'},
+ {n:'FICCI CSR Awards',o:'FICCI Aditya Birla CSR Centre for Excellence',sc:'India – national',fee:'Check',f:'Fee: check — apply via csrcfe@ficci.com',prize:'Trophy; 3-tier jury assessment',cat:'Women empowerment, skills & livelihood, education, PwD inclusion, food security & agriculture, aspirational districts, environment, SMEs',who:'PSUs, private companies, SMEs',when:'India\'s first CSR award (1999). Calls typically open in March.',dl:3,ce:8,u:'https://csrcfe.org/?p=3417'},
+ {n:'CII-ITC Sustainability Awards',o:'CII-ITC Centre of Excellence for Sustainable Development',sc:'India – national',fee:'Paid',f:'₹25,000–₹1,75,000 (Corporate Excellence, by turnover) + taxes',prize:'Recognition plus a detailed feedback report; site assessment',cat:'Corporate Excellence; domain excellence (environment, CSR, biodiversity etc.)',who:'Large to micro enterprises and units, 5+ years in India',when:'2026: intent by 22 May, questionnaire by 3 Jul, awards announced Dec 2026',dl:5,ce:12,u:'https://sustainabledevelopment.in/wp-content/themes/CII-Sustainable-Development/Awards/template-awards-2026.html'},
+ {n:'Golden Peacock Award for CSR',o:'Institute of Directors (IOD)',sc:'India – national',fee:'Paid',f:'₹69,500 + 18% GST',prize:'Trophy and certificate; use of logo',cat:'Sector-wise CSR excellence; a separate Global CSR award exists',who:'Organisations of all sectors',when:'2025 awards presented Feb 2026 in Mumbai at IOD\'s CSR conference',dl:null,ce:2,u:'https://www.goldenpeacockaward.com/national-awards/golden-peacock-award-for-corporate-social-responsibility.html'},
+ {n:'CSR Times Awards & Bharat ESG Awards',o:'CSR Times',sc:'India – national',fee:'Paid',f:'₹60,000 + GST (corporates/PSUs); ₹30,000 + GST (NGOs, MSMEs, government)',prize:'Trophy and media coverage',cat:'Thematic CSR categories; ESG & sustainability',who:'Projects at least one year old',when:'2026 nominations closed 10 Jun 2026',dl:6,ce:null,u:'https://csrtimes.org/nomination-form-2026/'},
+ {n:'India CSR Awards',o:'India CSR Network',sc:'India – national',fee:'Check',f:'Fee: check',prize:'Recognition at the India CSR Summit',cat:'Innovation, sustainability, scalability, replicability',who:'Companies and NGOs',when:'19th edition 2026; India CSR Summit & Awards on 21 Nov 2026, New Delhi',dl:null,ce:11,u:'https://indiacsr.in/awards/'},
+ {n:'The CSR Journal Excellence Awards',o:'The CSR Journal',sc:'India – national',fee:'Paid',f:'₹15,000 nomination fee',prize:'Trophy and coverage',cat:'Thematic CSR categories',who:'Companies, PSUs, NGOs',when:'Annual',dl:null,ce:null,u:'https://thecsrjournal.in/excellenceawards/nprocess.html'},
+ {n:'Mahatma Award',o:'Founded by Amit Sachdeva; supported by Aditya Birla Group',sc:'India – national',fee:'Check',f:'Fee: check',prize:'Recognition',cat:'CSR excellence across themes; leaders',who:'Companies, PSUs, NGOs, leaders',when:'Around Gandhi Jayanti; 2026: 1,900+ entries, 70 winners',dl:null,ce:10,u:'https://www.outlookbusiness.com/spotlight/pr-wire/bisleri-international-receives-mahatma-award-2026-for-csr-excellence'},
+ {n:'Social Impact Conference & Awards (SICA)',o:'TheCSRUniverse',sc:'India – national',fee:'Free',f:'Zero nomination fee (CASCA climate awards also free)',prize:'Recognition; story featured',cat:'Corporates, NGOs, social enterprises, individuals',who:'Pan-India',when:'Annual',dl:null,ce:null,u:'https://thecsruniverse.com/events/social-impact-conference-and-awards-sica/'},
+ {n:'Greentech CSR India Awards',o:'Greentech Foundation',sc:'India – national',fee:'Check',f:'Fee: check',prize:'Trophy',cat:'CSR leadership across sectors',who:'PSUs, corporates, foundations, MSMEs, NGOs',when:'12th edition, 12–13 May 2026, New Delhi',dl:null,ce:5,u:'https://www.greentechevents.com/12th-greentech-csr-india-awards-2026'},
+ {n:'ISC-FICCI Sanitation Awards',o:'India Sanitation Coalition & FICCI',sc:'India – national',fee:'Check',f:'Fee: check',prize:'Recognition; WASH finance awards alongside',cat:'Ten WASH categories (build, use, maintain, treat, reuse…)',who:'Organisations and individuals in WASH',when:'10th edition; nominations by 31 May 2026',dl:5,ce:null,u:'https://www.indiasanitationcoalition.org/isc-ficci-sanitaion-awards.html'},
+ {n:'SETU Bandhan CSR Awards',o:'Bandhan Konnagar',sc:'India – national',fee:'Check',f:'Fee: check',prize:'Recognition',cat:'Education, health, livelihoods, skills, women, climate',who:'CSR leaders and initiatives',when:'2026 nominations invited mid-year',dl:8,ce:null,u:'https://indiacsr.in/setu-bandhan-csr-awards/'},
+ {n:'Jamnalal Bajaj Awards',o:'Jamnalal Bajaj Foundation',sc:'India – national',fee:'Free',f:'Free',prize:'₹20 lakh per award, citation and trophy',cat:'Gandhian constructive work, women & children welfare, science for rural development, international',who:'Individuals only',when:'Nominations by 31 Jan; 48th awards on 25 Nov 2026',dl:1,ce:11,u:'https://www.jamnalalbajajawards.org/nomination-forms'},
+ {n:'FKCCI Global CSR & Sustainability Awards',o:'FKCCI (Karnataka)',sc:'India – state',fee:'Paid',f:'₹15,000 per category (corporates/PSUs); concessional for NGOs/MSMEs',prize:'Recognition at the FKCCI summit',cat:'11 categories; 2026: 127 entries, 45 awardees',who:'Corporates, NGOs, MSMEs, institutions',when:'Annual, Bengaluru',dl:null,ce:null,u:'https://indiacsr.in/fkcci-global-csr-sustainability-awards/'},
+ {n:'BridgeBharat CSR Awards',o:'Odisha Corporate Foundation with Govt of Odisha (Public Enterprise Dept)',sc:'India – state',fee:'Check',f:'Fee: check',prize:'Includes CSR Lifetime Achievement; presented by the Governor in 2026',cat:'CSR leadership in Odisha',who:'Companies and PSUs active in Odisha',when:'BridgeBharat 2026 national seminar, Bhubaneswar',dl:null,ce:null,u:'https://www.psuconnect.in/award/odisha-governor-presents-csr-lifetime-achievement-award-to-cmd-ireda'},
+ {n:'Sambad Corporate Excellence Awards',o:'Sambad / Kanak News (Odisha)',sc:'India – state',fee:'Check',f:'Fee: check',prize:'Includes "Brand of the Year – CSR"',cat:'Corporate excellence including CSR',who:'Companies in Odisha',when:'2026 edition held 30 Jan 2026',dl:null,ce:1,u:'https://indiacsr.in/jindal-stainless-wins-brand-of-the-year-csr-award-odisha/'},
+ {n:'Nava Bharat CSR Awards',o:'Nava Bharat group (Maharashtra)',sc:'India – state',fee:'Check',f:'Fee: check',prize:'Presented by the Maharashtra Governor',cat:'CSR excellence',who:'Companies and organisations',when:'4th edition presented 4 Feb 2025, Mumbai',dl:null,ce:2,u:'https://rajbhavan-maharashtra.gov.in/?p=55228'},
+ {n:'Maharashtra CSR Awards',o:'India CSR',sc:'India – state',fee:'Check',f:'Fee: check',prize:'Recognition at the Maharashtra CSR Summit',cat:'Organisations and leaders in CSR and social development',who:'Maharashtra-focused',when:'Held with the Maharashtra CSR Summit',dl:null,ce:null,u:'https://indiacsr.in/maharashtra-csr-awards-an-honour-for-social-development-organisations-and-leaders'},
+ {n:'Citizens Awards (Corporate Citizenship)',o:'U.S. Chamber of Commerce Foundation',sc:'Global',fee:'Free',f:'No entry fee',prize:'Public recognition; no cash prize',cat:'Nine categories incl. Best Corporate Steward (large / small)',who:'Businesses, chambers, associations',when:'2026 nominations closed late June; finalists early autumn; ceremony at Business Solves (Oct)',dl:6,ce:10,u:'https://www.uschamberfoundation.org/citizens-awards-1'},
+ {n:'Reuters Events Global Sustainability Awards',o:'Reuters Events (formerly Responsible Business Awards)',sc:'Global',fee:'Check',f:'Fee: check (entry pack on site)',prize:'Recognition at an in-person gala',cat:'Net zero leadership, supply-chain decarbonisation, biodiversity, social impact, DE&I, responsible investor…',who:'Companies worldwide',when:'Entries usually close ~April; 2026 gala 21 Oct, London',dl:4,ce:10,u:'https://events.reutersevents.com/sustainable-business/responsible-business-awards'},
+ {n:'edie Awards',o:'edie (UK)',sc:'Global',fee:'Paid',f:'Paid entry',prize:'UK\'s largest corporate sustainability awards',cat:'23 categories incl. ESG Strategy, Staff Engagement, AI in ESG',who:'Organisations with UK operations',when:'2027 entries opened late Oct 2026; ceremony at edie 27, 13–14 Apr 2027, London',dl:1,ce:4,u:'https://event.edie.net/awards_2027/about'},
+ {n:'Ashden Awards',o:'Ashden (UK charity)',sc:'Global',fee:'Free',f:'Free to enter',prize:'Cash prize up to £40,000, film, investor and policy connections',cat:'Clean energy access, nature-based solutions — UK and Global South',who:'Businesses, NGOs, public bodies, social enterprises',when:'2026 cycle closed 8 Dec 2025; winners June 2026; next cycle usually opens in autumn',dl:12,ce:6,u:'https://ashden.org/awards/'},
+ {n:'Responsible Business Awards (Northern Ireland)',o:'Business in the Community NI',sc:'Global',fee:'Free',f:'Free for members and non-members',prize:'Gala recognition',cat:'Community impact, DE&I, nature, wellbeing, skills, responsible company of the year…',who:'Organisations in Northern Ireland',when:'Entries Feb–1 May 2026; gala 17 Sep 2026, Belfast',dl:5,ce:9,u:'https://www.bitcni.org.uk/post-events/2026-responsible-business-awards-in-northern-ireland-deadline-for-entries/'},
+ {n:'Global CSR & ESG Awards',o:'Pinnacle Group International',sc:'Global',fee:'Check',f:'Fee: check',prize:'Recognition at the Global CSR & ESG Summit',cat:'CSR, ESG and sustainability leadership',who:'Organisations across Asia and beyond',when:'18th edition, 23 Apr 2026, Bangkok',dl:null,ce:4,u:'https://www.acnnewswire.com/press-release/english/106788/'},
+ {n:'Asia Responsible Enterprise Awards (AREA)',o:'Enterprise Asia',sc:'Global',fee:'Check',f:'Fee: check',prize:'Recognition; 69 honourees in 2026',cat:'Social empowerment, investment in people, green leadership, responsible digital practice, sustainable investing…',who:'Companies across Asia',when:'2026 ceremony Kuala Lumpur (July); China chapter Aug 2026',dl:null,ce:7,u:'https://www.aap.com.au/aapreleases/cision20260702ae94060/'},
+ {n:'Asia Sustainability Reporting Awards (ASRA)',o:'CSRWorks International',sc:'Global',fee:'Paid',f:'US$445–850 (large companies); lower for public sector/SMEs',prize:'Recognition for reporting quality',cat:'Best sustainability report and specialist categories',who:'Organisations publishing sustainability reports',when:'2026: early bird 30 Jun; final 10 Nov 2026',dl:11,ce:null,u:'https://www.csrworks.com/asra/?p=9883'},
+ {n:'Global Corporate Sustainability Awards (GCSA)',o:'Taiwan Institute for Sustainable Energy',sc:'Global',fee:'Paid',f:'Registration US$830 per organisation + US$470 per entry',prize:'Recognition',cat:'Sustainability reporting (50% disclosure quality) and performance categories',who:'Companies worldwide',when:'Annual',dl:null,ce:null,u:'https://globalcsaward.com/award/sra'},
+ {n:'The Global Sustainability Awards',o:'Sustainability LIVE / Sustainability Magazine',sc:'Global',fee:'Paid',f:'Paid; multi-category discounts',prize:'Black-tie gala, London',cat:'Enterprise and executive categories',who:'Companies and executives',when:'Entries closed 29 Jun 2026; ceremony 8 Sep 2026',dl:6,ce:9,u:'https://sustainabilitymag.com/events/sustainability-live/sustainability-live-global-awards-2026'},
+ {n:'Global Good Awards',o:'Global Good Awards (UK)',sc:'Global',fee:'Paid',f:'First entry free, then £100 each; non-profits free in one category',prize:'Recognition; 1% of revenue donated to Cool Earth',cat:'Purpose, sustainability and social impact',who:'Businesses, charities, public sector',when:'2026 deadline 8 May',dl:5,ce:null,u:'https://globalgoodawards.co.uk/?p=11223'},
+ {n:'TALHero Awards',o:'Touch-A-Life Foundation',sc:'Global',fee:'Free',f:'Free',prize:'Honours in India and the US',cat:'Individuals, nonprofits, CSR leaders',who:'India & US',when:'2026 nominations closed 15 Aug; ceremony 29 Oct 2026, San Diego',dl:8,ce:10,u:'https://touchalife.org/talhero-awards-2026/'}
+];
+let awScope='',awFee='';
+function renderAwards(){
+  $('#awards-list').innerHTML=AWARDS.filter(a=>(!awScope||a.sc===awScope)&&(!awFee||a.fee===awFee)).map(a=>`<div class="card lift aw"><div class="top"><div><h3 style="margin:0">${esc(a.n)}</h3><div class="muted">${esc(a.o)}</div></div><span class="pill ${a.fee==='Free'?'ok':a.fee==='Paid'?'warn':''}">${a.fee==='Check'?'Fee: check':a.fee}</span></div>
+    <dl><dt>Scope</dt><dd>${esc(a.sc)}</dd><dt>Fee</dt><dd>${esc(a.f)}</dd><dt>Prize</dt><dd>${esc(a.prize)}</dd><dt>Categories</dt><dd>${esc(a.cat)}</dd><dt>Who</dt><dd>${esc(a.who)}</dd><dt>Timing</dt><dd>${esc(a.when)}</dd></dl>
+    ${(a.dl||a.ce)?`<div class="cal" aria-label="Typical calendar">${MON.map((m,i)=>`<div class="${a.dl===i+1?'dl':a.ce===i+1?'ce':''}" title="${a.dl===i+1?'Typical deadline':a.ce===i+1?'Typical ceremony':''}">${m}</div>`).join('')}</div>`:''}
+    <div class="linkrow">${ext(a.u,'Official / source page ↗')}</div></div>`).join('')||'<p class="muted">No awards match.</p>';}
+chipGroup($('#aw-scope'),[['','All scopes'],['Global','🌍 Global'],['India – national','🇮🇳 India – national'],['India – state','📍 India – state / regional']],'',v=>{awScope=v;renderAwards();});
+chipGroup($('#aw-fee'),[['','Free + paid'],['Free','Free only'],['Paid','Paid only'],['Check','Fee not published']],'',v=>{awFee=v;renderAwards();});renderAwards();
+
+/* ===== NGOs ===== */
+const NGOS=[
+ {n:'Pratham Education Foundation',th:'Education',exp:313.97,r:95.2,y:'Give, 2024',c:'Silver',h:'Reached 80 lakh+ children in 2024-25 via direct work and government partnerships; runs the ASER survey.',sdg:4,L:[['https://pratham.org','Website'],['https://www.pratham.org/wp-content/uploads/2026/01/AR-NEW_2JAN.pdf','Annual report 2024-25'],['https://pratham.org/?p=25748','Audited financials'],['https://give.do/discover/17G3/pratham-education-foundation/','Give profile']]},
+ {n:'Smile Foundation',th:'Education',exp:147.0,r:93.7,y:'Audited FY 2024-25',c:'',h:'Education, mobile health and skilling; 1.43 lakh youth skilled across 25 states in FY 2024-25.',sdg:4,L:[['https://www.smilefoundationindia.org','Website'],['https://smilefoundationindia.org/annual-report/','Annual reports'],['https://www.smilefoundationindia.org/imfact/2025/financials.html','Financials 2024-25'],['https://give.do/discover/M8H/smile-foundation/','Give profile']]},
+ {n:'Educate Girls',th:'Girls & child rights',exp:134,r:null,y:'FY 2023-24',c:'',h:'Enrolled 2,85,237 out-of-school girls in FY 2024-25; first Indian organisation to win the Ramon Magsaysay Award (2025).',sdg:5,L:[['https://www.educategirls.ngo','Website'],['https://www.educategirls.ngo/wp-content/uploads/2026/02/Annual-Report-2024–2025.pdf','Annual report 2024-25'],['https://www.educategirls.ngo/wp-content/uploads/2025/05/Educate-Girls-Annual-Progress-Report-FY2024-25.pdf','Progress report FY25']]},
+ {n:'CRY – Child Rights and You',th:'Girls & child rights',exp:56.32,r:77.3,y:'Give, 2020',c:'Gold',h:'Grant-making model through ~150 grassroots partners in 20 states — expect higher fundraising cost.',sdg:16,L:[['https://www.cry.org','Website'],['https://discover.give.do/KMR/child-rights-and-you/','Give profile'],['https://www.helpyourngo.com/ngo/358/children/child-rights-and-you-cry','HelpYourNGO']]},
+ {n:'The Akshaya Patra Foundation',th:'Nutrition & relief',exp:758.59,r:79.6,y:'Give, 2024',c:'',h:'Served 52.6 crore meals in FY 2024-25 under PM POSHAN and partner programmes; graded IRR NGO 1.',sdg:2,L:[['https://www.akshayapatra.org','Website'],['https://akshayapatra.org/includefiles/financialreports/Annual-Report-2023-24_pdf.pdf','Annual report 2023-24'],['https://give.do/discover/17JU/the-akshaya-patra-foundation/','Give profile'],['https://www.helpyourngo.com/ngo-details.php?ngo=117','HelpYourNGO']]},
+ {n:'Goonj',th:'Nutrition & relief',exp:86.65,r:90.0,y:'Give, 2023',c:'Silver',h:'Material-for-work model and disaster relief across India.',sdg:1,L:[['https://goonj.org','Website'],['https://give.do/discover/LDS/goonj/','Give profile'],['https://www.helpyourngo.com/ngo/309/comprehensive-empowerment/goonj','HelpYourNGO']]},
+ {n:'Sankara Eye Foundation India',th:'Health & elder care',exp:184.76,r:82.6,y:'Give, 2022',c:'Gold',h:'2.3 million+ free sight-restoring cataract surgeries under its Gift of Vision programme.',sdg:3,L:[['https://sankaraeye.com','Website'],['https://discover.give.do/19A2/sankara-eye-foundation-india-a-unit-of-sri-kanchi-kamakoti-medical-trust/','Give profile']]},
+ {n:'HelpAge India',th:'Health & elder care',exp:123.09,r:93.9,y:'Give, 2023',c:'Gold',h:'Mobile healthcare units, cataract surgeries and livelihood support for elders.',sdg:3,L:[['https://www.helpageindia.org','Website'],['https://discover.give.do/3RJ/helpage-india/','Give profile']]},
+ {n:'PRADAN',th:'Livelihoods & rural',exp:234.64,r:85.3,y:'HelpYourNGO, latest',c:'Gold',h:'Women-led agriculture and livelihood collectives in central India\'s tribal belt.',sdg:8,L:[['https://www.pradan.net','Website'],['https://discover.give.do/LY3/pradan-professional-assistance-for-development-action/','Give profile'],['https://www.helpyourngo.com/ngo/228/comprehensive-empowerment/professional-assistance-for-development-action-pradan','HelpYourNGO']]},
+ {n:'Aga Khan Rural Support Programme (India)',th:'Livelihoods & rural',exp:55.51,r:92.0,y:'Give, 2020',c:'Gold',h:'Natural resource management, women\'s enterprise and climate resilience in 2,700+ villages.',sdg:8,L:[['https://www.akrspi.org','Website'],['https://discover.give.do/VXX/aga-khan-rural-support-programme-india/','Give profile']]},
+ {n:'Magic Bus India Foundation',th:'Livelihoods & rural',exp:181.12,r:86.5,y:'HelpYourNGO, latest',c:'Silver',h:'Childhood-to-livelihood model: life skills, employability and placement for young people.',sdg:8,L:[['https://www.magicbus.org','Website'],['https://www.magicbus.org/assets/images/uploads/fcra-audited/FY-2022-23.pdf','FCRA audited FY23'],['https://discover.give.do/U8Q/magic-bus-india-foundation/','Give profile'],['https://www.helpyourngo.com/ngo/595/children/magic-bus-india-foundation','HelpYourNGO']]},
+ {n:'Watershed Organisation Trust (WOTR)',th:'Water & sanitation',exp:71.28,r:86.3,y:'Give, 2023',c:'',h:'Watershed restoration, water budgeting and climate-resilient agriculture.',sdg:6,L:[['https://wotr.org','Website'],['https://give.do/discover/A0H/watershed-organisation-trust-wotr/','Give profile']]},
+ {n:'Gram Vikas',th:'Water & sanitation',exp:29.77,r:89.2,y:'Give, 2023',c:'Bronze',h:'Village water supply and sanitation in Odisha and Jharkhand; 82,000 households in its water-security programme (2022-23).',sdg:6,L:[['https://www.gramvikas.org','Website'],['https://gramvikas.org/wp-content/uploads/2024/09/Audit-Report-2023-24.pdf','Audit report 2023-24'],['https://www.gramvikas.org/wp-content/uploads/2026/07/Audited-FC-Financial-Statements-2024-2025.pdf','FC audited 2024-25'],['https://give.do/discover/18PH/gram-vikas/','Give profile']]},
+ {n:'SankalpTaru Foundation',th:'Environment & climate',exp:32.46,r:88.6,y:'Give, 2023',c:'Gold',h:'Tech-enabled tree planting with farmer livelihood models.',sdg:15,L:[['https://sankalptaru.org','Website'],['https://give.do/discover/T0Y/sankalptaru-foundation/','Give profile']]},
+ {n:'Give Me Trees Trust',th:'Environment & climate',exp:4.52,r:84.5,y:'Give, FY 2022-23',c:'Gold',h:'Urban and rural tree planting with school programmes.',sdg:15,L:[['https://www.givemetrees.org','Website'],['https://give.do/discover/LD4/give-me-trees-trust/','Give profile']]},
+ {n:'Samarthanam Trust for the Disabled',th:'Disability inclusion',exp:79.99,r:90.5,y:'Give, 2023',c:'Gold',h:'Education, hostels, livelihoods and sport for persons with disabilities.',sdg:10,L:[['https://www.samarthanam.org','Website'],['https://discover.give.do/IWX/samarthanam-trust-for-the-disabled/','Give profile'],['https://www.helpyourngo.com/ngo/612/disability/samarthanam-trust-for-the-disabled','HelpYourNGO']]},
+ {n:'Amar Seva Sangam',th:'Disability inclusion',exp:16.18,r:86.3,y:'Give, 2024',c:'Gold',h:'Rehabilitation and tech-enabled early intervention for children with disabilities in rural Tamil Nadu.',sdg:10,L:[['https://www.amarseva.org','Website'],['https://give.do/discover/6YE/amar-seva-sangam/','Give profile'],['https://www.helpyourngo.com/ngo/56/disability/amar-seva-sangam','HelpYourNGO']]},
+ {n:'Enable India',th:'Disability inclusion',exp:8.98,r:96.4,y:'Give, 2021 (₹23.9 cr in 2024)',c:'Bronze',h:'Employability and workplace inclusion for persons with disabilities.',sdg:10,L:[['https://www.enableindia.org','Website'],['https://discover.give.do/185V/enable-india/','Give profile']]}];
+const scaleS=e=>e>=500?100:e>=100?85:e>=50?70:e>=20?55:40, accS=c=>({Gold:100,Silver:80,Bronze:60}[c]||50);
+NGOS.forEach(o=>o.score=o.r==null?null:Math.round(.5*o.r+.25*scaleS(o.exp)+.25*accS(o.c)));
+const themes=[...new Set(NGOS.map(o=>o.th))];let ngoTheme='';
+function renderNGOs(){const so=$('#ngo-sort').value,key={score:o=>o.score??-1,exp:o=>o.exp,ratio:o=>o.r??-1}[so];
+  const rankIn={};themes.forEach(t=>NGOS.filter(o=>o.th===t&&o.score!=null).sort((a,b)=>b.score-a.score).forEach((o,i)=>rankIn[o.n]=i+1));
+  $('#ngo-list').innerHTML=NGOS.filter(o=>!ngoTheme||o.th===ngoTheme).sort((a,b)=>key(b)-key(a)).map(o=>{const ini=o.n.replace(/^The /,'').split(/\s+/).filter(w=>/^[A-Z]/.test(w)).slice(0,2).map(w=>w[0]).join('');const col=SDG(o.sdg);
+    return `<div class="card lift ngo"><div class="mono" style="background:${col}" aria-hidden="true">${ini}</div><div>
+    <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><h3 style="margin:0">${esc(o.n)}</h3><span>${o.score!=null?`<span class="rank">#${rankIn[o.n]}</span> <span class="muted">in theme</span>`:'<span class="pill">Not scored</span>'}</span></div>
+    <p class="muted" style="margin:2px 0 0">${esc(o.th)} · SDG ${o.sdg}${o.c?` · Give ${o.c}`:''}</p>
+    <div class="stat-row"><div><b>${o.score??'—'}</b><span>Score /100</span></div><div><b>₹${fmt(o.exp)} cr</b><span>Annual expenses</span></div><div><b>${o.r!=null?o.r+'%':'n/d'}</b><span>Programme ratio</span></div></div>
+    ${o.score!=null?`<div class="bar"><span style="width:${o.score}%;background:${col}"></span></div>`:''}
+    <p style="margin:.6rem 0 .2rem;font-size:.9rem">${esc(o.h)}</p><div class="muted" style="font-size:.75rem">Financial data: ${esc(o.y)}</div>
+    <div class="linkrow">${o.L.map(l=>ext(l[0],esc(l[1])+' ↗')).join('')}</div></div></div>`;}).join('');}
+chipGroup($('#ngo-theme'),[['','All themes'],...themes.map(t=>[t,t])],'',v=>{ngoTheme=v;renderNGOs();});$('#ngo-sort').oninput=renderNGOs;renderNGOs();
+
+/* ===== ESG ===== */
+$$('#v-esg .subtabs button').forEach(b=>b.onclick=()=>{$$('#v-esg .subtabs button').forEach(x=>x.classList.toggle('on',x===b));$$('#v-esg .subview').forEach(d=>d.classList.toggle('on',d.id==='esub-'+b.dataset.esub));});
+$('#v-esg .subtabs button').click();
+const FW=[
+ // India
+ ['BRSR','Regulation','India','Mandatory','SEBI\'s ESG report for the top 1,000 listed companies, built on the nine NGRBC principles.','In force; 1,230+ filers for FY24.','https://greensutra.in/news/brsr-all-you-need-to-know/'],
+ ['BRSR Core','Regulation','India','Mandatory','Nine KPI attributes needing independent assessment or assurance, phased by market cap.','Top 1,000 in FY 2026-27; value-chain disclosure voluntary.','https://taxguru.in/?p=955846'],
+ ['NGRBC (2019)','Principles','India','Voluntary','National Guidelines on Responsible Business Conduct — successor to the 2011 NVGs and the backbone of BRSR.','Reference framework.','https://www.mca.gov.in'],
+ ['Section 135 CSR','Regulation','India','Mandatory','Mandatory CSR spend of 2% of average net profit for qualifying companies.','In force; 2026 amendment bill pending.','https://prsindia.org/billtrack/prs-products/prs-jpc-report-summary'],
+ ['Carbon Credit Trading Scheme (CCTS)','Climate & nature','India','Mandatory','Intensity-based carbon market: binding GHG emission-intensity targets for obligated industrial plants.','~490 entities with targets for 2025-26 and 2026-27 (FY24 baseline).','https://icapcarbonaction.com/en/news/compliance-obligations-under-indias-carbon-credit-trading-scheme-enter-force-seven-sectors'],
+ ['Green Credit Programme','Climate & nature','India','Voluntary','Market-based credits for environmental actions such as tree plantation; disclosed as a BRSR leadership indicator.','Operational since 2023.','https://clearcutmedia.co.in/sebi-brsr-2026-esg-disclosure-rules-india/'],
+ ['RBI climate finance & risk directions','Regulation','India','Mandatory','Directions on climate finance and climate-risk management for banks and NBFCs; a climate-risk information system (RBI-CRIS).','Final climate disclosure norms reported as deferred (2026).','https://www.business-standard.com/finance/news/rbi-likely-defers-plan-to-mandate-climate-risk-disclosures-by-banks-126012900785_1.html'],
+ ['SEBI ESG Rating Providers','Ratings & indices','India','Mandatory','SEBI regulates ESG rating providers (e.g. CRISIL ESG, ICRA ESG) operating in Indian markets.','In force.','https://www.sebi.gov.in'],
+ ['ICAI SSAE 3000 / 3410','Assurance','India','Mandatory','Indian standards for sustainability and GHG assurance used for BRSR Core.','In use.','https://www.icai.org'],
+ // Global standards
+ ['GRI Standards','Reporting standard','Global','Voluntary','The most widely used impact-reporting standard; topic standards plus sector standards.','GRI 101 Biodiversity effective 2026; GRI 102 Climate and 103 Energy from 2027.','https://www.bdo.ch/en-gb/insights/gri-updates-2025-2027-transparency-and-impact-in-sustainability'],
+ ['ISSB — IFRS S1 & S2','Reporting standard','Global','Voluntary','Global baseline for investor-focused sustainability and climate disclosure; adopted into law by many jurisdictions.','35 jurisdictions adopted by Jul 2026; India consulting on S2 for finance.','https://onestopesg.com/esg-news/issb-adoption-tracker-august-2026'],
+ ['SASB Standards','Reporting standard','Global','Voluntary','77 industry-specific metric sets, now maintained by the ISSB and used with IFRS S1.','Maintained by IFRS Foundation.','https://www.ifrs.org'],
+ ['Integrated Reporting Framework','Reporting standard','Global','Voluntary','Value-creation reporting across six capitals; IFRS Foundation guidance links it with IFRS S1/S2.','Maintained by IFRS Foundation.','https://www.ifrs.org'],
+ ['TCFD','Climate & nature','Global','Voluntary','Climate disclosure recommendations (governance, strategy, risk, metrics) — fully built into IFRS S2.','Task force disbanded 2023; monitoring passed to ISSB.','https://www.ifrs.org'],
+ ['TNFD','Climate & nature','Global','Voluntary','Nature-related risk and opportunity disclosures using the LEAP approach.','836 adopters; technical work complete; ISSB nature practice statement in development.','https://onestopesg.com/esg-news/tnfd-guidance-adoption-26-trillion'],
+ ['CDP','Climate & nature','Global','Voluntary','Investor and customer questionnaire on climate, water and forests; feeds supplier and investor scores.','Annual disclosure cycle.','https://www.cdp.net'],
+ ['GHG Protocol','Climate & nature','Global','Voluntary','The accounting rules for Scope 1, 2 and 3 emissions used by almost every framework.','Standards under revision.','https://ghgprotocol.org'],
+ ['SBTi','Targets & initiatives','Global','Voluntary','Validates corporate emissions-reduction and net-zero targets against climate science.','Target-setting grew 40% in 2025.','https://www.businessgreen.com/news/4329160/mindset-quickly-shifting-100-firms-commit-tnfd-disclosure-framework'],
+ ['UN Global Compact','Principles','Global','Voluntary','Ten principles on human rights, labour, environment and anti-corruption; annual Communication on Progress.','Active; India network hosts summits.','https://unglobalcompact.org'],
+ ['UN SDGs','Principles','Global','Voluntary','17 Sustainable Development Goals — the common language for mapping CSR and ESG impact.','2030 agenda.','https://sdgs.un.org/goals'],
+ ['UN Guiding Principles on Business & Human Rights','Principles','Global','Voluntary','Protect, respect, remedy — the basis for human-rights due diligence laws.','Endorsed 2011.','https://www.ohchr.org'],
+ ['OECD Guidelines for MNEs','Principles','Global','Voluntary','Responsible business conduct expectations, updated in 2023 (climate, tech, value chains).','Updated 2023.','https://mneguidelines.oecd.org'],
+ ['UN PRI','Targets & initiatives','Global','Voluntary','Six principles for responsible investment signed by asset owners and managers.','Active.','https://www.unpri.org'],
+ ['Equator Principles & IFC Performance Standards','Finance','Global','Voluntary','Environmental and social risk standards for project finance.','Widely used by lenders.','https://equator-principles.com'],
+ ['ISO 26000','Management system','Global','Voluntary','Guidance (not certifiable) on social responsibility.','Reference standard.','https://www.iso.org'],
+ ['ISO 14001 / 45001 / 50001 / 14064','Management system','Global','Voluntary','Certifiable systems for environment, health & safety, energy, and GHG quantification.','Widely certified.','https://www.iso.org'],
+ ['SA8000 & B Corp','Management system','Global','Voluntary','Social accountability (labour) certification; B Corp whole-company impact certification.','Active.','https://sa-intl.org'],
+ ['ISSA 5000 / ISAE 3000 / AA1000AS','Assurance','Global','Voluntary','International sustainability assurance standards.','ISSA 5000 issued by IAASB.','https://www.iaasb.org'],
+ ['MSCI, Sustainalytics, S&P CSA (DJSI), FTSE4Good, ISS ESG','Ratings & indices','Global','Voluntary','Major ESG ratings and indices used by investors.','Annual assessments.','https://www.spglobal.com/esg/csa/'],
+ // EU / UK / US / APAC
+ ['EU CSRD & ESRS (after Omnibus I)','Regulation','EU','Mandatory','EU sustainability reporting with double materiality under ESRS.','Scope now >1,000 employees and >€450m turnover; non-EU groups with €450m EU turnover; wave 2 from FY2027.','https://dcycle.io/blog/csrd-omnibus-approved-2026'],
+ ['EU CSDDD','Regulation','EU','Mandatory','Human-rights and environmental due diligence across value chains.','Narrowed to 5,000+ employees and €1.5bn+ turnover.','https://help.dcycle.io/regulation/omnibus-i-final-agreement'],
+ ['EU Taxonomy','Regulation','EU','Mandatory','Classification of environmentally sustainable activities; KPI disclosure for in-scope firms.','Simplified under Omnibus.','https://finance.ec.europa.eu'],
+ ['EU SFDR','Finance','EU','Mandatory','Sustainability disclosures for financial-market participants and products.','Under review.','https://finance.ec.europa.eu'],
+ ['EU CBAM','Regulation','EU','Mandatory','Carbon price on imports of cement, iron & steel, aluminium, fertilisers, hydrogen and electricity — relevant for Indian exporters.','Definitive phase from 2026.','https://taxation-customs.ec.europa.eu'],
+ ['UK SRS S1 & S2','Regulation','UK','Voluntary','UK-endorsed versions of IFRS S1 and S2.','Published 25 Feb 2026; FCA consulting on listing-rule use.','https://www.frc.org.uk/docs/9191/html/'],
+ ['US SEC climate rule','Regulation','US','Mandatory','2024 federal climate disclosure rule for listed companies.','Stayed since 2024; SEC proposed full rescission on 29 May 2026.','https://foleyhoag.com/news-and-insights/blogs/public-companies-and-the-law/2026/june/sec-proposes-full-rescission-of-climate-related-disclosure-rules/'],
+ ['California SB 253 & SB 261','Regulation','US','Mandatory','Scope 1-3 emissions (SB 253, >$1bn revenue) and climate-risk reports (SB 261, >$500m) for companies doing business in California.','First Scope 1-2 reports due 10 Nov 2026.','https://uniqus.com/?p=58629'],
+ ['Australia AASB S2','Regulation','Asia-Pacific','Mandatory','ISSB-aligned climate reporting for large Australian entities.','Mandatory from 2025 in phases.','https://www.frc.org.uk/docs/9191/html/'],
+ ['China CSDS, Hong Kong, Singapore, Japan SSBJ','Regulation','Asia-Pacific','Mandatory','ISSB-aligned regimes across major Asian markets, phased by listing tier.','China CSDS and Philippines adopted in 2026; Hong Kong from 2025.','https://www.anthesisgroup.com/?p=71785']];
+const FWC={'Regulation':4,'Reporting standard':16,'Climate & nature':13,'Ratings & indices':10,'Principles':17,'Targets & initiatives':7,'Management system':12,'Assurance':9,'Finance':14};
+let fwCat='';
+function renderFW(){const r=$('#fw-reg').value,m=$('#fw-man').value,q=$('#fw-q').value.toLowerCase();
+  const list=FW.filter(f=>(!fwCat||f[1]===fwCat)&&(!r||f[2]===r)&&(!m||f[3]===m)&&(!q||(f[0]+f[4]+f[5]).toLowerCase().includes(q)));
+  $('#fw-count').textContent=`${list.length} of ${FW.length} frameworks · tap a card for status and link`;
+  $('#fw-list').innerHTML=list.map(f=>`<div class="card fw lift" style="--k:var(--sdg${FWC[f[1]]||17})" tabindex="0"><div class="h"><b>${esc(f[0])}</b><span class="pill ${f[3]==='Mandatory'?'bad':'ok'}">${f[3]}</span></div><div class="muted" style="margin-top:4px">${esc(f[1])} · ${esc(f[2])}</div><p style="margin:.5rem 0 0;font-size:.88rem">${esc(f[4])}</p><div class="more"><b>Status:</b> ${esc(f[5])}<div class="linkrow">${ext(f[6],'Learn more ↗')}</div></div></div>`).join('');
+  $$('#fw-list .fw').forEach(c=>{c.onclick=e=>{if(e.target.tagName!=='A')c.classList.toggle('open');};c.onkeydown=e=>{if(e.key==='Enter')c.classList.toggle('open');};});}
+chipGroup($('#fw-cat'),[['','All types'],...Object.keys(FWC).map(k=>[k,k])],'',v=>{fwCat=v;renderFW();});
+['fw-reg','fw-man','fw-q'].forEach(id=>$('#'+id).addEventListener('input',renderFW));renderFW();
+const AQ=[['top1000','Listed in India — top 1,000 by market cap',['BRSR','BRSR Core (if in the glide-path tier)','NGRBC']],['csr','Meets Section 135 thresholds',['Section 135 CSR, Schedule VII, CSR-2 filing']],['bank','Bank or NBFC regulated by RBI',['RBI climate finance & risk directions','Watch for final climate disclosure norms']],['heavy','Plant in aluminium, cement, chlor-alkali, pulp & paper, refining, petrochemicals or textiles',['CCTS emission-intensity targets (if notified as an obligated entity)']],['euexp','Exports steel, aluminium, cement, fertilisers or hydrogen to the EU',['EU CBAM — embedded-emissions data for EU importers']],['eu','EU turnover above €450m (or EU subsidiary/branch above €200m)',['EU CSRD (non-EU group regime) & ESRS','EU Taxonomy','Possibly CSDDD if very large']],['us','US entity with >$500m revenue doing business in California',['California SB 261 (climate risk); SB 253 if >$1bn']],['uk','Listed or large in the UK',['UK SRS S1 & S2 (via FCA rules once adopted)']],['inv','Investors/customers ask for ratings or questionnaires',['CDP','MSCI / Sustainalytics / S&P CSA','GRI-based report','SBTi targets']],['ifrs','Want a single global baseline report',['ISSB IFRS S1 & S2 (+ SASB metrics)','TNFD for nature']]];
+$('#ap-q').innerHTML=AQ.map(a=>`<label><input type="checkbox" value="${a[0]}"><span>${esc(a[1])}</span></label>`).join('');
+const apRun=()=>{const on=$$('#ap-q input:checked').map(i=>i.value),res=AQ.filter(a=>on.includes(a[0]));
+  $('#ap-out').innerHTML=res.length?`<b>Frameworks to plan for</b><ul class="clean">${res.map(a=>`<li><b>${esc(a[1])}:</b> ${a[2].map(esc).join(' · ')}</li>`).join('')}</ul><p class="muted">Always add: GHG Protocol accounting, a materiality assessment, and SDG mapping for CSR.</p>`:'<p class="muted">Tick at least one statement.</p>';};
+$('#ap-q').addEventListener('change',apRun);apRun();
+const CORE=[['GHG footprint','Scope 1 & 2; intensity per ₹ turnover (PPP-adjusted)','Fuel & electricity invoices, emission factors, calculation workbook'],['Water footprint','Withdrawal, consumption, intensity; discharge by treatment','Meter logs, bills, discharge test reports'],['Energy footprint','Total energy, % renewable, intensity','Energy bills, PPAs, RE certificates'],['Embracing circularity','Waste by category, recycled/reused share','Waste manifests, recycler certificates'],['Employee wellbeing & safety','Wellbeing spend %; LTIFR, fatalities','Payroll, insurance, incident registers'],['Gender diversity','Wages paid to women %; POSH complaints','HRMS reports, ICC records'],['Inclusive development','Inputs from MSMEs; jobs in smaller towns','Vendor master, location-wise payroll'],['Fairness with customers & suppliers','Data breaches; days payable','IT incident logs, AP ageing'],['Openness of business','Purchase/sales concentration; related-party transactions','Ledger extracts, RPT register']];
+$('#core-rows').innerHTML=CORE.map((r,i)=>`<tr><td>${i+1}</td><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join('');
+const STEPS=[['1. Materiality','Double-materiality check with investors, customers, employees and communities.'],['2. KPI dictionary','Define each KPI once — formula, unit, boundary, owner, frequency — mapped to BRSR, GRI and ISSB.'],['3. Owners & cadence','Site-level owners; monthly for energy, water, waste, safety; quarterly for HR and suppliers.'],['4. System of record','One ESG data system with audit trail and attached evidence.'],['5. Controls','Maker-checker review and year-on-year variance checks.'],['6. Dry-run assurance','Pre-assurance review two quarters before year end.'],['7. Board oversight','Quarterly dashboard to the ESG/Risk committee.'],['8. Publish & improve','File BRSR, publish report and assurance statement, log findings.']];
+$('#esg-steps').innerHTML=STEPS.map((s,i)=>`<div class="card flat lift" style="border-top:4px solid var(--sdg${[13,7,6,9,16,12,17,3][i]})"><b>${s[0]}</b><p style="margin:.3rem 0 0;font-size:.9rem">${s[1]}</p></div>`).join('');
+
+route();
+</script>
+</body>
+</html>

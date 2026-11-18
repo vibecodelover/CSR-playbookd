@@ -1,0 +1,176 @@
+{
+ "updated": "2026-11-17",
+ "note": "ROC adjudication orders, parliamentary data and news on CSR non-compliance. Updated daily.",
+ "stats": [
+  {
+   "big": "366",
+   "t": "Prosecution sanctions for FY 2014-15 CSR defaults (pre-2021 criminal regime)",
+   "url": "https://www.lokmattimes.com/politics/prosecution-sanction-accorded-in-366-cases-for-non-compliance-of-csr-mos-finance-informs-lok-sabha/amp",
+   "src": "Lok Sabha via ANI"
+  },
+  {
+   "big": "5,382",
+   "t": "Notices issued for CSR non-compliance (as reported to Lok Sabha, 2019)",
+   "url": "https://www.lokmattimes.com/politics/prosecution-sanction-accorded-in-366-cases-for-non-compliance-of-csr-mos-finance-informs-lok-sabha/amp",
+   "src": "Lok Sabha via ANI"
+  },
+  {
+   "big": "26",
+   "t": "Companies penalised for CSR, FY 2019-20 to 2023-24 (MCA list)",
+   "url": "https://taxguru.in/company-law/penalties-csr-non-compliance-companies-act.html",
+   "src": "Rajya Sabha Q.3414 (Apr 2025)"
+  },
+  {
+   "big": "₹55.5 cr",
+   "t": "Penalties on 703 companies under the Companies Act in 9 months to Dec 2025 (all provisions)",
+   "url": "https://www.dailyexcelsior.com/?p=2155155",
+   "src": "Lok Sabha via Daily Excelsior"
+  }
+ ],
+ "items": [
+  {
+   "date": "2026-08-11",
+   "who": "Company (CSR-2 non-filing) — ROC Kolkata I",
+   "type": "CSR-2 not filed",
+   "what": "Did not file Form CSR-2 as required by Rule 12(1B) of the Companies (Accounts) Rules.",
+   "result": "Penalty under Section 450 despite explanations.",
+   "url": "https://taxguru.in/?p=1068950",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2026-08-03",
+   "who": "Royal Foodstuffs Ltd — ROC Mumbai II",
+   "type": "Shortfall",
+   "what": "FY 2023-24 obligation of ₹34.08 lakh not met; suo-motu application filed.",
+   "result": "₹14.16 lakh on the company plus penalties on officers; Section 446B relief denied.",
+   "url": "https://taxguru.in/?p=1065542",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2026-07-24",
+   "who": "Companies flagged by MCA instruction — ROC Kolkata",
+   "type": "CSR-2 not filed",
+   "what": "Companies above Section 135 thresholds in FY 2021-22 never filed Form CSR-2.",
+   "result": "Show-cause notices and Section 450 penalties — a systematic drive.",
+   "url": "https://taxguru.in/?p=1063565",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2026-07-17",
+   "who": "Varindera Constructions Ltd — ROC Delhi II",
+   "type": "Late transfer",
+   "what": "Spent ₹22 lakh of ₹27.20 lakh in FY 2020-21; ₹5.20 lakh reached Swachh Bharat Kosh only in June 2024.",
+   "result": "Company and five officers penalised despite eventual transfer.",
+   "url": "https://taxguru.in/?p=1060066",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2026-06-25",
+   "who": "Company — ROC Bilaspur",
+   "type": "CSR-2 not filed",
+   "what": "Form CSR-2 for FY 2020-21 filed only in 2026, before the show-cause notice.",
+   "result": "Penalised anyway — late filing is still a default.",
+   "url": "https://taxguru.in/?p=1058083",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2026-05-20",
+   "who": "Company — ROC (Haryana)",
+   "type": "Not transferred",
+   "what": "FY 2022-23 unspent amount not moved to a Schedule VII fund by 30 Sep 2023.",
+   "result": "₹37.26 lakh on the company and ₹1.86 lakh on each of four officers; a non-executive director was spared under MCA Circular 01/2020.",
+   "url": "https://taxguru.in/?p=1044795",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2026-05-16",
+   "who": "Company — ROC Kolkata",
+   "type": "No reply to notice",
+   "what": "Section 135(7) default; company did not reply to the show-cause notice.",
+   "result": "₹1.60 lakh on the company and ₹8,005 on each of four officers.",
+   "url": "https://taxguru.in/?p=1044207",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2026-03-27",
+   "who": "Company — ROC Bangalore",
+   "type": "Calculation error",
+   "what": "Mis-computed the CSR liability, leaving a ₹1.68 lakh shortfall later moved to PM CARES.",
+   "result": "Penalty under Section 135(7) — even small computation errors count.",
+   "url": "https://taxguru.in/?p=1034361",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2026-01-20",
+   "who": "Company — ROC Chennai",
+   "type": "Shortfall",
+   "what": "FY 2019-20 obligation of ₹17.27 lakh neither spent nor transferred on time; later rectified.",
+   "result": "Penalised — post-facto payment is not a defence.",
+   "url": "https://taxguru.in/?p=1020432",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2026-01-07",
+   "who": "Company — ROC Chennai",
+   "type": "Shortfall",
+   "what": "FY 2022-23 obligation of ₹19.64 lakh not spent or transferred; later paid to PM National Relief Fund.",
+   "result": "Penalty equal to the unspent amount on the company, ₹2 lakh on each officer.",
+   "url": "https://taxguru.in/?p=1017864",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2025-11-22",
+   "who": "Company — ROC Bangalore",
+   "type": "Misuse of Unspent Account",
+   "what": "Used ₹4.62 lakh from the Unspent CSR Account for a non-ongoing activity instead of the declared ongoing project.",
+   "result": "Penalised — the account is ring-fenced for the declared project.",
+   "url": "https://taxguru.in/?p=1003529",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2025-10-17",
+   "who": "Pace Digitek Ltd — ROC Bangalore",
+   "type": "Multi-year shortfall",
+   "what": "CSR not spent for FY 2020-21, 2021-22 and 2023-24; disclosed suo motu before its IPO; later moved ₹26.63 lakh to PMNRF.",
+   "result": "Penalties reported at ₹55.92 lakh in total across years.",
+   "url": "https://indiacsr.in/?p=176615",
+   "src": "India CSR"
+  },
+  {
+   "date": "2025-03-26",
+   "who": "BIGTEC Pvt Ltd — ROC Bangalore",
+   "type": "Shortfall",
+   "what": "Failed to meet its CSR obligation; spent only part and undertook to spend the rest.",
+   "result": "Maximum penalty: ₹1 crore on the company and ₹2 lakh on each of four directors.",
+   "url": "https://taxguru.in/?p=988454",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2025-03-17",
+   "who": "Kerala 'half-price' CSR fund scam",
+   "type": "Fraud invoking CSR",
+   "what": "Promoters promised scooters and laptops at half price 'using CSR funds' through a web of NGOs and societies; ₹281.43 crore collected from 48,386 people per the Chief Minister.",
+   "result": "Crime Branch and ED probes; arrests including NGO office-bearers. Lesson: verify partners' CSR-1, track record and money trail.",
+   "url": "https://www.theweek.in/wire-updates/national/2025/03/17/mds2-kl-assembly-csr-scam.html",
+   "src": "The Week (PTI)"
+  },
+  {
+   "date": "2024-07",
+   "who": "Ganesh Green Bharat Ltd — ROC adjudication",
+   "type": "Shortfall",
+   "what": "Failed to spend and transfer the CSR obligation within the statutory period.",
+   "result": "₹1.02 crore on the company and ₹4 lakh on an officer.",
+   "url": "https://taxguru.in/?p=923795",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2025-11",
+   "who": "Unnamed company — ROC Delhi",
+   "type": "Late transfer",
+   "what": "FY 2022-23 unspent ₹10.24 lakh not moved to a Schedule VII fund by 30 Sep 2023.",
+   "result": "₹20.48 lakh on the company (2×) and ₹1.02 lakh on each director (1/10).",
+   "url": "https://www.taxscan.in/top-stories/delay-in-transferring-1024-lakh-unspent-csr-funds-mca-imposes-penalty-of-2048-lakh-on-company-and-102-lakh-on-each-director-1441712",
+   "src": "Taxscan"
+  }
+ ]
+}

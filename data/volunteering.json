@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18",
+ "updated": "2026-11-19",
  "bench": [
   {
    "big": "25%",
@@ -10,11 +10,11 @@
    "sdg": 10
   },
   {
-   "big": "31% vs 22%",
+   "big": "33.1% vs 25.6%",
    "t": "Workforce participation: India vs global",
-   "s": "Benchmark of 212 companies",
-   "src": "Goodera, 2024",
-   "url": "https://www.outlookindia.com/hub4business/the-tech-behind-purpose-abhishek-humbad-founder-ceo-of-goodera-on-transforming-corporate-volunteering-worldwide",
+   "s": "Median rates; India drawn from 122 companies’ ESG/BRSR reports. Only 37% of Indian firms offer volunteer time off vs ~65% globally",
+   "src": "Goodera India Volunteering Quotient 2026",
+   "url": "https://www.goodera.com/ebook/gooderas-india-corporate-volunteering-quotient-2026-report",
    "sdg": 5
   },
   {
@@ -40,6 +40,14 @@
    "src": "UN Volunteers",
    "url": "https://www.unv.org/es/node/48333",
    "sdg": 16
+  },
+  {
+   "big": "~60%",
+   "t": "Share of corporate volunteers giving under 5 hours a year",
+   "s": "23.7 M hours by 1.87 M volunteers in 2025; hours per volunteer fell from 16.4 to 12.7 since 2019",
+   "src": "Benevity State of Corporate Volunteering 2026",
+   "url": "https://benevity.com/press-releases/state-of-corporate-volunteering-2026-report",
+   "sdg": 17
   }
  ],
  "types": [
@@ -436,6 +444,94 @@
   }
  ],
  "cases": [
+  {
+   "co": "Amazon India — Global Month of Volunteering",
+   "reg": "India",
+   "model": "Month-long annual campaign across offices and operations sites; employee-created events with NGO partners (ration kits, community kitchens, career mentoring, school upgrades, lake clean-ups)",
+   "sdg": 2,
+   "stats": [
+    [
+     "65,000+",
+     "employees and associates volunteered in the 2026 campaign"
+    ],
+    [
+     "1.6 lakh+",
+     "hours across 300 events in 8 cities"
+    ],
+    [
+     "1,926",
+     "operations sites took part; 70% of corporate events were employee-led"
+    ]
+   ],
+   "why": "It pulls frontline operations associates into the same campaign as office staff and lets employees design their own events, so reach scales well beyond corporate offices.",
+   "src": [
+    [
+     "About Amazon India — GMV 2026",
+     "https://www.aboutamazon.in/news/community/one-month-thousands-of-volunteers-lasting-change-inside-amazon-indias-global-month-of-volunteering-2026"
+    ]
+   ],
+   "added": "2026-11-19"
+  },
+  {
+   "co": "Wipro — Wipro Cares",
+   "reg": "India",
+   "model": "Employee-run trust (since 2002) with location chapters: volunteering plus employee giving matched 1:1 by Wipro, disaster relief and the Spirit of Wipro Run",
+   "sdg": 17,
+   "stats": [
+    [
+     "45,000+",
+     "employees engaged through volunteering, giving or both"
+    ],
+    [
+     "1:1",
+     "company match on every employee contribution"
+    ],
+    [
+     "62,000+",
+     "joined the 20th Spirit of Wipro Run (2025) across 100+ locations, each registration matched"
+    ]
+   ],
+   "why": "One employee-run vehicle for both time and money, with a guaranteed match and local chapters, gives every employee an easy entry point and a reason to stay involved.",
+   "src": [
+    [
+     "Wipro Foundation — Wipro Cares",
+     "https://www.wiprofoundation.org/wipro-cares/"
+    ],
+    [
+     "Wipro — Spirit of Wipro Run 2025",
+     "https://www.wipro.com/newsroom/press-releases/2025/spirit-of-wipro-run-celebrates-historic-20th-edition-run-by-bringing-together-over-62000-participants-worldwide/"
+    ]
+   ],
+   "added": "2026-11-19"
+  },
+  {
+   "co": "Vedanta — plant-site volunteering & V-Volunteer",
+   "reg": "India",
+   "model": "Employee volunteering at operating sites in Odisha, Chhattisgarh and Andhra Pradesh, plus V-Volunteer (2026), a platform that opens Vedanta CSR projects such as Nand Ghar anganwadis to employees, families, students and citizens",
+   "sdg": 4,
+   "stats": [
+    [
+     "1,800",
+     "Vedanta Aluminium employees gave 4,000 hours in 2025 at Lanjigarh, Korba and Visakhapatnam"
+    ],
+    [
+     "20+",
+     "live V-Volunteer opportunities at launch, from one-hour tasks to multi-day field stints, with digital hour tracking"
+    ]
+   ],
+   "why": "Anchoring volunteering in the company’s own CSR sites in industrial districts, then opening those projects to the public, turns one-off drives into continuing local engagement.",
+   "src": [
+    [
+     "India CSR — Vedanta Aluminium volunteering",
+     "https://indiacsr.in/vedanta-aluminium-1800-employees-volunteer-4000-hours-impact-7-lakh/"
+    ],
+    [
+     "India CSR — V-Volunteer launch",
+     "https://indiacsr.in/vedanta-unveils-v-volunteer-platform-boost-social-volunteering/"
+    ]
+   ],
+   "added": "2026-11-19"
+  },
   {
    "co": "Tata group — Tata Engage & ProEngage",
    "reg": "India",

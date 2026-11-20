@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18",
+ "updated": "2026-11-20",
  "note": "Official figures: MCA National CSR Portal / Parliament replies. Latest year marked 'analyst' is from reports built on MCA filings and is replaced when MCA publishes official numbers.",
  "trend": [
   {
@@ -654,8 +654,40 @@
    "t": "Record CSR spend in FY 2024-25",
    "s": "Up 17% in a year; about 15% a year compounded since FY15 (₹10,066 crore).",
    "src": "Sattva",
-   "url": "https://www.outlookbusiness.com/spotlight/pr-wire/indias-csr-spending-reaches-rs-40794-crore-in-fy25-funding-remains-unevenly-distributed-against-need-sattva-consulting-report",
+   "url": "https://thecsruniverse.com/articles/sattva-report-identifies-five-gaps-in-india-s-csr-funding-priorities",
    "sdg": 17
+  },
+  {
+   "big": "12%",
+   "t": "Of NCD-related CSR goes to heart disease",
+   "s": "Cardiovascular disease causes over half of NCD deaths; cancer gets about 62% of the funding.",
+   "src": "Sattva, Catalytic CSR (Nov 2026)",
+   "url": "https://indiacsr.in/csr-funding-falls-short-of-india-biggest-challenges/",
+   "sdg": 3
+  },
+  {
+   "big": "₹0.24",
+   "t": "For work exposure per ₹1 on academics and skills",
+   "s": "Graduates face 25.9% unemployment — exposure to the world of work is under-funded.",
+   "src": "Sattva, Catalytic CSR (Nov 2026)",
+   "url": "https://indiacsr.in/csr-funding-falls-short-of-india-biggest-challenges/",
+   "sdg": 8
+  },
+  {
+   "big": "7%",
+   "t": "Of groundwater CSR reaches the most stressed states",
+   "s": "Punjab, Rajasthan and Haryana hold about 49% of critical or over-exploited groundwater units.",
+   "src": "Sattva, Catalytic CSR (Nov 2026)",
+   "url": "https://indiacsr.in/csr-funding-falls-short-of-india-biggest-challenges/",
+   "sdg": 6
+  },
+  {
+   "big": "1.2%",
+   "t": "The most any industry gives to innovation and research",
+   "s": "Only about ₹298 crore of CSR went to innovation and research in three years.",
+   "src": "Sattva, Catalytic CSR (Nov 2026)",
+   "url": "https://indiacsr.in/csr-funding-falls-short-of-india-biggest-challenges/",
+   "sdg": 9
   },
   {
    "big": "34%",
@@ -682,30 +714,6 @@
    "sdg": 10
   },
   {
-   "big": "3×",
-   "t": "What a 5% shift would do for high-need districts",
-   "s": "Redirecting 5% of FY25 CSR would triple what they receive today.",
-   "src": "Sattva",
-   "url": "https://theprint.in/ani-press-releases/indias-csr-spending-reaches-rs-40794-crore-in-fy25-funding-remains-unevenly-distributed-against-need-sattva-consulting-report/3081507/",
-   "sdg": 1
-  },
-  {
-   "big": "₹3,661 cr",
-   "t": "CSR by Global Capability Centres in FY25",
-   "s": "About 9% of national CSR; GCC CSR grew at a 20.4% CAGR since FY15 vs 15% for all CSR.",
-   "src": "Sattva & IDI",
-   "url": "https://www.peoplematters.in/news/business/indias-gccs-increase-csr-spending-64x-in-a-decade-report-finds-52722",
-   "sdg": 9
-  },
-  {
-   "big": "120%",
-   "t": "Growth of CSR to industrial districts (3 yrs to FY24)",
-   "s": "Tier-2 cities grew 55% — CSR is following plants, not metros.",
-   "src": "Sattva via Newslaundry",
-   "url": "https://www.newslaundry.com/2025/12/22/how-indias-rs-34000-crore-csr-spending-is-distributed",
-   "sdg": 11
-  },
-  {
    "big": "49%",
    "t": "Share of CSR from just 200 companies",
    "s": "The other 29,046 companies run small projects averaging ₹18 lakh.",
@@ -720,14 +728,6 @@
    "src": "Bain & Dasra, India Philanthropy Report 2026",
    "url": "https://www.bain.com/insights/india-philanthropy-report-2026/",
    "sdg": 17
-  },
-  {
-   "big": "₹54,000 cr",
-   "t": "What Indian households give every year",
-   "s": "More than all mandatory CSR — but mostly informal.",
-   "src": "CSIP Ashoka, How India Gives 2025–26",
-   "url": "https://thecsruniverse.com/articles/ashoka-university-s-how-india-gives-2025-26-finds-68-indians-contribute-540-billion-annually",
-   "sdg": 1
   }
  ],
  "global": [
@@ -792,6 +792,68 @@
  },
  "reports": [
   {
+   "id": "sattva-catalytic",
+   "name": "Catalytic CSR (Sattva 8th annual CSR report)",
+   "sub": "Where focused capital can move India's development needle",
+   "org": "Sattva Consulting and India Data Insights",
+   "date": "2026-11-18",
+   "sdg": 17,
+   "url": "https://www.sattva.co.in/",
+   "sample": "Identifiable CSR projects of ₹25 lakh and above reported to MCA, FY 2022-23 to FY 2024-25",
+   "stats": [
+    [
+     "₹40,794 cr",
+     "CSR in FY25 — 15% a year compounded over the decade"
+    ],
+    [
+     "62% vs 12%",
+     "Share of identifiable NCD-related CSR going to cancer vs cardiovascular disease, though heart disease causes over half of NCD deaths"
+    ],
+    [
+     "₹0.24",
+     "Spent on exposure to the world of work for every ₹1 on academic and skills support (FY25)"
+    ],
+    [
+     "₹1,122.8 cr",
+     "To women's economic agency (29% of identifiable funding in the five areas); about 77% of it on skilling and livelihoods"
+    ],
+    [
+     "49% vs 7%",
+     "Punjab, Rajasthan and Haryana's share of critical groundwater units vs their share of groundwater CSR"
+    ],
+    [
+     "₹298 cr",
+     "For innovation and research over three years; no industry gives it more than 1.2% of its CSR"
+    ]
+   ],
+   "take": [
+    "NCDs now cause about 60% of deaths in India (up from 45% in 2004–06), yet CSR on NCDs is heavily tilted to cancer.",
+    "Youth unemployment rises sharply with education — 8.8% for higher-secondary vs 25.9% for graduates — so work exposure matters as much as more classes.",
+    "95% of groundwater CSR goes to recharge and source sustainability; demand management and water-use efficiency get little.",
+    "India spends about 0.84% of GDP on R&D vs 2.5–5% in leading innovation economies.",
+    "Three shifts: keep reassessing through data and learning loops, move closer to persistent needs other capital won't reach, and act as a multiplier through partnerships and technology."
+   ],
+   "act": "Use CSR's patience and appetite for risk on neglected gaps — heart disease, school-to-work exposure, groundwater demand and R&D.",
+   "src": [
+    [
+     "India CSR (19 Nov 2026)",
+     "https://indiacsr.in/csr-funding-falls-short-of-india-biggest-challenges/"
+    ],
+    [
+     "TheCSRUniverse (18 Nov 2026)",
+     "https://thecsruniverse.com/articles/sattva-report-identifies-five-gaps-in-india-s-csr-funding-priorities"
+    ],
+    [
+     "Business Standard",
+     "https://www.business-standard.com/content/press-releases-ani/where-csr-funding-falls-short-of-india-s-biggest-challenges-sattva-consulting-report-identifies-five-areas-for-catalytic-impact-126111900354_1.html"
+    ],
+    [
+     "Sattva",
+     "https://www.sattva.co.in/"
+    ]
+   ]
+  },
+  {
    "id": "dus",
    "name": "dus spoke India Inc 2026",
    "sub": "Trends, Insights & Voices — 3rd edition",
@@ -850,6 +912,87 @@
     [
      "2024 first edition (PDF)",
      "https://give.do/givegrants/wp-content/uploads/2024/04/dus-spoke-India-Inc_Report.pdf"
+    ]
+   ]
+  },
+  {
+   "id": "sattva-green",
+   "name": "A Decade of Green Spending",
+   "sub": "What ₹17,000 crore of environmental CSR reveals",
+   "org": "Sattva Consulting and India Data Insights",
+   "date": "2026-07",
+   "sdg": 13,
+   "url": "https://www.sattva.co.in/quick-read/environmental-csr-in-india-lessons-from-%E2%82%B917000-crore-of-investments/",
+   "sample": "MCA CSR filings over the last decade",
+   "stats": [
+    [
+     "₹17,377 cr",
+     "Environmental CSR over the last decade"
+    ],
+    [
+     "8.4%",
+     "Share of CSR going to the environment"
+    ],
+    [
+     "9th",
+     "India's rank on the Climate Risk Index 2026"
+    ],
+    [
+     "176 / 177",
+     "India's rank on the Environmental Performance Index"
+    ]
+   ],
+   "take": [
+    "Environment gets under a tenth of CSR despite India's high climate vulnerability."
+   ],
+   "act": "Climate adaptation and resilience are under-funded — a clear opening for CSR portfolios.",
+   "src": [
+    [
+     "Sattva quick read",
+     "https://www.sattva.co.in/quick-read/environmental-csr-in-india-lessons-from-%E2%82%B917000-crore-of-investments/"
+    ],
+    [
+     "Full report (PDF)",
+     "https://www.sattva.co.in/wp-content/uploads/2026/07/A-decade-of-green-spending-What-₹17000-crores-of-environmental-CSR-reveals-about-corporate-India-1.pdf"
+    ]
+   ]
+  },
+  {
+   "id": "sattva",
+   "name": "State of CSR (FY25 update)",
+   "sub": "India CSR report on FY25 filings",
+   "org": "Sattva Consulting",
+   "date": "2026-04",
+   "sdg": 16,
+   "url": "https://www.outlookbusiness.com/spotlight/pr-wire/indias-csr-spending-reaches-rs-40794-crore-in-fy25-funding-remains-unevenly-distributed-against-need-sattva-consulting-report",
+   "sample": "MCA CSR filings, FY15–FY25",
+   "stats": [
+    [
+     "₹40,794 cr",
+     "CSR spend in FY25, a record"
+    ],
+    [
+     "193",
+     "districts receive three-quarters of all CSR"
+    ],
+    [
+     "3 of 54",
+     "high-poverty districts are among the top recipients"
+    ],
+    [
+     "₹3,661 cr",
+     "CSR from Global Capability Centres in FY25"
+    ]
+   ],
+   "take": [
+    "CSR follows plants and offices: about 60% of manufacturing CSR stays in plant districts.",
+    "Shifting just 5% of CSR could triple funding to high-need districts."
+   ],
+   "act": "Add a need lens to geography — aspirational and high-poverty districts are underfunded.",
+   "src": [
+    [
+     "Outlook Business",
+     "https://www.outlookbusiness.com/spotlight/pr-wire/indias-csr-spending-reaches-rs-40794-crore-in-fy25-funding-remains-unevenly-distributed-against-need-sattva-consulting-report"
     ]
    ]
   },
@@ -955,45 +1098,6 @@
     [
      "CSIP research",
      "https://csip.ashoka.edu.in/?p=1236"
-    ]
-   ]
-  },
-  {
-   "id": "sattva",
-   "name": "State of CSR 2026",
-   "sub": "India CSR report on FY25 filings",
-   "org": "Sattva Consulting",
-   "date": "2026-04",
-   "sdg": 16,
-   "url": "https://www.outlookbusiness.com/spotlight/pr-wire/indias-csr-spending-reaches-rs-40794-crore-in-fy25-funding-remains-unevenly-distributed-against-need-sattva-consulting-report",
-   "sample": "MCA CSR filings, FY15–FY25",
-   "stats": [
-    [
-     "₹40,794 cr",
-     "CSR spend in FY25, a record"
-    ],
-    [
-     "193",
-     "districts receive three-quarters of all CSR"
-    ],
-    [
-     "3 of 54",
-     "high-poverty districts are among the top recipients"
-    ],
-    [
-     "₹3,661 cr",
-     "CSR from Global Capability Centres in FY25"
-    ]
-   ],
-   "take": [
-    "CSR follows plants and offices: about 60% of manufacturing CSR stays in plant districts.",
-    "Shifting just 5% of CSR could triple funding to high-need districts."
-   ],
-   "act": "Add a need lens to geography — aspirational and high-poverty districts are underfunded.",
-   "src": [
-    [
-     "Outlook Business",
-     "https://www.outlookbusiness.com/spotlight/pr-wire/indias-csr-spending-reaches-rs-40794-crore-in-fy25-funding-remains-unevenly-distributed-against-need-sattva-consulting-report"
     ]
    ]
   },

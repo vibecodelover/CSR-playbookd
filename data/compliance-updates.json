@@ -1,7 +1,25 @@
 {
- "updated": "2026-11-18",
+ "updated": "2026-11-23",
  "note": "Regulatory changes, enforcement orders and pending bills. Pending bills are NOT law until passed and notified.",
  "items": [
+  {
+   "date": "2026-11-11",
+   "type": "Rule",
+   "status": "Pending",
+   "title": "MCA draft Companies (CSR Policy) Amendment Rules, 2026 released for consultation",
+   "summary": "Proposes new exclusions (one-off events, government schemes, corpus contributions, own products in kind), voluntary impact assessment, and surrender/cancellation of implementing-agency registration with a 3-year bar. Comments till 11 Dec 2026. Not yet in force.",
+   "source": "A2Z Taxcorp",
+   "url": "https://a2ztaxcorp.net/mca-proposes-major-overhaul-of-csr-framework-expanded-schedule-vii-stricter-ngo-registration-norms-new-csr-fund-restrictions-and-voluntary-impact-assessment/"
+  },
+  {
+   "date": "2026-11-11",
+   "type": "Rule",
+   "status": "Pending",
+   "title": "MCA draft replaces Schedule VII with a 14-item list of CSR activities",
+   "summary": "Adds mental health, telemedicine, PM Internship Scheme, career counselling, e-waste, marine resources and sports items; groups PM CARES, PMNRF and other funds; asks for liberal interpretation. Draft only.",
+   "source": "TheCSRUniverse",
+   "url": "https://thecsruniverse.com/articles/CSR-Draft-Rules-new-activities-mental-health-pm-internship"
+  },
   {
    "date": "2026-11-03",
    "type": "Global",
@@ -10,6 +28,15 @@
    "summary": "Authorisation gateway opens June 2027; regime in force from 29 June 2028.",
    "source": "Freshfields",
    "url": "https://www.freshfields.com/en/our-thinking/blogs/sustainability/esg-insights-november-2026-102o8nh"
+  },
+  {
+   "date": "2026-11-03",
+   "type": "Rule",
+   "status": "In force",
+   "title": "MCA widens overseas listing rules to equity instruments (G.S.R. 968(E))",
+   "summary": "Companies (Listing of equity instruments in permissible jurisdictions) Amendment Rules, 2026 extend scope beyond equity shares to convertibles and preference shares and bring IFSC unlisted public companies in. Not CSR-specific.",
+   "source": "TaxGuru",
+   "url": "https://taxguru.in/?p=1099101"
   },
   {
    "date": "2026-10-24",
@@ -55,6 +82,15 @@
    "summary": "₹5.51 lakh not transferred by Sep 2021; ₹11.02 lakh on the company and ₹55,092 on each of two directors.",
    "source": "TaxGuru",
    "url": "https://taxguru.in/company-law/roc-imposes-rs-12-12-lakh-penalty-failure-transfer-unspent-csr-amount.html"
+  },
+  {
+   "date": "2026-07-27",
+   "type": "Enforcement",
+   "status": "Order",
+   "title": "ROC Cuttack penalises Malook Chand Foods for late Form CSR-2 (FY 2020-21)",
+   "summary": "CSR-2 due June 2022 was filed only in June 2026; late filing did not cure the continuing default. ₹2 lakh on the company and ₹50,000 on each of three officers under Section 450.",
+   "source": "TaxGuru",
+   "url": "https://taxguru.in/?p=1063574"
   },
   {
    "date": "2026-07-24",

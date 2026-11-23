@@ -1,7 +1,43 @@
 {
- "updated": "2026-11-20",
+ "updated": "2026-11-23",
  "note": "Curated daily. Headlines are paraphrased; open the source for the full story.",
  "items": [
+  {
+   "date": "2026-11-21",
+   "tag": "CSR",
+   "region": "India",
+   "title": "MCA floats a sweeping rewrite of the CSR Rules and Schedule VII; comments due 11 December",
+   "summary": "Draft would bar CSR spend on one-off events, government schemes and corpus funds, make impact assessment voluntary, tighten implementing-agency registration and replace Schedule VII with a 14-item list.",
+   "source": "TheCSRUniverse",
+   "url": "https://thecsruniverse.com/articles/csr-rules-overhaul-bars-csr-spend-on-one-off-events-govt-schemes-and-corpus-funds-comments-open-till-december-11"
+  },
+  {
+   "date": "2026-11-21",
+   "tag": "CSR",
+   "region": "India",
+   "title": "Unspent CSR at BSE 200 firms climbs to a record ₹2,290 crore in FY26",
+   "summary": "Hurun data show excess spending fell to ₹1,107 crore, leaving a net shortfall of ₹1,183 crore — the widest in over a decade — on total CSR spend of ₹18,922 crore.",
+   "source": "TheCSRUniverse",
+   "url": "https://thecsruniverse.com/articles/unspent-csr-at-bse-200-companies-hits-record-2-290-crore-as-excess-spending-shrinks-hurun"
+  },
+  {
+   "date": "2026-11-21",
+   "tag": "CSR",
+   "region": "India",
+   "title": "EdelGive Hurun Philanthropy List 2026: ₹11,554 crore given in FY26, highly concentrated",
+   "summary": "219 donors gave 11% more than last year; 19 donors of ₹100 crore+ accounted for 68%. Healthcare giving rose 82% and environment 86%; Shiv Nadar and family top the list.",
+   "source": "TheCSRUniverse",
+   "url": "https://thecsruniverse.com/articles/india-s-philanthropy-crosses-11-500-crore-but-19-donors-account-for-68-of-giving"
+  },
+  {
+   "date": "2026-11-19",
+   "tag": "ESG",
+   "region": "Global",
+   "title": "COP31 second week: carbon-market (Article 6.4) guidance and finance remain divisive",
+   "summary": "Earth Negotiations Bulletin reports a decision on least developed countries, but splits over Article 6.4 supervisory-body guidance, the mitigation work programme and adaptation/loss-and-damage finance.",
+   "source": "IISD ENB",
+   "url": "https://enb.iisd.org/sites/default/files/2026-11/enb12910e.pdf"
+  },
   {
    "date": "2026-11-18",
    "tag": "CSR",
@@ -10,6 +46,15 @@
    "summary": "Catalytic CSR finds funding skewed to cancer over heart disease, to classroom skilling over work exposure, and away from the most groundwater-stressed states; it urges data-led, riskier bets.",
    "source": "TheCSRUniverse",
    "url": "https://thecsruniverse.com/articles/sattva-report-identifies-five-gaps-in-india-s-csr-funding-priorities"
+  },
+  {
+   "date": "2026-11-18",
+   "tag": "CSR",
+   "region": "India",
+   "title": "Omnicom Global Solutions and Prayoga back hands-on STEM learning in government schools",
+   "summary": "Interview with OGS's CFO on a CSR partnership with Prayoga focused on experiential science learning rather than rote memorisation.",
+   "source": "India CSR",
+   "url": "https://indiacsr.in/ogs-prayoga-experiential-stem-education-government-schools/"
   },
   {
    "date": "2026-11-17",

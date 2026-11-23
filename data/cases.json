@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18",
+ "updated": "2026-11-23",
  "note": "ROC adjudication orders, parliamentary data and news on CSR non-compliance. Updated daily.",
  "stats": [
   {
@@ -62,6 +62,15 @@
    "what": "Spent ₹6.73 lakh of a ₹12.24 lakh obligation; ₹5.51 lakh moved to PM CARES only in June 2026.",
    "result": "₹11.02 lakh on the company and ₹55,092 on each of two directors; Section 446B relief denied (not a small company).",
    "url": "https://taxguru.in/company-law/roc-imposes-rs-12-12-lakh-penalty-failure-transfer-unspent-csr-amount.html",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2026-07-27",
+   "who": "Malook Chand Foods Pvt Ltd — ROC Cuttack",
+   "type": "CSR-2 not filed",
+   "what": "Form CSR-2 for FY 2020-21 was due by 30 June 2022 but filed only on 3 June 2026; the company cited oversight and COVID, and skipped the rescheduled hearing.",
+   "result": "₹3.5 lakh under Section 450 (₹2 lakh company + ₹50,000 each on three officers). Lesson: a belated filing does not erase the default period.",
+   "url": "https://taxguru.in/?p=1063574",
    "src": "TaxGuru"
   },
   {

@@ -3,7 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CSR Playbook India</title>
+<title>CSR Playbook India — the open CSR &amp; ESG repository</title>
+<meta name="description" content="The open repository for everyone working in CSR and ESG — CSR leaders, consultants, ESG and sustainability teams, and people new to the sector. Track the law, the money, the evidence and the partners in one place, with every figure linked to its source.">
+<meta property="og:title" content="CSR Playbook India">
+<meta property="og:description" content="The open repository for everyone working in CSR and ESG — CSR leaders, consultants, ESG and sustainability teams, and people new to the sector. Track the law, the money, the evidence and the partners in one place, with every figure linked to its source.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
@@ -270,9 +274,9 @@ details.acc .body{padding:0 18px 16px}
 .theme-fab .ic2{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--surface);font-size:.8rem}
 @media (max-width:640px){.theme-fab .lbl{display:none}.theme-fab{padding:10px}}
 html{transition:background .25s}
-dialog#ngo-dlg{max-width:680px;width:calc(100% - 32px);border:0;border-radius:18px;padding:0;background:var(--surface);color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35)}
-dialog#ngo-dlg form{padding:22px 24px 20px}
-dialog#ngo-dlg::backdrop{background:rgba(10,16,24,.55);backdrop-filter:blur(3px)}
+dialog#ngo-dlg,dialog#cmp-dlg{max-width:680px;width:calc(100% - 32px);border:0;border-radius:18px;padding:0;background:var(--surface);color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35)}
+dialog#ngo-dlg form,dialog#cmp-dlg form{padding:22px 24px 20px}
+dialog#ngo-dlg::backdrop,dialog#cmp-dlg::backdrop{background:rgba(10,16,24,.55);backdrop-filter:blur(3px)}
 .dlg-bar{height:6px;margin:-22px -24px 18px;border-radius:18px 18px 0 0;background:linear-gradient(90deg,var(--sdg3),var(--sdg15),var(--sdg6),var(--sdg14),var(--sdg16))}
 .score-card{border-top:5px solid var(--sdg3)}
 .vt .pills{display:flex;gap:5px;flex-wrap:wrap;margin:8px 0}
@@ -288,6 +292,82 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
 .hide{display:none!important}
 .new{display:inline-block;background:var(--sdg9);color:#fff;font-size:.62rem;font-weight:700;padding:1px 6px;border-radius:5px;margin-left:6px;vertical-align:middle}
 @media (max-width:640px){.sdg-hint{display:none}.sdgbar{height:14px}.sdgbar.show{height:34px}.wheel{width:180px;height:180px;right:-70px;top:-70px;opacity:.35}.hdr-search{flex-basis:100%}header.top h1{font-size:1.5rem}.feed .item{grid-template-columns:1fr;gap:3px}.chartbox{height:260px}.subtabs{position:static;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.subtabs button{white-space:nowrap}.slide{padding:24px 22px 50px}}
+
+/* ---- interactive add-ons: volunteering & ESG ---- */
+.save{font:inherit;font-size:.74rem;font-weight:700;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);border-radius:999px;padding:3px 10px;cursor:pointer;white-space:nowrap;transition:all .15s}
+.save:hover{border-color:var(--ink-3)}
+.save.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.shortbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 16px;padding:10px 12px;border:1px dashed color-mix(in srgb,var(--accent) 55%,var(--line));border-radius:12px;background:color-mix(in srgb,var(--accent) 6%,var(--surface))}
+.shortbar[hidden]{display:none}
+.shortbar .chip{display:inline-flex;gap:6px;align-items:center;cursor:default}
+.shortbar .chip i{font-style:normal;cursor:pointer;opacity:.7}
+.linkbtn{background:none;border:0;padding:0;color:var(--link);text-decoration:underline;text-underline-offset:2px;cursor:pointer;font:inherit}
+.calc-row{display:grid;grid-template-columns:1fr 120px;gap:6px 10px;align-items:center;margin:12px 0}
+.calc-row>span{font-size:.84rem;font-weight:600;color:var(--ink-2)}
+.calc-row input[type=range]{grid-column:1/-1}
+.calc-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:6px 0 4px}
+.calc-kpis div{border:1px solid var(--line);border-radius:12px;padding:10px 12px;border-top:4px solid var(--k)}
+.calc-kpis b{display:block;font-family:Fraunces,serif;font-size:1.45rem;line-height:1.1}
+.calc-kpis span{font-size:.76rem;color:var(--ink-2)}
+.bench{margin:14px 0}
+.bench .lb{display:flex;justify-content:space-between;gap:8px;font-size:.8rem;color:var(--ink-2)}
+.bench .track{position:relative;height:10px;background:var(--surface-2);border-radius:99px;margin-top:6px}
+.bench .track span{position:absolute;left:0;top:0;bottom:0;border-radius:99px;background:var(--k,var(--accent));transition:width .25s}
+.bench .track i{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--ink);border-radius:2px}
+.quiz{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.qz{border-left:5px solid var(--k)}
+.qz .ans{display:flex;gap:8px;margin-top:12px}
+.qz .fb{display:none;margin-top:12px;font-size:.88rem;padding:10px 12px;border-radius:10px}
+.qz.done .fb{display:block}
+.qz.right .fb{background:var(--okbg)} .qz.wrong .fb{background:var(--badbg)}
+.qz.done .ans .btn{pointer-events:none;opacity:.55}
+.qz.done .ans .btn.pick{opacity:1;outline:2px solid var(--ink)}
+.score{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 14px}
+.score b{font-family:Fraunces,serif;font-size:1.5rem}
+.fwmap{margin-bottom:14px;padding:12px 14px}
+.fwmap summary{cursor:pointer;font-size:.9rem}
+.fwmap .scr{overflow-x:auto;margin-top:10px}
+.fwmap table{border-collapse:separate;border-spacing:3px;font-size:.78rem;width:100%}
+.fwmap th{font-weight:600;color:var(--ink-2);text-align:left;padding:4px 6px;white-space:nowrap;background:none!important;vertical-align:middle;border:0!important;position:static!important}
+.fwmap td{padding:0!important;border:0!important;background:none!important}
+.fwmap thead th{text-align:center}
+.fwmap td button{width:100%;min-width:46px;height:34px;border:0;border-radius:8px;font:inherit;font-weight:700;cursor:pointer;color:var(--ink);transition:transform .12s}
+.fwmap td button:hover{transform:scale(1.06)}
+.fwmap td button.z{cursor:default;color:var(--ink-3);background:var(--surface-2)}
+.fwmap td button.z:hover{transform:none}
+.fwmap td button.on{outline:2px solid var(--ink);outline-offset:1px}
+.cmp-tray{position:sticky;bottom:14px;z-index:30;display:none;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px;padding:10px 14px;border-radius:14px;background:var(--hdr-bg);color:var(--hdr-ink);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.cmp-tray.show{display:flex}
+.cmp-tray span{flex:1;font-size:.86rem;font-weight:600}
+.fw .foot{display:flex;justify-content:flex-end;margin-top:10px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex-wrap:wrap}
+.seg button{font:inherit;font-size:.74rem;font-weight:600;border:0;background:var(--surface);color:var(--ink-2);padding:6px 10px;cursor:pointer;border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button.on{background:var(--k,var(--accent));color:#fff}
+.rd-row{display:grid;grid-template-columns:1fr;gap:6px;padding:10px 0;border-bottom:1px solid var(--line)}
+.rd-row .seg{display:grid;grid-template-columns:repeat(4,1fr)}
+.rd-row .seg button{padding:7px 4px}
+.rd-side{position:sticky;top:130px;align-self:start}
+.rd-row:last-child{border-bottom:0}
+.rd-row small{display:block;color:var(--ink-3);font-size:.74rem}
+.sc-row{display:grid;grid-template-columns:1fr auto;gap:8px 12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.sc-row .fb{grid-column:1/-1;display:none;font-size:.84rem;padding:8px 10px;border-radius:9px}
+.sc-row.done .fb{display:block}
+.sc-row.right .fb{background:var(--okbg)} .sc-row.wrong .fb{background:var(--badbg)}
+.sc-row.done .seg button{pointer-events:none}
+.flips{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:12px}
+.flip{perspective:900px;cursor:pointer;height:190px;outline:none}
+.flip .in{position:relative;width:100%;height:100%;transition:transform .45s;transform-style:preserve-3d}
+.flip.on .in{transform:rotateY(180deg)}
+.flip .fa,.flip .fz{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:var(--r);padding:16px;border:1px solid var(--line);background:var(--surface);display:flex;flex-direction:column;justify-content:center;overflow:auto}
+.flip .fa{border-top:5px solid var(--k)}
+.flip .fa b{font-family:Fraunces,serif;font-size:1.25rem;line-height:1.15}
+.flip .fa small{color:var(--ink-3);margin-top:8px;font-size:.74rem}
+.flip .fz{transform:rotateY(180deg);font-size:.86rem;line-height:1.45;border-left:5px solid var(--k)}
+.flip:focus-visible .fa,.flip:focus-visible .fz{outline:2px solid var(--accent)}
+dialog#cmp-dlg .tbl td{vertical-align:top;font-size:.86rem}
+@media (prefers-reduced-motion:reduce){.flip .in{transition:none}}
+dialog#cmp-dlg{max-width:920px}
 </style>
 </head>
 <body>
@@ -295,7 +375,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
   <div class="hdr-clip" aria-hidden="true"><div class="wheel"></div></div>
   <div class="wrap hdr" style="padding-top:26px;padding-bottom:14px;position:relative;z-index:3">
     <div class="hdr-main"><h1>CSR Playbook India</h1>
-    <p>Spend trends, the law and its history, audit readiness, awards, credible NGOs and global ESG frameworks — India first, with global context. Every figure links to its public source.</p></div>
+    <p>The open repository for everyone working in CSR and ESG — CSR leaders, consultants, ESG and sustainability teams, and people new to the sector. Track the law, the money, the evidence and the partners in one place, with every figure linked to its source.</p></div>
     <div class="hdr-search"><input type="search" id="gs" placeholder="Search laws, awards, NGOs, frameworks, news…" aria-label="Search the playbook" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="gs-res"><div class="gs-res" id="gs-res" role="listbox"></div></div>
   </div>
   <div class="wrap" style="position:relative;z-index:1"><div class="pulse" id="pulse" aria-label="Live highlights"></div></div>
@@ -593,15 +673,18 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
 <!-- ================= VOLUNTEERING ================= -->
 <section class="view" id="v-volunteering" style="--accent2:var(--sdg5)" data-accent="var(--sdg10)">
   <div class="hero-h"><h2>Employee volunteering &amp; engagement</h2><span class="badge">India + global</span></div>
-  <p class="lede">Every way employees can give time and skills, who can help you run it, programmes that work, and how to stay CSR-compliant while measuring impact. <span class="muted" id="vol-updated"></span></p>
+  <p class="lede">Every way employees can give time and skills, who can help you run it, programmes that work, and how to stay CSR-compliant while measuring impact. Size your programme with the impact calculator and test yourself on the rules. <span class="muted" id="vol-updated"></span></p>
   <div class="grid g4" id="vol-bench"></div>
   <div class="subtabs" style="margin-top:18px">
     <button data-vsub="types">Ways to volunteer</button>
     <button data-vsub="finder">Find the right format</button>
+    <button data-vsub="calc">Impact calculator</button>
     <button data-vsub="agencies">Who can help</button>
     <button data-vsub="cases">Programmes that work</button>
     <button data-vsub="plan">Plan, comply &amp; measure</button>
+    <button data-vsub="quiz">Myth or fact?</button>
   </div>
+  <div class="shortbar" id="vol-short" hidden></div>
   <div class="subview" id="vsub-types">
     <div class="chips" id="vt-cat"></div>
     <div class="controls">
@@ -644,26 +727,53 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
     <div class="sec-h"><h3>Volunteering calendar</h3></div>
     <div class="grid g4" id="vp-cal"></div>
   </div>
+
+  <div class="subview" id="vsub-calc">
+    <div class="grid g2">
+      <div class="card"><h3>Size your programme</h3><p class="muted">Move the sliders — results update instantly and are saved in this browser.</p>
+        <div class="calc-row"><span>Employees (headcount)</span><input type="number" id="vc-hc" min="10" max="1000000" step="10"><input type="range" id="vc-hc-r" min="100" max="200000" step="100" aria-label="Headcount slider"></div>
+        <div class="calc-row"><span>Share of employees who volunteer (%)</span><input type="number" id="vc-pp" min="0" max="100"><input type="range" id="vc-pp-r" min="0" max="100" aria-label="Participation slider"></div>
+        <div class="calc-row"><span>Hours per volunteer per year</span><input type="number" id="vc-hr" min="1" max="400"><input type="range" id="vc-hr-r" min="1" max="80" aria-label="Hours slider"></div>
+        <div class="calc-row"><span>Share of hours that are skills-based (%)</span><input type="number" id="vc-sk" min="0" max="100"><input type="range" id="vc-sk-r" min="0" max="100" aria-label="Skills-based share slider"></div>
+        <div class="calc-row"><span>Value per hour — general volunteering (₹)</span><input type="number" id="vc-rg" min="0" step="50"></div>
+        <div class="calc-row"><span>Value per hour — skills-based (₹)</span><input type="number" id="vc-rs" min="0" step="50"></div>
+        <p class="muted" style="font-size:.78rem">Hourly values are your assumptions — use your own cost per hour. B4SI values paid-time volunteering at the cost to the company.</p>
+      </div>
+      <div class="card"><h3>What it adds up to</h3>
+        <div class="calc-kpis" id="vc-kpis"></div>
+        <div id="vc-bench"></div>
+        <div id="vc-notes"></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button class="btn sm primary" id="vc-copy" type="button">Copy summary</button><button class="btn sm" id="vc-reset" type="button">Reset</button></div>
+      </div>
+    </div>
+  </div>
+  <div class="subview" id="vsub-quiz">
+    <div class="score"><span>Volunteering and India's CSR law — six quick calls.</span><b id="vq-score">0 / 6</b><button class="btn sm" id="vq-reset" type="button">Start again</button></div>
+    <div class="quiz" id="vq-list"></div>
+  </div>
 </section>
 
 <!-- ================= ESG ================= -->
 <section class="view" id="v-esg" style="--accent2:var(--sdg6)" data-accent="var(--sdg13)">
   <div class="hero-h"><h2>ESG frameworks, documents &amp; assurance</h2><span class="badge">India + global</span></div>
-  <p class="lede">Every major framework in one explorer — mandatory regulations, reporting standards, climate and nature, ratings, principles, management systems and assurance — plus a quick "what applies to us" check.</p>
+  <p class="lede">Every major framework in one explorer — mandatory regulations, reporting standards, climate and nature, ratings, principles, management systems and assurance — plus a framework map, side-by-side compare, a "what applies to us" check, a BRSR Core readiness score and a learn-the-basics corner.</p>
   <div class="subtabs">
     <button data-esub="explorer">Framework explorer</button>
     <button data-esub="applies">What applies to us?</button>
     <button data-esub="india">India: BRSR &amp; BRSR Core</button>
     <button data-esub="track">Documents &amp; metric tracking</button>
+    <button data-esub="learn">Learn the basics</button>
   </div>
 
   <div class="subview" id="esub-explorer">
+    <details class="card flat fwmap" open><summary><b>Framework map</b> <span class="muted">— type × region. Tap a cell to filter the cards below.</span></summary><div class="scr" id="fw-map"></div></details>
     <div class="chips" id="fw-cat"></div>
     <div class="controls"><select id="fw-reg"><option value="">All regions</option><option>India</option><option>Global</option><option>EU</option><option>UK</option><option>US</option><option>Asia-Pacific</option></select>
       <select id="fw-man"><option value="">Mandatory + voluntary</option><option value="Mandatory">Mandatory</option><option value="Voluntary">Voluntary</option></select>
       <input type="search" id="fw-q" placeholder="Search frameworks…" style="flex:1;min-width:200px"></div>
     <p class="muted" id="fw-count"></p>
     <div class="grid g3" id="fw-list"></div>
+    <div class="cmp-tray" id="cmp-tray"><span id="cmp-txt"></span><button class="btn sm primary" id="cmp-go" type="button">Compare side by side</button><button class="btn sm" id="cmp-clr" type="button">Clear</button></div>
   </div>
 
   <div class="subview" id="esub-applies">
@@ -682,6 +792,13 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
     </div>
     <div class="sec-h"><h3>The nine BRSR Core attributes and the evidence to keep</h3></div>
     <div class="card"><div class="tbl" style="max-height:none"><table><thead><tr><th>#</th><th>Attribute</th><th>Typical KPIs</th><th>Evidence an assessor will ask for</th></tr></thead><tbody id="core-rows"></tbody></table></div></div>
+    <div class="sec-h"><h3>BRSR Core readiness check</h3></div>
+    <div class="grid g2">
+      <div class="card"><p class="muted" style="margin-top:0">Rate where you stand on each attribute. Saved in this browser only.</p>
+        <label class="f" style="margin-bottom:6px">Your market-cap tier<select id="rd-tier"><option value="150">Top 150 listed</option><option value="250">Top 151–250</option><option value="500">Top 251–500</option><option value="1000" selected>Top 501–1,000</option><option value="no">Not in the top 1,000 / unlisted</option></select></label>
+        <div id="rd-rows"></div></div>
+      <div class="card rd-side"><div id="rd-out"></div></div>
+    </div>
     <div class="sec-h"><h3>Assurance standards</h3></div>
     <div class="card"><ul class="clean">
       <li><b>ICAI SSAE 3000 / 3410</b> — Indian standards for sustainability and GHG assurance, used for BRSR Core.</li>
@@ -698,6 +815,20 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
     </div>
     <div class="sec-h"><h3>How to track ESG metrics — 8 steps</h3></div>
     <div class="grid g4" id="esg-steps"></div>
+  </div>
+
+  <div class="subview" id="esub-learn">
+    <div class="sec-h" style="margin-top:0"><h3>Which scope is it?</h3></div>
+    <div class="grid g3" style="margin-bottom:12px">
+      <div class="card flat" style="border-top:4px solid var(--sdg7)"><b>Scope 1 — direct</b><p style="margin:.3rem 0 0;font-size:.88rem">Fuel you burn and gases you release from sources you own or control.</p></div>
+      <div class="card flat" style="border-top:4px solid var(--sdg9)"><b>Scope 2 — purchased energy</b><p style="margin:.3rem 0 0;font-size:.88rem">Electricity, steam, heat or cooling you buy and use.</p></div>
+      <div class="card flat" style="border-top:4px solid var(--sdg13)"><b>Scope 3 — value chain</b><p style="margin:.3rem 0 0;font-size:.88rem">Everything else, upstream and downstream — usually the biggest share.</p></div>
+    </div>
+    <div class="card"><div class="score"><span>Sort each activity into the right scope.</span><b id="sc-score">0 / 12</b><button class="btn sm" id="sc-reset" type="button">Start again</button></div><div id="sc-list"></div>
+      <div class="src">Based on the <a href="https://ghgprotocol.org/corporate-standard" target="_blank" rel="noopener">GHG Protocol Corporate Standard</a> and <a href="https://ghgprotocol.org/corporate-value-chain-scope-3-standard" target="_blank" rel="noopener">Scope 3 Standard</a>.</div></div>
+    <div class="sec-h"><h3>ESG jargon, decoded</h3><input type="search" id="gl-q" placeholder="Search terms…" style="min-width:200px"></div>
+    <p class="muted" style="margin-top:-4px">Tap a card to flip it.</p>
+    <div class="flips" id="gl-list"></div>
   </div>
 </section>
 </main>
@@ -720,6 +851,12 @@ footer{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--ink-3);f
   <p class="muted" style="margin:0 0 12px">Score = 0.5 × programme ratio + 0.25 × scale score + 0.25 × accreditation score. Ranks are within each theme.</p>
   <label style="display:flex;gap:8px;align-items:center;font-size:.85rem;margin-bottom:14px"><input type="checkbox" id="ngo-dlg-skip"> Don't show this again in this browser</label>
   <div style="display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap"><button class="btn" value="back" id="ngo-dlg-back">Go back</button><button class="btn primary" value="ok" autofocus>I understand — open directory</button></div>
+</form></dialog>
+<dialog id="cmp-dlg" aria-labelledby="cmp-dlg-h"><form method="dialog">
+  <div class="dlg-bar"></div>
+  <h3 id="cmp-dlg-h" style="font-size:1.3rem">Compare frameworks</h3>
+  <div class="tbl" style="max-height:60vh" id="cmp-body"></div>
+  <div style="display:flex;justify-content:flex-end;margin-top:14px"><button class="btn primary" value="ok">Close</button></div>
 </form></dialog>
 <footer><div class="sdgstrip" aria-hidden="true" style="height:4px;margin-top:-24px;margin-bottom:24px"><i style="background:var(--sdg1)"></i><i style="background:var(--sdg2)"></i><i style="background:var(--sdg3)"></i><i style="background:var(--sdg4)"></i><i style="background:var(--sdg5)"></i><i style="background:var(--sdg6)"></i><i style="background:var(--sdg7)"></i><i style="background:var(--sdg8)"></i><i style="background:var(--sdg9)"></i><i style="background:var(--sdg10)"></i><i style="background:var(--sdg11)"></i><i style="background:var(--sdg12)"></i><i style="background:var(--sdg13)"></i><i style="background:var(--sdg14)"></i><i style="background:var(--sdg15)"></i><i style="background:var(--sdg16)"></i><i style="background:var(--sdg17)"></i></div><div class="wrap"><p>CSR Playbook India · Base data as of 17 November 2026. What's New, the compliance tracker and penalty cases refresh daily; statistics weekly. Not legal or investment advice. NGO scores use public data (Give Discover, HelpYourNGO, NGO reports) and are not endorsements. SDG colours are used for navigation and theme coding.</p></div></footer>
 
@@ -1096,7 +1233,7 @@ const VCAT={'Hands-on':11,'Skills-based':9,'Pro bono & leadership':16,'Virtual &
 function renderVT(){if(!VOL)return;const f=$('#vt-fmt').value,t=$('#vt-time').value,k=$('#vt-skill').value,q=$('#vt-q').value.toLowerCase();
   const L=VOL.types.filter(x=>(!vtCat||x.cat===vtCat)&&(!f||x.fmt===f)&&(!t||x.time===t)&&(!k||x.skill===k)&&(!q||(x.n+x.d+x.ex+x.best).toLowerCase().includes(q)));
   $('#vt-count').textContent=`${L.length} of ${VOL.types.length} formats`;
-  $('#vt-list').innerHTML=L.map(x=>`<div class="card lift vt" style="--k:var(--sdg${x.sdg})"><div style="display:flex;justify-content:space-between;gap:8px"><b>${esc(x.n)}${isNew(x)}</b><span class="pill" style="background:var(--sdg${VCAT[x.cat]||17});color:#fff;border:0">${esc(x.cat)}</span></div>
+  $('#vt-list').innerHTML=L.map(x=>`<div class="card lift vt" style="--k:var(--sdg${x.sdg})"><div style="display:flex;justify-content:space-between;gap:8px"><b>${esc(x.n)}${isNew(x)}</b><span class="pill" style="background:var(--sdg${VCAT[x.cat]||17});color:#fff;border:0">${esc(x.cat)}</span></div><div style="display:flex;justify-content:flex-end;margin-top:-2px">${saveBtn(x.n)}</div>
     <div class="pills"><span class="pill">${esc(x.fmt)}</span><span class="pill">⏱ ${esc(x.time)}</span><span class="pill">${esc(x.skill)} skills</span><span class="pill">SDG ${x.sdg}</span></div>
     <div style="font-size:.9rem">${esc(x.d)}</div><div class="ex"><b>Examples:</b> ${esc(x.ex)}</div><div class="ex"><b>Best for:</b> ${esc(x.best)}</div></div>`).join('')||'<p class="muted">No formats match.</p>';}
 function renderVF(){if(!VOL)return;const tm=['Hours','Days','Weeks','Months'];const T=$('#vf-time').value,Lc=$('#vf-loc').value,S=$('#vf-skill').value,G=$('#vf-group').value,Go=$('#vf-goal').value;
@@ -1109,7 +1246,7 @@ function renderVF(){if(!VOL)return;const tm=['Hours','Days','Weeks','Months'];co
     const gm={participation:{'Hands-on':2,'Giving-linked':2,'Virtual & micro':1},skills:{'Skills-based':3,'Pro bono & leadership':3},capacity:{'Skills-based':2.5,'Pro bono & leadership':2.5},giving:{'Giving-linked':3}}[Go][x.cat]||0;sc+=gm;if(gm>=2)why.push('matches your goal');
     return {x,sc,why};}).sort((a,b)=>b.sc-a.sc).slice(0,6);
   const mx=res[0].sc;
-  $('#vf-out').innerHTML=`<b>Best matches</b><div class="vf-res" style="margin-top:8px">${res.map((r,i)=>`<div class="card flat lift" style="--k:var(--sdg${r.x.sdg})"><span class="mt">#${i+1} · ${Math.round(r.sc/mx*100)}% match</span><b style="display:block;margin-top:2px">${esc(r.x.n)}</b><div class="muted" style="font-size:.82rem;margin-top:4px">${esc(r.x.d)}</div><div style="font-size:.8rem;margin-top:6px">${r.why.length?'✓ '+r.why.map(esc).join(' · '):''}</div></div>`).join('')}</div>`;}
+  $('#vf-out').innerHTML=`<b>Best matches</b><div class="vf-res" style="margin-top:8px">${res.map((r,i)=>`<div class="card flat lift" style="--k:var(--sdg${r.x.sdg})"><span class="mt">#${i+1} · ${Math.round(r.sc/mx*100)}% match</span><span style="float:right">${saveBtn(r.x.n)}</span><b style="display:block;margin-top:2px">${esc(r.x.n)}</b><div class="muted" style="font-size:.82rem;margin-top:4px">${esc(r.x.d)}</div><div style="font-size:.8rem;margin-top:6px">${r.why.length?'✓ '+r.why.map(esc).join(' · '):''}</div></div>`).join('')}</div>`;}
 function renderVA(){if(!VOL)return;const r=$('#va-reg').value,q=$('#va-q').value.toLowerCase();
   const C={'Volunteering intermediary':10,'Workplace giving & volunteering':17,'Volunteer-led NGO':3,'NGO partner':1,'Giving platform':9,'Volunteering platform':14,'Skills-based platform':16,'Network & research':13};
   $('#va-list').innerHTML=VOL.agencies.filter(a=>(!vaType||a.type===vaType)&&(!r||a.reg===r)&&(!q||(a.n+a.does+a.type).toLowerCase().includes(q))).map(a=>`<div class="card lift vt" style="--k:var(--sdg${C[a.type]||17})"><div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start"><h3 style="margin:0;font-size:1.02rem">${esc(a.n)}</h3>${isNew(a)}<span class="pill">${esc(a.reg)}</span></div><div class="muted" style="margin:2px 0 6px">${esc(a.type)}</div><div style="font-size:.88rem">${esc(a.does)}</div><div class="linkrow">${ext(a.u,'Visit ↗')}</div></div>`).join('')||'<p class="muted">No agencies match.</p>';}
@@ -1131,28 +1268,173 @@ loadJSON('data/volunteering.json').then(d=>{VOL=d;$('#vol-updated').textContent=
   $$('#v-volunteering .sec-h h3').forEach((h,i)=>h.style.setProperty('--u',`var(--sdg${[10,5,3,14][i%4]})`));
 }).catch(()=>{$('#vt-list').innerHTML='<p class="muted">Volunteering data could not be loaded.</p>';});
 
+/* ===== volunteering: shortlist ===== */
+let VSHORT=store.get('vol-short',[]);
+const saveBtn=n=>{const on=VSHORT.includes(n);return `<button class="save${on?' on':''}" type="button" data-save="${esc(n)}" aria-pressed="${on}">${on?'★ Saved':'☆ Save'}</button>`;};
+function renderShort(){const el=$('#vol-short');if(!el)return;el.hidden=!VSHORT.length;
+  el.innerHTML=`<b style="font-size:.85rem">★ Your shortlist (${VSHORT.length})</b>${VSHORT.map(n=>`<span class="chip">${esc(n)}<i data-unsave="${esc(n)}" role="button" aria-label="Remove ${esc(n)}">×</i></span>`).join('')}<span style="flex:1"></span><button class="btn sm" type="button" id="vs-copy">Copy list</button><button class="btn sm" type="button" id="vs-clear">Clear</button>`;}
+function toggleSave(n){VSHORT=VSHORT.includes(n)?VSHORT.filter(x=>x!==n):[...VSHORT,n];store.set('vol-short',VSHORT);
+  $$('#v-volunteering .save').forEach(b=>{if(b.dataset.save===n){const on=VSHORT.includes(n);b.classList.toggle('on',on);b.textContent=on?'★ Saved':'☆ Save';b.setAttribute('aria-pressed',on);}});renderShort();}
+async function copyText(t,btn){try{await navigator.clipboard.writeText(t);}catch(e){const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(_){}a.remove();}
+  if(btn){const o=btn.textContent;btn.textContent='Copied ✓';setTimeout(()=>btn.textContent=o,1400);}}
+$('#v-volunteering').addEventListener('click',e=>{const s=e.target.closest('[data-save]');if(s){e.stopPropagation();toggleSave(s.dataset.save);return;}
+  const u=e.target.closest('[data-unsave]');if(u){toggleSave(u.dataset.unsave);return;}
+  if(e.target.id==='vs-clear'){VSHORT=[];store.set('vol-short',VSHORT);renderVT();renderVF();renderShort();}
+  if(e.target.id==='vs-copy'&&VOL){copyText('Volunteering shortlist — CSR Playbook India\n'+VSHORT.map(n=>{const x=VOL.types.find(t=>t.n===n);return '• '+n+(x?` (${x.fmt}, ${x.time}, ${x.skill} skills) — ${x.d}`:'');}).join('\n'),e.target);}});
+renderShort();
+
+/* ===== volunteering: impact calculator ===== */
+const VCD={hc:5000,pp:25,hr:8,sk:20,rg:400,rs:1500};
+let VCS=Object.assign({},VCD,store.get('vol-calc',{}));
+const inr=v=>v>=1e7?'₹'+fmt(v/1e7,2)+' cr':v>=1e5?'₹'+fmt(v/1e5,1)+' lakh':'₹'+fmt(v,0);
+function vcSync(){['hc','pp','hr','sk','rg','rs'].forEach(k=>{const n=$('#vc-'+k);if(n)n.value=VCS[k];const r=$('#vc-'+k+'-r');if(r)r.value=VCS[k];});}
+function vcRun(){const {hc,pp,hr,sk,rg,rs}=VCS;const vols=Math.round(hc*pp/100),hrs=vols*hr,pc=hc?hrs/hc:0,val=hrs*((1-sk/100)*rg+(sk/100)*rs),py=hrs/2000;
+  $('#vc-kpis').innerHTML=[[fmt(vols,0),'volunteers',10],[fmt(hrs,0),'hours a year',5],[fmt(pc,1),'hours per employee',3],[inr(val),'value of time',9],[fmt(py,1),'person-years of work (2,000 h each)',17]].map(k=>`<div style="--k:var(--sdg${k[2]})"><b>${k[0]}</b><span>${k[1]}</span></div>`).join('');
+  const bar=(lab,v,bm,bmL,max,k,unit)=>{const M=Math.max(max,v*1.1,bm*1.2);return `<div class="bench" style="--k:var(--sdg${k})"><div class="lb"><span><b>${lab}:</b> ${fmt(v,1)}${unit}</span><span>${bmL}: ${bm}${unit}</span></div><div class="track" role="img" aria-label="${lab} ${fmt(v,1)}${unit} against benchmark ${bm}${unit}"><span style="width:${Math.min(100,v/M*100)}%"></span><i style="left:${bm/M*100}%"></i></div></div>`;};
+  $('#vc-bench').innerHTML=bar('Participation',pp,25,'CECP average',50,10,'%')+bar('Hours per employee',pc,4,'Tata group goal',8,5,' h');
+  const n=[];
+  n.push(pp>=25?`<li>✓ Participation is at or above the 25% CECP average.</li>`:`<li>Participation is below the 25% CECP average — easy entry points (micro-volunteering, family days, Daan Utsav) lift reach fastest.</li>`);
+  n.push(pc>=4?`<li>✓ Depth meets the 4-hours-per-employee mark.</li>`:`<li>Depth is under 4 hours per employee — paid volunteer leave and skills-based projects add hours.</li>`);
+  if(sk<20)n.push(`<li>Only ${sk}% of hours are skills-based — pro bono work usually gives NGOs the most lasting value.</li>`);
+  n.push(`<li><b>Compliance:</b> this value of time is <b>not</b> CSR spend (MCA General Circular 21/2014). Report it in BRSR and your sustainability report, not in Form CSR-2.</li>`);
+  $('#vc-notes').innerHTML=`<ul class="clean" style="font-size:.86rem">${n.join('')}</ul>`;
+  store.set('vol-calc',VCS);}
+['hc','pp','hr','sk','rg','rs'].forEach(k=>{[$('#vc-'+k),$('#vc-'+k+'-r')].forEach(el=>{if(!el)return;el.addEventListener('input',()=>{const v=Math.max(0,+el.value||0);VCS[k]=k==='pp'||k==='sk'?Math.min(100,v):v;vcSync();vcRun();});});});
+$('#vc-reset').onclick=()=>{VCS=Object.assign({},VCD);vcSync();vcRun();};
+$('#vc-copy').onclick=e=>{const {hc,pp,hr,sk}=VCS;copyText(`Employee volunteering — programme sizing (CSR Playbook India)\n`+$$('#vc-kpis div').map(d=>`• ${d.querySelector('b').textContent} ${d.querySelector('span').textContent}`).join('\n')+`\nAssumptions: ${fmt(hc,0)} employees, ${pp}% participation, ${hr} h per volunteer, ${sk}% skills-based.\nNote: value of employee time is not CSR spend (MCA GC 21/2014).`,e.target);};
+vcSync();vcRun();
+
+/* ===== volunteering: myth or fact ===== */
+const VQ=[['The value of employees\u2019 volunteering hours can be counted towards the 2% CSR obligation.',false,'Myth. MCA has said monetising employees\u2019 pro bono services does not count as CSR spend.','MCA General Circular 21/2014','https://taxguru.in/?p=75559',16],
+ ['Salaries of employees who deliver CSR projects can be charged to CSR — but only within the 5% overhead cap.',true,'Fact. MCA treats salaries of regular CSR staff and employees rendering CSR services as administrative overheads, capped at 5% of CSR spend.','MCA CSR FAQ','https://www.mca.gov.in/mca/html/mcav2_en/home/home/efacilitaion+center/faq+on+csr+cell-site+area/faq+on+csr+cell.html',8],
+ ['T-shirts, team meals and travel for employee volunteers can be booked as CSR spend.',false,'Myth. Activities that benefit only employees and their families are excluded from CSR.','Rule 2(1)(d), CSR Rules','https://www.mca.gov.in',10],
+ ['Materials and kits for a Schedule VII project that employees help deliver can count as CSR.',true,'Fact — if the activity fits Schedule VII and runs through an eligible channel (directly or via a registered implementing agency).','Schedule VII & Rule 4','https://www.mca.gov.in',4],
+ ['Every company covered by Section 135 must run an employee volunteering programme.',false,'Myth. MCA encourages employee involvement in CSR, but volunteering is not mandatory.','MCA General Circular 21/2014','https://taxguru.in/?p=75559',17],
+ ['Participation rate counts each volunteer once, however many events they join.',true,'Fact. Participation = unique volunteers ÷ total headcount. Count hours separately to show depth.','B4SI / CECP practice','https://b4si.net',10]];
+let VQA=store.get('vol-quiz',{});
+function renderVQ(){let right=0;
+  $('#vq-list').innerHTML=VQ.map((q,i)=>{const a=VQA[i];const done=a!==undefined;const ok=done&&a===q[1];if(ok)right++;
+    return `<div class="card qz${done?' done '+(ok?'right':'wrong'):''}" style="--k:var(--sdg${q[5]})"><span class="muted" style="font-size:.75rem;font-weight:700">${i+1} of ${VQ.length}</span><p style="margin:.35rem 0 0;font-weight:600">${esc(q[0])}</p>
+      <div class="ans"><button class="btn sm${a===true?' pick':''}" data-q="${i}" data-a="1" type="button">Fact</button><button class="btn sm${a===false?' pick':''}" data-q="${i}" data-a="0" type="button">Myth</button></div>
+      <div class="fb">${ok?'✓ Right. ':'✗ Not quite. '}${esc(q[2])}<div class="src">${ext(q[4],esc(q[3]))}</div></div></div>`;}).join('');
+  $('#vq-score').textContent=`${right} / ${VQ.length}`;}
+$('#vq-list').addEventListener('click',e=>{const b=e.target.closest('[data-q]');if(!b)return;const i=+b.dataset.q;if(VQA[i]!==undefined)return;VQA[i]=b.dataset.a==='1';store.set('vol-quiz',VQA);renderVQ();});
+$('#vq-reset').onclick=()=>{VQA={};store.set('vol-quiz',VQA);renderVQ();};
+renderVQ();
+
 /* ===== ESG ===== */
 $$('#v-esg .subtabs button').forEach(b=>b.onclick=()=>{$$('#v-esg .subtabs button').forEach(x=>x.classList.toggle('on',x===b));$$('#v-esg .subview').forEach(d=>d.classList.toggle('on',d.id==='esub-'+b.dataset.esub));});
 $('#v-esg .subtabs button').click();
-let FW=[];
+let FW=[],CMP=[];
 const FWC={'Regulation':4,'Reporting standard':16,'Climate & nature':13,'Ratings & indices':10,'Principles':17,'Targets & initiatives':7,'Management system':12,'Assurance':9,'Finance':14};
 let fwCat='';
 function renderFW(){const r=$('#fw-reg').value,m=$('#fw-man').value,q=$('#fw-q').value.toLowerCase();
   const list=FW.filter(f=>(!fwCat||f[1]===fwCat)&&(!r||f[2]===r)&&(!m||f[3]===m)&&(!q||(f[0]+f[4]+f[5]).toLowerCase().includes(q)));
   $('#fw-count').textContent=`${list.length} of ${FW.length} frameworks · tap a card for status and link`;
-  $('#fw-list').innerHTML=list.map(f=>`<div class="card fw lift" style="--k:var(--sdg${FWC[f[1]]||17})" tabindex="0"><div class="h"><b>${esc(f[0])}${f[7]&&(Date.now()-new Date(f[7]))<30*864e5?'<span class="new">New</span>':''}</b><span class="pill ${f[3]==='Mandatory'?'bad':'ok'}">${f[3]}</span></div><div class="muted" style="margin-top:4px">${esc(f[1])} · ${esc(f[2])}</div><p style="margin:.5rem 0 0;font-size:.88rem">${esc(f[4])}</p><div class="more"><b>Status:</b> ${esc(f[5])}<div class="linkrow">${ext(f[6],'Learn more ↗')}</div></div></div>`).join('');
-  $$('#fw-list .fw').forEach(c=>{c.onclick=e=>{if(e.target.tagName!=='A')c.classList.toggle('open');};c.onkeydown=e=>{if(e.key==='Enter')c.classList.toggle('open');};});}
-chipGroup($('#fw-cat'),[['','All types'],...Object.keys(FWC).map(k=>[k,k])],'',v=>{fwCat=v;renderFW();});
+  $('#fw-list').innerHTML=list.map(f=>`<div class="card fw lift" style="--k:var(--sdg${FWC[f[1]]||17})" tabindex="0"><div class="h"><b>${esc(f[0])}${f[7]&&(Date.now()-new Date(f[7]))<30*864e5?'<span class="new">New</span>':''}</b><span class="pill ${f[3]==='Mandatory'?'bad':'ok'}">${f[3]}</span></div><div class="muted" style="margin-top:4px">${esc(f[1])} · ${esc(f[2])}</div><p style="margin:.5rem 0 0;font-size:.88rem">${esc(f[4])}</p><div class="more"><b>Status:</b> ${esc(f[5])}<div class="linkrow">${ext(f[6],'Learn more ↗')}</div></div><div class="foot"><button class="save${CMP.includes(f[0])?' on':''}" type="button" data-cmp="${esc(f[0])}">${CMP.includes(f[0])?'✓ Comparing':'+ Compare'}</button></div></div>`).join('')||'<p class="muted">No frameworks match — tap another cell or <button class="linkbtn" type="button" id="fw-reset2">reset filters</button>.</p>';
+  renderFWMap();
+  $$('#fw-list .fw').forEach(c=>{c.onclick=e=>{if(e.target.tagName!=='A'&&!e.target.closest('[data-cmp]'))c.classList.toggle('open');};c.onkeydown=e=>{if(e.key==='Enter')c.classList.toggle('open');};});}
+const fwChips=()=>chipGroup($('#fw-cat'),[['','All types'],...Object.keys(FWC).map(k=>[k,k])],fwCat,v=>{fwCat=v;renderFW();});fwChips();
 ['fw-reg','fw-man','fw-q'].forEach(id=>$('#'+id).addEventListener('input',renderFW));
-loadJSON('data/esg.json').then(d=>{FW=d.frameworks.map(f=>[f.n,f.cat,f.reg,f.man,f.d,f.status,f.url,f.added]);renderFW();}).catch(()=>{$('#fw-list').innerHTML='<p class="muted">Frameworks could not be loaded.</p>';});
+loadJSON('data/esg.json').then(d=>{FW=d.frameworks.map(f=>[f.n,f.cat,f.reg,f.man,f.d,f.status,f.url,f.added]);renderFW();apRun();}).catch(()=>{$('#fw-list').innerHTML='<p class="muted">Frameworks could not be loaded.</p>';});
+
+/* ===== ESG: framework map, compare ===== */
+const FWR=['India','Global','EU','UK','US','Asia-Pacific'];
+function renderFWMap(){const el=$('#fw-map');if(!el||!FW.length)return;const r=$('#fw-reg').value,m=$('#fw-man').value;
+  const pool=FW.filter(f=>!m||f[3]===m);const cnt=(c,g)=>pool.filter(f=>(!c||f[1]===c)&&(!g||f[2]===g)).length;
+  const max=Math.max(1,...Object.keys(FWC).flatMap(c=>FWR.map(g=>cnt(c,g))));
+  el.innerHTML=`<table><thead><tr><th></th>${FWR.map(g=>`<th>${g}</th>`).join('')}<th>All</th></tr></thead><tbody>${Object.keys(FWC).map(c=>`<tr><th><span style="display:inline-block;width:9px;height:9px;border-radius:3px;background:var(--sdg${FWC[c]});margin-right:6px"></span>${c}</th>${FWR.map(g=>{const n=cnt(c,g);const pct=n?Math.round(18+62*n/max):0;
+      return `<td><button type="button" class="${n?'':'z'}${fwCat===c&&r===g?' on':''}" ${n?`data-c="${esc(c)}" data-g="${g}"`:'disabled'} style="${n?`background:color-mix(in srgb,var(--sdg${FWC[c]}) ${pct}%,var(--surface));${pct>55?'color:#fff':''}`:''}" aria-label="${c} in ${g}: ${n}">${n||'·'}</button></td>`;}).join('')}<td><button type="button" data-c="${esc(c)}" data-g="" class="${fwCat===c&&!r?'on':''}" style="background:var(--surface-2)">${cnt(c,'')}</button></td></tr>`).join('')}</tbody></table>`;}
+$('#fw-map').addEventListener('click',e=>{const b=e.target.closest('button[data-c]');if(!b)return;const same=fwCat===b.dataset.c&&$('#fw-reg').value===b.dataset.g;
+  fwCat=same?'':b.dataset.c;$('#fw-reg').value=same?'':b.dataset.g;$('#fw-q').value='';fwChips();renderFW();});
+function fwReset(){fwCat='';$('#fw-reg').value='';$('#fw-man').value='';$('#fw-q').value='';fwChips();renderFW();}
+function renderCmp(){const t=$('#cmp-tray');t.classList.toggle('show',CMP.length>0);$('#cmp-txt').textContent=CMP.length<2?`${CMP.length} selected — pick up to 3 to compare`:`${CMP.length} frameworks selected`;$('#cmp-go').disabled=CMP.length<2;}
+$('#esub-explorer').addEventListener('click',e=>{if(e.target.id==='fw-reset2'){fwReset();return;}
+  const b=e.target.closest('[data-cmp]');if(!b)return;e.stopPropagation();const n=b.dataset.cmp;
+  if(CMP.includes(n))CMP=CMP.filter(x=>x!==n);else{if(CMP.length>=3){b.textContent='Max 3';setTimeout(renderFW,900);return;}CMP.push(n);}
+  renderFW();renderCmp();});
+$('#cmp-clr').onclick=()=>{CMP=[];renderFW();renderCmp();};
+$('#cmp-go').onclick=()=>{const L=CMP.map(n=>FW.find(f=>f[0]===n)).filter(Boolean);const row=(lab,fn)=>`<tr><th style="white-space:nowrap">${lab}</th>${L.map(f=>`<td>${fn(f)}</td>`).join('')}</tr>`;
+  $('#cmp-body').innerHTML=`<table><thead><tr><th></th>${L.map(f=>`<th style="border-top:4px solid var(--sdg${FWC[f[1]]||17})">${esc(f[0])}</th>`).join('')}</tr></thead><tbody>${row('Type',f=>esc(f[1]))}${row('Region',f=>esc(f[2]))}${row('Mandatory?',f=>`<span class="pill ${f[3]==='Mandatory'?'bad':'ok'}">${f[3]}</span>`)}${row('What it is',f=>esc(f[4]))}${row('Status',f=>esc(f[5]))}${row('Source',f=>ext(f[6],'Open ↗'))}</tbody></table>`;
+  $('#cmp-dlg').showModal();};
+renderCmp();
 const AQ=[['top1000','Listed in India — top 1,000 by market cap',['BRSR','BRSR Core (if in the glide-path tier)','NGRBC']],['csr','Meets Section 135 thresholds',['Section 135 CSR, Schedule VII, CSR-2 filing']],['bank','Bank or NBFC regulated by RBI',['RBI climate finance & risk directions','Watch for final climate disclosure norms']],['heavy','Plant in aluminium, cement, chlor-alkali, pulp & paper, refining, petrochemicals or textiles',['CCTS emission-intensity targets (if notified as an obligated entity)']],['euexp','Exports steel, aluminium, cement, fertilisers or hydrogen to the EU',['EU CBAM — embedded-emissions data for EU importers']],['eu','EU turnover above €450m (or EU subsidiary/branch above €200m)',['EU CSRD (non-EU group regime) & ESRS','EU Taxonomy','Possibly CSDDD if very large']],['us','US entity with >$500m revenue doing business in California',['California SB 261 (climate risk); SB 253 if >$1bn']],['uk','Listed or large in the UK',['UK SRS S1 & S2 (via FCA rules once adopted)']],['inv','Investors/customers ask for ratings or questionnaires',['CDP','MSCI / Sustainalytics / S&P CSA','GRI-based report','SBTi targets']],['ifrs','Want a single global baseline report',['ISSB IFRS S1 & S2 (+ SASB metrics)','TNFD for nature']]];
 $('#ap-q').innerHTML=AQ.map(a=>`<label><input type="checkbox" value="${a[0]}"><span>${esc(a[1])}</span></label>`).join('');
 const apRun=()=>{const on=$$('#ap-q input:checked').map(i=>i.value),res=AQ.filter(a=>on.includes(a[0]));
-  $('#ap-out').innerHTML=res.length?`<b>Frameworks to plan for</b><ul class="clean">${res.map(a=>`<li><b>${esc(a[1])}:</b> ${a[2].map(esc).join(' · ')}</li>`).join('')}</ul><p class="muted">Always add: GHG Protocol accounting, a materiality assessment, and SDG mapping for CSR.</p>`:'<p class="muted">Tick at least one statement.</p>';};
+  const lk=t=>{const q=t.split(/ \(| —|;|,| &| \+/)[0].trim();return FW.some(f=>(f[0]+f[4]).toLowerCase().includes(q.toLowerCase()))?`<button class="linkbtn" type="button" data-fq="${esc(q)}">${esc(t)}</button>`:esc(t);};
+  $('#ap-out').innerHTML=res.length?`<b>Frameworks to plan for</b> <span class="muted">— tap a name to open it in the explorer</span><ul class="clean">${res.map(a=>`<li><b>${esc(a[1])}:</b> ${a[2].map(lk).join(' · ')}</li>`).join('')}</ul><p class="muted">Always add: GHG Protocol accounting, a materiality assessment, and SDG mapping for CSR.</p>`:'<p class="muted">Tick at least one statement.</p>';};
 $('#ap-q').addEventListener('change',apRun);apRun();
+$('#ap-out').addEventListener('click',e=>{const b=e.target.closest('[data-fq]');if(!b)return;fwCat='';$('#fw-reg').value='';$('#fw-man').value='';$('#fw-q').value=b.dataset.fq;fwChips();renderFW();$('#v-esg .subtabs button[data-esub=explorer]').click();$('#fw-list').scrollIntoView({behavior:'smooth',block:'start'});});
 const CORE=[['GHG footprint','Scope 1 & 2; intensity per ₹ turnover (PPP-adjusted)','Fuel & electricity invoices, emission factors, calculation workbook'],['Water footprint','Withdrawal, consumption, intensity; discharge by treatment','Meter logs, bills, discharge test reports'],['Energy footprint','Total energy, % renewable, intensity','Energy bills, PPAs, RE certificates'],['Embracing circularity','Waste by category, recycled/reused share','Waste manifests, recycler certificates'],['Employee wellbeing & safety','Wellbeing spend %; LTIFR, fatalities','Payroll, insurance, incident registers'],['Gender diversity','Wages paid to women %; POSH complaints','HRMS reports, ICC records'],['Inclusive development','Inputs from MSMEs; jobs in smaller towns','Vendor master, location-wise payroll'],['Fairness with customers & suppliers','Data breaches; days payable','IT incident logs, AP ageing'],['Openness of business','Purchase/sales concentration; related-party transactions','Ledger extracts, RPT register']];
 $('#core-rows').innerHTML=CORE.map((r,i)=>`<tr><td>${i+1}</td><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join('');
 const STEPS=[['1. Materiality','Double-materiality check with investors, customers, employees and communities.'],['2. KPI dictionary','Define each KPI once — formula, unit, boundary, owner, frequency — mapped to BRSR, GRI and ISSB.'],['3. Owners & cadence','Site-level owners; monthly for energy, water, waste, safety; quarterly for HR and suppliers.'],['4. System of record','One ESG data system with audit trail and attached evidence.'],['5. Controls','Maker-checker review and year-on-year variance checks.'],['6. Dry-run assurance','Pre-assurance review two quarters before year end.'],['7. Board oversight','Quarterly dashboard to the ESG/Risk committee.'],['8. Publish & improve','File BRSR, publish report and assurance statement, log findings.']];
+
+/* ===== ESG: BRSR Core readiness ===== */
+const RDL=['Not started','Data exists','Evidence ready','Assured'];
+let RD=store.get('brsr-rd',{tier:'1000',v:{}});
+const TIER={'150':'BRSR Core assessment or assurance has applied to you since FY 2023-24.','250':'BRSR Core assessment or assurance has applied to you since FY 2024-25.','500':'BRSR Core assessment or assurance applies to you from FY 2025-26.','1000':'BRSR Core assessment or assurance applies to you from FY 2026-27 — the current year.','no':'BRSR Core does not apply directly. Listed customers may still ask for these KPIs (value-chain disclosure is now voluntary).'};
+function renderRD(){$('#rd-tier').value=RD.tier;
+  $('#rd-rows').innerHTML=CORE.map((c,i)=>{const v=RD.v[i]??-1;return `<div class="rd-row"><div><b style="font-size:.88rem">${i+1}. ${c[0]}</b><small>${c[1]}</small></div><div class="seg" style="--k:var(--sdg${[13,6,7,12,3,5,10,16,17][i]})">${RDL.map((l,j)=>`<button type="button" class="${v===j?'on':''}" data-rd="${i}" data-j="${j}" aria-pressed="${v===j}">${l}</button>`).join('')}</div></div>`;}).join('');
+  const vals=CORE.map((_,i)=>RD.v[i]??0),pct=Math.round(vals.reduce((a,b)=>a+b,0)/(CORE.length*3)*100),rated=Object.keys(RD.v).length;
+  const lvl=pct>=75?['Assurance-ready','ok',3]:pct>=40?['Building','mid',7]:['Early stage','bad',1];
+  const gaps=CORE.map((c,i)=>[c,vals[i]]).filter(x=>x[1]<2);
+  $('#rd-out').innerHTML=`<div class="muted" style="font-size:.78rem;font-weight:700">YOUR READINESS</div><div style="display:flex;align-items:baseline;gap:10px"><b style="font-family:Fraunces,serif;font-size:2.4rem">${pct}%</b><span class="pill ${lvl[1]==='mid'?'warn':lvl[1]}">${lvl[0]}</span></div>
+   <div class="bar" style="height:10px"><span style="width:${pct}%;background:var(--sdg${lvl[2]})"></span></div><p class="muted" style="font-size:.8rem">${rated} of 9 attributes rated.</p>
+   <p style="font-size:.88rem"><b>Timing:</b> ${TIER[RD.tier]}</p>
+   ${gaps.length?`<b style="font-size:.88rem">Close these gaps first</b><ul class="clean" style="font-size:.84rem">${gaps.slice(0,5).map(([c])=>`<li><b>${c[0]}:</b> ${c[2]}</li>`).join('')}</ul>${gaps.length>5?`<p class="muted" style="font-size:.78rem">+${gaps.length-5} more below “Evidence ready”.</p>`:''}`:'<p style="font-size:.88rem">✓ Evidence is ready on every attribute — book a dry-run assessment.</p>'}
+   <button class="btn sm" type="button" id="rd-reset">Reset</button>`;}
+$('#rd-rows').addEventListener('click',e=>{const b=e.target.closest('[data-rd]');if(!b)return;RD.v[b.dataset.rd]=+b.dataset.j;store.set('brsr-rd',RD);renderRD();});
+$('#rd-tier').onchange=e=>{RD.tier=e.target.value;store.set('brsr-rd',RD);renderRD();};
+$('#rd-out').addEventListener('click',e=>{if(e.target.id==='rd-reset'){RD={tier:RD.tier,v:{}};store.set('brsr-rd',RD);renderRD();}});
+renderRD();
+
+/* ===== ESG: learn — scope sorter + glossary ===== */
+const SCQ=[['Diesel burned in the factory\u2019s backup generators',1,'Fuel combusted in equipment you own — stationary combustion.'],
+ ['Grid electricity bought for your offices',2,'Purchased electricity is the classic Scope 2 source.'],
+ ['Employees\u2019 business flights',3,'Scope 3, category 6 — business travel.'],
+ ['Petrol used by company-owned delivery vans',1,'Mobile combustion in vehicles you own or control.'],
+ ['Steel bought from suppliers',3,'Scope 3, category 1 — purchased goods; the emissions happen at the supplier\u2019s plant.'],
+ ['Refrigerant leaking from office air-conditioners',1,'Fugitive emissions from equipment you control count as Scope 1.'],
+ ['Chilled water or steam bought from a district plant',2,'Purchased heat, steam and cooling sit in Scope 2 alongside electricity.'],
+ ['Employees commuting in their own cars',3,'Scope 3, category 7 — employee commuting.'],
+ ['Fuel burned by customers driving the cars you sell',3,'Scope 3, category 11 — use of sold products.'],
+ ['Natural gas burned in your own boiler',1,'Stationary combustion in equipment you own.'],
+ ['A logistics firm trucking your goods to distributors (you pay)',3,'Scope 3, category 4 — upstream transport and distribution.'],
+ ['Waste from your sites sent to landfill',3,'Scope 3, category 5 — waste generated in operations.']];
+let SCA=store.get('scope-q',{});
+function renderSC(){let ok=0;$('#sc-list').innerHTML=SCQ.map((q,i)=>{const a=SCA[i];const done=a!==undefined;const r=done&&a===q[1];if(r)ok++;
+  return `<div class="sc-row${done?' done '+(r?'right':'wrong'):''}"><span style="font-size:.9rem">${esc(q[0])}</span><div class="seg">${[1,2,3].map(s=>`<button type="button" data-sc="${i}" data-s="${s}" class="${done&&(s===q[1]||s===a)?'on':''}" style="${done&&s===q[1]?'background:var(--ok)':done&&s===a?'background:var(--bad)':''}">Scope ${s}</button>`).join('')}</div><div class="fb">${r?'✓ Right — ':`✗ It\u2019s Scope ${q[1]} — `}${esc(q[2])}</div></div>`;}).join('');
+  $('#sc-score').textContent=`${ok} / ${SCQ.length}`;}
+$('#sc-list').addEventListener('click',e=>{const b=e.target.closest('[data-sc]');if(!b)return;const i=+b.dataset.sc;if(SCA[i]!==undefined)return;SCA[i]=+b.dataset.s;store.set('scope-q',SCA);renderSC();});
+$('#sc-reset').onclick=()=>{SCA={};store.set('scope-q',SCA);renderSC();};
+renderSC();
+const GL=[['BRSR','India','SEBI\u2019s Business Responsibility and Sustainability Report — the mandatory annual ESG disclosure for the top 1,000 listed companies, built on the nine NGRBC principles.',16],
+ ['BRSR Core','India','A subset of BRSR KPIs across nine attributes that must be independently assessed or assured, phased in by market-cap tier.',16],
+ ['NGRBC','India','National Guidelines on Responsible Business Conduct (MCA, 2019) — the nine principles that frame BRSR. CSR sits under Principle 8.',16],
+ ['CCTS','India','India\u2019s Carbon Credit Trading Scheme: emission-intensity targets for obligated industrial entities, with tradeable carbon credit certificates.',13],
+ ['Green Credit Programme','India','A voluntary MoEFCC scheme that awards green credits for activities such as tree plantation and water conservation.',15],
+ ['Double materiality','Concept','Reporting both how sustainability issues affect the company (financial) and how the company affects people and planet (impact). Central to the EU\u2019s CSRD.',12],
+ ['Scope 1, 2, 3','Concept','GHG Protocol buckets: direct emissions (1), purchased energy (2) and everything else in the value chain (3) — usually the largest.',13],
+ ['Limited vs reasonable assurance','Concept','Limited assurance is negative ("nothing came to our attention"). Reasonable assurance is a positive opinion, like a financial audit, and needs stronger controls.',9],
+ ['Net zero','Concept','Cutting emissions as deeply as possible (around 90% under SBTi\u2019s standard) and neutralising the rest with permanent carbon removals.',13],
+ ['Just transition','Concept','Making sure workers and communities that depend on high-carbon sectors are not left behind as economies decarbonise — a natural bridge to CSR.',8],
+ ['Greenwashing','Concept','Overstating environmental credentials. Regulators and ad watchdogs, including SEBI, ASCI and the EU, are tightening rules on vague or unsupported claims.',12],
+ ['ISSB · IFRS S1 & S2','Global','Global baseline standards from the IFRS Foundation: S1 covers general sustainability disclosures, S2 covers climate. Investor-focused.',17],
+ ['GRI','Global','The most widely used impact-reporting standards, covering economic, environmental and social topics for all stakeholders.',17],
+ ['SASB','Global','Industry-specific sustainability metrics for 77 industries, now maintained by the ISSB.',17],
+ ['TCFD','Global','Four-pillar climate disclosure framework (governance, strategy, risk management, metrics and targets); its work now sits with the ISSB.',13],
+ ['TNFD','Global','A TCFD-style framework for nature-related risks and impacts, using the LEAP approach (Locate, Evaluate, Assess, Prepare).',15],
+ ['SBTi','Global','The Science Based Targets initiative validates company emission-reduction targets against climate science.',13],
+ ['CDP','Global','A global disclosure system where companies answer investor and customer questionnaires on climate, water and forests, and are scored A to D-.',13],
+ ['CSRD & ESRS','EU','EU law requiring sustainability reporting under the European Sustainability Reporting Standards; its scope was narrowed by the EU\u2019s Omnibus simplification.',12],
+ ['CSDDD','EU','EU due-diligence directive: very large companies must find and address human-rights and environmental harms in their value chains.',16],
+ ['CBAM','EU','The EU\u2019s Carbon Border Adjustment Mechanism puts a carbon price on imports such as steel, aluminium, cement, fertilisers and hydrogen; the definitive phase began in 2026.',13]];
+const GLC={India:'var(--sdg16)',Concept:'var(--sdg4)',Global:'var(--sdg17)',EU:'var(--sdg9)'};
+function renderGL(){const q=$('#gl-q').value.toLowerCase();const L=GL.filter(g=>!q||(g[0]+g[2]+g[1]).toLowerCase().includes(q));
+  $('#gl-list').innerHTML=L.map(g=>`<div class="flip" tabindex="0" role="button" aria-label="${esc(g[0])} — flip for meaning" style="--k:var(--sdg${g[3]})"><div class="in"><div class="fa"><span class="pill" style="align-self:flex-start;margin-bottom:8px;background:${GLC[g[1]]};color:#fff;border:0">${g[1]}</span><b>${esc(g[0])}</b><small>Tap to flip ↻</small></div><div class="fz"><b style="margin-bottom:6px">${esc(g[0])}</b>${esc(g[2])}</div></div></div>`).join('')||'<p class="muted">No terms match.</p>';}
+$('#gl-list').addEventListener('click',e=>{const f=e.target.closest('.flip');if(f)f.classList.toggle('on');});
+$('#gl-list').addEventListener('keydown',e=>{const f=e.target.closest('.flip');if(f&&(e.key==='Enter'||e.key===' ')){e.preventDefault();f.classList.toggle('on');}});
+$('#gl-q').addEventListener('input',renderGL);renderGL();
 $('#esg-steps').innerHTML=STEPS.map((s,i)=>`<div class="card flat lift" style="border-top:4px solid var(--sdg${[13,7,6,9,16,12,17,3][i]})"><b>${s[0]}</b><p style="margin:.3rem 0 0;font-size:.9rem">${s[1]}</p></div>`).join('');
 
 /* ===== header: pulse chips ===== */
@@ -1202,6 +1484,13 @@ function buildIdx(){const I=[];const add=(t,sub,k,fn)=>I.push({t,sub,k,fn,q:(t+'
   SCH7.forEach(r=>add(`Schedule VII (${r[0]}) — ${r[2]}`,'Eligible CSR activity',r[1],()=>go('compliance-howto',()=>{const d=$$('#sub-howto details')[2];d.open=true;d.scrollIntoView({behavior:'smooth'});})));
   const vgo=(sub,fn)=>go('volunteering',()=>{$(`#v-volunteering .subtabs button[data-vsub=${sub}]`).click();fn&&fn();});
   add('Employee volunteering','Section',10,()=>go('volunteering'));
+  const ego=sub=>go('esg',()=>$(`#v-esg .subtabs button[data-esub=${sub}]`).click());
+  add('Volunteering impact calculator','Tool · hours, participation, value of time',10,()=>vgo('calc'));
+  add('Myth or fact? Volunteering & CSR law','Quiz',10,()=>vgo('quiz'));
+  add('BRSR Core readiness check','Tool · score your 9 attributes',13,()=>ego('india'));
+  add('Compare ESG frameworks','Tool · side by side',13,()=>ego('explorer'));
+  add('Scope 1, 2, 3 sorter','Quiz · GHG emissions',13,()=>ego('learn'));
+  add('ESG jargon, decoded','Glossary · flip cards',13,()=>ego('learn'));
   if(VOL){VOL.types.forEach(x=>add(x.n,'Volunteering format · '+x.cat,x.sdg,()=>vgo('types',()=>{vtCat='';$('#vt-q').value=x.n;renderVT();flash($('#vt-list .card'));})));
     VOL.agencies.forEach(a=>add(a.n,'Volunteering partner · '+a.type,10,()=>vgo('agencies',()=>{vaType='';$('#va-q').value=a.n;renderVA();flash($('#va-list .card'));})));
     VOL.cases.forEach(c=>add(c.co,'Volunteering programme',c.sdg,()=>vgo('cases',()=>{vcReg='';renderVC();const h=findCard('#vc-list h3',c.co);if(h){h.closest('.card').scrollIntoView({behavior:'smooth',block:'center'});flash(h.closest('.card'));}})));}

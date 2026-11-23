@@ -1,0 +1,357 @@
+{
+ "updated": "2026-11-23",
+ "note": "Monthly refresh: status lines, new frameworks or rule changes.",
+ "frameworks": [
+  {
+   "n": "BRSR",
+   "cat": "Regulation",
+   "reg": "India",
+   "man": "Mandatory",
+   "d": "SEBI's ESG report for the top 1,000 listed companies, built on the nine NGRBC principles.",
+   "status": "In force; 1,230+ filers for FY24.",
+   "url": "https://greensutra.in/news/brsr-all-you-need-to-know/"
+  },
+  {
+   "n": "BRSR Core",
+   "cat": "Regulation",
+   "reg": "India",
+   "man": "Mandatory",
+   "d": "Nine KPI attributes needing independent assessment or assurance, phased by market cap.",
+   "status": "Top 1,000 in FY 2026-27; value-chain disclosure voluntary.",
+   "url": "https://taxguru.in/?p=955846"
+  },
+  {
+   "n": "NGRBC (2019)",
+   "cat": "Principles",
+   "reg": "India",
+   "man": "Voluntary",
+   "d": "National Guidelines on Responsible Business Conduct — successor to the 2011 NVGs and the backbone of BRSR.",
+   "status": "Reference framework.",
+   "url": "https://www.mca.gov.in"
+  },
+  {
+   "n": "Section 135 CSR",
+   "cat": "Regulation",
+   "reg": "India",
+   "man": "Mandatory",
+   "d": "Mandatory CSR spend of 2% of average net profit for qualifying companies.",
+   "status": "In force; 2026 amendment bill pending.",
+   "url": "https://prsindia.org/billtrack/prs-products/prs-jpc-report-summary"
+  },
+  {
+   "n": "Carbon Credit Trading Scheme (CCTS)",
+   "cat": "Climate & nature",
+   "reg": "India",
+   "man": "Mandatory",
+   "d": "Intensity-based carbon market: binding GHG emission-intensity targets for obligated industrial plants.",
+   "status": "~490 entities with targets for 2025-26 and 2026-27 (FY24 baseline).",
+   "url": "https://icapcarbonaction.com/en/news/compliance-obligations-under-indias-carbon-credit-trading-scheme-enter-force-seven-sectors"
+  },
+  {
+   "n": "Green Credit Programme",
+   "cat": "Climate & nature",
+   "reg": "India",
+   "man": "Voluntary",
+   "d": "Market-based credits for environmental actions such as tree plantation; disclosed as a BRSR leadership indicator.",
+   "status": "Operational since 2023.",
+   "url": "https://clearcutmedia.co.in/sebi-brsr-2026-esg-disclosure-rules-india/"
+  },
+  {
+   "n": "RBI climate finance & risk directions",
+   "cat": "Regulation",
+   "reg": "India",
+   "man": "Mandatory",
+   "d": "Directions on climate finance and climate-risk management for banks and NBFCs; a climate-risk information system (RBI-CRIS).",
+   "status": "Final climate disclosure norms reported as deferred (2026).",
+   "url": "https://www.business-standard.com/finance/news/rbi-likely-defers-plan-to-mandate-climate-risk-disclosures-by-banks-126012900785_1.html"
+  },
+  {
+   "n": "SEBI ESG Rating Providers",
+   "cat": "Ratings & indices",
+   "reg": "India",
+   "man": "Mandatory",
+   "d": "SEBI regulates ESG rating providers (e.g. CRISIL ESG, ICRA ESG) operating in Indian markets.",
+   "status": "In force.",
+   "url": "https://www.sebi.gov.in"
+  },
+  {
+   "n": "ICAI SSAE 3000 / 3410",
+   "cat": "Assurance",
+   "reg": "India",
+   "man": "Mandatory",
+   "d": "Indian standards for sustainability and GHG assurance used for BRSR Core.",
+   "status": "In use.",
+   "url": "https://www.icai.org"
+  },
+  {
+   "n": "GRI Standards",
+   "cat": "Reporting standard",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "The most widely used impact-reporting standard; topic standards plus sector standards.",
+   "status": "GRI 101 Biodiversity effective 2026; GRI 102 Climate and 103 Energy from 2027.",
+   "url": "https://www.bdo.ch/en-gb/insights/gri-updates-2025-2027-transparency-and-impact-in-sustainability"
+  },
+  {
+   "n": "ISSB — IFRS S1 & S2",
+   "cat": "Reporting standard",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "Global baseline for investor-focused sustainability and climate disclosure; adopted into law by many jurisdictions.",
+   "status": "35 jurisdictions adopted by Jul 2026; India consulting on S2 for finance.",
+   "url": "https://onestopesg.com/esg-news/issb-adoption-tracker-august-2026"
+  },
+  {
+   "n": "SASB Standards",
+   "cat": "Reporting standard",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "77 industry-specific metric sets, now maintained by the ISSB and used with IFRS S1.",
+   "status": "Maintained by IFRS Foundation.",
+   "url": "https://www.ifrs.org"
+  },
+  {
+   "n": "Integrated Reporting Framework",
+   "cat": "Reporting standard",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "Value-creation reporting across six capitals; IFRS Foundation guidance links it with IFRS S1/S2.",
+   "status": "Maintained by IFRS Foundation.",
+   "url": "https://www.ifrs.org"
+  },
+  {
+   "n": "TCFD",
+   "cat": "Climate & nature",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "Climate disclosure recommendations (governance, strategy, risk, metrics) — fully built into IFRS S2.",
+   "status": "Task force disbanded 2023; monitoring passed to ISSB.",
+   "url": "https://www.ifrs.org"
+  },
+  {
+   "n": "TNFD",
+   "cat": "Climate & nature",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "Nature-related risk and opportunity disclosures using the LEAP approach.",
+   "status": "836 adopters; technical work complete; ISSB nature practice statement in development.",
+   "url": "https://onestopesg.com/esg-news/tnfd-guidance-adoption-26-trillion"
+  },
+  {
+   "n": "CDP",
+   "cat": "Climate & nature",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "Investor and customer questionnaire on climate, water and forests; feeds supplier and investor scores.",
+   "status": "Annual disclosure cycle.",
+   "url": "https://www.cdp.net"
+  },
+  {
+   "n": "GHG Protocol",
+   "cat": "Climate & nature",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "The accounting rules for Scope 1, 2 and 3 emissions used by almost every framework.",
+   "status": "Standards under revision.",
+   "url": "https://ghgprotocol.org"
+  },
+  {
+   "n": "SBTi",
+   "cat": "Targets & initiatives",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "Validates corporate emissions-reduction and net-zero targets against climate science.",
+   "status": "Target-setting grew 40% in 2025.",
+   "url": "https://www.businessgreen.com/news/4329160/mindset-quickly-shifting-100-firms-commit-tnfd-disclosure-framework"
+  },
+  {
+   "n": "UN Global Compact",
+   "cat": "Principles",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "Ten principles on human rights, labour, environment and anti-corruption; annual Communication on Progress.",
+   "status": "Active; India network hosts summits.",
+   "url": "https://unglobalcompact.org"
+  },
+  {
+   "n": "UN SDGs",
+   "cat": "Principles",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "17 Sustainable Development Goals — the common language for mapping CSR and ESG impact.",
+   "status": "2030 agenda.",
+   "url": "https://sdgs.un.org/goals"
+  },
+  {
+   "n": "UN Guiding Principles on Business & Human Rights",
+   "cat": "Principles",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "Protect, respect, remedy — the basis for human-rights due diligence laws.",
+   "status": "Endorsed 2011.",
+   "url": "https://www.ohchr.org"
+  },
+  {
+   "n": "OECD Guidelines for MNEs",
+   "cat": "Principles",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "Responsible business conduct expectations, updated in 2023 (climate, tech, value chains).",
+   "status": "Updated 2023.",
+   "url": "https://mneguidelines.oecd.org"
+  },
+  {
+   "n": "UN PRI",
+   "cat": "Targets & initiatives",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "Six principles for responsible investment signed by asset owners and managers.",
+   "status": "Active.",
+   "url": "https://www.unpri.org"
+  },
+  {
+   "n": "Equator Principles & IFC Performance Standards",
+   "cat": "Finance",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "Environmental and social risk standards for project finance.",
+   "status": "Widely used by lenders.",
+   "url": "https://equator-principles.com"
+  },
+  {
+   "n": "ISO 26000",
+   "cat": "Management system",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "Guidance (not certifiable) on social responsibility.",
+   "status": "Reference standard.",
+   "url": "https://www.iso.org"
+  },
+  {
+   "n": "ISO 14001 / 45001 / 50001 / 14064",
+   "cat": "Management system",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "Certifiable systems for environment, health & safety, energy, and GHG quantification.",
+   "status": "Widely certified.",
+   "url": "https://www.iso.org"
+  },
+  {
+   "n": "SA8000 & B Corp",
+   "cat": "Management system",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "Social accountability (labour) certification; B Corp whole-company impact certification.",
+   "status": "Active.",
+   "url": "https://sa-intl.org"
+  },
+  {
+   "n": "ISSA 5000 / ISAE 3000 / AA1000AS",
+   "cat": "Assurance",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "International sustainability assurance standards.",
+   "status": "ISSA 5000 issued by IAASB.",
+   "url": "https://www.iaasb.org"
+  },
+  {
+   "n": "MSCI, Sustainalytics, S&P CSA (DJSI), FTSE4Good, ISS ESG",
+   "cat": "Ratings & indices",
+   "reg": "Global",
+   "man": "Voluntary",
+   "d": "Major ESG ratings and indices used by investors.",
+   "status": "Annual assessments.",
+   "url": "https://www.spglobal.com/esg/csa/"
+  },
+  {
+   "n": "EU CSRD & ESRS (after Omnibus I)",
+   "cat": "Regulation",
+   "reg": "EU",
+   "man": "Mandatory",
+   "d": "EU sustainability reporting with double materiality under ESRS.",
+   "status": "Scope now >1,000 employees and >€450m turnover; non-EU groups with €450m EU turnover; wave 2 from FY2027.",
+   "url": "https://dcycle.io/blog/csrd-omnibus-approved-2026"
+  },
+  {
+   "n": "EU CSDDD",
+   "cat": "Regulation",
+   "reg": "EU",
+   "man": "Mandatory",
+   "d": "Human-rights and environmental due diligence across value chains.",
+   "status": "Narrowed to 5,000+ employees and €1.5bn+ turnover.",
+   "url": "https://help.dcycle.io/regulation/omnibus-i-final-agreement"
+  },
+  {
+   "n": "EU Taxonomy",
+   "cat": "Regulation",
+   "reg": "EU",
+   "man": "Mandatory",
+   "d": "Classification of environmentally sustainable activities; KPI disclosure for in-scope firms.",
+   "status": "Simplified under Omnibus.",
+   "url": "https://finance.ec.europa.eu"
+  },
+  {
+   "n": "EU SFDR",
+   "cat": "Finance",
+   "reg": "EU",
+   "man": "Mandatory",
+   "d": "Sustainability disclosures for financial-market participants and products.",
+   "status": "Under review.",
+   "url": "https://finance.ec.europa.eu"
+  },
+  {
+   "n": "EU CBAM",
+   "cat": "Regulation",
+   "reg": "EU",
+   "man": "Mandatory",
+   "d": "Carbon price on imports of cement, iron & steel, aluminium, fertilisers, hydrogen and electricity — relevant for Indian exporters.",
+   "status": "Definitive phase from 2026.",
+   "url": "https://taxation-customs.ec.europa.eu"
+  },
+  {
+   "n": "UK SRS S1 & S2",
+   "cat": "Regulation",
+   "reg": "UK",
+   "man": "Voluntary",
+   "d": "UK-endorsed versions of IFRS S1 and S2.",
+   "status": "Published 25 Feb 2026; FCA consulting on listing-rule use.",
+   "url": "https://www.frc.org.uk/docs/9191/html/"
+  },
+  {
+   "n": "US SEC climate rule",
+   "cat": "Regulation",
+   "reg": "US",
+   "man": "Mandatory",
+   "d": "2024 federal climate disclosure rule for listed companies.",
+   "status": "Stayed since 2024; SEC proposed full rescission on 29 May 2026.",
+   "url": "https://foleyhoag.com/news-and-insights/blogs/public-companies-and-the-law/2026/june/sec-proposes-full-rescission-of-climate-related-disclosure-rules/"
+  },
+  {
+   "n": "California SB 253 & SB 261",
+   "cat": "Regulation",
+   "reg": "US",
+   "man": "Mandatory",
+   "d": "Scope 1-3 emissions (SB 253, >$1bn revenue) and climate-risk reports (SB 261, >$500m) for companies doing business in California.",
+   "status": "First Scope 1-2 reports due 10 Nov 2026.",
+   "url": "https://uniqus.com/?p=58629"
+  },
+  {
+   "n": "Australia AASB S2",
+   "cat": "Regulation",
+   "reg": "Asia-Pacific",
+   "man": "Mandatory",
+   "d": "ISSB-aligned climate reporting for large Australian entities.",
+   "status": "Mandatory from 2025 in phases.",
+   "url": "https://www.frc.org.uk/docs/9191/html/"
+  },
+  {
+   "n": "China CSDS, Hong Kong, Singapore, Japan SSBJ",
+   "cat": "Regulation",
+   "reg": "Asia-Pacific",
+   "man": "Mandatory",
+   "d": "ISSB-aligned regimes across major Asian markets, phased by listing tier.",
+   "status": "China CSDS and Philippines adopted in 2026; Hong Kong from 2025.",
+   "url": "https://www.anthesisgroup.com/?p=71785"
+  }
+ ]
+}

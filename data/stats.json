@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20",
+ "updated": "2026-11-24",
  "note": "Official figures: MCA National CSR Portal / Parliament replies. Latest year marked 'analyst' is from reports built on MCA filings and is replaced when MCA publishes official numbers.",
  "trend": [
   {
@@ -658,6 +658,22 @@
    "sdg": 17
   },
   {
+   "big": "₹2,290 cr",
+   "t": "Record unspent CSR at BSE 200 companies, FY26",
+   "s": "Excess spending fell to ₹1,107 crore, leaving a net shortfall of ₹1,183 crore — the widest in over a decade.",
+   "src": "Hurun Research via TheCSRUniverse (Nov 2026)",
+   "url": "https://thecsruniverse.com/articles/unspent-csr-at-bse-200-companies-hits-record-2-290-crore-as-excess-spending-shrinks-hurun",
+   "sdg": 16
+  },
+  {
+   "big": "68%",
+   "t": "Of top philanthropists' giving came from 19 donors",
+   "s": "Each gave ₹100 crore or more in FY26; healthcare giving rose 82% and environment 86%.",
+   "src": "EdelGive Hurun India Philanthropy List 2026",
+   "url": "https://thecsruniverse.com/articles/india-s-philanthropy-crosses-11-500-crore-but-19-donors-account-for-68-of-giving",
+   "sdg": 10
+  },
+  {
    "big": "12%",
    "t": "Of NCD-related CSR goes to heart disease",
    "s": "Cardiovascular disease causes over half of NCD deaths; cancer gets about 62% of the funding.",
@@ -682,28 +698,12 @@
    "sdg": 6
   },
   {
-   "big": "1.2%",
-   "t": "The most any industry gives to innovation and research",
-   "s": "Only about ₹298 crore of CSR went to innovation and research in three years.",
-   "src": "Sattva, Catalytic CSR (Nov 2026)",
-   "url": "https://indiacsr.in/csr-funding-falls-short-of-india-biggest-challenges/",
-   "sdg": 9
-  },
-  {
    "big": "34%",
    "t": "Education's share of FY25 CSR",
    "s": "₹13,877 crore, up 14% in a year — still the biggest theme; healthcare follows at 21% (₹8,531 crore).",
    "src": "Fulcrum",
    "url": "https://indiacsr.in/?p=194212",
    "sdg": 4
-  },
-  {
-   "big": "37%",
-   "t": "Companies under-spending in FY24, down from 66% in FY20",
-   "s": "The 2021 penalty regime is working: 63% now spend more than prescribed.",
-   "src": "CareEdge via Business Today",
-   "url": "https://www.businesstoday.in/amp/latest/corporate/story/hdfc-reliance-industries-top-csr-contributors-in-india-careedge-514961-2026-02-06",
-   "sdg": 16
   },
   {
    "big": "193",
@@ -754,7 +754,7 @@
   }
  ],
  "landscape": {
-  "note": "FY 2024-25 estimates from different studies. They overlap (private philanthropy includes CSR and family giving) and use different methods, so they should not be added up.",
+  "note": "Latest estimates (FY 2024-25; the Hurun list covers FY 2025-26) from different studies. They overlap (private philanthropy includes CSR and family giving) and use different methods, so they should not be added up.",
   "tiles": [
    {
     "big": "₹1.43 lakh cr",
@@ -781,16 +781,78 @@
     "sdg": 16
    },
    {
-    "big": "₹10,380 cr",
-    "t": "Personal giving by India's top 191 donors",
-    "s": "Up 85% in three years",
-    "src": "EdelGive Hurun India Philanthropy List 2025",
-    "url": "https://www.outlookmoney.com/amp/story/ampstories/web-stories/indias-top-10-philanthropists-2025-shiv-nadar-tops-the-list",
+    "big": "₹11,554 cr",
+    "t": "Giving by India's top 219 philanthropists",
+    "s": "FY26, up 11%; 19 donors gave 68% of it",
+    "src": "EdelGive Hurun India Philanthropy List 2026",
+    "url": "https://thecsruniverse.com/articles/india-s-philanthropy-crosses-11-500-crore-but-19-donors-account-for-68-of-giving",
     "sdg": 10
    }
   ]
  },
  "reports": [
+  {
+   "id": "hurun",
+   "name": "EdelGive Hurun India Philanthropy List 2026",
+   "sub": "13th edition — personal and promoter giving, FY26",
+   "org": "EdelGive Foundation and Hurun India",
+   "date": "2026-11-20",
+   "sdg": 4,
+   "url": "https://indiacsr.in/edelgive-hurun-india-philanthropy-list-2026/",
+   "sample": "Cash or cash-equivalent donations of ₹5 crore and above, 1 Apr 2025 – 31 Mar 2026",
+   "stats": [
+    [
+     "₹11,554 cr",
+     "given by 219 philanthropists in FY26, up 11% — the longest list in 13 editions"
+    ],
+    [
+     "₹2,593 cr",
+     "Shiv Nadar & family — most generous for the fifth year running"
+    ],
+    [
+     "68%",
+     "of the total came from 19 donors giving ₹100 crore or more"
+    ],
+    [
+     "₹4,188 cr",
+     "to education (36% of all giving); healthcare up 82% to ₹1,768 crore"
+    ],
+    [
+     "₹813 cr",
+     "to environment & sustainability, up 86%"
+    ],
+    [
+     "₹2,290 cr",
+     "record unspent CSR at BSE 200 companies in FY26 (Hurun data released alongside)"
+    ]
+   ],
+   "take": [
+    "Top five: Shiv Nadar & family, Gautam Adani & family (₹877 cr, up 127%), the Bajaj family, Mukesh Ambani & family and Nandan Nilekani.",
+    "125 self-made philanthropists (57% of the list) gave 65% of the money; 45 new entrants added ₹696 crore.",
+    "Rohini Nilekani (₹215 cr) is again the most generous woman; 29 women made the list, up from 24.",
+    "Only 47% of the total is personal wealth; the rest is company giving, including CSR, attributed by shareholding.",
+    "Delhi-based donors gave the most by value (₹3,168 cr); Mumbai has the most donors (64)."
+   ],
+   "act": "Big family givers are growing fastest in health and climate — approach them as co-funders for CSR programmes there, and track your own unspent CSR closely.",
+   "src": [
+    [
+     "India CSR (20 Nov 2026)",
+     "https://indiacsr.in/edelgive-hurun-india-philanthropy-list-2026/"
+    ],
+    [
+     "TheCSRUniverse (21 Nov 2026)",
+     "https://thecsruniverse.com/articles/india-s-philanthropy-crosses-11-500-crore-but-19-donors-account-for-68-of-giving"
+    ],
+    [
+     "Startup Success Stories",
+     "https://startupsuccessstories.in/edelgive-hurun-india-philanthropy-list-2026/"
+    ],
+    [
+     "TheCSRUniverse — BSE 200 unspent CSR",
+     "https://thecsruniverse.com/articles/unspent-csr-at-bse-200-companies-hits-record-2-290-crore-as-excess-spending-shrinks-hurun"
+    ]
+   ]
+  },
   {
    "id": "sattva-catalytic",
    "name": "Catalytic CSR (Sattva 8th annual CSR report)",
@@ -1098,54 +1160,6 @@
     [
      "CSIP research",
      "https://csip.ashoka.edu.in/?p=1236"
-    ]
-   ]
-  },
-  {
-   "id": "hurun",
-   "name": "EdelGive Hurun India Philanthropy List 2025",
-   "sub": "12th edition — personal giving, FY25",
-   "org": "EdelGive Foundation and Hurun India",
-   "date": "2025-11-06",
-   "sdg": 8,
-   "url": "https://yourstory.com/socialstory/2025/11/shiv-nadar-family-retains-top-spot-in-edelgive-hurun-list",
-   "sample": "Cash or cash-equivalent donations, 1 Apr 2024 – 31 Mar 2025",
-   "stats": [
-    [
-     "₹10,380 cr",
-     "given by 191 philanthropists, up 85% in three years"
-    ],
-    [
-     "₹2,708 cr",
-     "Shiv Nadar & family — most generous for the 4th time in 5 years"
-    ],
-    [
-     "101",
-     "self-made philanthropists on the list"
-    ],
-    [
-     "28%",
-     "of the total came from 57 Mumbai-based donors"
-    ]
-   ],
-   "take": [
-    "Top five: Shiv Nadar & family, Mukesh Ambani & family, the Bajaj family, Kumar Mangalam Birla & family, Gautam Adani & family.",
-    "Rohini Nilekani (₹204 cr) is the most generous woman on the list.",
-    "More new-age wealth gives through personal foundations, outside CSR."
-   ],
-   "act": "Family foundations are natural co-funders for CSR programmes; the 2026 list usually lands in early November.",
-   "src": [
-    [
-     "YourStory",
-     "https://yourstory.com/socialstory/2025/11/shiv-nadar-family-retains-top-spot-in-edelgive-hurun-list"
-    ],
-    [
-     "Business Today",
-     "https://www.businesstoday.in/india/story/hurun-india-philanthropy-list-2025-shiv-nadar-tops-list-with-rs2708-cr-donation-check-full-list-501042-2025-11-06"
-    ],
-    [
-     "Free Press Journal",
-     "https://www.freepressjournal.in/mumbai/mumbai-stands-out-as-indias-philanthropy-capital-for-2025-as-57-individuals-donate-more-than-2600-crores-to-various-social-causes"
     ]
    ]
   }

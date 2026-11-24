@@ -1,7 +1,25 @@
 {
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "note": "Curated daily. Headlines are paraphrased; open the source for the full story.",
  "items": [
+  {
+   "date": "2026-11-23",
+   "tag": "ESG",
+   "region": "Global",
+   "title": "COP31 ends in Antalya without a cover decision — first such failure since Copenhagen",
+   "summary": "After the longest COP on record, the EU, UK and dozens of climate-vulnerable nations rejected the proposed 'Antalya pact', which omitted fossil fuels and dropped the $120bn adaptation-finance tripling target. Technical decisions on just transition, the adaptation goal, a climate finance work programme and Article 6 carbon markets were still adopted.",
+   "source": "Carbon Brief",
+   "url": "https://www.carbonbrief.org/cop31-key-outcomes-agreed-at-the-un-climate-talks-in-antalya"
+  },
+  {
+   "date": "2026-11-21",
+   "tag": "CSR",
+   "region": "India",
+   "title": "Muthoot Finance launches 'ASHA Shakti', honouring 239 ASHA workers in Ernakulam",
+   "summary": "The new CSR programme recognises senior community health workers in Kerala's Ernakulam district, with ₹30 lakh earmarked for its first phase.",
+   "source": "India CSR",
+   "url": "https://indiacsr.in/muthoot-finance-asha-shakti-asha-workers-ernakulam/"
+  },
   {
    "date": "2026-11-21",
    "tag": "CSR",
@@ -28,6 +46,24 @@
    "summary": "219 donors gave 11% more than last year; 19 donors of ₹100 crore+ accounted for 68%. Healthcare giving rose 82% and environment 86%; Shiv Nadar and family top the list.",
    "source": "TheCSRUniverse",
    "url": "https://thecsruniverse.com/articles/india-s-philanthropy-crosses-11-500-crore-but-19-donors-account-for-68-of-giving"
+  },
+  {
+   "date": "2026-11-20",
+   "tag": "ESG",
+   "region": "Global",
+   "title": "SFDR 2.0: EU lawmakers agree new Sustainable, Transition and ESG Basics fund categories",
+   "summary": "The provisional Parliament–Council deal lets fossil-expanding companies sit in Transition funds only if 20% of capex goes to Taxonomy-aligned activities under a time-bound Paris-aligned plan. Rules apply two years after publication once formally endorsed.",
+   "source": "ESG Today",
+   "url": "https://www.esgtoday.com/sfdr-2-0-eu-strikes-deal-on-new-sustainable-investment-product-categories/"
+  },
+  {
+   "date": "2026-11-20",
+   "tag": "ESG",
+   "region": "Global",
+   "title": "TNFD urges the ISSB to turn nature-related disclosure into a mandatory standard by 2030",
+   "summary": "Following the ISSB's November board meeting, the TNFD called for a full nature-related reporting standard rather than guidance, setting 2030 as its target date.",
+   "source": "ESG Dive",
+   "url": "https://www.esgdive.com/news/issb-urged-to-make-its-nature-related-disclosure-a-standard/875352/"
   },
   {
    "date": "2026-11-19",

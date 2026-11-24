@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "note": "ROC adjudication orders, parliamentary data and news on CSR non-compliance. Updated daily.",
  "stats": [
   {
@@ -83,12 +83,57 @@
    "src": "TaxGuru"
   },
   {
+   "date": "2026-07-23",
+   "who": "Dhan Commercial Pvt Ltd — ROC Kolkata",
+   "type": "CSR-2 not filed",
+   "what": "Met the Section 135(1) thresholds for FY 2021-22 but never filed Form CSR-2; no reply to the July 2026 show-cause notice.",
+   "result": "₹2 lakh on the company and ₹50,000 on each of two directors (₹3 lakh total) under Section 450.",
+   "url": "https://taxguru.in/?p=1061342",
+   "src": "TaxGuru"
+  },
+  {
    "date": "2026-07-17",
    "who": "Varindera Constructions Ltd — ROC Delhi II",
    "type": "Late transfer",
    "what": "Spent ₹22 lakh of ₹27.20 lakh in FY 2020-21; ₹5.20 lakh reached Swachh Bharat Kosh only in June 2024.",
    "result": "Company and five officers penalised despite eventual transfer.",
    "url": "https://taxguru.in/?p=1060066",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2026-07-13",
+   "who": "Khemka Refractories Pvt Ltd — ROC Cuttack",
+   "type": "CSR-2 not filed",
+   "what": "FY 2020-21 CSR-2 due June 2022 filed only in May 2026; company called it an inadvertent COVID-era omission.",
+   "result": "₹2 lakh on the company and ₹50,000 on each of two directors (₹3 lakh total).",
+   "url": "https://taxguru.in/?p=1058998",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2026-07-13",
+   "who": "Gurumahraj Engicon Pvt Ltd — ROC Cuttack",
+   "type": "CSR-2 not filed",
+   "what": "FY 2020-21 CSR-2 filed nearly four years late (June 2026); plea that the CS joined after the due date rejected as the default was continuing.",
+   "result": "₹2 lakh on the company and ₹50,000 each on the CS and a director (₹3 lakh total).",
+   "url": "https://taxguru.in/?p=1058984",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2026-07-13",
+   "who": "Kashvi Power & Steel Pvt Ltd — ROC Cuttack",
+   "type": "CSR-2 not filed",
+   "what": "FY 2020-21 CSR-2 filed in June 2026 instead of June 2022; request to drop a later-appointed CS refused.",
+   "result": "₹2 lakh on the company and ₹50,000 each on the MD and two company secretaries (₹3.5 lakh total).",
+   "url": "https://taxguru.in/?p=1059005",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2026-06-30",
+   "who": "M Rajkrishna Trading Pvt Ltd — ROC Kolkata",
+   "type": "Wrong CSR disclosure in AOC-4",
+   "what": "FY 2024-25 AOC-4 XBRL marked CSR 'not applicable' by error, blocking CSR-2; GNL-1 rectification request did not cure the breach.",
+   "result": "₹10,000 on the company and ₹10,000 on the certifying director.",
+   "url": "https://taxguru.in/?p=1058913",
    "src": "TaxGuru"
   },
   {
@@ -102,7 +147,7 @@
   },
   {
    "date": "2026-05-20",
-   "who": "Company — ROC (Haryana)",
+   "who": "Acuity Knowledge Centre (India) Pvt Ltd — ROC Haryana",
    "type": "Not transferred",
    "what": "FY 2022-23 unspent amount not moved to a Schedule VII fund by 30 Sep 2023.",
    "result": "₹37.26 lakh on the company and ₹1.86 lakh on each of four officers; a non-executive director was spared under MCA Circular 01/2020.",
@@ -116,6 +161,15 @@
    "what": "Section 135(7) default; company did not reply to the show-cause notice.",
    "result": "₹1.60 lakh on the company and ₹8,005 on each of four officers.",
    "url": "https://taxguru.in/?p=1044207",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2026-05-11",
+   "who": "Robinsons Cargo & Logistics Pvt Ltd — ROC Mumbai",
+   "type": "Wrong CSR disclosure in AOC-4",
+   "what": "FY 2024-25 AOC-4 XBRL wrongly showed CSR as not applicable; auto-approved form meant CSR-2 could not be filed.",
+   "result": "₹10,000 on the signing director.",
+   "url": "https://taxguru.in/?p=1043186",
    "src": "TaxGuru"
   },
   {
@@ -135,6 +189,15 @@
    "result": "Five arrested; account linked to 44 cyber-fraud complaints. Lesson: no genuine CSR funder needs control of an NGO's bank account.",
    "url": "https://indiacsr.in/csr-funding-scam-raigarh-ngo-worker-duped-rs-2-17-crore-cyber-fraud/",
    "src": "India CSR"
+  },
+  {
+   "date": "2026-03-12",
+   "who": "Arihant Innochem Pvt Ltd — ROC Mumbai",
+   "type": "Wrong CSR disclosure in AOC-4",
+   "what": "FY 2024-25 AOC-4 XBRL filed with CSR marked not applicable although Section 135 applied, so CSR-2 could not be filed.",
+   "result": "₹10,000 on the managing director.",
+   "url": "https://taxguru.in/?p=1031936",
+   "src": "TaxGuru"
   },
   {
    "date": "2026-02-05",
@@ -171,6 +234,15 @@
    "result": "₹25.99 lakh on the company and ₹2 lakh on each of two directors (₹29.99 lakh total).",
    "url": "https://studycafe.in/roc-slaps-rs-29-99-lakh-penalty-on-company-and-its-directors-for-not-spending-mandatory-csr-amount-405515.html",
    "src": "StudyCafe"
+  },
+  {
+   "date": "2025-12-31",
+   "who": "Kolhapur NGO (Yuva Vikas Kalyankari Sanstha) — fake CSR donor gang, Mumbai",
+   "type": "Fraud invoking CSR",
+   "what": "Accused promised a ₹60 lakh CSR donation against a ₹30 lakh 'security deposit', showed fake bank statements and vanished.",
+   "result": "FIR registered at Mumbai Airport Police Station against four named accused; investigation ongoing.",
+   "url": "https://www.freepressjournal.in/mumbai/mumbai-airport-police-investigate-alleged-30-lakh-csr-fraud-targeting-kolhapur-social-organisation-four-accused-named",
+   "src": "Free Press Journal"
   },
   {
    "date": "2025-12-12",

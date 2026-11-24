@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19",
+ "updated": "2026-11-24",
  "bench": [
   {
    "big": "25%",
@@ -445,6 +445,94 @@
  ],
  "cases": [
   {
+   "co": "HCLTech — Power of One",
+   "reg": "India",
+   "model": "Combined employee volunteering and payroll-giving programme run with HCLFoundation, with CSR councils in 25 countries and a My Scholar payroll-giving strand",
+   "sdg": 4,
+   "stats": [
+    [
+     "7,760+",
+     "employee volunteers in India in FY26 — up from 4,470 in FY24"
+    ],
+    [
+     "28,130+",
+     "India volunteering hours in FY26"
+    ],
+    [
+     "1,580+",
+     "employees donated blood; 336 young people supported via My Scholar payroll giving"
+    ]
+   ],
+   "why": "Bundling time, blood and payroll giving under one named programme gives employees several low-friction ways in and has grown the volunteer base by about 70% in two years.",
+   "src": [
+    [
+     "HCLTech Sustainability Report 2025-26",
+     "https://www.hcltech.com/sustainability/sustainability-report-2025-26"
+    ]
+   ],
+   "added": "2026-11-24"
+  },
+  {
+   "co": "Tata Consumer Products — overseas team volunteering",
+   "reg": "Global (incl. India)",
+   "model": "Country teams (UK, US, Canada, Australia) volunteer with local food, health and literacy partners alongside India programmes",
+   "sdg": 2,
+   "stats": [
+    [
+     "46,000",
+     "volunteering hours in FY 2025-26"
+    ],
+    [
+     "4.23",
+     "hours per employee — up on the previous year"
+    ],
+    [
+     "35,000",
+     "books sorted for Title 1 schools (US); 10,000+ meals a year packed with Foodbank (Australia)"
+    ]
+   ],
+   "why": "Letting each market pick partners its staff already know, like food banks and children's hospitals, keeps per-employee hours high across a dispersed workforce.",
+   "src": [
+    [
+     "Tata Consumer Products Sustainability Report FY 2025-26",
+     "https://www.tataconsumer.com/sites/g/files/gfwrlq316/files/2026-08/Tata_Consumer_Products_Sustainability_Report_2025_26.pdf"
+    ]
+   ],
+   "added": "2026-11-24"
+  },
+  {
+   "co": "Cognizant — Outreach",
+   "reg": "India",
+   "model": "Employee-led volunteering chapters (since 2007) on education, environment and community welfare, plus associate payroll giving that funds scholarships",
+   "sdg": 4,
+   "stats": [
+    [
+     "100,000+",
+     "employees volunteered 2 M hours in Outreach's first decade (to 2017)"
+    ],
+    [
+     "32,420+",
+     "associates funded scholarships through payroll giving, 2012-2020"
+    ],
+    [
+     "2,100+",
+     "scholars funded; 72% girls and 90%+ first-generation graduates"
+    ]
+   ],
+   "why": "Volunteers run the chapters themselves and can back the students they teach through payroll giving, which keeps participation going for years.",
+   "src": [
+    [
+     "India CSR — Outreach at 10",
+     "https://indiacsr.in/cognizant-employee-volunteering-program-outreach-impacts-450000-lives/"
+    ],
+    [
+     "Cognizant — Outreach",
+     "https://www.cognizant.com/us/en/about-cognizant/sustainability-corporate-citizenship/outreach-program"
+    ]
+   ],
+   "added": "2026-11-24"
+  },
+  {
    "co": "Amazon India — Global Month of Volunteering",
    "reg": "India",
    "model": "Month-long annual campaign across offices and operations sites; employee-created events with NGO partners (ration kits, community kitchens, career mentoring, school upgrades, lake clean-ups)",
@@ -633,7 +721,7 @@
     ],
     [
      "2.62 lakh+",
-     "hours in FY26 — roughly double"
+     "hours by 84,000+ employees in India in FY26, benefiting 1.65 lakh+ people"
     ]
    ],
    "why": "Volunteering is tied to the foundation's own education, health and relief programmes, with location-level impact weeks.",
@@ -644,7 +732,7 @@
     ],
     [
      "Infosys ESG 2025-26",
-     "https://www.infosys.com/about/esg/reports/2025-26/social-communities.html"
+     "https://www.infosys.com/about/esg/reports/2025-26/social-vision-and-performance.html"
     ]
    ]
   },
@@ -665,6 +753,10 @@
     [
      "1,079",
      "family members took part (11% of volunteers)"
+    ],
+    [
+     "4.8+",
+     "per-capita volunteering hours in FY26; 500+ volunteers joined 21 NGOs at InCollab Connect"
     ]
    ],
    "why": "Family participation and many small local activities (238 in a year).",
@@ -672,6 +764,10 @@
     [
      "Tata.com — Titan",
      "https://www.tata.com/newsroom/community/titan-employee-volunteering-footprints"
+    ],
+    [
+     "Titan Annual Report 2025-26",
+     "https://www.titancompany.in/sites/default/files/2026-07/Titan%20AR%202026_0.pdf"
     ]
    ]
   },

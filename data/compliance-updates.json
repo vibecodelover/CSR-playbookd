@@ -1,7 +1,16 @@
 {
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "note": "Regulatory changes, enforcement orders and pending bills. Pending bills are NOT law until passed and notified.",
  "items": [
+  {
+   "date": "2026-11-23",
+   "type": "Enforcement",
+   "status": "Order",
+   "title": "PMLA court lets ED formally arrest alleged mastermind of ₹200 crore CSR diversion case",
+   "summary": "A special PMLA court in Mumbai allowed the ED to arrest Juhu resident Dharmendra Singh, who allegedly posed as a doctor and ran trusts that drew CSR money from about 40 PSUs, public sector banks and private firms and routed it through linked entities. Probe continues; a reminder to verify implementing agencies before releasing CSR funds.",
+   "source": "Free Press Journal",
+   "url": "https://www.freepressjournal.in/mumbai/csr-fund-fraud-case-ed-gets-court-nod-to-arrest-juhu-resident-who-allegedly-posed-as-doctor-in-200-crore-money-laundering-probe"
+  },
   {
    "date": "2026-11-19",
    "type": "Rule",
@@ -163,6 +172,15 @@
    "summary": "Filing late (before the SCN) did not avoid a penalty under Section 450.",
    "source": "TaxGuru",
    "url": "https://taxguru.in/?p=1058083"
+  },
+  {
+   "date": "2026-06-16",
+   "type": "Enforcement",
+   "status": "Order",
+   "title": "ITAT Bangalore allows Section 80G deduction on mandatory CSR spend (Schneider Electric IT Business India, AY 2020-21)",
+   "summary": "The tribunal set aside the denial of an 80G claim of about ₹3.76 crore on CSR donations, treating it as a double disallowance since CSR spend was already added back under Section 37. Adds to a line of ITAT rulings allowing 80G on CSR contributions to approved bodies.",
+   "source": "Taxscan",
+   "url": "https://www.taxscan.in/top-stories/schneider-electric-wins-tax-relief-itat-quashes-revenues-denial-of-80g-benefit-on-mandatory-csr-expenses-1447585"
   },
   {
    "date": "2026-05-27",

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "note": "ROC adjudication orders, parliamentary data and news on CSR non-compliance. Updated daily.",
  "stats": [
   {
@@ -15,10 +15,10 @@
    "src": "Lok Sabha via ANI"
   },
   {
-   "big": "26",
-   "t": "Companies penalised for CSR, FY 2019-20 to 2023-24 (MCA list)",
-   "url": "https://taxguru.in/company-law/penalties-csr-non-compliance-companies-act.html",
-   "src": "Rajya Sabha Q.3414 (Apr 2025)"
+   "big": "₹19.9 cr",
+   "t": "CSR penalties on 30 companies, FY 2022-23 to 2024-25 (6, 11 and 13 companies a year)",
+   "url": "https://www.taxtmi.com/news?id=71605",
+   "src": "Rajya Sabha reply, 17 Mar 2026 (PTI)"
   },
   {
    "big": "₹55.5 cr",
@@ -33,7 +33,7 @@
    "who": "Healthcare trusts linked to Dharmendra Kumar Chandradev Singh — ED Mumbai",
    "type": "Misuse of funds",
    "what": "Trusts allegedly drew CSR from ~40 PSUs/banks and private firms; projects incomplete, bills inflated, money routed via shells and returned as cash for a commission (~₹200 crore).",
-   "result": "PMLA searches at 8 locations; cash, documents and devices seized; probe ongoing. Lesson: politically recommended partners still need due diligence.",
+   "result": "PMLA searches at 8 locations; cash, documents and devices seized; probe ongoing. Lesson: politically recommended partners still need due diligence. Nov 2026: special PMLA court allowed ED to formally arrest the main accused.",
    "url": "https://www.enforcementdirectorate.gov.in/media/press-release-documents/63cd2884-4d87-4619-b05a-cd1f3183ad08_PR_CSR%20case_3.pdf",
    "src": "Enforcement Directorate"
   },
@@ -89,6 +89,15 @@
    "what": "Met the Section 135(1) thresholds for FY 2021-22 but never filed Form CSR-2; no reply to the July 2026 show-cause notice.",
    "result": "₹2 lakh on the company and ₹50,000 on each of two directors (₹3 lakh total) under Section 450.",
    "url": "https://taxguru.in/?p=1061342",
+   "src": "TaxGuru"
+  },
+  {
+   "date": "2026-07-23",
+   "who": "Seminary Tie-Up Pvt Ltd — ROC Kolkata I",
+   "type": "Wrong CSR disclosure in AOC-4",
+   "what": "Filed the FY 2024-25 AOC-4 XBRL marking CSR as 'Not Applicable' even though Section 135 applied to it.",
+   "result": "Penalty under Section 450: ₹10,000 on the company and ₹10,000 on the certifying director.",
+   "url": "https://taxguru.in/?p=1061332",
    "src": "TaxGuru"
   },
   {
@@ -198,6 +207,15 @@
    "result": "₹10,000 on the managing director.",
    "url": "https://taxguru.in/?p=1031936",
    "src": "TaxGuru"
+  },
+  {
+   "date": "2026-02-21",
+   "who": "Private college trust, Bengaluru — Hennur police",
+   "type": "Fraud invoking CSR",
+   "what": "Six people allegedly promised ₹100 crore of CSR funding via a Gujarat company and collected ₹35 lakh in phases as 'documentation and processing' charges.",
+   "result": "FIR for cheating and criminal conspiracy against six; investigation ongoing. Lesson: genuine CSR donors never charge fees to release funds.",
+   "url": "https://the420.in/bengaluru-csr-scam-amarapalli-suresh-college-trust-fraud-case/",
+   "src": "The420.in"
   },
   {
    "date": "2026-02-05",
@@ -315,6 +333,15 @@
    "result": "Crime Branch and ED probes; arrests including NGO office-bearers. Lesson: verify partners' CSR-1, track record and money trail.",
    "url": "https://www.theweek.in/wire-updates/national/2025/03/17/mds2-kl-assembly-csr-scam.html",
    "src": "The Week (PTI)"
+  },
+  {
+   "date": "2025-02-13",
+   "who": "Rudra Kripa Foundation Trust, Noida — Sector-113 police",
+   "type": "Fraud invoking CSR",
+   "what": "Accused posing as representatives of a listed company promised a ₹5.5 crore CSR donation and took a ₹1.10 crore advance; cheques bounced and a demand draft was fake.",
+   "result": "Police case registered; investigation underway.",
+   "url": "https://indiacsr.in/csr-scam-in-noida-spiritual-trust-defrauded-of-rs-1-10-cr-in-fake-csr-fund-deal/",
+   "src": "India CSR"
   },
   {
    "date": "2024-07",

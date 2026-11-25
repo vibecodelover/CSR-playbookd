@@ -1,7 +1,61 @@
 {
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "note": "Curated daily. Headlines are paraphrased; open the source for the full story.",
  "items": [
+  {
+   "date": "2026-11-24",
+   "tag": "ESG",
+   "region": "Global",
+   "title": "Meta says it is re-evaluating its 2030 net zero target as AI data centres push emissions up 45%",
+   "summary": "Meta's 2026 sustainability report puts net 2025 emissions at 11.8 Mt CO2e, up 45% year on year on the back of its AI data-centre buildout and supply chain. It still contracted over 10 GW of clean energy in 2025, and 62% of suppliers by emissions now have science-based targets, up from 48%.",
+   "source": "ESG Today",
+   "url": "https://www.esgtoday.com/meta-reconsiders-net-zero-goal-as-ai-buildout-drives-45-spike-in-emissions/"
+  },
+  {
+   "date": "2026-11-24",
+   "tag": "ESG",
+   "region": "Global",
+   "title": "PRI poll: investors now see political pushback on ESG as their biggest risk",
+   "summary": "Polled at the PRI's 20th-anniversary summit in Amsterdam (about 1,700 delegates from 60 markets), 44% named political scrutiny of ESG as the biggest disruption of the next five years, against 16% each for geopolitical conflict and AI. Short-term benchmarking was seen as a bigger obstacle to pricing emerging risks than poor data.",
+   "source": "ESG News",
+   "url": "https://esgnews.com/political-scrutiny-of-esg-pri-polling-2026/"
+  },
+  {
+   "date": "2026-11-23",
+   "tag": "CSR",
+   "region": "India",
+   "title": "Pernod Ricard India Foundation and IIM Bangalore's NSRCEL launch a circular-economy innovation programme",
+   "summary": "The foundation has partnered with NSRCEL, IIM Bangalore's start-up hub, on what it calls its first programme to back circular-economy innovators, launched in Bengaluru.",
+   "source": "The CSR Universe",
+   "url": "https://thecsruniverse.com/articles/pernod-ricard-india-foundation-and-nsrcel-launch-circular-innovation-programme"
+  },
+  {
+   "date": "2026-11-23",
+   "tag": "CSR",
+   "region": "India",
+   "title": "J&K Bank backs Child Heart Foundation's paediatric cardiac care project in Baramulla",
+   "summary": "Under 'Project HRIDHAAN', J&K Bank and the Child Heart Foundation will support heart care for children in Baramulla district of Jammu and Kashmir.",
+   "source": "The CSR Universe",
+   "url": "https://thecsruniverse.com/articles/j-k-bank-child-heart-foundation-partner-to-provide-cardiac-care-to-children-in-baramulla"
+  },
+  {
+   "date": "2026-11-23",
+   "tag": "CSR",
+   "region": "Global",
+   "title": "CapitaLand Hope Foundation picks 12 NGOs, including Indian ones, for its 2026 community resilience initiative",
+   "summary": "The philanthropic arm of Singapore's CapitaLand selected 12 non-profits across China, India, Singapore and Vietnam to receive support under its Community Resilience Initiative 2026.",
+   "source": "The CSR Universe",
+   "url": "https://thecsruniverse.com/articles/capitaland-selects-12-ngos-for-community-resilience-initiative-2026"
+  },
+  {
+   "date": "2026-11-23",
+   "tag": "CSR",
+   "region": "India",
+   "title": "Rangeet teams up with Muktangan and other NGOs to take its SEEK social-emotional curriculum into classrooms",
+   "summary": "Mumbai-based education social enterprise Rangeet is partnering with the non-profit Muktangan and other NGOs to bring its SEEK curriculum to more schools.",
+   "source": "The CSR Universe",
+   "url": "https://thecsruniverse.com/articles/rangeet-partners-with-muktangan-and-ngos-to-bring-seek-curriculum-to-classrooms"
+  },
   {
    "date": "2026-11-23",
    "tag": "ESG",
@@ -37,6 +91,15 @@
    "summary": "After the longest COP on record, the EU, UK and dozens of climate-vulnerable nations rejected the proposed 'Antalya pact', which omitted fossil fuels and dropped the $120bn adaptation-finance tripling target. Technical decisions on just transition, the adaptation goal, a climate finance work programme and Article 6 carbon markets were still adopted.",
    "source": "Carbon Brief",
    "url": "https://www.carbonbrief.org/cop31-key-outcomes-agreed-at-the-un-climate-talks-in-antalya"
+  },
+  {
+   "date": "2026-11-21",
+   "tag": "Event",
+   "region": "India",
+   "title": "Microsoft, Samhita-CGF and NITI Aayog convene on AI adoption among MSMEs",
+   "summary": "Microsoft India and Samhita-CGF, with NITI Aayog's Atal Innovation Mission, held a discussion on how small businesses can take up AI tools.",
+   "source": "The CSR Universe",
+   "url": "https://thecsruniverse.com/articles/microsoft-samhita-cgf-and-niti-aayog-discuss-ai-adoption-among-msmes"
   },
   {
    "date": "2026-11-21",

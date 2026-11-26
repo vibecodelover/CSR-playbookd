@@ -1,7 +1,52 @@
 {
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "note": "Curated daily. Headlines are paraphrased; open the source for the full story.",
  "items": [
+  {
+   "date": "2026-11-25",
+   "tag": "CSR",
+   "region": "India",
+   "title": "Vantara signs a 10-year conservation partnership with Madagascar",
+   "summary": "The Reliance-backed wildlife centre in Jamnagar will return seized animals to Madagascar, help build a national conservation centre there and train local wildlife specialists, following a commitment it made to India's CITES authority in August.",
+   "source": "The CSR Journal",
+   "url": "https://thecsrjournal.in/vantara-signs-10-year-madagascar-partnership-delivering-pledge-protect-animals-range-countries"
+  },
+  {
+   "date": "2026-11-24",
+   "tag": "CSR",
+   "region": "India",
+   "title": "Allcargo commits ₹15 crore to a School of Logistics at FUEL University, Pune",
+   "summary": "Through its Avashya Foundation, Allcargo will fund a logistics school on FUEL SkillTech & Entrepreneurship University's Pune campus, with fully funded two-year MBA scholarships for 100 students from underprivileged and drought-hit rural Maharashtra families. Formal launch is set for 30 November.",
+   "source": "India CSR",
+   "url": "https://indiacsr.in/allcargo-group-fuel-university-logistics-school-investment/"
+  },
+  {
+   "date": "2026-11-24",
+   "tag": "ESG",
+   "region": "Global",
+   "title": "Google signs a 50 MW superhot geothermal power deal with Quaise Energy",
+   "summary": "The agreement would supply Google's Oregon data-centre operations with firm clean power from as early as 2030, as big tech hunts for round-the-clock low-carbon electricity to match AI demand.",
+   "source": "ESG Dive",
+   "url": "https://www.esgdive.com/news/google-signs-50-mw-superhot-geothermal-ppa-with-quaise-energy/875634/"
+  },
+  {
+   "date": "2026-11-24",
+   "tag": "ESG",
+   "region": "Global",
+   "title": "CIP raises $1.9 billion via a new vehicle giving investors access to its energy-transition funds",
+   "summary": "Copenhagen Infrastructure Partners closed a new instrument that pools investor access to its energy-transition infrastructure funds, a sign that climate infrastructure is still drawing large private capital.",
+   "source": "ESG Today",
+   "url": "https://www.esgtoday.com/cip-raises-1-9-billion-through-new-instrument-providing-investors-access-to-energy-transition-infrastructure-funds/"
+  },
+  {
+   "date": "2026-11-24",
+   "tag": "ESG",
+   "region": "Global",
+   "title": "Snam issues $1.25 billion of sustainability-linked bonds tied to value-chain emissions",
+   "summary": "The Italian gas-grid operator linked the bonds' terms to decarbonisation targets that extend into its value chain, not just its own operations — a stricter test than most sustainability-linked debt.",
+   "source": "ESG Today",
+   "url": "https://www.esgtoday.com/snam-issues-1-25-billion-sustainability-linked-bonds-tied-to-value-chain-decarbonization-goals/"
+  },
   {
    "date": "2026-11-24",
    "tag": "ESG",
@@ -19,6 +64,15 @@
    "summary": "Polled at the PRI's 20th-anniversary summit in Amsterdam (about 1,700 delegates from 60 markets), 44% named political scrutiny of ESG as the biggest disruption of the next five years, against 16% each for geopolitical conflict and AI. Short-term benchmarking was seen as a bigger obstacle to pricing emerging risks than poor data.",
    "source": "ESG News",
    "url": "https://esgnews.com/political-scrutiny-of-esg-pri-polling-2026/"
+  },
+  {
+   "date": "2026-11-23",
+   "tag": "ESG",
+   "region": "Global",
+   "title": "Brooks Running uses supplier mock-detention drills to manage forced-labour risk",
+   "summary": "The running-shoe brand runs an annual exercise with suppliers simulating a customs detention, to improve traceability across more materials and prepare for import-ban compliance — a practical model for supply-chain human-rights due diligence.",
+   "source": "ESG Dive",
+   "url": "https://www.esgdive.com/news/how-brooks-running-is-using-supplier-data-to-address-human-rights-risks/875326/"
   },
   {
    "date": "2026-11-23",

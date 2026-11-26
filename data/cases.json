@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "note": "ROC adjudication orders, parliamentary data and news on CSR non-compliance. Updated daily.",
  "stats": [
   {
@@ -39,10 +39,10 @@
   },
   {
    "date": "2026-08-11",
-   "who": "Company (CSR-2 non-filing) — ROC Kolkata I",
+   "who": "Shekhavati Investment Corporation Ltd — ROC Kolkata I",
    "type": "CSR-2 not filed",
-   "what": "Did not file Form CSR-2 as required by Rule 12(1B) of the Companies (Accounts) Rules.",
-   "result": "Penalty under Section 450 despite explanations.",
+   "what": "Did not file Form CSR-2 on time for FY 2020-21 although it met the Section 135(1) thresholds; accepted the default and later made it good.",
+   "result": "Section 450 penalty (order 11 Aug 2026): ₹2 lakh on the company and ₹50,000 on each of five officers (₹4.5 lakh total).",
    "url": "https://taxguru.in/?p=1068950",
    "src": "TaxGuru"
   },

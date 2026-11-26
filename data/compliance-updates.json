@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "note": "Regulatory changes, enforcement orders and pending bills. Pending bills are NOT law until passed and notified.",
  "items": [
   {
@@ -37,6 +37,15 @@
    "summary": "Adds mental health, telemedicine, PM Internship Scheme, career counselling, e-waste, marine resources and sports items; groups PM CARES, PMNRF and other funds; asks for liberal interpretation. Draft only.",
    "source": "TheCSRUniverse",
    "url": "https://thecsruniverse.com/articles/CSR-Draft-Rules-new-activities-mental-health-pm-internship"
+  },
+  {
+   "date": "2026-11-05",
+   "type": "Enforcement",
+   "status": "Order",
+   "title": "ITAT Mumbai quashes Section 263 revision over Section 80G claim on CSR donations (NTT Global Data Centers, AY 2020-21)",
+   "summary": "The tax commissioner had reopened the assessment, arguing CSR spending is not a donation. The Tribunal held that the Section 37(1) bar on deducting CSR as business expense does not by itself block an independent Section 80G claim; only gifts to Swachh Bharat Kosh and Clean Ganga Fund are excluded. Revision set aside. Adds to the run of ITAT rulings allowing 80G on qualifying CSR gifts.",
+   "source": "TaxGuru",
+   "url": "https://taxguru.in/income-tax/general-objection-csr-donations-cannot-sustain-section-263-revision-itat-mumbai.html"
   },
   {
    "date": "2026-11-03",
@@ -91,6 +100,15 @@
    "summary": "Delegated Regulations (EU) 2026/1563 (simplified ESRS, in force 10 Nov 2026, mandatory for financial years from 1 Jan 2027) and 2026/1560 (voluntary standard for out-of-scope companies) complete Omnibus I. Relevant to Indian groups with EU subsidiaries or EU customers asking for ESG data.",
    "source": "Linklaters",
    "url": "https://sustainablefutures.linklaters.com/post/102o1ou/eu-csrd-revised-esrs-and-voluntary-reporting-standard-are-published-in-the-offic"
+  },
+  {
+   "date": "2026-08-08",
+   "type": "Enforcement",
+   "status": "Order",
+   "title": "ITAT Panaji allows ₹2.09 crore Section 80G deduction on CSR donations (Colorcon Asia, AY 2020-21)",
+   "summary": "Out of ₹4.41 crore CSR spend, the company claimed ₹2.09 crore under Section 80G; the Revenue denied it on the view that mandatory CSR is not a donation. The Tribunal allowed the claim since none of it went to Swachh Bharat Kosh or Clean Ganga Fund.",
+   "source": "TaxGuru",
+   "url": "https://taxguru.in/income-tax/panaji-itat-section-80g-deduction-csr-donations-csr-spend-remains-donation.html"
   },
   {
    "date": "2026-08-03",

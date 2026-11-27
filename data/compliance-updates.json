@@ -1,7 +1,16 @@
 {
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "note": "Regulatory changes, enforcement orders and pending bills. Pending bills are NOT law until passed and notified.",
  "items": [
+  {
+   "date": "2026-11-25",
+   "type": "Enforcement",
+   "status": "Order",
+   "title": "ED arrests alleged mastermind of ₹200 crore CSR diversion case under PMLA",
+   "summary": "After the special court's nod, the Enforcement Directorate in Mumbai arrested the Class XII-pass man accused of posing as a doctor and channelling about ₹200 crore of PSU and private CSR money through trusts and shell entities, with several funded projects allegedly never delivered. Allegations only; no conviction yet.",
+   "source": "Medical Dialogues",
+   "url": "https://medicaldialogues.in/news/health/doctors/rs-200-crore-csr-fraud-class-12-pass-man-who-posed-as-doctor-for-30-years-arrested-183967"
+  },
   {
    "date": "2026-11-23",
    "type": "Enforcement",
@@ -201,6 +210,15 @@
    "url": "https://www.taxscan.in/top-stories/schneider-electric-wins-tax-relief-itat-quashes-revenues-denial-of-80g-benefit-on-mandatory-csr-expenses-1447585"
   },
   {
+   "date": "2026-05-29",
+   "type": "Enforcement",
+   "status": "Order",
+   "title": "ITAT Delhi allows Section 80G deduction on CSR donations (Cosmo First, AY 2021-22)",
+   "summary": "The tribunal rejected the AO/DRP view that a Section 135 mandate makes CSR donations involuntary, and allowed the 80G claim. Adds to the line of rulings that CSR spend can still qualify for 80G if the donee and conditions are met.",
+   "source": "Taxscan",
+   "url": "https://www.taxscan.in/top-stories/donations-by-company-remain-voluntary-despite-statutory-mandate-itat-grants-s-80g-deduction-on-csr-expenditure-1446550"
+  },
+  {
    "date": "2026-05-27",
    "type": "Rule",
    "status": "In force",
@@ -208,6 +226,15 @@
    "summary": "Up to 10% of a year's CSR spend may go into ZCZP instruments; no impact assessment needed for those projects.",
    "source": "Taxmann",
    "url": "https://www.taxmann.com/post/blog/mca-enables-csr-spending-through-zczp-instruments-on-sse/"
+  },
+  {
+   "date": "2026-05-19",
+   "type": "Enforcement",
+   "status": "Order",
+   "title": "ITAT allows ₹22.60 lakh 80G relief on CSR donation despite Section 37 bar (Genesys International, AY 2020-21)",
+   "summary": "A donation to an approved foundation, disallowed as a business expense because it was CSR, was held eligible for Section 80G: the Section 37 Explanation 2 restriction does not block the separate 80G deduction.",
+   "source": "Taxscan",
+   "url": "https://www.taxscan.in/top-stories/csr-donation-to-approved-institution-eligible-for-income-tax-deduction-despite-restriction-us-37-itat-allows-2260-lakh-deduction-1446226"
   },
   {
    "date": "2026-03-23",

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "note": "ROC adjudication orders, parliamentary data and news on CSR non-compliance. Updated daily.",
  "stats": [
   {
@@ -33,7 +33,7 @@
    "who": "Healthcare trusts linked to Dharmendra Kumar Chandradev Singh — ED Mumbai",
    "type": "Misuse of funds",
    "what": "Trusts allegedly drew CSR from ~40 PSUs/banks and private firms; projects incomplete, bills inflated, money routed via shells and returned as cash for a commission (~₹200 crore).",
-   "result": "PMLA searches at 8 locations; cash, documents and devices seized; probe ongoing. Lesson: politically recommended partners still need due diligence. Nov 2026: special PMLA court allowed ED to formally arrest the main accused.",
+   "result": "PMLA searches at 8 locations; cash, documents and devices seized; probe ongoing. Lesson: politically recommended partners still need due diligence. Nov 2026: after a special PMLA court allowed it, ED arrested the main accused (reported 25 Nov 2026).",
    "url": "https://www.enforcementdirectorate.gov.in/media/press-release-documents/63cd2884-4d87-4619-b05a-cd1f3183ad08_PR_CSR%20case_3.pdf",
    "src": "Enforcement Directorate"
   },
@@ -272,6 +272,15 @@
    "src": "Free Press Journal"
   },
   {
+   "date": "2025-12-24",
+   "who": "FS India Devco Pvt Ltd — ROC Delhi",
+   "type": "Late transfer",
+   "what": "Unspent CSR of about ₹10.24 lakh for FY 2022-23 was due in a Schedule VII fund by 30 Sep 2023 but was transferred only in March 2025; plea for remission rejected.",
+   "result": "Company fined ₹20.48 lakh (twice the unspent amount) and three officers about ₹1.02 lakh each; two directors who had left before the due date were not penalised.",
+   "url": "https://taxguru.in/company-law/delay-transferring-unspent-csr-funds-triggers-heavy-penalty-companies-act.html",
+   "src": "TaxGuru"
+  },
+  {
    "date": "2025-12-12",
    "who": "Falcon Marine Exports Ltd — ROC Cuttack",
    "type": "Board report disclosure",
@@ -344,6 +353,15 @@
    "src": "India CSR"
   },
   {
+   "date": "2025-01",
+   "who": "Vishnupriya Hotels and Resorts Pvt Ltd — ROC Karnataka / RD Hyderabad",
+   "type": "Unspent not transferred",
+   "what": "No CSR policy or committee for FY 2020-21 to 2022-23, about ₹68 lakh unspent CSR not transferred on time (moved to the Clean Ganga Fund only in March 2024) and inadequate board-report disclosure.",
+   "result": "ROC levied about ₹1.59 crore; on appeal the Regional Director cut it to about ₹32.7 lakh (company ₹30 lakh, two directors ₹1.36 lakh each).",
+   "url": "https://indiacsr.in/mca-reduces-vishnupriya-hotels-csr-penalty-from-rs-1-59-cr-to-rs-32-lakh/",
+   "src": "India CSR"
+  },
+  {
    "date": "2024-07",
    "who": "Ganesh Green Bharat Ltd — ROC adjudication",
    "type": "Shortfall",
@@ -369,6 +387,15 @@
    "result": "₹1 crore on the company and ₹2 lakh each on the MD, a director, the CS and the CFO.",
    "url": "https://www.taxscan.in/non-utilization-of-csr-funds-roc-slams-rhi-magnesita-india-ltd-with-rs-1-crore-fine/277092",
    "src": "Taxscan"
+  },
+  {
+   "date": "2023-02-22",
+   "who": "Kony India Pvt Ltd — ROC Hyderabad",
+   "type": "Unspent not transferred",
+   "what": "Unspent CSR of about ₹42 lakh for FY 2019-20 was not moved to an Unspent CSR Account within 30 days of year-end as Section 135(6) requires.",
+   "result": "Company penalised about ₹84.2 lakh (twice the unspent amount) plus ₹2 lakh on each officer in default.",
+   "url": "https://indiacsr.in/mca-csr-violations-kony-india/",
+   "src": "India CSR"
   }
  ]
 }

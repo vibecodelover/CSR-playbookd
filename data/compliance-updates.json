@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27",
+ "updated": "2026-11-28",
  "note": "Regulatory changes, enforcement orders and pending bills. Pending bills are NOT law until passed and notified.",
  "items": [
   {
@@ -10,6 +10,15 @@
    "summary": "After the special court's nod, the Enforcement Directorate in Mumbai arrested the Class XII-pass man accused of posing as a doctor and channelling about ₹200 crore of PSU and private CSR money through trusts and shell entities, with several funded projects allegedly never delivered. Allegations only; no conviction yet.",
    "source": "Medical Dialogues",
    "url": "https://medicaldialogues.in/news/health/doctors/rs-200-crore-csr-fraud-class-12-pass-man-who-posed-as-doctor-for-30-years-arrested-183967"
+  },
+  {
+   "date": "2026-11-25",
+   "type": "Enforcement",
+   "status": "Order",
+   "title": "ITAT Ahmedabad quashes revision over ₹31.68 crore Section 80G claim on CSR donations (Axis Bank, AY 2020-21)",
+   "summary": "The Tribunal set aside the Principal Commissioner's Section 263 order. It held that the CSR bar in Explanation 2 to Section 37(1) does not cut down a separate Section 80G deduction, and that the verification point was raised for the first time in revision. Donations to Swachh Bharat Kosh and Clean Ganga Fund remain outside 80G.",
+   "source": "TaxGuru",
+   "url": "https://taxguru.in/income-tax/rs-31-68-crore-csr-donations-eligible-section-80g-axis-bank-wins-section-263-appeal.html"
   },
   {
    "date": "2026-11-23",
@@ -28,6 +37,15 @@
    "summary": "Analysis of the 11 Nov 2026 draft notes it limits the heritage entry to preservation and protection (dropping historical sites and promotion of traditional art), counts in-kind contributions only for disaster relief, deletes the COVID-19 R&D entry and requires implementing agencies to report CSR-1 changes within 30 days. Comments due 11 Dec 2026. Draft only.",
    "source": "Vinod Kothari Consultants",
    "url": "https://vinodkothari.com/2026/11/revisiting-the-csr-framework-key-amendments-proposed-to-the-csr-rules-and-schedule-vii/"
+  },
+  {
+   "date": "2026-11-16",
+   "type": "Enforcement",
+   "status": "Order",
+   "title": "ITAT Bangalore: CSR donation to Karnataka CM Relief Fund still qualifies for Section 80G (Adcock Ingram, AY 2020-21)",
+   "summary": "An 80G deduction of about ₹1.44 crore was allowed: an otherwise eligible donation cannot be refused only because it counted as CSR, since the Section 37(1) bar applies to business-income computation. The revision under Section 263 was quashed as the officer had already examined the claim.",
+   "source": "TaxGuru",
+   "url": "https://taxguru.in/income-tax/csr-donation-karnataka-cm-relief-fund-eligible-section-80g-itat-bangalore.html"
   },
   {
    "date": "2026-11-11",
@@ -57,6 +75,24 @@
    "url": "https://taxguru.in/income-tax/general-objection-csr-donations-cannot-sustain-section-263-revision-itat-mumbai.html"
   },
   {
+   "date": "2026-11-05",
+   "type": "Enforcement",
+   "status": "Order",
+   "title": "ITAT Mumbai upholds Section 80G relief on CSR-linked donations (Asian Paints, AY 2020-21)",
+   "summary": "Dismissing the Revenue's appeal, the Tribunal confirmed the CIT(A)'s order allowing an 80G claim of about ₹37.8 crore on CSR donations, reading Explanation 2 to Section 37(1) as limited to business expenditure and not to Chapter VI-A deductions.",
+   "source": "TaxGuru",
+   "url": "https://taxguru.in/income-tax/eligible-csr-donations-remain-deductible-section-80g-business-expense-bar-itat-mumbai.html"
+  },
+  {
+   "date": "2026-11-04",
+   "type": "Enforcement",
+   "status": "Order",
+   "title": "ITAT Mumbai quashes Section 263 revision on 80G claim for CSR donations (Rishabh Instruments, AY 2020-21)",
+   "summary": "The Tribunal held that disallowing CSR spend as a business expense does not automatically deny a separate 80G deduction (about ₹10.5 lakh claimed), and that the assessing officer had taken a plausible view after examining the papers.",
+   "source": "TaxGuru",
+   "url": "https://taxguru.in/income-tax/itat-mumbai-quashes-section-263-revision-section-80g-deduction-csr-donations.html"
+  },
+  {
    "date": "2026-11-03",
    "type": "Global",
    "status": "Final",
@@ -73,6 +109,15 @@
    "summary": "Companies (Listing of equity instruments in permissible jurisdictions) Amendment Rules, 2026 extend scope beyond equity shares to convertibles and preference shares and bring IFSC unlisted public companies in. Not CSR-specific.",
    "source": "TaxGuru",
    "url": "https://taxguru.in/?p=1099101"
+  },
+  {
+   "date": "2026-10-27",
+   "type": "Enforcement",
+   "status": "Order",
+   "title": "ITAT Jaipur: CSR donations eligible for Section 80G, revision quashed (Gillette India, AY 2018-19)",
+   "summary": "On CSR spend of about ₹4.34 crore with an 80G claim of about ₹1.77 crore, the Tribunal held Section 80G works independently of Section 37(1), so a donation meeting 80G conditions is not disqualified for also satisfying Section 135.",
+   "source": "TaxGuru",
+   "url": "https://taxguru.in/income-tax/csr-donations-eligible-section-80g-deduction-section-263-revision-quashed-itat-jaipur.html"
   },
   {
    "date": "2026-10-24",
